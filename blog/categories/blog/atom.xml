@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://linsolas.github.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: blog | My Octopress Blog]]></title>
+  <link href="http://linsolas.github.com/blog/categories/blog/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
   <updated>2012-11-17T23:05:39+01:00</updated>
   <id>http://linsolas.github.com/</id>
@@ -18,7 +18,7 @@
     <link href="http://linsolas.github.com/blog/2012/11/17/im-back/"/>
     <updated>2012-11-17T22:28:00+01:00</updated>
     <id>http://linsolas.github.com/blog/2012/11/17/im-back</id>
-    <content type="html"><![CDATA[<p>Cette fois-ci, ce devrait être la bonne. Bye bye mon <a href="http://linsolas.free.fr/wordpress">ancien blog</a>, l&#8217;hébergement chez Free devenant trop contraignant. Welcome donc à GitHub pages, avec <a href="http://octopress.org/">Octopress</a> par dessus.</p>
+    <content type="html"><![CDATA[<p>Cette fois-ci, ce devrait être la bonne. Bye bye mon <a href="http://linsolas.free.fr/wordpress">ancien blog</a>, l'hébergement chez Free devenant trop contraignant. Welcome donc à GitHub pages, avec <a href="http://octopress.org/">Octopress</a> par dessus.</p>
 
 <p>Maintenant que les fondations sont là, place au contenu !</p>
 ]]></content>
