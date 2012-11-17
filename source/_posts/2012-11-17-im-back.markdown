@@ -1,0 +1,11 @@
+---
+layout: post
+title: "I'm back"
+date: 2012-11-17 22:28
+comments: true
+categories: blog
+---
+
+Cette fois-ci, ce devrait être la bonne. Bye bye mon <a href="http://linsolas.free.fr/wordpress">ancien blog</a>, l'hébergement chez Free devenant trop contraignant. Welcome donc à GitHub pages, avec <a href="http://octopress.org/">Octopress</a> par dessus.
+
+Maintenant que les fondations sont là, place au contenu !
