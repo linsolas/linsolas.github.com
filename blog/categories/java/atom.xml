@@ -4,7 +4,7 @@
   <title><![CDATA[Category: java | My Octopress Blog]]></title>
   <link href="http://linsolas.github.com/blog/categories/java/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2012-11-17T23:17:18+01:00</updated>
+  <updated>2012-11-17T23:19:12+01:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -18,7 +18,7 @@
     <link href="http://linsolas.github.com/blog/2012/11/17/devoxx-2012-presentation-dhibernate-envers/"/>
     <updated>2012-11-17T23:07:00+01:00</updated>
     <id>http://linsolas.github.com/blog/2012/11/17/devoxx-2012-presentation-dhibernate-envers</id>
-    <content type="html"><![CDATA[<h1><a href="">Hibernate Envers</a></h1>
+    <content type="html"><![CDATA[<h1><a href="http://devoxx.com/display/DV12/Easy+Entity+Auditing+with+Hibernate+Envers">Hibernate Envers</a></h1>
 
 <p>Difficile de ne pas parler de la meilleure conférence à Devoxx celle présentée par <a href="">Romain Linsolas</a> sur Hibernate Envers. Bien entendu, le fait que ce soit moi n'a aucune incidence sur cette considération :)
 Trève de plaisanterie. J'ai donc présenté un Quickie, à savoir 15 minutes, sur cette librairie d'Hibernate qui permet d'auditer ses entités (classes de persistence). Par audit on entend la conservation en base des enregistrements à chaque fois qu'une modification y est apportée. Voyez cela comme Subversion par exemple : si je commite une nouvelle version d'un fichier, alors SVN va conserver son historique, et permettre de "remonter" dans le temps et de voir les évolutions apportées à ce fichier.</p>
