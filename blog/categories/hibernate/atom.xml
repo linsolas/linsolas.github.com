@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: hibernate | My Octopress Blog]]></title>
+  <link href="http://linsolas.github.com/blog/categories/hibernate/atom.xml" rel="self"/>
+  <link href="http://linsolas.github.com/"/>
+  <updated>2012-11-17T23:17:18+01:00</updated>
+  <id>http://linsolas.github.com/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Devoxx 2012 - Présentation d'Hibernate Envers]]></title>
+    <link href="http://linsolas.github.com/blog/2012/11/17/devoxx-2012-presentation-dhibernate-envers/"/>
+    <updated>2012-11-17T23:07:00+01:00</updated>
+    <id>http://linsolas.github.com/blog/2012/11/17/devoxx-2012-presentation-dhibernate-envers</id>
+    <content type="html"><![CDATA[<h1><a href="">Hibernate Envers</a></h1>
+
+<p>Difficile de ne pas parler de la meilleure conférence à Devoxx celle présentée par <a href="">Romain Linsolas</a> sur Hibernate Envers. Bien entendu, le fait que ce soit moi n'a aucune incidence sur cette considération :)
+Trève de plaisanterie. J'ai donc présenté un Quickie, à savoir 15 minutes, sur cette librairie d'Hibernate qui permet d'auditer ses entités (classes de persistence). Par audit on entend la conservation en base des enregistrements à chaque fois qu'une modification y est apportée. Voyez cela comme Subversion par exemple : si je commite une nouvelle version d'un fichier, alors SVN va conserver son historique, et permettre de "remonter" dans le temps et de voir les évolutions apportées à ce fichier.</p>
+
+<p>Ma présentation s'est donc déroulée en 4 chapitres.</p>
+
+<h2>Activer Envers</h2>
+
+<p>Tout d'abord, le plus simple, consiste à activer Envers, ce qui se fait extrêmement facilement en ajoutant simplement la librairie dans le classpath (ajout de la dépendance <code>hibernate:hibernate-envers</code> dans son pom.xml par exemple). C'est tout. On notera toutefois qu'il est nécessaire d'utiliser une version 3 ou 4 d'Hibernate ainsi que d'<em>Hibernate Annotations</em>, Envers ne supportant pas (encore ?) la configuration par XML.</p>
+
+<h2>Démarrer l'audit</h2>
+
+<p>Ensuite, on passe à l'audit à proprement parlé. Du côté Java, c'est très simple, l'annotation principale étant <code>@Audited</code>, qui indiquera à Envers qu'il faudra auditer cette entité. Voilà un petit exemple d'entité auditée :</p>
+
+<p>``` java
+@Audited
+@Entity
+@Table(name = "T_PERSON")
+public class Person {</p>
+
+<pre><code>@Id @GeneratedValue
+private int id;
+
+private String name;
+
+private String surname;
+
+@NotAudited
+private String comments;
+
+// Getter, setter, etc.
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Le <code>@NotAudited</code> permet d'exclure complètement le champ de l'audit : non seulement Envers ne conservera pas sa valeur dans la table d'audit, mais également si c'est la seule valeur qui est modifiée dans un update de l'enregistrement, alors Envers n'ira pas ajouter de nouvelle révision dans la piste d'audit.</p>
+
+<p>Une nouveauté apparue <em>a priori</em> récemment (c'est d'ailleurs une fonctionnalité "expérimentale") dans Envers est la possibilité de tracer quels champs ont été modifiés. Pour cela, on ajoutera au choix la propriété suivante :</p>
+
+<p><code>xml
+&lt;property name="org.hibernate.envers.global_with_modified_flag" value="true"/&gt;
+</code></p>
+
+<p>pour avoir la fonctionnalité globalement, ou alors on choisira au cas par cas les champs à suivre, comme ceci :</p>
+
+<p>``` java</p>
+
+<pre><code>@Audited(withModifiedFlag = true)
+private String monChamp;
+</code></pre>
+
+<p>```</p>
+
+<p>Du côté de la base de données, voilà comment ça se passe. Envers nécessite une table d'audit par entité auditée. Par exemple, si j'audite ma table <code>T_PERSON</code>, j'aurais alors besoin d'une table <code>T_PERSON_AUD</code> (par défaut, Envers ajoute <code>_AUD</code> à la fin du nom de la table). Cette table d'audit est un quasi-clône de la table originelle, à quelques exceptions près :</p>
+
+<ul>
+<li>Elle contient 2 champs supplémentaires, à savoir <code>REV</code>, qui est l'ID de la révision, et <code>REVTYPE</code> qui contient le type d'opération qui a créé la révision (0 pour une addition, 1 pour une modification, 2 pour une suppression).</li>
+<li>Les contraintes ne sont plus les mêmes, parce que lorsque l'on supprime une donnée, on créera une révision avec tous les champs vides (à l'exception de la clé primaire de l'objet supprimé). Attention donc avec les <code>not null</code> !</li>
+<li>La clé primaire de cette table d'audit sera la même clé primaire que celle d'origine, à laquelle on ajoutera le champ <code>REV</code>.</li>
+<li>Dans le cas où l'on active la fonctionnalité du traçage des champs modifiés, il faudra ajouter pour chaque champ concerné (donc tous si la fonctionnalité est activée de façon globale) un champ <code>xxx_MOD</code> qui pourra valoir 0 (le champ n'a pas été modifié) ou 1 (le champ a été modifié).</li>
+<li>Optionnellement, tout champ dont la propriété liée est marquée comme non auditée (<code>@NotAudited</code>) peut être supprimé de la table d'audit.</li>
+</ul>
+
+
+<p>Envers a également besoin d'une table globale pour stocker les informations de révision. Cette table, nommée <code>REVINFO</code>, ne contient initiallement que 2 champs : <code>REV</code> qui est l'ID de la révision (et que l'on retrouve dans toutes les tables d'audit), ainsi que <code>REVTSTMP</code>. Il est toutefois possible d'ajouter des informations pour cette table, voici comment y ajouter le nom de l'utilisateur connecté qui a déclenché la révision. Tout d'abord, il faut créer une entité pour cela, étendant simplement <code>DefaultRevisionEntity</code> :</p>
+
+<p>``` java
+@Entity
+@RevisionEntity(UsernameRevisionListener.class)
+public class MyEntityRevision extends DefaultRevisionEntity {</p>
+
+<pre><code>private String username;  // + getter / setter
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Cette entité est liée à un listener qui sera appelé à la création de chaque nouvelle révision. Le listener s'écrit ainsi (la méthode <code>getCurrentUsername()</code> est à écrire soi-même, mais généralement le container - comme Spring MVC - propose des fonctionnalités pour ça) :</p>
+
+<p>``` java
+public class UsernameRevisionListener implements RevisionListener {</p>
+
+<pre><code>@Override
+public void newRevision(Object revisionEntity) {
+    String theUser = getCurrentUsername();
+    ((MyEntityRevision) revisionEntity).setUsername(theUser);
+}
+</code></pre>
+
+<p>}
+```</p>
+
+<h2>Requêter les données d'audit</h2>
+
+<p>Créer les données d'audit c'est bien, les utiliser c'est encore mieux. Heureusement Envers dispose d'une API pour ça. Voyons ça avec quelques exemples. Tout d'abord, nous voulons récupérer la liste des révisions pour une entité donnée, puis on affichera l'historique de cette entité :</p>
+
+<p>``` java
+int personId = somePerson.getId();
+AuditReader auditReader = AuditReaderFactory.get(entityManager);
+List<Number> allRevisions = auditReader.getRevisions(Person.class, personId);</p>
+
+<p>for (Number n: allRevisions) {</p>
+
+<pre><code>Person p = auditReader.find(Person.class, personId, n);
+</code></pre>
+
+<p>   System.out.printf("\t[Rev #%1$s] > %2$s\n", n, p);
+}
+```</p>
+
+<p>Le résultat obtenu est le suivant :</p>
+
+<p><code>
+[Rev #1] &gt; Person { id=10, name='Romain', surname='', comments=''}
+[Rev #3] &gt; Person { id=10, name='Romain', surname='Linsolas', comments=''}
+[Rev #4] &gt; null
+</code></p>
+
+<p>On devine ainsi que l'on a créé l'entité "Romain", puis qu'on lui a affecté une valeur pour le <em>surname</em>, pour enfin la supprimer (d'où le <code>null</code> lors de la 4e révision).
+Envers propose également la classe <code>AuditQuery</code> qui permet de requêter plus précisément les données d'audit. Ici, nous allons récupérer toutes les entités modifiées lors d'une révision donnée (disons 42) :</p>
+
+<p><code>java
+AuditQuery query1 = auditReader.createQuery().forEntitiesAtRevision(Person.class, 42);
+List&lt;Person&gt; persons = query1.getResultList();
+</code></p>
+
+<p>Le résultat :</p>
+
+<p><code>
+Person { id=11, name='Chuck', surname='Norris', comments=''}
+Person { id=10, name='Romain', surname='Linsolas', comments=''}
+</code></p>
+
+<p>On voit que l'on a 2 entités qui ont été modifiées. Jusqu'à présent, nous avons utilisé l'API pour récupérer les entités telles qu'elle étaient à un moment donnée dans leur histoire. Mais nous n'avons pas d'informations quant à la modification qu'ils ont subi. C'est bien entendu possible :</p>
+
+<p><code>java
+AuditQuery query2 = auditReader.createQuery().forRevisionsOfEntity(Person.class, false, true);
+List&lt;Object[]&gt; revisions = query2.getResultList();
+</code></p>
+
+<p>Le résultat sera donc une liste de tableaux d'objets. Chaque tableau contient 3 éléments : l'entité elle-même, l'objet représentant la révision (avec l'ID et le timestamp, ainsi que des informations additionnelles si cela avait été paramétré comme nous l'avons vu précédemment), et enfin le type de révision. Le retour du code ci-dessus sera celui-ci :</p>
+
+<p><code>
+| Person { id=10, name='Romain', surname='', comments='' }         | EntityRevision {id=1, timestamp=1352936106653, username='Devoxx'} | ADD |
+| Person { id=11, name='Chuck', surname='Norris', comments='' }    | EntityRevision {id=1, timestamp=1352936106669, username='Devoxx'} | ADD |
+| Person { id=10, name='Romain', surname='Linsolas', comments='' } | EntityRevision {id=1, timestamp=1352936106687, username='Devoxx'} | MOD |
+| Person { id=10, name='', surname='', comments='' }               | EntityRevision {id=1, timestamp=1352936106734, username='Devoxx'} | DEL |
+</code></p>
+
+<p>L'intérêt de la classe <code>AuditQuery</code> est qu'elle propose une API pour affiner sa requête. Par exemple :</p>
+
+<p>``` java
+List<Person> persons = auditReader.createQuery()</p>
+
+<pre><code>    .forEntitiesAtRevision(Person.class, 42)
+    .addOrder(AuditEntity.property("surname").desc())
+    .add(AuditEntity.relatedId("address").eq(theAddressId))
+    .setFirstResult(4)
+    .setMaxResults(2)
+    .getResultList();
+</code></pre>
+
+<p>```</p>
+
+<p>Si vous connaissez Criteria, alors vous êtes en terrain connu. Bien entendu, cette API gère aussi la fonctionnalité de traçage des champs modifiés :</p>
+
+<p>``` java
+AuditQuery query = auditReader().createQuery()</p>
+
+<pre><code>    .forEntitiesAtRevision(Person.class, 42)
+    .add(AuditEntity.property("surname").hasChanged())
+    .add(AuditEntity.property("name").hasNotChanged());
+</code></pre>
+
+<p>```</p>
+
+<h2>Démonstration</h2>
+
+<p>La dernière partie de ce Quickie est une courte démonstration. Le code est récupérable sur GitHub : https://github.com/linsolas/devoxx-envers
+Dans ce petit projet, je démarre une base en mémoire (H2) contenant 3 tables (T_PERSON, T_PERSON_AUD et REVINFO), puis je réalise quelques opérations basiques de CRUD sur quelques entités. Entre chaque étape, j'affiche le contenu de la base. A noter que j'utilise le projet p6spy pour logguer les requêtes exactes envoyées à la base.</p>
+
+<ul>
+<li><a href="https://github.com/linsolas/devoxx-envers">La démo sur GitHub</a></li>
+<li><a href="http://fr.slideshare.net/linsolas/devoxx-2012-hibernate-envers">Les slides de la présentation</a></li>
+</ul>
+
+
+<p><a href="http://www.flickr.com/photos/bejug/sets/72157632019400699/">Photo tirées des photos officielles de Devooxx</a></p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://linsolas.github.com/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2012-11-17T23:05:39+01:00</updated>
+  <updated>2012-11-17T23:17:18+01:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -12,6 +12,258 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Devoxx 2012 - Présentation d'Hibernate Envers]]></title>
+    <link href="http://linsolas.github.com/blog/2012/11/17/devoxx-2012-presentation-dhibernate-envers/"/>
+    <updated>2012-11-17T23:07:00+01:00</updated>
+    <id>http://linsolas.github.com/blog/2012/11/17/devoxx-2012-presentation-dhibernate-envers</id>
+    <content type="html"><![CDATA[<h1><a href="">Hibernate Envers</a></h1>
+
+<p>Difficile de ne pas parler de la meilleure conférence à Devoxx celle présentée par <a href="">Romain Linsolas</a> sur Hibernate Envers. Bien entendu, le fait que ce soit moi n&#8217;a aucune incidence sur cette considération :)
+Trève de plaisanterie. J&#8217;ai donc présenté un Quickie, à savoir 15 minutes, sur cette librairie d&#8217;Hibernate qui permet d&#8217;auditer ses entités (classes de persistence). Par audit on entend la conservation en base des enregistrements à chaque fois qu&#8217;une modification y est apportée. Voyez cela comme Subversion par exemple : si je commite une nouvelle version d&#8217;un fichier, alors SVN va conserver son historique, et permettre de &#8220;remonter&#8221; dans le temps et de voir les évolutions apportées à ce fichier.</p>
+
+<p>Ma présentation s&#8217;est donc déroulée en 4 chapitres.</p>
+
+<h2>Activer Envers</h2>
+
+<p>Tout d&#8217;abord, le plus simple, consiste à activer Envers, ce qui se fait extrêmement facilement en ajoutant simplement la librairie dans le classpath (ajout de la dépendance <code>hibernate:hibernate-envers</code> dans son pom.xml par exemple). C&#8217;est tout. On notera toutefois qu&#8217;il est nécessaire d&#8217;utiliser une version 3 ou 4 d&#8217;Hibernate ainsi que d&#8217;<em>Hibernate Annotations</em>, Envers ne supportant pas (encore ?) la configuration par XML.</p>
+
+<h2>Démarrer l&#8217;audit</h2>
+
+<p>Ensuite, on passe à l&#8217;audit à proprement parlé. Du côté Java, c&#8217;est très simple, l&#8217;annotation principale étant <code>@Audited</code>, qui indiquera à Envers qu&#8217;il faudra auditer cette entité. Voilà un petit exemple d&#8217;entité auditée :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="nd">@Audited</span>
+</span><span class='line'><span class="nd">@Entity</span>
+</span><span class='line'><span class="nd">@Table</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">&quot;T_PERSON&quot;</span><span class="o">)</span>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nd">@Id</span> <span class="nd">@GeneratedValue</span>
+</span><span class='line'>    <span class="kd">private</span> <span class="kt">int</span> <span class="n">id</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">private</span> <span class="n">String</span> <span class="n">surname</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nd">@NotAudited</span>
+</span><span class='line'>    <span class="kd">private</span> <span class="n">String</span> <span class="n">comments</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">// Getter, setter, etc.</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Le <code>@NotAudited</code> permet d&#8217;exclure complètement le champ de l&#8217;audit : non seulement Envers ne conservera pas sa valeur dans la table d&#8217;audit, mais également si c&#8217;est la seule valeur qui est modifiée dans un update de l&#8217;enregistrement, alors Envers n&#8217;ira pas ajouter de nouvelle révision dans la piste d&#8217;audit.</p>
+
+<p>Une nouveauté apparue <em>a priori</em> récemment (c&#8217;est d&#8217;ailleurs une fonctionnalité &#8220;expérimentale&#8221;) dans Envers est la possibilité de tracer quels champs ont été modifiés. Pour cela, on ajoutera au choix la propriété suivante :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;org.hibernate.envers.global_with_modified_flag&quot;</span> <span class="na">value=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>pour avoir la fonctionnalité globalement, ou alors on choisira au cas par cas les champs à suivre, comme ceci :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="nd">@Audited</span><span class="o">(</span><span class="n">withModifiedFlag</span> <span class="o">=</span> <span class="kc">true</span><span class="o">)</span>
+</span><span class='line'><span class="kd">private</span> <span class="n">String</span> <span class="n">monChamp</span><span class="o">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Du côté de la base de données, voilà comment ça se passe. Envers nécessite une table d&#8217;audit par entité auditée. Par exemple, si j&#8217;audite ma table <code>T_PERSON</code>, j&#8217;aurais alors besoin d&#8217;une table <code>T_PERSON_AUD</code> (par défaut, Envers ajoute <code>_AUD</code> à la fin du nom de la table). Cette table d&#8217;audit est un quasi-clône de la table originelle, à quelques exceptions près :</p>
+
+<ul>
+<li>Elle contient 2 champs supplémentaires, à savoir <code>REV</code>, qui est l&#8217;ID de la révision, et <code>REVTYPE</code> qui contient le type d&#8217;opération qui a créé la révision (0 pour une addition, 1 pour une modification, 2 pour une suppression).</li>
+<li>Les contraintes ne sont plus les mêmes, parce que lorsque l&#8217;on supprime une donnée, on créera une révision avec tous les champs vides (à l&#8217;exception de la clé primaire de l&#8217;objet supprimé). Attention donc avec les <code>not null</code> !</li>
+<li>La clé primaire de cette table d&#8217;audit sera la même clé primaire que celle d&#8217;origine, à laquelle on ajoutera le champ <code>REV</code>.</li>
+<li>Dans le cas où l&#8217;on active la fonctionnalité du traçage des champs modifiés, il faudra ajouter pour chaque champ concerné (donc tous si la fonctionnalité est activée de façon globale) un champ <code>xxx_MOD</code> qui pourra valoir 0 (le champ n&#8217;a pas été modifié) ou 1 (le champ a été modifié).</li>
+<li>Optionnellement, tout champ dont la propriété liée est marquée comme non auditée (<code>@NotAudited</code>) peut être supprimé de la table d&#8217;audit.</li>
+</ul>
+
+
+<p>Envers a également besoin d&#8217;une table globale pour stocker les informations de révision. Cette table, nommée <code>REVINFO</code>, ne contient initiallement que 2 champs : <code>REV</code> qui est l&#8217;ID de la révision (et que l&#8217;on retrouve dans toutes les tables d&#8217;audit), ainsi que <code>REVTSTMP</code>. Il est toutefois possible d&#8217;ajouter des informations pour cette table, voici comment y ajouter le nom de l&#8217;utilisateur connecté qui a déclenché la révision. Tout d&#8217;abord, il faut créer une entité pour cela, étendant simplement <code>DefaultRevisionEntity</code> :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="nd">@Entity</span>
+</span><span class='line'><span class="nd">@RevisionEntity</span><span class="o">(</span><span class="n">UsernameRevisionListener</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyEntityRevision</span> <span class="kd">extends</span> <span class="n">DefaultRevisionEntity</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kd">private</span> <span class="n">String</span> <span class="n">username</span><span class="o">;</span>  <span class="c1">// + getter / setter</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Cette entité est liée à un listener qui sera appelé à la création de chaque nouvelle révision. Le listener s&#8217;écrit ainsi (la méthode <code>getCurrentUsername()</code> est à écrire soi-même, mais généralement le container - comme Spring MVC - propose des fonctionnalités pour ça) :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">UsernameRevisionListener</span> <span class="kd">implements</span> <span class="n">RevisionListener</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nd">@Override</span>
+</span><span class='line'>  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">newRevision</span><span class="o">(</span><span class="n">Object</span> <span class="n">revisionEntity</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>      <span class="n">String</span> <span class="n">theUser</span> <span class="o">=</span> <span class="n">getCurrentUsername</span><span class="o">();</span>
+</span><span class='line'>      <span class="o">((</span><span class="n">MyEntityRevision</span><span class="o">)</span> <span class="n">revisionEntity</span><span class="o">).</span><span class="na">setUsername</span><span class="o">(</span><span class="n">theUser</span><span class="o">);</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Requêter les données d&#8217;audit</h2>
+
+<p>Créer les données d&#8217;audit c&#8217;est bien, les utiliser c&#8217;est encore mieux. Heureusement Envers dispose d&#8217;une API pour ça. Voyons ça avec quelques exemples. Tout d&#8217;abord, nous voulons récupérer la liste des révisions pour une entité donnée, puis on affichera l&#8217;historique de cette entité :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kt">int</span> <span class="n">personId</span> <span class="o">=</span> <span class="n">somePerson</span><span class="o">.</span><span class="na">getId</span><span class="o">();</span>
+</span><span class='line'><span class="n">AuditReader</span> <span class="n">auditReader</span> <span class="o">=</span> <span class="n">AuditReaderFactory</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">entityManager</span><span class="o">);</span>
+</span><span class='line'><span class="n">List</span><span class="o">&lt;</span><span class="n">Number</span><span class="o">&gt;</span> <span class="n">allRevisions</span> <span class="o">=</span> <span class="n">auditReader</span><span class="o">.</span><span class="na">getRevisions</span><span class="o">(</span><span class="n">Person</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">personId</span><span class="o">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">for</span> <span class="o">(</span><span class="n">Number</span> <span class="nl">n:</span> <span class="n">allRevisions</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>  <span class="n">Person</span> <span class="n">p</span> <span class="o">=</span> <span class="n">auditReader</span><span class="o">.</span><span class="na">find</span><span class="o">(</span><span class="n">Person</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">personId</span><span class="o">,</span> <span class="n">n</span><span class="o">);</span>
+</span><span class='line'>   <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">&quot;\t[Rev #%1$s] &gt; %2$s\n&quot;</span><span class="o">,</span> <span class="n">n</span><span class="o">,</span> <span class="n">p</span><span class="o">);</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Le résultat obtenu est le suivant :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="o">[</span><span class="n">Rev</span> <span class="err">#</span><span class="mi">1</span><span class="o">]</span> <span class="o">&gt;</span> <span class="n">Person</span> <span class="o">{</span> <span class="n">id</span><span class="o">=</span><span class="mi">10</span><span class="o">,</span> <span class="n">name</span><span class="o">=</span><span class="err">&#39;</span><span class="n">Romain</span><span class="err">&#39;</span><span class="o">,</span> <span class="n">surname</span><span class="o">=</span><span class="err">&#39;&#39;</span><span class="o">,</span> <span class="n">comments</span><span class="o">=</span><span class="err">&#39;&#39;</span><span class="o">}</span>
+</span><span class='line'><span class="o">[</span><span class="n">Rev</span> <span class="err">#</span><span class="mi">3</span><span class="o">]</span> <span class="o">&gt;</span> <span class="n">Person</span> <span class="o">{</span> <span class="n">id</span><span class="o">=</span><span class="mi">10</span><span class="o">,</span> <span class="n">name</span><span class="o">=</span><span class="err">&#39;</span><span class="n">Romain</span><span class="err">&#39;</span><span class="o">,</span> <span class="n">surname</span><span class="o">=</span><span class="err">&#39;</span><span class="n">Linsolas</span><span class="err">&#39;</span><span class="o">,</span> <span class="n">comments</span><span class="o">=</span><span class="err">&#39;&#39;</span><span class="o">}</span>
+</span><span class='line'><span class="o">[</span><span class="n">Rev</span> <span class="err">#</span><span class="mi">4</span><span class="o">]</span> <span class="o">&gt;</span> <span class="kc">null</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>On devine ainsi que l&#8217;on a créé l&#8217;entité &#8220;Romain&#8221;, puis qu&#8217;on lui a affecté une valeur pour le <em>surname</em>, pour enfin la supprimer (d&#8217;où le <code>null</code> lors de la 4e révision).
+Envers propose également la classe <code>AuditQuery</code> qui permet de requêter plus précisément les données d&#8217;audit. Ici, nous allons récupérer toutes les entités modifiées lors d&#8217;une révision donnée (disons 42) :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">AuditQuery</span> <span class="n">query1</span> <span class="o">=</span> <span class="n">auditReader</span><span class="o">.</span><span class="na">createQuery</span><span class="o">().</span><span class="na">forEntitiesAtRevision</span><span class="o">(</span><span class="n">Person</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="mi">42</span><span class="o">);</span>
+</span><span class='line'><span class="n">List</span><span class="o">&lt;</span><span class="n">Person</span><span class="o">&gt;</span> <span class="n">persons</span> <span class="o">=</span> <span class="n">query1</span><span class="o">.</span><span class="na">getResultList</span><span class="o">();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Le résultat :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">Person</span> <span class="o">{</span> <span class="n">id</span><span class="o">=</span><span class="mi">11</span><span class="o">,</span> <span class="n">name</span><span class="o">=</span><span class="err">&#39;</span><span class="n">Chuck</span><span class="err">&#39;</span><span class="o">,</span> <span class="n">surname</span><span class="o">=</span><span class="err">&#39;</span><span class="n">Norris</span><span class="err">&#39;</span><span class="o">,</span> <span class="n">comments</span><span class="o">=</span><span class="err">&#39;&#39;</span><span class="o">}</span>
+</span><span class='line'><span class="n">Person</span> <span class="o">{</span> <span class="n">id</span><span class="o">=</span><span class="mi">10</span><span class="o">,</span> <span class="n">name</span><span class="o">=</span><span class="err">&#39;</span><span class="n">Romain</span><span class="err">&#39;</span><span class="o">,</span> <span class="n">surname</span><span class="o">=</span><span class="err">&#39;</span><span class="n">Linsolas</span><span class="err">&#39;</span><span class="o">,</span> <span class="n">comments</span><span class="o">=</span><span class="err">&#39;&#39;</span><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>On voit que l&#8217;on a 2 entités qui ont été modifiées. Jusqu&#8217;à présent, nous avons utilisé l&#8217;API pour récupérer les entités telles qu&#8217;elle étaient à un moment donnée dans leur histoire. Mais nous n&#8217;avons pas d&#8217;informations quant à la modification qu&#8217;ils ont subi. C&#8217;est bien entendu possible :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">AuditQuery</span> <span class="n">query2</span> <span class="o">=</span> <span class="n">auditReader</span><span class="o">.</span><span class="na">createQuery</span><span class="o">().</span><span class="na">forRevisionsOfEntity</span><span class="o">(</span><span class="n">Person</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="kc">false</span><span class="o">,</span> <span class="kc">true</span><span class="o">);</span>
+</span><span class='line'><span class="n">List</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">[]&gt;</span> <span class="n">revisions</span> <span class="o">=</span> <span class="n">query2</span><span class="o">.</span><span class="na">getResultList</span><span class="o">();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Le résultat sera donc une liste de tableaux d&#8217;objets. Chaque tableau contient 3 éléments : l&#8217;entité elle-même, l&#8217;objet représentant la révision (avec l&#8217;ID et le timestamp, ainsi que des informations additionnelles si cela avait été paramétré comme nous l&#8217;avons vu précédemment), et enfin le type de révision. Le retour du code ci-dessus sera celui-ci :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="o">|</span> <span class="n">Person</span> <span class="o">{</span> <span class="n">id</span><span class="o">=</span><span class="mi">10</span><span class="o">,</span> <span class="n">name</span><span class="o">=</span><span class="err">&#39;</span><span class="n">Romain</span><span class="err">&#39;</span><span class="o">,</span> <span class="n">surname</span><span class="o">=</span><span class="err">&#39;&#39;</span><span class="o">,</span> <span class="n">comments</span><span class="o">=</span><span class="err">&#39;&#39;</span> <span class="o">}</span>         <span class="o">|</span> <span class="n">EntityRevision</span> <span class="o">{</span><span class="n">id</span><span class="o">=</span><span class="mi">1</span><span class="o">,</span> <span class="n">timestamp</span><span class="o">=</span><span class="mi">1352936106653</span><span class="o">,</span> <span class="n">username</span><span class="o">=</span><span class="err">&#39;</span><span class="n">Devoxx</span><span class="err">&#39;</span><span class="o">}</span> <span class="o">|</span> <span class="n">ADD</span> <span class="o">|</span>
+</span><span class='line'><span class="o">|</span> <span class="n">Person</span> <span class="o">{</span> <span class="n">id</span><span class="o">=</span><span class="mi">11</span><span class="o">,</span> <span class="n">name</span><span class="o">=</span><span class="err">&#39;</span><span class="n">Chuck</span><span class="err">&#39;</span><span class="o">,</span> <span class="n">surname</span><span class="o">=</span><span class="err">&#39;</span><span class="n">Norris</span><span class="err">&#39;</span><span class="o">,</span> <span class="n">comments</span><span class="o">=</span><span class="err">&#39;&#39;</span> <span class="o">}</span>    <span class="o">|</span> <span class="n">EntityRevision</span> <span class="o">{</span><span class="n">id</span><span class="o">=</span><span class="mi">1</span><span class="o">,</span> <span class="n">timestamp</span><span class="o">=</span><span class="mi">1352936106669</span><span class="o">,</span> <span class="n">username</span><span class="o">=</span><span class="err">&#39;</span><span class="n">Devoxx</span><span class="err">&#39;</span><span class="o">}</span> <span class="o">|</span> <span class="n">ADD</span> <span class="o">|</span>
+</span><span class='line'><span class="o">|</span> <span class="n">Person</span> <span class="o">{</span> <span class="n">id</span><span class="o">=</span><span class="mi">10</span><span class="o">,</span> <span class="n">name</span><span class="o">=</span><span class="err">&#39;</span><span class="n">Romain</span><span class="err">&#39;</span><span class="o">,</span> <span class="n">surname</span><span class="o">=</span><span class="err">&#39;</span><span class="n">Linsolas</span><span class="err">&#39;</span><span class="o">,</span> <span class="n">comments</span><span class="o">=</span><span class="err">&#39;&#39;</span> <span class="o">}</span> <span class="o">|</span> <span class="n">EntityRevision</span> <span class="o">{</span><span class="n">id</span><span class="o">=</span><span class="mi">1</span><span class="o">,</span> <span class="n">timestamp</span><span class="o">=</span><span class="mi">1352936106687</span><span class="o">,</span> <span class="n">username</span><span class="o">=</span><span class="err">&#39;</span><span class="n">Devoxx</span><span class="err">&#39;</span><span class="o">}</span> <span class="o">|</span> <span class="n">MOD</span> <span class="o">|</span>
+</span><span class='line'><span class="o">|</span> <span class="n">Person</span> <span class="o">{</span> <span class="n">id</span><span class="o">=</span><span class="mi">10</span><span class="o">,</span> <span class="n">name</span><span class="o">=</span><span class="err">&#39;&#39;</span><span class="o">,</span> <span class="n">surname</span><span class="o">=</span><span class="err">&#39;&#39;</span><span class="o">,</span> <span class="n">comments</span><span class="o">=</span><span class="err">&#39;&#39;</span> <span class="o">}</span>               <span class="o">|</span> <span class="n">EntityRevision</span> <span class="o">{</span><span class="n">id</span><span class="o">=</span><span class="mi">1</span><span class="o">,</span> <span class="n">timestamp</span><span class="o">=</span><span class="mi">1352936106734</span><span class="o">,</span> <span class="n">username</span><span class="o">=</span><span class="err">&#39;</span><span class="n">Devoxx</span><span class="err">&#39;</span><span class="o">}</span> <span class="o">|</span> <span class="n">DEL</span> <span class="o">|</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>L&#8217;intérêt de la classe <code>AuditQuery</code> est qu&#8217;elle propose une API pour affiner sa requête. Par exemple :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">List</span><span class="o">&lt;</span><span class="n">Person</span><span class="o">&gt;</span> <span class="n">persons</span> <span class="o">=</span> <span class="n">auditReader</span><span class="o">.</span><span class="na">createQuery</span><span class="o">()</span>
+</span><span class='line'>      <span class="o">.</span><span class="na">forEntitiesAtRevision</span><span class="o">(</span><span class="n">Person</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="mi">42</span><span class="o">)</span>
+</span><span class='line'>      <span class="o">.</span><span class="na">addOrder</span><span class="o">(</span><span class="n">AuditEntity</span><span class="o">.</span><span class="na">property</span><span class="o">(</span><span class="s">&quot;surname&quot;</span><span class="o">).</span><span class="na">desc</span><span class="o">())</span>
+</span><span class='line'>      <span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">AuditEntity</span><span class="o">.</span><span class="na">relatedId</span><span class="o">(</span><span class="s">&quot;address&quot;</span><span class="o">).</span><span class="na">eq</span><span class="o">(</span><span class="n">theAddressId</span><span class="o">))</span>
+</span><span class='line'>      <span class="o">.</span><span class="na">setFirstResult</span><span class="o">(</span><span class="mi">4</span><span class="o">)</span>
+</span><span class='line'>      <span class="o">.</span><span class="na">setMaxResults</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span>
+</span><span class='line'>      <span class="o">.</span><span class="na">getResultList</span><span class="o">();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Si vous connaissez Criteria, alors vous êtes en terrain connu. Bien entendu, cette API gère aussi la fonctionnalité de traçage des champs modifiés :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">AuditQuery</span> <span class="n">query</span> <span class="o">=</span> <span class="n">auditReader</span><span class="o">().</span><span class="na">createQuery</span><span class="o">()</span>
+</span><span class='line'>      <span class="o">.</span><span class="na">forEntitiesAtRevision</span><span class="o">(</span><span class="n">Person</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="mi">42</span><span class="o">)</span>
+</span><span class='line'>      <span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">AuditEntity</span><span class="o">.</span><span class="na">property</span><span class="o">(</span><span class="s">&quot;surname&quot;</span><span class="o">).</span><span class="na">hasChanged</span><span class="o">())</span>
+</span><span class='line'>      <span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">AuditEntity</span><span class="o">.</span><span class="na">property</span><span class="o">(</span><span class="s">&quot;name&quot;</span><span class="o">).</span><span class="na">hasNotChanged</span><span class="o">());</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Démonstration</h2>
+
+<p>La dernière partie de ce Quickie est une courte démonstration. Le code est récupérable sur GitHub : https://github.com/linsolas/devoxx-envers
+Dans ce petit projet, je démarre une base en mémoire (H2) contenant 3 tables (T_PERSON, T_PERSON_AUD et REVINFO), puis je réalise quelques opérations basiques de CRUD sur quelques entités. Entre chaque étape, j&#8217;affiche le contenu de la base. A noter que j&#8217;utilise le projet p6spy pour logguer les requêtes exactes envoyées à la base.</p>
+
+<ul>
+<li><a href="https://github.com/linsolas/devoxx-envers">La démo sur GitHub</a></li>
+<li><a href="http://fr.slideshare.net/linsolas/devoxx-2012-hibernate-envers">Les slides de la présentation</a></li>
+</ul>
+
+
+<p><a href="http://www.flickr.com/photos/bejug/sets/72157632019400699/">Photo tirées des photos officielles de Devooxx</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[I'm back]]></title>
