@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://linsolas.github.com/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2012-11-18T17:56:13+01:00</updated>
+  <updated>2012-11-18T17:57:43+01:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -30,7 +30,7 @@ Mercredi matin, 6h. Les choses ne commencent pas bien. Une grève en Belgique (e
 <!-- more -->
 
 
-<h1><a href="http://www.devoxx.com/display/DV12/7+Things++How+to+make+good+teams+great">7 things: How to make good teams great</a></h1>
+<h2><a href="http://www.devoxx.com/display/DV12/7+Things++How+to+make+good+teams+great">7 things: How to make good teams great</a></h2>
 
 <p><a href="http://www.devoxx.com/display/DV12/Sven+Peters">Sven Peters</a>, d&#8217;Atlassian, nous donne 7 conseils pour qu&#8217;une bonne équipe devienne une excellente équipe. Pour chaque conseil, il donne également une note sur 5 pour la faisabilité, ainsi qu&#8217;une autre sur l&#8217;<em>awesomeness</em>.</p>
 
