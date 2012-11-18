@@ -4,7 +4,7 @@
   <title><![CDATA[Category: java | My Octopress Blog]]></title>
   <link href="http://linsolas.github.com/blog/categories/java/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2012-11-18T17:57:43+01:00</updated>
+  <updated>2012-11-18T18:00:14+01:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -62,7 +62,7 @@ Note: <em>2-4/5</em> et <em>5/5</em>.</p>
 <hr/>
 
 
-<h1><a href="http://www.devoxx.com/display/DV12/The+Future+of+Software+Development+Process+Methodology+Effectiveness+%28Part+1+2%29">The Future of Software Development Process Methodology Effectiveness</a></h1>
+<h2><a href="http://www.devoxx.com/display/DV12/The+Future+of+Software+Development+Process+Methodology+Effectiveness+%28Part+1+2%29">The Future of Software Development Process Methodology Effectiveness</a></h2>
 
 <p><a href="http://www.devoxx.com/display/DV12/Chet+Haase">Chet Haase</a>, de Google, est un orateur formidable. Cette session (ainsi que les autres sur Android), le prouve bien. Ce double-quickie a tellement eu de succès que les organisateurs lui ont demandé de le rejouer jeudi soir, en le filmant pour qu'il soit disponible sur Parleys.
 Durant son talk, il nous a présenté des "nouvelles" méthodologies de développement logicielles, basées sur des existantes. Difficile de retranscrire ici l'esprit de la session, mais en gros, voici quelques idées qu'il a présenté, ce qui devrait vous donner une idée du ton de son quickie :</p>
@@ -87,7 +87,7 @@ Durant son talk, il nous a présenté des "nouvelles" méthodologies de dévelop
 <hr/>
 
 
-<h1><a href="http://devoxx.com/display/DV12/Behaviour+Driven+Development+on+the+JVM+-+a+State+of+the+Union">BDD on the JVM, a state of the Union</a></h1>
+<h2><a href="http://devoxx.com/display/DV12/Behaviour+Driven+Development+on+the+JVM+-+a+State+of+the+Union">BDD on the JVM, a state of the Union</a></h2>
 
 <p><a href="http://devoxx.com/display/DV12/John+Smart">John Smart</a> nous présente le BDD, <em>Behavior Driven Development</em>, et en particulier son intégration au sein de l'écosystème Java.
 La première partie est un rappel de ce qu'est le BDD, dont le but principal est l'écriture dans un langage commun à toutes les parties d'un projet (développeurs, analystes, testeurs, etc.) de spéfications exécutables. L'idée étant d'écrire un scénario en partant d'un contexte (<em>Given</em>), d'une action (<em>When</em>), on s'attend à un résultat précis (<em>Then</em>).</p>
@@ -157,7 +157,7 @@ public void shouldOnlySeeAdsContainingKeyword(String keyword) {
 <hr/>
 
 
-<h1><a href="http://devoxx.com/display/DV12/Code+Story">Code Story</a></h1>
+<h2><a href="http://devoxx.com/display/DV12/Code+Story">Code Story</a></h2>
 
 <p>Je m'accorde ensuite une petite pause, pour discuter avec quelques personnes, visiter les stands, et assister un peu à <a href="http://code-story.net/">Code Story</a>. Les 4 compères français réédite leur performances de Devoxx France, à savoir de coder en <em>live</em> une application. Cette fois-ci, ils ont développé une application de "combat", disponible <a href="http://fight.code-story.net/">ici</a>. Le principe : on rentre 2 mots clé (nom d'un speaker, d'une session, etc.), et l'application donne le résultat du combat. Ce score dépend - je crois - des votes que les internautes avaient préalablement donné sur les sessions. Le <a href="https://github.com/CodeStory/code-story-fight">code final est sur GitHub</a>.
 Encore une fois, une très belle session, mais hélas pas aussi populaire qu'à Devoxx France. Le fait qu'ils n'aient pas eu une salle à eux, et qu'ils soient situés dans le grand hall, un peu trop bruyant, n'a sans doute pas aidé. Un manque de publicité lors de la keynote a pu aussi jouer en leur défaveur.</p>
@@ -165,7 +165,7 @@ Encore une fois, une très belle session, mais hélas pas aussi populaire qu'à 
 <hr/>
 
 
-<h1><a href="http://www.devoxx.com/display/DV12/The+Chrome+Dev+Tools+can+do+THAT">The Chrome Dev Tools can do THAT</a></h1>
+<h2><a href="http://www.devoxx.com/display/DV12/The+Chrome+Dev+Tools+can+do+THAT">The Chrome Dev Tools can do THAT</a></h2>
 
 <p>Les speakers de Google présents à Devoxx sont des bons. Celui qui a présenté Chrome Dev Tools, <a href="http://www.devoxx.com/display/DV12/Ilya+Grigorik">Ilya Grigorik</a> ne déroge pas à la règle. Ce développeur Google nous présente donc <a href="https://developers.google.com/chrome-developer-tools/docs/overview">Chrome Dev Tools</a> et ses fonctionnalités.</p>
 
