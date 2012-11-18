@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <title>Devoxx 2012 - Présentation d'Hibernate Envers - My Octopress Blog</title>
-  <meta name="author" content="Your Name">
+  <meta name="author" content="Romain Linsolas">
 
   
   <meta name="description" content="Hibernate Envers Difficile de ne pas parler de la meilleure conférence à Devoxx celle présentée par Romain Linsolas sur Hibernate Envers. Bien &hellip;">
@@ -375,7 +375,7 @@ Dans ce petit projet, je démarre une base en mémoire (H2) contenant 3 tables (
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://linsolas.github.com/blog/2012/11/17/devoxx-2012-presentation-dhibernate-envers/" data-via="" data-counturl="http://linsolas.github.com/blog/2012/11/17/devoxx-2012-presentation-dhibernate-envers/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://linsolas.github.com/blog/2012/11/17/devoxx-2012-presentation-dhibernate-envers/" data-via="romaintaz" data-counturl="http://linsolas.github.com/blog/2012/11/17/devoxx-2012-presentation-dhibernate-envers/" >Tweet</a>
   
   
   
@@ -410,6 +410,51 @@ Dans ce petit projet, je démarre une base en mémoire (H2) contenant 3 tables (
   </ul>
 </section>
 
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/linsolas">@linsolas</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'linsolas',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("romaintaz", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/romaintaz" class="twitter-follow-button" data-show-count="false">Follow @romaintaz</a>
+  
+</section>
 
 
 
@@ -422,7 +467,7 @@ Dans ce petit projet, je démarre une base en mémoire (H2) contenant 3 tables (
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - Your Name -
+  Copyright &copy; 2012 - Romain Linsolas -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
