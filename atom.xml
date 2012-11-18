@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://linsolas.github.com/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2012-11-18T18:01:03+01:00</updated>
+  <updated>2012-11-18T19:24:02+01:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -31,6 +31,8 @@ Mercredi matin, 6h. Les choses ne commencent pas bien. Une grève en Belgique (e
 
 
 <h2><a href="http://www.devoxx.com/display/DV12/7+Things++How+to+make+good+teams+great">7 things: How to make good teams great</a></h2>
+
+<p><img src="http://linsolas.github.com/images/Devoxx-2012-7thing.JPG" alt="7 things to make a good team great"/></p>
 
 <p><a href="http://www.devoxx.com/display/DV12/Sven+Peters">Sven Peters</a>, d&#8217;Atlassian, nous donne 7 conseils pour qu&#8217;une bonne équipe devienne une excellente équipe. Pour chaque conseil, il donne également une note sur 5 pour la faisabilité, ainsi qu&#8217;une autre sur l&#8217;<em>awesomeness</em>.</p>
 
@@ -64,6 +66,8 @@ Note: <em>2-4/5</em> et <em>5/5</em>.</p>
 
 <h2><a href="http://www.devoxx.com/display/DV12/The+Future+of+Software+Development+Process+Methodology+Effectiveness+%28Part+1+2%29">The Future of Software Development Process Methodology Effectiveness</a></h2>
 
+<p><img src="http://linsolas.github.com/images/Devoxx2012-Processes.JPG" alt="Future of processes"/></p>
+
 <p><a href="http://www.devoxx.com/display/DV12/Chet+Haase">Chet Haase</a>, de Google, est un orateur formidable. Cette session (ainsi que les autres sur Android), le prouve bien. Ce double-quickie a tellement eu de succès que les organisateurs lui ont demandé de le rejouer jeudi soir, en le filmant pour qu&#8217;il soit disponible sur Parleys.
 Durant son talk, il nous a présenté des &#8220;nouvelles&#8221; méthodologies de développement logicielles, basées sur des existantes. Difficile de retranscrire ici l&#8217;esprit de la session, mais en gros, voici quelques idées qu&#8217;il a présenté, ce qui devrait vous donner une idée du ton de son quickie :</p>
 
@@ -88,6 +92,8 @@ Durant son talk, il nous a présenté des &#8220;nouvelles&#8221; méthodologies
 
 
 <h2><a href="http://devoxx.com/display/DV12/Behaviour+Driven+Development+on+the+JVM+-+a+State+of+the+Union">BDD on the JVM, a state of the Union</a></h2>
+
+<p><img src="http://linsolas.github.com/images/Devoxx2012-BDD.jpg" alt="BDD State of the union"/></p>
 
 <p><a href="http://devoxx.com/display/DV12/John+Smart">John Smart</a> nous présente le BDD, <em>Behavior Driven Development</em>, et en particulier son intégration au sein de l&#8217;écosystème Java.
 La première partie est un rappel de ce qu&#8217;est le BDD, dont le but principal est l&#8217;écriture dans un langage commun à toutes les parties d&#8217;un projet (développeurs, analystes, testeurs, etc.) de spéfications exécutables. L&#8217;idée étant d&#8217;écrire un scénario en partant d&#8217;un contexte (<em>Given</em>), d&#8217;une action (<em>When</em>), on s&#8217;attend à un résultat précis (<em>Then</em>).</p>
@@ -196,6 +202,8 @@ Encore une fois, une très belle session, mais hélas pas aussi populaire qu&#82
 
 
 <h2><a href="http://www.devoxx.com/display/DV12/The+Chrome+Dev+Tools+can+do+THAT">The Chrome Dev Tools can do THAT</a></h2>
+
+<p><img src="http://linsolas.github.com/images/Devoxx2012-ChromDevTools.JPG" alt="Chrome can do THAT"/></p>
 
 <p>Les speakers de Google présents à Devoxx sont des bons. Celui qui a présenté Chrome Dev Tools, <a href="http://www.devoxx.com/display/DV12/Ilya+Grigorik">Ilya Grigorik</a> ne déroge pas à la règle. Ce développeur Google nous présente donc <a href="https://developers.google.com/chrome-developer-tools/docs/overview">Chrome Dev Tools</a> et ses fonctionnalités.</p>
 
