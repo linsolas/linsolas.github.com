@@ -4,7 +4,7 @@
   <title><![CDATA[Category: conference | My Octopress Blog]]></title>
   <link href="http://linsolas.github.com/blog/categories/conference/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2012-11-18T19:24:02+01:00</updated>
+  <updated>2012-11-18T19:36:09+01:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -205,9 +205,9 @@ Chrome Dev Tools est également compatible avec <a href="https://developers.goog
     <link href="http://linsolas.github.com/blog/2012/11/17/devoxx-2012-presentation-dhibernate-envers/"/>
     <updated>2012-11-17T23:07:00+01:00</updated>
     <id>http://linsolas.github.com/blog/2012/11/17/devoxx-2012-presentation-dhibernate-envers</id>
-    <content type="html"><![CDATA[<h1><a href="http://devoxx.com/display/DV12/Easy+Entity+Auditing+with+Hibernate+Envers">Hibernate Envers</a></h1>
+    <content type="html"><![CDATA[<h2><a href="http://devoxx.com/display/DV12/Easy+Entity+Auditing+with+Hibernate+Envers">Hibernate Envers</a></h2>
 
-<p><img src="http://farm9.staticflickr.com/8066/8189385451_94812c5af4_z.jpg" alt="Moi, à Devoxx"/></p>
+<p><img src="http://linsolas.github.com/images/Devoxx2012-moi.jpg" alt="Moi, à Devoxx"/></p>
 
 <p>Difficile de ne pas parler de la meilleure conférence à Devoxx celle présentée par <a href="">Romain Linsolas</a> sur Hibernate Envers. Bien entendu, le fait que ce soit moi n'a aucune incidence sur cette considération :)
 Trève de plaisanterie. J'ai donc présenté un Quickie, à savoir 15 minutes, sur cette librairie d'Hibernate qui permet d'auditer ses entités (classes de persistence). Par audit on entend la conservation en base des enregistrements à chaque fois qu'une modification y est apportée. Voyez cela comme Subversion par exemple : si je commite une nouvelle version d'un fichier, alors SVN va conserver son historique, et permettre de "remonter" dans le temps et de voir les évolutions apportées à ce fichier.</p>
@@ -217,11 +217,11 @@ Trève de plaisanterie. J'ai donc présenté un Quickie, à savoir 15 minutes, s
 <!-- more -->
 
 
-<h2>Activer Envers</h2>
+<h3>Activer Envers</h3>
 
 <p>Tout d'abord, le plus simple, consiste à activer Envers, ce qui se fait extrêmement facilement en ajoutant simplement la librairie dans le classpath (ajout de la dépendance <code>hibernate:hibernate-envers</code> dans son pom.xml par exemple). C'est tout. On notera toutefois qu'il est nécessaire d'utiliser une version 3 ou 4 d'Hibernate ainsi que d'<em>Hibernate Annotations</em>, Envers ne supportant pas (encore ?) la configuration par XML.</p>
 
-<h2>Démarrer l'audit</h2>
+<h3>Démarrer l'audit</h3>
 
 <p>Ensuite, on passe à l'audit à proprement parlé. Du côté Java, c'est très simple, l'annotation principale étant <code>@Audited</code>, qui indiquera à Envers qu'il faudra auditer cette entité. Voilà un petit exemple d'entité auditée :</p>
 

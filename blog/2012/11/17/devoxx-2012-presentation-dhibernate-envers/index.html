@@ -104,9 +104,9 @@
   </header>
 
 
-<div class="entry-content"><h1><a href="http://devoxx.com/display/DV12/Easy+Entity+Auditing+with+Hibernate+Envers">Hibernate Envers</a></h1>
+<div class="entry-content"><h2><a href="http://devoxx.com/display/DV12/Easy+Entity+Auditing+with+Hibernate+Envers">Hibernate Envers</a></h2>
 
-<p><img src="http://farm9.staticflickr.com/8066/8189385451_94812c5af4_z.jpg" alt="Moi, à Devoxx"/></p>
+<p><img src="/images/Devoxx2012-moi.jpg" alt="Moi, à Devoxx"/></p>
 
 <p>Difficile de ne pas parler de la meilleure conférence à Devoxx celle présentée par <a href="">Romain Linsolas</a> sur Hibernate Envers. Bien entendu, le fait que ce soit moi n&#8217;a aucune incidence sur cette considération :)
 Trève de plaisanterie. J&#8217;ai donc présenté un Quickie, à savoir 15 minutes, sur cette librairie d&#8217;Hibernate qui permet d&#8217;auditer ses entités (classes de persistence). Par audit on entend la conservation en base des enregistrements à chaque fois qu&#8217;une modification y est apportée. Voyez cela comme Subversion par exemple : si je commite une nouvelle version d&#8217;un fichier, alors SVN va conserver son historique, et permettre de &#8220;remonter&#8221; dans le temps et de voir les évolutions apportées à ce fichier.</p>
@@ -116,11 +116,11 @@ Trève de plaisanterie. J&#8217;ai donc présenté un Quickie, à savoir 15 minu
 <!-- more -->
 
 
-<h2>Activer Envers</h2>
+<h3>Activer Envers</h3>
 
 <p>Tout d&#8217;abord, le plus simple, consiste à activer Envers, ce qui se fait extrêmement facilement en ajoutant simplement la librairie dans le classpath (ajout de la dépendance <code>hibernate:hibernate-envers</code> dans son pom.xml par exemple). C&#8217;est tout. On notera toutefois qu&#8217;il est nécessaire d&#8217;utiliser une version 3 ou 4 d&#8217;Hibernate ainsi que d&#8217;<em>Hibernate Annotations</em>, Envers ne supportant pas (encore ?) la configuration par XML.</p>
 
-<h2>Démarrer l&#8217;audit</h2>
+<h3>Démarrer l&#8217;audit</h3>
 
 <p>Ensuite, on passe à l&#8217;audit à proprement parlé. Du côté Java, c&#8217;est très simple, l&#8217;annotation principale étant <code>@Audited</code>, qui indiquera à Envers qu&#8217;il faudra auditer cette entité. Voilà un petit exemple d&#8217;entité auditée :</p>
 
