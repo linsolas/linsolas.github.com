@@ -4,7 +4,7 @@
   <title><![CDATA[Category: java | My Octopress Blog]]></title>
   <link href="http://linsolas.github.com/blog/categories/java/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2012-11-20T23:36:50+01:00</updated>
+  <updated>2012-11-20T23:37:47+01:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -33,13 +33,13 @@
 
 <p>Niveau organisation, on voit qu'il s'agit de la 11e édition. Tout est bien rodé, il n'y a quasiment aucun accroc, les conférences s'enchainent avec une fluidité remarquable. Devoxx prennant place dans un complexe cinématographique, les salles sont plutôt grandes, de 200 à 900 places environ et les sièges sont vraiment confortables (peut-être même un peu trop, quand on a très peu dormi la veille :) ). Devoxx étant une conférence de geeks, il fallait bien des gadgets de geeks. Le premier, c'est le bracelet incorporant une puce NFC, permettant de s'authentifier, mais aussi de voter à la fin d'une session. D'ailleurs ce point m'a vraiment plu, je trouve cette idée géniale. Seul bémol, il aurait été appréciable pour le conférencier d'avoir sa note finale, histoire de savoir si son discours a convaincu ou non.</p>
 
-<p><img src="http://linsolas.github.com/images/Devoxx2012-Badge.jpg" alt="Le badge Devoxx"/></p>
+<p><img src="http://linsolas.github.com/images/Devoxx2012-Badge.jpg" alt="Le badge Devoxx" title="Le badge Devoxx"/></p>
 
-<p><img src="http://linsolas.github.com/images/Devoxx2012-Votes.jpg" alt="Les bornes de votes"/></p>
+<p><img src="http://linsolas.github.com/images/Devoxx2012-Votes.jpg" alt="Les bornes de votes" title="Les bornes de votes"/></p>
 
 <p>Ces bornes de votes sont gérées par des <a href="http://www.raspberrypi.org/">Raspberry Pi</a>, l'une des stars de Devoxx. Plusieurs sessions étaient consacrées à cette petite machine très accessible (autour de $25) et visiblement assez puissante. D'ailleurs, il y en avait aussi pour gérer les écrans affichant le descriptif de la conférence devant chacune des salles. Il y a eu aussi <a href="http://www.aldebaran-robotics.com/en/">le NAO</a>, un magnifique petit robot.</p>
 
-<p><img src="http://linsolas.github.com/images/Devoxx2012-NAO.jpg" alt="NAO, le petit robot"/></p>
+<p><img src="http://linsolas.github.com/images/Devoxx2012-NAO.jpg" alt="NAO, le petit robot" title="NAO, le petit robot"/></p>
 
 <p>Là, contrairement au Raspberry Pi, le joujou est <em>très</em> cher. En gros, si vous passez un test d'aptitude auprès d'Aldebaran Robotics (la concepteur français du robot), et que vous vous engagez à produire 2 applications par an, alors il ne vous en coûtera <em>que</em> 3000€ (H.T. bien entendu). Si vous voulez juste vous l'offrir pour Noël, comptez 4 fois plus :) Mais cela reste un bien joli jouet, et l'ouverture de la conférence (que j'ai ratée pour cause de grèves) a été faite par 5 NAOs qui ont dansé une petite chorégraphie. Stephan Janssen, le fondateur de Devoxx, a dit que s'ils étaient les Commodore 64 de la robotique, il fallait imaginer ce que nous aurons dans 5 ans ! Je suis assez d'accord sur ce point, il suffit de voir l'évolution de nos téléphones en 5 ou 10 ans (comparez le Nokia 3310 à un iPhone 5, Samsung Galaxy S3 ou un Nexus 4 :) ).</p>
 
