@@ -4,7 +4,7 @@
   <title><![CDATA[Category: devoxx | My Octopress Blog]]></title>
   <link href="http://linsolas.github.com/blog/categories/devoxx/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2012-11-20T11:08:00+01:00</updated>
+  <updated>2012-11-20T15:28:27+01:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -12,6 +12,45 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Devoxx 2012 - Jour 3]]></title>
+    <link href="http://linsolas.github.com/blog/2012/11/20/devoxx-2012-jour-3/"/>
+    <updated>2012-11-20T14:19:00+01:00</updated>
+    <id>http://linsolas.github.com/blog/2012/11/20/devoxx-2012-jour-3</id>
+    <content type="html"><![CDATA[<p>Et voilà, l'aventure Devoxx s'achève presque, avec ce 3e jour, ou plutôt demi-journée, car la conférence ferme ses portes à 13 heures. En arrivant le matin au Métropolis, on voit déjà que beaucoup de stands ont déjà plié bagage, l'ambiance est clairement plus calme.
+Au programme pour moi : de l'Elastic Search, et le podcast des Cast Codeurs...</p>
+
+<!-- more -->
+
+
+
+
+<hr/>
+
+
+<h2><a href="http://devoxx.com/display/DV12/Search%2C+the+Final+Frontier">Search, the Final Frontier</a></h2>
+
+<p><img src="http://linsolas.github.com/images/Devoxx2012-ElasticSearch.jpg" alt="Shay Banon présente Elastic Search"/></p>
+
+<p><a href="http://devoxx.com/display/DV12/Shay+Banon">Shay Banon</a>, le créateur d'Elastic Search, nous fait une démonstration live d'Elastic Search et de son API. Ici, point de slide, simplement 2 outils : un bloc note, rempli de commmand <em>curl</em>, et une terminal de commandes pour les exécuter (bon, ok, parfois un navigateur juste pour nous montrer l'état des noeuds d'Elastic Search) ! En utilisant <em>curl</em> (une commande utilisée ici pour faire des appels à l'API REST d'Elastic Search), Shay Banon nous montre comment il est possible d'intéragir avec son réseau Elastic Search et d'y exécuter différents types de recherche (stricte, phonétique, approximative, etc.).</p>
+
+<p>Pas facile de retranscrire ici les idées présentées ici, mais j'espère que Shay Banon mettra à disposition les commandes qu'il a utilisé, afin de pouvoir se familiariser un peu plus avec Elastic Search !</p>
+
+<hr/>
+
+
+<h2><a href="http://devoxx.com/display/DV12/Les+Cast+Codeurs+Podcast">Les Cast Codeurs</a></h2>
+
+<p><img src="http://linsolas.github.com/images/Devoxx2012-CastCodeurs.jpg" alt="Enregistrement du podcast des Cast Codeurs"/></p>
+
+<p>Pour terminer en beauté ce Devoxx, rien ne vaut un enregistrement live du <a href="http://lescastcodeurs.com/">podcast des Cast Codeurs</a> (l'épisode devrait être disponible sous peu). Beaucoup de membres des Duchess France, ainsi que les habitués des Cast Codeurs (Emmanuel Bernard, Vincent Massol, Guillaume Laforge, Antonio Goncalves, Arnaud Héritier) sont au micro pour nous donner leur avis sur cette édition, pour parler des thèmes abordés par les conférenciers, évoquer les présentations marquantes, et plein d'autres choses. Bien entendu, tout se fait dans une très bonne ambiance, vous ne tarderez pas à le découvrir dès que le podcast deviendra disponible. Et pour clore cet enregistrement, les gars géniaux d'Atlassian nous ont offert un buffet bière - pizza, l'alimentation de base du développeur :)</p>
+
+<p>Voilà, l'édition 2012 de Devoxx s'achève, il est temps de rentrer en France, avec un retour bien moins chaotique que l'aller, à voyager avec quelques personnes sympathiques dont Mathilde Lemée, Antonio Goncalves, ou encore José Paumard.</p>
+
+<p>Allez, pour rester dans l'esprit Devoxx, aujourd'hui s'est ouverte <a href="https://cfp.devoxx.com/">la soumission des sujets pour Devoxx France et Devoxx UK</a> (CFP, <em>Call For Paper</em>), et en moins d'une demi-heure, déjà 5 sujets ont été soumis ! Ne tardez pas trop, le CFP ferme fin janvier...</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Devoxx 2012 - Jour 2]]></title>
