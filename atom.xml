@@ -4,7 +4,7 @@
   <title><![CDATA[fr.romain:blog:3.0]]></title>
   <link href="http://linsolas.github.com/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2013-02-09T23:14:20+01:00</updated>
+  <updated>2013-02-09T23:18:16+01:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -29,11 +29,13 @@
 <!-- more -->
 
 
-<p><img src="http://linsolas.github.com/images/bbl-gageot.jpg" alt="David Gageot durant son BBL"/></p>
+<p><img src="http://linsolas.github.com/images/bbl-gageot.jpg" alt="David Gageot durant son BBL"/>
+<em>David Gageot nous explique comment tester du code legacy</em></p>
 
 <p>Le premier BBL organisé à la SGCIB aura finalement été celui d&#8217;un autre <a href="https://twitter.com/dadoonet">David, Pilato</a> venu faire une présentation d&#8217;<a href="http://www.elasticsearch.org">Elastic Search</a>, un moteur de recherche très puissant et extrêmement simple d&#8217;emploi.</p>
 
-<p><img src="http://linsolas.github.com/images/bbl-pilato.jpg" alt="David Pilato durant son BBL"/></p>
+<p><img src="http://linsolas.github.com/images/bbl-pilato.jpg" alt="David Pilato durant son BBL"/>
+<em>David Pilato nous montre son Elastic</em></p>
 
 <p>Le 3e BBL devrait être celui de <a href="https://twitter.com/fsarradin">François Sarradin</a> pour nous montrer qu&#8217;en une heure, on peut développer un framework web en Scala (et, par la même occasion, chauffer la salle ;o) ).</p>
 
