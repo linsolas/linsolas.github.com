@@ -4,7 +4,7 @@
   <title><![CDATA[Category: conference | fr.romain:blog:3.0]]></title>
   <link href="http://linsolas.github.com/blog/categories/conference/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2013-02-21T00:01:02+01:00</updated>
+  <updated>2013-02-21T00:07:34+01:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -20,26 +20,27 @@
     <id>http://linsolas.github.com/blog/2013/02/20/conferencier-a-devoxx-france-2013</id>
     <content type="html"><![CDATA[<p><img src="http://www.devoxx.com/download/attachments/6816022/DevoxxFR-2012-web-400-267.png"/></p>
 
-<p><em>tl;dr</em> Je serais à nouveau présentateur pour la conférence Devoxx France 2013, et ça fait mon bonheur, surtout qu'il s'agit d'une conférence !</p>
+<p><em>tl;dr</em> Je serais à nouveau présentateur pour la conférence Devoxx France 2013, et ça fait mon bonheur, surtout qu'il s'agit d'une conférence (oui, je fais une conférence dans une conférence, normal quoi) !</p>
 
 <!-- more -->
 
 
-<p>La conférence <a href="http://www.devoxx.com">Devoxx</a> est arrivée assez tard dans ma vie professionnelle finalement. J'en avais entendu parler il y a environ 4 ou 5 ans, et j'avais eu envie d'y assister à plusieurs reprises, en vain.
-Quand fin 2011 le comité Devoxx annonça qu'à partir de 2012, la conférence aurait sa <em>petite</em> soeur <strong>Devoxx France</strong>, il devenait hors de question pour moi de ne pas y assister. Et pour n'avoir aucun regrêt, j'avais même proposé 2 sujets (un <em>Tools In Action</em> ainsi qu'un <em>Quickie</em>) au <em>CFP</em> (<em>Call for Papers</em>, ou en français <em>Appel à Orateur</em> ?). A ma grande surprise, les deux sujets ont été acceptés, et je me suis ainsi retrouvé à présenter ceci :</p>
+<p>La conférence <a href="http://www.devoxx.com">Devoxx</a> est arrivée assez tard dans ma vie professionnelle. J'en avais entendu parler il y a environ 4 ou 5 ans, et j'avais eu envie d'y assister à plusieurs reprises, en vain.
+Quand fin 2011 le comité Devoxx annonça qu'à partir de 2012 la conférence aurait sa <em>petite</em> soeur <strong>Devoxx France</strong>, il devenait hors de question pour moi de ne pas y assister. Et pour n'avoir aucun regrêt, j'avais même proposé deux sujets (un <em>Tools In Action</em> ainsi qu'un <em>Quickie</em>) au <em>CFP</em> (<em>Call for Papers</em>, ou en français <em>Appel à Orateur</em> ?). A ma grande surprise, les deux sujets ont été acceptés, et je me suis ainsi retrouvé à présenter ceci :</p>
 
 <ul>
-<li><a href="http://www.devoxx.com/display/FR12/Chouchoutez+votre+code+JavaScript">Chouchoutez votre code JavaScript</a>, ou comment montrer qu'industrialiser son développement JavaScript est aussi facile qu'en Java, et pour ne rien gâcher, en utilisant les mêmes outils : Maven, Jenkins, Sonar.</li>
+<li><a href="http://www.devoxx.com/display/FR12/Chouchoutez+votre+code+JavaScript">Chouchoutez votre code JavaScript</a>, où je montrais qu'industrialiser son développement JavaScript est aussi facile qu'en Java, et pour ne rien gâcher, avec les mêmes outils : Maven, Jenkins, Sonar.</li>
 <li><a href="http://www.devoxx.com/display/FR12/TestNG%2C+parce+que+vos+tests+le+valent+bien">TestNG, parce que vos tests le valent bien</a>, un petit <em>Quickie</em> pour montrer les atouts de TestNG par rapport à JUnit.</li>
 </ul>
 
 
-<p>Ca a été un grand moment, et quand est venu le <em>CFP</em> pour Devoxx World (la conférence originelle, tenue à Anvers), je me suis dit que j'allais également y proposer des sujets. Au final, mon <em>Quickie</em> <a href="http://www.devoxx.com/display/DV12/Easy+Entity+Auditing+with+Hibernate+Envers">Easy Entity Auditing With Hibernate Envers</a> a été retenu. Parler en anglais n'est pas forcément chose aisée, et le format Quickie - 15 minutes - s'adaptait à merveille !</p>
+<p>Ca a été un grand moment, et quand est venu le <em>CFP</em> pour Devoxx World (la conférence originelle, tenue à Anvers), je me suis dit que j'allais également y proposer des sujets. Au final, mon <em>Quickie</em> <a href="http://www.devoxx.com/display/DV12/Easy+Entity+Auditing+with+Hibernate+Envers">Easy Entity Auditing With Hibernate Envers</a> a été retenu. Parler en anglais n'est pas forcément chose aisée, et le format <em>Quickie</em> - 15 minutes - s'adaptait à merveille !</p>
 
-<p>Et voilà que vient l'année 2013. Et donc les Devoxx. Cette année, en plus de Paris et Anvers, Londres s'est jointe à la fête. Mais pas question pour moi d'assister à DevoxxUK, Devoxx France reste la priorité (surtout que les deux conférences se chevauchent dans le calendrier).
-Vu l'excitation que m'avait procuré mes présentations lors des Devoxx 2012, je voulais absolument y retourner comme orateur. Par manque de temps et d'inspiration, je n'ai finalement proposé qu'un seul sujet, une conférence (format de 50 minutes). Pari risqué, car c'est le <em>slot</em> le plus demandé. Il me semble qu'il y a eu environ 310 propositions pour une trentaine de places. Près de 90% seront donc refusées. Par chance, la mienne fut retenue, tout comme celle de <a href="http://julien.jakubowski.fr/">Julien Jakubowski</a> (architecte <a href="http://www.octo.com">OCTO</a> et fondateur du <a href="http://chtijug.org/">Chti'JUG</a>), "<a href="http://www.devoxx.com/display/FR13/Du+Javascript+propre+++Challenge+Accepted+%21">Du JavaScript propre ? Challenge Accepted*</a>.</p>
+<p>Et voilà que vient l'année 2013. Et donc les Devoxx. Cette année, en plus de Paris et Anvers, Londres s'est jointe à la fête. Mais pas question pour moi d'assister à DevoxxUK, Devoxx France restant la priorité (surtout que les deux conférences se chevauchent dans le calendrier).
+Vu l'excitation que m'avait procuré mes présentations lors des Devoxx 2012, je voulais absolument y retourner comme orateur. Par manque de temps et d'inspiration, je n'ai finalement proposé qu'un seul sujet, une conférence (format de 50 minutes). Pari risqué, car c'est le <em>slot</em> le plus demandé. Il me semble qu'il y a eu environ 310 propositions pour une trentaine de places. Près de 90% seront donc refusées. Par chance, la mienne fut retenue, tout comme celle de <a href="http://julien.jakubowski.fr/">Julien Jakubowski</a> (architecte <a href="http://www.octo.com">OCTO</a> et fondateur du <a href="http://chtijug.org/">Chti'JUG</a>), <a href="http://www.devoxx.com/display/FR13/Du+Javascript+propre+++Challenge+Accepted+%21"><em>Du JavaScript propre ? Challenge Accepted</em></a>.
+Etant donné la ressemblance de nos deux présentations, il a été décidé que nous présenterions tous les deux une conférence commune. C'est donc chose faite (enfin, on y travaille quoi).</p>
 
-<p>Je ne vais pas dévoiler le contenu de la présentation, mais il s'agira de montrer les principaux travers lorsque l'on développe en JavaScript, et surtout de montrer les moyens de code proprement.</p>
+<p>Je ne vais pas dévoiler le contenu de la présentation, mais il s'agira de lister les principaux travers lorsque l'on développe en JavaScript, et surtout de montrer les moyens de code proprement.</p>
 
 <p><em>Stay tuned</em>, et je l'espère que l'on se verra à la conférence Devoxx !</p>
 ]]></content>
