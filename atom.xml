@@ -4,7 +4,7 @@
   <title><![CDATA[fr.romain:blog:3.0]]></title>
   <link href="http://linsolas.github.com/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2013-02-09T23:18:16+01:00</updated>
+  <updated>2013-02-20T23:20:55+01:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -12,6 +12,24 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[brownbaglunch.fr]]></title>
+    <link href="http://linsolas.github.com/blog/2013/02/20/brownbaglunch-dot-fr/"/>
+    <updated>2013-02-20T23:12:00+01:00</updated>
+    <id>http://linsolas.github.com/blog/2013/02/20/brownbaglunch-dot-fr</id>
+    <content type="html"><![CDATA[<p>Récemment, je vous ai dit qu&#8217;il fallait <a href="http://linsolas.github.com/blog/2013/02/09/lancez-vous-dans-les-brown-bag-lunches/">vous lancer dans les Brown Bag Lunch</a>. Je suis sûr que depuis, vous avez envie de vous y mettre, comme participant, ou pourquoi pas comme orateur !</p>
+
+<p>Hé bien voilà un beau site tout neuf fait spécialement pour vous aider dans la démarche : <a href="http://www.brownbaglunch.fr/">http://www.brownbaglunch.fr/</a>.</p>
+
+<p>Vous trouverez sur ce site la liste des <em>baggers</em> (présentateurs) français, avec leurs propositions de sessions, ainsi que des sites permettant d&#8217;accueillir des BBL.
+Si vous souhaitez enrichir ce site, allez jeter un coup d&#8217;oeil à la <a href="https://github.com/nrichand/BrownBagLunch">page GitHub du site</a>.</p>
+
+<p>Enfin, n&#8217;hésitez absolument pas à suivre le petit piou-piou <a href="https://twitter.com/bbl_fr">@bbl_fr</a> !</p>
+
+<p>Allez, on s&#8217;appelle et on se fait <del>une bouffe</del> un BBL !</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Lancez-vous dans les Brown Bag Lunches]]></title>
