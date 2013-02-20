@@ -4,7 +4,7 @@
   <title><![CDATA[fr.romain:blog:3.0]]></title>
   <link href="http://linsolas.github.com/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2013-02-21T00:07:34+01:00</updated>
+  <updated>2013-02-21T00:09:50+01:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Conférencier à Devoxx France 2013]]></title>
-    <link href="http://linsolas.github.com/blog/2013/02/20/conferencier-a-devoxx-france-2013/"/>
-    <updated>2013-02-20T23:35:00+01:00</updated>
-    <id>http://linsolas.github.com/blog/2013/02/20/conferencier-a-devoxx-france-2013</id>
+    <link href="http://linsolas.github.com/blog/2013/02/21/conferencier-a-devoxx-france-2013/"/>
+    <updated>2013-02-21T00:08:00+01:00</updated>
+    <id>http://linsolas.github.com/blog/2013/02/21/conferencier-a-devoxx-france-2013</id>
     <content type="html"><![CDATA[<p><img src="http://www.devoxx.com/download/attachments/6816022/DevoxxFR-2012-web-400-267.png"/></p>
 
 <p><em>tl;dr</em> Je serais à nouveau présentateur pour la conférence Devoxx France 2013, et ça fait mon bonheur, surtout qu&#8217;il s&#8217;agit d&#8217;une conférence (oui, je fais une conférence dans une conférence, normal quoi) !</p>
