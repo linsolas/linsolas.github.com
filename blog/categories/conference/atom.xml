@@ -4,7 +4,7 @@
   <title><![CDATA[Category: conference | fr.romain:blog:3.0]]></title>
   <link href="http://linsolas.github.com/blog/categories/conference/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2013-02-21T00:09:50+01:00</updated>
+  <updated>2013-03-21T23:26:10+01:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -12,6 +12,26 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Du JavaScript propre ? Challenge Accepted]]></title>
+    <link href="http://linsolas.github.com/blog/2013/03/21/du-javascript-propre-challenge-accepted/"/>
+    <updated>2013-03-21T23:17:00+01:00</updated>
+    <id>http://linsolas.github.com/blog/2013/03/21/du-javascript-propre-challenge-accepted</id>
+    <content type="html"><![CDATA[<p><img src="http://linsolas.github.com/images/affiche-conference.jpg" alt="Du JavaScript propre ? Challenge Accepted!"/></p>
+
+<p>L'édition 2013 de <a href="http://www.devoxx.com/display/FR13/Accueil">Devoxx France</a> arrive à grands pas, le 27 mars c'est presque demain !
+A nouveau, j'aurais la chance d'être speaker, cette fois-ci pour présenter, conjointement avec <a href="http://www.devoxx.com/display/FR13/Julien+Jakubowski">Julien Jakubowski</a>, <a href="http://www.devoxx.com/display/FR13/Du+Javascript+propre+++Challenge+Accepted"><em>Du JavaScript propre ? Challenge Accepted!</em></a></p>
+
+<p>Le JavaScript est partout, et pour peu que vous souhaitiez faire un peu de web, il est incontournable. Mais fini le JavaScript de papy, celui que vous écriviez en 2003 pour bidouiller votre page web. On est aujourd'hui sur quelque chose de sérieux. Il est donc hors de question de continuer à bidouiller, et il faut savoir chouchouter son code JavaScript.</p>
+
+<p>Nous aborderons dans un premier temps les principaux travers du développement en JavaScript, avec quelques petites surprises, puis nous rentrerons dans le vif du sujet : les astuces, les bonnes pratiques et les bons outils pour écrire du code JavaScript <strong>proprement</strong>. Au bout d'une heure, vous ne devriez plus avoir peur de vous lancer dans l'écriture de 100,000 lignes de code JavaScript !</p>
+
+<p>Si vous êtes curieux des solutions que l'on va vous proposer, venez à la Seine B, vendredi matin à 10h40.</p>
+
+<p>Rendez-vous à Devoxx !</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Conférencier à Devoxx France 2013]]></title>
@@ -163,45 +183,6 @@ Peu présente l'année dernière, Adobe n'était même plus à Devoxx cette ann�
 <p>Autre thématique à ce Devoxx, qui disposait de son propre canal appelé le <em>Future<Devoxx></em>, était la <strong>robotique</strong>, avec les interactions avec le NAO ou les Raspberry Pi.</p>
 
 <p>Au final, des sujets d'actualité, et assez variés. Je me demande ce que nous réserve les trois Devoxx de 2013 !</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Devoxx 2012 - Jour 3]]></title>
-    <link href="http://linsolas.github.com/blog/2012/11/20/devoxx-2012-jour-3/"/>
-    <updated>2012-11-20T14:19:00+01:00</updated>
-    <id>http://linsolas.github.com/blog/2012/11/20/devoxx-2012-jour-3</id>
-    <content type="html"><![CDATA[<p>Et voilà, l'aventure Devoxx s'achève presque, avec ce 3e jour, ou plutôt demi-journée, car la conférence ferme ses portes à 13 heures. En arrivant le matin au Métropolis, on voit déjà que beaucoup de stands ont déjà plié bagage, l'ambiance est clairement plus calme.
-Au programme pour moi : de l'Elastic Search, et le podcast des Cast Codeurs...</p>
-
-<!-- more -->
-
-
-
-
-<hr/>
-
-
-<h2><a href="http://devoxx.com/display/DV12/Search%2C+the+Final+Frontier">Search, the Final Frontier</a></h2>
-
-<p><img src="http://linsolas.github.com/images/Devoxx2012-ElasticSearch.jpg" alt="Shay Banon présente Elastic Search"/></p>
-
-<p><a href="http://devoxx.com/display/DV12/Shay+Banon">Shay Banon</a>, le créateur d'Elastic Search, nous fait une démonstration live d'Elastic Search et de son API. Ici, point de slide, simplement 2 outils : un bloc note, rempli de commmand <em>curl</em>, et une terminal de commandes pour les exécuter (bon, ok, parfois un navigateur juste pour nous montrer l'état des noeuds d'Elastic Search) ! En utilisant <em>curl</em> (une commande utilisée ici pour faire des appels à l'API REST d'Elastic Search), Shay Banon nous montre comment il est possible d'intéragir avec son réseau Elastic Search et d'y exécuter différents types de recherche (stricte, phonétique, approximative, etc.).</p>
-
-<p>Pas facile de retranscrire ici les idées présentées ici, mais j'espère que Shay Banon mettra à disposition les commandes qu'il a utilisé, afin de pouvoir se familiariser un peu plus avec Elastic Search !</p>
-
-<hr/>
-
-
-<h2><a href="http://devoxx.com/display/DV12/Les+Cast+Codeurs+Podcast">Les Cast Codeurs</a></h2>
-
-<p><img src="http://linsolas.github.com/images/Devoxx2012-CastCodeurs.jpg" alt="Enregistrement du podcast des Cast Codeurs"/></p>
-
-<p>Pour terminer en beauté ce Devoxx, rien ne vaut un enregistrement live du <a href="http://lescastcodeurs.com/">podcast des Cast Codeurs</a> (l'épisode devrait être disponible sous peu). Beaucoup de membres des Duchess France, ainsi que les habitués des Cast Codeurs (Emmanuel Bernard, Vincent Massol, Guillaume Laforge, Antonio Goncalves, Arnaud Héritier) sont au micro pour nous donner leur avis sur cette édition, pour parler des thèmes abordés par les conférenciers, évoquer les présentations marquantes, et plein d'autres choses. Bien entendu, tout se fait dans une très bonne ambiance, vous ne tarderez pas à le découvrir dès que le podcast deviendra disponible. Et pour clore cet enregistrement, les gars géniaux d'Atlassian nous ont offert un buffet bière - pizza, l'alimentation de base du développeur :)</p>
-
-<p>Voilà, l'édition 2012 de Devoxx s'achève, il est temps de rentrer en France, avec un retour bien moins chaotique que l'aller, à voyager avec quelques personnes sympathiques dont Mathilde Lemée, Antonio Goncalves, ou encore José Paumard.</p>
-
-<p>Allez, pour rester dans l'esprit Devoxx, aujourd'hui s'est ouverte <a href="https://cfp.devoxx.com/">la soumission des sujets pour Devoxx France et Devoxx UK</a> (CFP, <em>Call For Paper</em>), et en moins d'une demi-heure, déjà 5 sujets ont été soumis ! Ne tardez pas trop, le CFP ferme fin janvier...</p>
 ]]></content>
   </entry>
   

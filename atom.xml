@@ -4,7 +4,7 @@
   <title><![CDATA[fr.romain:blog:3.0]]></title>
   <link href="http://linsolas.github.com/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2013-02-21T00:09:50+01:00</updated>
+  <updated>2013-03-21T23:26:10+01:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -12,6 +12,26 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Du JavaScript propre ? Challenge Accepted]]></title>
+    <link href="http://linsolas.github.com/blog/2013/03/21/du-javascript-propre-challenge-accepted/"/>
+    <updated>2013-03-21T23:17:00+01:00</updated>
+    <id>http://linsolas.github.com/blog/2013/03/21/du-javascript-propre-challenge-accepted</id>
+    <content type="html"><![CDATA[<p><img src="http://linsolas.github.com/images/affiche-conference.jpg" alt="Du JavaScript propre ? Challenge Accepted!"/></p>
+
+<p>L&#8217;édition 2013 de <a href="http://www.devoxx.com/display/FR13/Accueil">Devoxx France</a> arrive à grands pas, le 27 mars c&#8217;est presque demain !
+A nouveau, j&#8217;aurais la chance d&#8217;être speaker, cette fois-ci pour présenter, conjointement avec <a href="http://www.devoxx.com/display/FR13/Julien+Jakubowski">Julien Jakubowski</a>, <a href="http://www.devoxx.com/display/FR13/Du+Javascript+propre+++Challenge+Accepted"><em>Du JavaScript propre ? Challenge Accepted!</em></a></p>
+
+<p>Le JavaScript est partout, et pour peu que vous souhaitiez faire un peu de web, il est incontournable. Mais fini le JavaScript de papy, celui que vous écriviez en 2003 pour bidouiller votre page web. On est aujourd&#8217;hui sur quelque chose de sérieux. Il est donc hors de question de continuer à bidouiller, et il faut savoir chouchouter son code JavaScript.</p>
+
+<p>Nous aborderons dans un premier temps les principaux travers du développement en JavaScript, avec quelques petites surprises, puis nous rentrerons dans le vif du sujet : les astuces, les bonnes pratiques et les bons outils pour écrire du code JavaScript <strong>proprement</strong>. Au bout d&#8217;une heure, vous ne devriez plus avoir peur de vous lancer dans l&#8217;écriture de 100,000 lignes de code JavaScript !</p>
+
+<p>Si vous êtes curieux des solutions que l&#8217;on va vous proposer, venez à la Seine B, vendredi matin à 10h40.</p>
+
+<p>Rendez-vous à Devoxx !</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Conférencier à Devoxx France 2013]]></title>
