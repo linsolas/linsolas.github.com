@@ -4,7 +4,7 @@
   <title><![CDATA[Category: conference | fr.romain:blog:3.0]]></title>
   <link href="http://linsolas.github.com/blog/categories/conference/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2013-04-01T14:48:51+02:00</updated>
+  <updated>2013-04-01T14:50:28+02:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -63,7 +63,7 @@
 
 <p>Passons maintenant à l'analyse de données. David présente <a href="http://kibana.org/">Kibana</a>, un plugin d'Elastic Search qui permet de créer des dashboards dynamiques. En quelques clics, David arrive à créer un histogramme montrant la distribution des dates de naissance parmi la base de données contenant déjà plus d'un million d'entrées. Même chose pour créer un camembert pour la répartition par pays. Ce dashboard est dynamique. On peut ainsi naviguer dans nos données.</p>
 
-<p><img src="/images/devoxxfr-2013-nosql-3.jpg," title="Kibana, pour faire des dashboards rapides et efficaces" alt="Kibana, pour faire des dashboards rapides et efficaces" /></p>
+<p><img src="/images/devoxxfr-2013-nosql-3.jpg" title="Kibana, pour faire des dashboards rapides et efficaces" alt="Kibana, pour faire des dashboards rapides et efficaces" /></p>
 
 <p>Un autre point positif des bases NoSQL : les données sont sans schéma (<em>schema less</em>), c'est-à-dire qu'il est possible d'ajouter, modifier ou supprimer des champs sans aucun problème. Aucun <code>ALTER TABLE</code> à faire, pas de freeze de la base de données, pas d'update des données existantes.</p>
 
