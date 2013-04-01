@@ -1,0 +1,855 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Devoxx France 2013 - Jour 1 - fr.romain:blog:3.0</title>
+  <meta name="author" content="Romain Linsolas">
+
+  
+  <meta name="description" content="Enfin, ça y est ! La deuxième édition de la conférence Devoxx France a débuté. Comme l&#8217;année dernière, la conférence se déroule sur trois &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://linsolas.github.com/blog/2013/03/27/devoxx-france-2013-jour-1/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="fr.romain:blog:3.0" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-34711882-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">fr.romain:blog:3.0</a></h1>
+  
+    <h2>Un blog qu'il est bien pour le Java</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:linsolas.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">A propos</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Devoxx France 2013 - Jour 1</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-27T09:42:00+01:00" pubdate data-updated="true">Mar 27<span>th</span>, 2013</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><img src="http://www.devoxx.com/download/attachments/6816022/DevoxxFR-2012-web-400-267.png" alt="Devoxx France" /></p>
+
+<p>Enfin, ça y est ! La deuxième édition de la conférence <a href="http://www.devoxx.com/display/FR13/Accueil">Devoxx France</a> a débuté. Comme l&#8217;année dernière, la conférence se déroule sur trois jours. Le mercredi est essentiellement constituée de démonstrations, de laboratoires, de mises en pratique d&#8217;un outil ou d&#8217;un langage, de <em>Tools in Action</em>.
+Ma journée débute donc avec une université sur les tests en JavaScript. L&#8217;après-midi contiendra quelques surprises, dont&#8230; un minitel :)</p>
+
+<!-- more -->
+
+
+<h2><a href="http://www.devoxx.com/display/FR13/Le+fantome%2C+le+zombie+et+testacular%2C+panorama+des+outils+de+tests+pour+application+web+moderne.">Le fantôme, le zombie et Testacular, panorama des outils de tests pour application web moderne</a></h2>
+
+<p><img src="/images/devoxxfr-2013-tests-js-1.jpg" alt="Qui fait vraiment des tests ?" /></p>
+
+<p>Photo par <a href="https://twitter.com/binout">@binout</a></p>
+
+<p>Pour commencer la journée et la conférence, <a href="http://www.devoxx.com/display/FR13/Jean-laurent+De+morlhon">Jean-Laurent de Morhlon</a> (<a href="https://twitter.com/morlhon">@morlhon</a>) et <a href="http://www.devoxx.com/display/FR13/Pierre+Gayvallet">Pierre Gayvallet</a> (<a href="https://twitter.com/wayofspark">@wayofspark</a>) nous proposent un tour d&#8217;horizon de ce qui se fait autour des tests JavaScript.</p>
+
+<p>Tout d&#8217;abord, un rappel des différents types de tests</p>
+
+<ul>
+<li>Tests <strong>unitaires</strong> : il s&#8217;agit ici de tests techniques. On les exécutera plutôt en isolation, c&#8217;est-à-dire côté en supprimant le maximum de choses autour du code : pas de base de données, de navigateur web, d&#8217;accès réseau, etc.</li>
+<li>Tests d&#8217;<strong>intégration</strong> : nous restons dans les techniques techniques, mais ici nous voulons mettre l&#8217;ensemble de l&#8217;application en test.</li>
+<li>Tests d&#8217;<strong>acceptance</strong> : ce sont avant tout des tests fonctionnels. Nous pouvons utiliser le <em>BDD</em> (<em>Behavior Driven Development</em>). Toutefois, ces tests doivent représenter une petite partie de l&#8217;ensemble des tests.</li>
+</ul>
+
+
+<p>Technique de l&#8217;<em>outside-in</em> :</p>
+
+<ul>
+<li>On écrit un test d&#8217;acceptance qui va échouer.</li>
+<li>Ensuite, on écrit un test unitaire qui va également échouer.</li>
+<li>Puis on code de façon à faire passer le test simplement.</li>
+<li>Une fois le test unitaire réussit, on procède au refactoring.</li>
+<li>Une fois que le test unitaire est au vert et que le refactoring est terminé, on peut terminer en faisant en sorte que le test d&#8217;acceptance réussisse.</li>
+</ul>
+
+
+<p>Un peu de vocabulaire maintenant : un navigateur <em>headless</em> (&#8221;<em>sans tête</em>&#8221;) est un navigateur sans interface graphique. Cela servira beaucoup pour les tests, la partie graphique étant éliminée, nous gagnons ainsi beaucoup de temps. Quelques exemples : PhantomJS, HtmlUnit, Zombie.js&#8230;</p>
+
+<h3>PhantomJS</h3>
+
+<p><img src="/images/phantomjs.png" alt="PhantomJS" /></p>
+
+<p><a href="http://phantomjs.org">PhantomJS</a>, un navigateur <em>headless</em> dispose d&#8217;un vrai <em>rendering</em> (pas d&#8217;émulation), rapide, et offre une API JavaScript très complète.</p>
+
+<p>Voici un exemple de code avec PhantomJS :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Loading a web page&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">page</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;webpage&#39;</span><span class="p">).</span><span class="nx">create</span><span class="p">();</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="s1">&#39;http://www.phantomjs.org/&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="nx">page</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">status</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">//Page is loaded!</span>
+</span><span class='line'>    <span class="nx">phantom</span><span class="p">.</span><span class="nx">exit</span><span class="p">();</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>L&#8217;une des particularité de PhantomJS est son double contexte d&#8217;exécution : client et serveur. Cela implique parfois des problèmes de communication entre les deux contextes, ce qui est souvent source d&#8217;erreur.</p>
+
+<p>La gestion du <em>rendering</em> de PhantomJS supporte quasiment tous les standards HTML5 et CSS3, avec quelques limites toutefois : pas de support de Flash (ô mon dieu :) ), pas de CSS 3D, de géolocalisation, WebGL, etc.
+Son écosystème est assez riche : GhostWriter (qui implémente la spécification WebDriver), des runners de tests (Poltergeist, Mocha, etc.), des frameworks de tests (Lotte, WebSpecter, CasperJS, etc.), mais aussi des outils pour réaliser des screenshots (capturejs, node-webshot&#8230;)</p>
+
+<h3>CasperJS</h3>
+
+<p><img src="/images/casperjs.jpg" alt="CasperJS" /></p>
+
+<p><a href="http://casperjs.org/">CasperJS</a> est une surcouche de PhantomJS pour ajouter ce qui manque à ce dernier :</p>
+
+<ul>
+<li>Gestion des callbacks, de l&#8217;asynchronisme</li>
+<li>API fluide (<em>fluent API</em>)</li>
+<li>Méthodes d&#8217;intéraction avec la page (support du clavier, etc.)</li>
+<li>Framework de tests</li>
+</ul>
+
+
+<p>Par exemple, le code suivant :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">page</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;webpage&#39;</span><span class="p">).</span><span class="nx">create</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">page</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">url1</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">status</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">status</span> <span class="o">==</span> <span class="s2">&quot;fail&quot;</span><span class="p">)</span> <span class="nx">phantom</span><span class="p">.</span><span class="nx">exit</span><span class="p">();</span>
+</span><span class='line'>    <span class="nx">page</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">url2</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">status</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nx">status</span> <span class="o">==</span> <span class="s2">&quot;fail&quot;</span><span class="p">)</span> <span class="nx">phantom</span><span class="p">.</span><span class="nx">exit</span><span class="p">();</span>
+</span><span class='line'>        <span class="nx">page</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">url3</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">status</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="k">if</span> <span class="p">(</span><span class="nx">status</span> <span class="o">==</span> <span class="s2">&quot;fail&quot;</span><span class="p">)</span> <span class="nx">phantom</span><span class="p">.</span><span class="nx">exit</span><span class="p">();</span>
+</span><span class='line'>            <span class="nx">page</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">url4</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">status</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                <span class="k">if</span> <span class="p">(</span><span class="nx">status</span> <span class="o">==</span> <span class="s2">&quot;fail&quot;</span><span class="p">)</span> <span class="nx">phantom</span><span class="p">.</span><span class="nx">exit</span><span class="p">();</span>
+</span><span class='line'>                <span class="c1">// Can I stop, now?</span>
+</span><span class='line'>            <span class="p">});</span>
+</span><span class='line'>        <span class="p">});</span>
+</span><span class='line'>    <span class="p">});</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>s&#8217;écrira plus simplement avec CasperJS :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">casper</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;casper&#39;</span><span class="p">).</span><span class="nx">create</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">casper</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span><span class="nx">url1</span><span class="p">);</span>
+</span><span class='line'><span class="nx">casper</span><span class="p">.</span><span class="nx">thenOpen</span><span class="p">(</span><span class="nx">url2</span><span class="p">);</span>
+</span><span class='line'><span class="nx">casper</span><span class="p">.</span><span class="nx">thenOpen</span><span class="p">(</span><span class="nx">url3</span><span class="p">);</span>
+</span><span class='line'><span class="nx">casper</span><span class="p">.</span><span class="nx">thenOpen</span><span class="p">(</span><span class="nx">url4</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">casper</span><span class="p">.</span><span class="nx">run</span><span class="p">();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Il faut noter qu&#8217;avec la version 1.1 de CasperJS (pas encore sortie), l&#8217;écriture des tests sera simplifiée, en particulier pour ce qui concerne le code à exécuter avant ou après des tests (<code>setUp</code> et <code>`tearDown</code>).</p>
+
+<p>S&#8217;ensuit une démonstration de l&#8217;outil CasperJS, pour tester de façon fluide est très simple des interactions sur un site web marchant : tests basiques d&#8217;une page (vérification d&#8217;un titre, du contenu), simulation de clics pour ajouter des éléments dans le panier, test de la validation d&#8217;un formulaire, etc.
+Point sympathique, il est possible de demander à CasperJS de réaliser une capture d&#8217;écran durant un test et de le copier dans un fichier avec une commande simple : <code>casper.capture("mon_image.png");</code> On peut donc faire du <em>Screenshot Driven Development</em> :)</p>
+
+<h3>Zombie.js</h3>
+
+<p><img src="/images/zombiejs.jpg" alt="ZombieJS" /></p>
+
+<p><a href="http://zombie.labnotes.org/">ZombieJS</a> est un navigateur <em>headless</em>, qui tourne sur node.js, et qui repose sur des bibliothèque d&#8217;émulation (c&#8217;est un avantage mais aussi un inconvénient). Ce n&#8217;est donc pas un <em>vrai</em> navigateur, bien qu&#8217;il supporte la plupart des fonctionnalités des navigateurs actuels : HTML5, sélecteurs CSS3, cookier, web storage, ajax, etc. Il se base sur certaines librairies tierces, telles que :</p>
+
+<ul>
+<li>JSDom</li>
+<li>HTML5</li>
+<li>Sizzle.js (sélecteurs CSS)</li>
+</ul>
+
+
+<p>L&#8217;API de Zombie.js est fluide, ce qui permet de rendre le code plus lisible (encore plus en utilisant CoffeeScript). Voici un exemple de code avec Zombie.js :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">Browser</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;zombie&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">assert</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;assert&quot;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Load the page from localhost</span>
+</span><span class='line'><span class="nx">browser</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Browser</span><span class="p">()</span>
+</span><span class='line'><span class="nx">browser</span><span class="p">.</span><span class="nx">visit</span><span class="p">(</span><span class="s2">&quot;http://localhost:3000/&quot;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Fill email, password and submit form</span>
+</span><span class='line'>  <span class="nx">browser</span><span class="p">.</span>
+</span><span class='line'>    <span class="nx">fill</span><span class="p">(</span><span class="s2">&quot;email&quot;</span><span class="p">,</span> <span class="s2">&quot;zombie@underworld.dead&quot;</span><span class="p">).</span>
+</span><span class='line'>    <span class="nx">fill</span><span class="p">(</span><span class="s2">&quot;password&quot;</span><span class="p">,</span> <span class="s2">&quot;eat-the-living&quot;</span><span class="p">).</span>
+</span><span class='line'>    <span class="nx">pressButton</span><span class="p">(</span><span class="s2">&quot;Sign Me Up!&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="c1">// Form submitted, new page loaded.</span>
+</span><span class='line'>      <span class="nx">assert</span><span class="p">.</span><span class="nx">ok</span><span class="p">(</span><span class="nx">browser</span><span class="p">.</span><span class="nx">success</span><span class="p">);</span>
+</span><span class='line'>      <span class="nx">assert</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="nx">browser</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">),</span> <span class="s2">&quot;Welcome To Brains Depot&quot;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="p">})</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Un autre exemple de test avec les sélecteurs CSS :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">brower</span><span class="p">.</span><span class="nx">queryAll</span><span class="p">(</span><span class="s2">&quot;#content &gt; .produit&quot;</span><span class="p">).</span><span class="nx">length</span><span class="p">.</span><span class="nx">should</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Avec Zombie, le code devient très lisible, ultra rapide. Toutefois, il a quelques défauts (assez importants pour certains) :</p>
+
+<ul>
+<li>Emule un navigateur.</li>
+<li>Difficile à intégrer dans un build java.</li>
+<li>Difficile à faire tourner sur Windows (aie !).</li>
+<li>Le développement est quelque peu en berne (aie aussi !).</li>
+<li>Les erreurs sont parfois cryptiques.</li>
+</ul>
+
+
+<p>Jean-Laurent passe ensuite à une démonstration de l&#8217;outil avec CoffeeScript.</p>
+
+<h3>QUnit</h3>
+
+<p><img src="/images/qunit.png" alt="QUnit" /></p>
+
+<p><a href="http://qunitjs.com">QUnit</a> est une librairie de tests JavaScript plus proche des JUnit, avec le système des assert. On est ici plutôt à destination des tests unitaires, pour faire du TDD.
+L&#8217;écosystème de QUnit est assez riche, il est également possible d&#8217;ajouter de nouvelles assertions (par défaut, QUnit n&#8217;en propose qu&#8217;une toute petite poignée) :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// Code du plugin QUnit closeEnough (https://github.com/jquery/qunit/tree/master/addons/close-enough)</span>
+</span><span class='line'><span class="nx">QUnit</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span> <span class="nx">QUnit</span><span class="p">.</span><span class="nx">assert</span><span class="p">,</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="cm">/**</span>
+</span><span class='line'><span class="cm">  * Checks that the first two arguments are equal, or are numbers close enough to be considered equal</span>
+</span><span class='line'><span class="cm">  * based on a specified maximum allowable difference.</span>
+</span><span class='line'><span class="cm">  */</span>
+</span><span class='line'>  <span class="nx">close</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">actual</span><span class="p">,</span> <span class="nx">expected</span><span class="p">,</span> <span class="nx">maxDifference</span><span class="p">,</span> <span class="nx">message</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="kd">var</span> <span class="nx">passes</span> <span class="o">=</span> <span class="p">(</span><span class="nx">actual</span> <span class="o">===</span> <span class="nx">expected</span><span class="p">)</span> <span class="o">||</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">actual</span> <span class="o">-</span> <span class="nx">expected</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="nx">maxDifference</span><span class="p">;</span>
+</span><span class='line'>      <span class="nx">QUnit</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">passes</span><span class="p">,</span> <span class="nx">actual</span><span class="p">,</span> <span class="nx">expected</span><span class="p">,</span> <span class="nx">message</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="cm">/**</span>
+</span><span class='line'><span class="cm">  * Checks that the first two arguments are numbers with differences greater than the specified</span>
+</span><span class='line'><span class="cm">  * minimum difference.</span>
+</span><span class='line'><span class="cm">  */</span>
+</span><span class='line'>  <span class="nx">notClose</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">actual</span><span class="p">,</span> <span class="nx">expected</span><span class="p">,</span> <span class="nx">minDifference</span><span class="p">,</span> <span class="nx">message</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">QUnit</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">actual</span> <span class="o">-</span> <span class="nx">expected</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nx">minDifference</span><span class="p">,</span> <span class="nx">actual</span><span class="p">,</span> <span class="nx">expected</span><span class="p">,</span> <span class="nx">message</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>L&#8217;utilisation de cette nouvelle assertion doit passer par l&#8217;objet <em>assert</em> :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;Example unit test&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">assert</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">assert</span><span class="p">.</span><span class="nx">close</span><span class="p">(</span><span class="mf">3.141</span><span class="p">,</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">assert</span><span class="p">.</span><span class="nx">notClose</span><span class="p">(</span><span class="mf">3.1</span><span class="p">,</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Sinon.js</h3>
+
+<p><a href="http://sinonjs.org/">Cette librairie</a> de tests a le gros avantage de pouvoir mocker pas mal de choses, dont les timers, des servers, des appels Ajax.
+Il dispose également d&#8217;une API assez complète pour les espions (<em>spy</em>) ou les <em>stubs</em>.
+Un petit exemple :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">it</span><span class="p">(</span><span class="s2">&quot;calls original function with right this and args&quot;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">callback</span> <span class="o">=</span> <span class="nx">sinon</span><span class="p">.</span><span class="nx">spy</span><span class="p">();</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">proxy</span> <span class="o">=</span> <span class="nx">once</span><span class="p">(</span><span class="nx">callback</span><span class="p">);</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{};</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nx">proxy</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nx">assert</span><span class="p">(</span><span class="nx">callback</span><span class="p">.</span><span class="nx">calledOn</span><span class="p">(</span><span class="nx">obj</span><span class="p">));</span>
+</span><span class='line'>    <span class="nx">assert</span><span class="p">(</span><span class="nx">callback</span><span class="p">.</span><span class="nx">calledWith</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Un autre exemple, en mockant une requête Ajax :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">after</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// When the test either fails or passes, restore the original</span>
+</span><span class='line'>    <span class="c1">// jQuery ajax function (Sinon.JS also provides tools to help</span>
+</span><span class='line'>    <span class="c1">// test frameworks automate clean-up like this)</span>
+</span><span class='line'>    <span class="nx">jQuery</span><span class="p">.</span><span class="nx">ajax</span><span class="p">.</span><span class="nx">restore</span><span class="p">();</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">it</span><span class="p">(</span><span class="s2">&quot;makes a GET request for todo items&quot;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">sinon</span><span class="p">.</span><span class="nx">stub</span><span class="p">(</span><span class="nx">jQuery</span><span class="p">,</span> <span class="s2">&quot;ajax&quot;</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">getTodos</span><span class="p">(</span><span class="mi">42</span><span class="p">,</span> <span class="nx">sinon</span><span class="p">.</span><span class="nx">spy</span><span class="p">());</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nx">assert</span><span class="p">(</span><span class="nx">jQuery</span><span class="p">.</span><span class="nx">ajax</span><span class="p">.</span><span class="nx">calledWithMatch</span><span class="p">({</span> <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;/todo/42/items&quot;</span> <span class="p">}));</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Karma (aka Testacular)</h3>
+
+<p><a href="http://karma-runner.github.com/0.8/index.html">Karma</a> (anciennement appelé Testacular) est un lanceur de tests multi-navigateurs, tournant sur node.js. Il a été développé par l&#8217;équipe d&#8217;AngularJS (Google).
+Il propose également des adaptateurs pour supporter différents frameworks de tests : Mocha, Jasmine, QUnit ou Angular Scenario.</p>
+
+<h3>Chai.js</h3>
+
+<p><img src="/images/chaijs.png" alt="Chaijs" /></p>
+
+<p><a href="http://chaijs.com/">ChaiJS</a> est une toute petite librairie d&#8217;assertions. Elle propose 3 types d&#8217;assertions :</p>
+
+<p>Le type <em>Assert</em> :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">assert</span> <span class="o">=</span> <span class="nx">chai</span><span class="p">.</span><span class="nx">assert</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">assert</span><span class="p">.</span><span class="nx">typeOf</span><span class="p">(</span><span class="nx">foo</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">assert</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="nx">foo</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">assert</span><span class="p">.</span><span class="nx">lengthOf</span><span class="p">(</span><span class="nx">foo</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</span><span class='line'><span class="nx">assert</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="nx">tea</span><span class="p">,</span> <span class="s1">&#39;favors&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">assert</span><span class="p">.</span><span class="nx">lengthOf</span><span class="p">(</span><span class="nx">tea</span><span class="p">.</span><span class="nx">flavors</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Le type <em>Expect</em> :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">expect</span> <span class="o">=</span> <span class="nx">chai</span><span class="p">.</span><span class="nx">expect</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">expect</span><span class="p">(</span><span class="nx">foo</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="nx">a</span><span class="p">(</span><span class="s1">&#39;string&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">expect</span><span class="p">(</span><span class="nx">foo</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">expect</span><span class="p">(</span><span class="nx">foo</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="nx">have</span><span class="p">.</span><span class="nx">length</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+</span><span class='line'><span class="nx">expect</span><span class="p">(</span><span class="nx">tea</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="nx">have</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s1">&#39;flavors&#39;</span><span class="p">).</span><span class="kd">with</span><span class="p">.</span><span class="nx">length</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ou encore le type du <em>Should</em> :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">chai</span><span class="p">.</span><span class="nx">should</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">foo</span><span class="p">.</span><span class="nx">should</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="nx">a</span><span class="p">(</span><span class="s1">&#39;string&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">foo</span><span class="p">.</span><span class="nx">should</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">foo</span><span class="p">.</span><span class="nx">should</span><span class="p">.</span><span class="nx">have</span><span class="p">.</span><span class="nx">length</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+</span><span class='line'><span class="nx">tea</span><span class="p">.</span><span class="nx">should</span><span class="p">.</span><span class="nx">have</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s1">&#39;flavors&#39;</span><span class="p">).</span><span class="kd">with</span><span class="p">.</span><span class="nx">length</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Mocha</h3>
+
+<p><img src="/images/mocha.png" alt="Mocha" /></p>
+
+<p><a href="http://visionmedia.github.com/mocha/">Mocha</a> est un framework de test, tourne sur Node.js ou dans un navigateur.
+Il s&#8217;intègre parfaitement avec beaucoup d&#8217;autres choses : Jenkins, TeamCity, des outils comme chai.js.</p>
+
+<h3>JSCover</h3>
+
+<p><a href="http://tntim96.github.com/JSCover/">JSCover</a> (anciennement JsCoverage) permet de mesurer la couverture de code par les tests JS. Il offre également un export de type Cobertura, ce qui lui permet son intégration dans Jenkins (et a priori Sonar ?).</p>
+
+<h3>Plato</h3>
+
+<p><a href="http://jsoverson.github.com/plato/examples/jquery/">Plato</a> est un outil d&#8217;introspection des tests. Il donne ainsi un rapport détaillé du code JS, permet même d&#8217;estimer le nombre de bugs dans l&#8217;application :)
+Il met également en détails les erreurs levées par JsLint.</p>
+
+<p>Voilà une très bonne présentation pour commencer Devoxx France, avec beaucoup de beaux outils à tester. Peut-être même trop, les trois heures ont paru bien courtes :)</p>
+
+<hr/>
+
+
+<h2><a href="http://www.devoxx.com/display/FR13/Frontend+Live+Coding+++Tour+d%27horizon+de+l%27outillage+et+des+technos+web+d%27aujourd%27hui">Frontend live coding : tour d&#8217;horizon de l&#8217;outillage et des technos web d&#8217;aujourd&#8217;hui</a></h2>
+
+<p><a href="http://www.parleys.com/#play/51561f64e4b0c779d78813f3">Vidéo Parleys</a></p>
+
+<p><a href="http://www.devoxx.com/display/FR13/Frederic+Camblor">Frédéric Camblor</a> (<a href="https://twitter.com/fcamblor">@fcamblor</a>) nous propose un tour d&#8217;horizon des outils liés au développement web :</p>
+
+<ul>
+<li><strong>Yeoman</strong> / <strong>Grunt</strong> : orchestrateur des développements web ;</li>
+<li><strong>Sass</strong> / <strong>Compass</strong> : surcouche à CSS permettant notamment de variabiliser les feuilles de style ;</li>
+<li><strong>Bower</strong> : provisionneur de librairies JavaScript ;</li>
+<li><strong>RequireJS</strong> : injecteur de dépendances JavaScript à la demande ;</li>
+<li><strong>Handlebars</strong> : moteur de templating coté client ;</li>
+<li><strong>BackboneJS</strong> : framework MVC qui permet d&#8217;améliorer la maintenabilité du code JavaScript ;</li>
+<li>Un ensemble de tips de développement dans Chrome, dont vous ne soupçonnez peut-être pas l&#8217;existence.</li>
+</ul>
+
+
+<h3>Yeoman et Grunt</h3>
+
+<p><img src="/images/yeoman.png" alt="Yeoman" /></p>
+
+<p>Premier outil présenté par Frédéric, <a href="http://yeoman.io/">Yeoman</a>. C&#8217;est un ensemble d&#8217;outils pouvant jouer le rôle de <em>scaffolder</em>, c&#8217;est-à-dire qu&#8217;il va nous créer en un rien de temps une structure spécifique pour un projet, tout en forçant certaines bonnes pratiques (définition d&#8217;un cycle de vie pour l&#8217;application, exécution des tests, etc.). Quelque part, il y a pas mal de similitudes avec Maven ici.</p>
+
+<p>Frédéric démarre par générer une structure adaptée à une <em>webapp</em>, via un générateur dédié. Il existe plusieurs autres générateurs, pour faire de l&#8217;Angular, du Testacular (enfin Karma), du Backbone, etc. La similitude avec les Maven archetype est saisissante ici. Donc une simple commande <code>yo webapp</code> permet de tout générer.</p>
+
+<p>Une fois ceci généré, nous pouvons constater la présence d&#8217;un fichier <em>gruntfile.js</em> qui est utilisé par <a href="http://gruntjs.com/">Grunt</a> pour réaliser un certain nombre de tâches (&#8220;compilation&#8221;, tests, démarrage d&#8217;un serveur, etc.). Frédéric le compare là aussi à Maven ou Gradle. Dans les faits, je trouve plus que cela s&#8217;approche de Gradle et de son approche scriptée, mais bon. A en voir le contenu, cela est un peu cryptique dans un premier temps, mais Frédéric nous indique qu&#8217;il n&#8217;est guère nécessaire de s&#8217;y attarder. En effet, ça fonctionne, et c&#8217;est tout ce qu&#8217;on lui demande ! On pourra bien sûr décider de s&#8217;intéresser au contenu de ce fichier, si les besoins au sein du projet le nécessite.</p>
+
+<h3>SASS</h3>
+
+<p><img src="/images/sass-lang.png" alt="SASS" /></p>
+
+<p><a href="http://sass-lang.com/">SASS</a>, à l&#8217;image de <a href="http://lesscss.org/">LESS</a> est une surcharge du langage CSS pour en offrir des améliorations. Parmi celles-ci, on notera surtout :</p>
+
+<ul>
+<li><code>@import</code> qui permet d&#8217;importer un autre fichier CSS, et donc de bien segmenter son code CSS.</li>
+<li>La possibilité d&#8217;imbriquer les classes (le <em>nesting</em>), offrant ainsi une bien meilleure lisibilité de son code, tout en l&#8217;architecturant mieux.</li>
+<li>Les variables, pratique pour éviter les redondances, et faciliter le refactoring.</li>
+<li>Des fonctions arithmétiques simples (on pourra faire <code>$largeurPanneau + 10px</code> par exemple).</li>
+<li>Des mixins, sortes de fonction permettant de regrouper sous un même bloc un code redondant.</li>
+</ul>
+
+
+<p>A noter qu&#8217;il existe un site, <a href="http://compass-style.org/">Compass</a> qui permet de disposer de nombreux mixins pour SASS.</p>
+
+<h3>Bower</h3>
+
+<p><a href="https://github.com/twitter/bower">Bower</a> est un module de gestion des dépendances, un peu à l&#8217;image de Maven. Le fichier <code>component.json</code>, que Frédéric avait généré via la commande <code>yo webapp</code>, est le descripteur des dépendances de notre projet web-app.
+Il est possible d&#8217;exécuter quelques commandes avec <code>bower</code> :</p>
+
+<ul>
+<li><code>bower install</code> pour installer en local les dépendances définies pour le projet. A noter que contrairement à Maven qui utilise un <em>repository</em> commun à tous les projets, Bower copie localement, <strong>pour chaque projet</strong> la liste des dépendances. Un peu dommage !</li>
+<li><code>bower search</code> recherche les dépendances présentes dans le <em>registry</em> Bower.</li>
+<li><code>bower info XXX</code>  donne toutes les versions présentes pour la librairie spécifiée.</li>
+</ul>
+
+
+<p>Il est également possible d&#8217;enregistrer sa propre librairie dans le <em>registry</em> de Bower, via une commande (<code>bower register [mon package] [mon repo git]</code>). Attention, il ne semble pas y avoir beaucoup de contrôles, et la librairie est de suite visible à tout le monde !</p>
+
+<p>Un point important, le <em>versioning</em> des dépendances hébergées sur Bower est assez strict, et respecte le <a href="http://semver.org/"><em>Semantic Versioning</em></a>. Pour faire simple, une version est généralement constituée de 3 chiffres (<code>x.y.z</code>), où nous avons la version majeure (<code>x</code>), la version mineure  (<code>y</code>) puis les bugfixes  (<code>z</code>). Cela nous permet d&#8217;obtenir une certaine flexibilité dans la définition des dépendances. Par exemple, si on définit une version <code>1.2.x</code>, cela signifie que l&#8217;on veut n&#8217;importe quelle version <code>1.2.*</code>, et que si une nouvelle version bugfixe apparait, alors Bower pourra l&#8217;utiliser directement.</p>
+
+<h3>RequireJS</h3>
+
+<p><img src="/images/requirejs.png" alt="Require.js" /></p>
+
+<p>Frédéric parle maintenant de <a href="http://requirejs.org/">Require.js</a>, une librairie qui a l&#8217;avantage de pouvoir charger des fichiers JavaScript à la demande. On peut également y définir des dépendances (par exemple il faut la librairie <em>foo.js</em> puis <em>bar.js</em> avant d&#8217;exécuter mon code).</p>
+
+<h3>Handlebars</h3>
+
+<p><img src="/images/handlebars.png" alt="Handlebars" /></p>
+
+<p>Il arrive fréquemment d&#8217;avoir besoin de recourir au <em>templating</em>, c&#8217;est-à-dire de placer de la donnée (généralement en format JSON) dans du code HTML (en particulier quand on doit itérer sur un ensemble d&#8217;éléments). Frédéric est parti pour utiliser <a href="http://handlebarsjs.com/">Handlebars</a>. Personnellement, j&#8217;ai plus l&#8217;habitude d&#8217;utiliser <a href="http://mustache.github.com/">Mustache.js</a>, mais les principes sont les mêmes.</p>
+
+<h3>Backbone.js</h3>
+
+<p><img src="/images/backbone.png" alt="Backbone.js" /></p>
+
+<p>Pour de multiples raisons, on peut être amené à développer toute une partie de l&#8217;application côté client. Ainsi, au lieu de développer le coeur de l&#8217;application côté serveur et de n&#8217;envoyer que la partie graphique au client, nous y envoyons un framework JavaScript, ainsi que toute une application côté client : la partie modèle, la partie controlleur et la partie vue se retrouvent dès lors sur le navigateur. Frédéric opte pour <a href="http://backbonejs.org/">Backbone.js</a>, mais il existe aussi <a href="http://emberjs.com/">Ember.js</a>, ou le très à la mode <a href="http://angularjs.org/">Angular.js</a> de Google.
+Un tel choix architectural n&#8217;est bien sûr pas à prendre à la légère, cela apporte certains avantages (rapidité, minimisation de l&#8217;utilisation de la bande passante, possibilité de faire fonctionner son application en mode déconnecté, etc.), mais il y a également des inconvénients, dont le principal à mon avis est la sécurité.</p>
+
+<h3>Rivets.js</h3>
+
+<p>Dernier choix de librairie de la session : <a href="http://rivetsjs.com/">Rivets.js</a> pour réaliser du <em>data-binding</em> bi-directionnel. Cela est nécessaire pour qu&#8217;une modification au niveau du modèle soit immédiatement répercutée côté DOM, et qu&#8217;une modification côté DOM soit répercutée côté modèle. Cette librairie s&#8217;intègre parfaitement à Backbone.js, mais aurait été tout à fait inutile avec Angular, car ce dernier intègre nativement cette fonctionnalité de <em>data-binding</em>.</p>
+
+<p>Pour résumer, cette deuxième université a été très intéressante aussi, car elle a montré une <em>stack</em> complète d&#8217;outils et de librairies pour le développement efficace d&#8217;une application en JavaScript. Seul bémol, la partie tests qui n&#8217;a pas été abordée. Toutefois, Frédéric nous avait prévenu au début qu&#8217;il n&#8217;était pas à l&#8217;aise dans ce domaine. De plus, l&#8217;université du matin en avait fait son thème principal, et cela aurait été sans doute redondant. J&#8217;aurais quand même apprécié de savoir quelles librairies de tests s&#8217;adaptaient le mieux avec la <em>stack</em> choisie par Frédéric.</p>
+
+<hr/>
+
+
+<h2><a href="http://www.devoxx.com/display/FR13/3615+Cloud+Devoxx">3615 Cloud @ Devoxx</a></h2>
+
+<p><img src="/images/devoxxfr-2013-minitel.jpg" alt="Le minitel, l'avenir de Maven ?" /></p>
+
+<p>Voici une session complètement décalée. <a href="http://www.devoxx.com/display/FR13/Nicolas+Loof">Nicolas Loof</a> et <a href="http://www.devoxx.com/display/FR13/Laurent+Huet">Laurent Huet</a> nous proposent d&#8217;intéragir avec une instance CloudBees grâce à&#8230; un minitel ! Oui, le minitel des années 80. Et sans trucage, juste du bricolage.
+Le montage est le suivant :</p>
+
+<ul>
+<li>Un bon vieux minitel sert de console : saisie des commandes et affichage (textuel bien entendu).</li>
+<li>Ensuite, un assemblage électronique réalisé par Laurent pour le connecter avec un Raspberry Pi.</li>
+<li>Un Raspberry Pi qui va s&#8217;occuper de la partie &#8220;intelligente&#8221; des opérations.</li>
+<li>Un MacBook Pro (celui de Nicolas, dont l&#8217;écran a rendu l&#8217;âme la semaine d&#8217;avant, grâce à un geste malheureux d&#8217;un enfant) pour la connexion à Internet. C&#8217;est aussi le MBP qui affichera la vidéo d&#8217;une caméra qui filme l&#8217;écran du minitel (eh oui, difficile de brancher un cable de vidéoprojecteur sur un minitel).</li>
+</ul>
+
+
+<p>Durant la présentation, on nous explique le montage électronique, puis ils exécuteront les tâches suivantes :</p>
+
+<ul>
+<li>Afficher le status de quelques jobs sur CloudBees, puis interagir avec eux : stopper ou démarrer ces jobs.</li>
+<li>Faire un <code>mvn package</code> ! (ils le lanceront en mode <code>offline</code> bien sûr :) ).</li>
+<li>Faire un commit avec git.</li>
+</ul>
+
+
+<p>Bref, une session très agréable, bien que tout à fait inutile !</p>
+
+<h2><a href="http://www.devoxx.com/display/FR13/Good+Bad+and+Ugly+Maven+-+a+puzzler+session">Good bad and ugly Maven - a puzzler session</a></h2>
+
+<p><img src="/images/devoxxfr-2013-maven.jpg" alt="In Maven dependencies hell" /></p>
+
+<p><a href="http://www.devoxx.com/display/FR13/Nicolas+Loof">Nicolas Loof</a> (encore lui), accompagné de son éternel ami <a href="http://www.devoxx.com/display/FR13/Arnaud+Heritier">Arnaud Héritier</a> nous ont proposé le jeu &#8221;<em>Qui veut gagner des millions</em>&#8221; mais à la sauce Maven. Au cours d&#8217;une série de 6 ou 7 questions, Nicolas présentait des situations plus ou moins compliquées avec Maven, souvent des problèmes de dépendances transitives avec des conflits de version. Arnaud, en bon candidat, devait donner la bonne réponse, avec parfois l&#8217;aide du public.</p>
+
+<p>Dans une ambiance décontractée et sympathique, j&#8217;ai donc terminé la première journée de Devoxx, avant de me rendre au repas du soir des speakers.</p>
+
+<h2>Conclusion</h2>
+
+<p>Comme l&#8217;année dernière, la première journée a été très riche à Devoxx France. Celle-ci est généralement plus calme, car il y a moins de monde, les sessions sont plus longues, surtout quand on assiste à des universités. J&#8217;ai fait un choix très orienté sur JavaScript cette année, avec 6 heures de démo, de code et de tests. A vrai dire, le programme que j&#8217;avais initialement établi le matin était différent. Je comptais en effet aller d&#8217;abord suivre <a href="http://www.devoxx.com/display/FR13/Introduction+iOS6+pour+les+developpeurs+Java">l&#8217;introduction à iOS pour un développeur Java</a> puis le <a href="http://www.devoxx.com/display/FR13/AngularJS%2C+ou+le+futur+du+developpement+Web">développement sur AngularJS</a>, mais à ma grande déception il s&#8217;agissait d&#8217;universités et non de <em>Labs</em> (ou <em>Hands On</em>). Ne codant pas moi-même, je craignais de ne pas retenir grand chose pour iOS (je n&#8217;ai aucune connaissance dans ce langage), et je n&#8217;aurais sans doute pas appris grand chose de nouveau sur Angular.js, que j&#8217;ai déjà un peu manipulé.</p>
+
+<p>Mon souhait pour Devoxx France 2014, ce serait que la conférence se déroule sur 4 jours :</p>
+
+<ul>
+<li>2 jours de Labs, <em>Hands On</em> et universités, mais avec une préférence pour les sessions on l&#8217;audience code;</li>
+<li>2 jours de conférences.</li>
+</ul>
+
+
+<p>Sait-on jamais :)</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Romain Linsolas</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-27T09:42:00+01:00" pubdate data-updated="true">Mar 27<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/conference/'>conference</a>, <a class='category' href='/blog/categories/devoxx/'>devoxx</a>, <a class='category' href='/blog/categories/java/'>java</a>, <a class='category' href='/blog/categories/javascript/'>javascript</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://linsolas.github.com/blog/2013/03/27/devoxx-france-2013-jour-1/" data-via="romaintaz" data-counturl="http://linsolas.github.com/blog/2013/03/27/devoxx-france-2013-jour-1/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/03/21/du-javascript-propre-challenge-accepted/" title="Previous Post: Du JavaScript propre ? Challenge Accepted">&laquo; Du JavaScript propre ? Challenge Accepted</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Derniers Billets</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/03/27/devoxx-france-2013-jour-1/">Devoxx France 2013 - Jour 1</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/21/du-javascript-propre-challenge-accepted/">Du JavaScript propre ? Challenge Accepted</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/02/21/conferencier-a-devoxx-france-2013/">Conférencier à Devoxx France 2013</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/02/20/brownbaglunch-dot-fr/">brownbaglunch.fr</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/02/09/lancez-vous-dans-les-brown-bag-lunches/">Lancez-vous dans les Brown Bag Lunches</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("romaintaz", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/romaintaz" class="twitter-follow-button" data-show-count="false">Follow @romaintaz</a>
+  
+</section>
+
+<section>
+  <h1>A propos</h1>
+  <p>Je m'appelle Romain Linsolas, et je suis un développeur Java et web. Voici mon blog, pour vous faire partager ma passion !</p>
+<a href="http://stackoverflow.com/users/26457/romaintaz"><img src="http://stackoverflow.com/users/flair/26457.png?theme=clean" width="208" height="58" alt="profile for romaintaz at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for romaintaz at Stack Overflow, Q&amp;A for professional and enthusiast programmers"></a>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Romain Linsolas -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'romain';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://linsolas.github.com/blog/2013/03/27/devoxx-france-2013-jour-1/';
+        var disqus_url = 'http://linsolas.github.com/blog/2013/03/27/devoxx-france-2013-jour-1/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

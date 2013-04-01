@@ -4,7 +4,7 @@
   <title><![CDATA[Category: devoxx | fr.romain:blog:3.0]]></title>
   <link href="http://linsolas.github.com/blog/categories/devoxx/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2013-03-21T23:26:10+01:00</updated>
+  <updated>2013-04-01T09:41:28+02:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -12,6 +12,483 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Devoxx France 2013 - Jour 1]]></title>
+    <link href="http://linsolas.github.com/blog/2013/03/27/devoxx-france-2013-jour-1/"/>
+    <updated>2013-03-27T09:42:00+01:00</updated>
+    <id>http://linsolas.github.com/blog/2013/03/27/devoxx-france-2013-jour-1</id>
+    <content type="html"><![CDATA[<p><img src="http://www.devoxx.com/download/attachments/6816022/DevoxxFR-2012-web-400-267.png" alt="Devoxx France" /></p>
+
+<p>Enfin, ça y est ! La deuxième édition de la conférence <a href="http://www.devoxx.com/display/FR13/Accueil">Devoxx France</a> a débuté. Comme l'année dernière, la conférence se déroule sur trois jours. Le mercredi est essentiellement constituée de démonstrations, de laboratoires, de mises en pratique d'un outil ou d'un langage, de <em>Tools in Action</em>.
+Ma journée débute donc avec une université sur les tests en JavaScript. L'après-midi contiendra quelques surprises, dont... un minitel :)</p>
+
+<!-- more -->
+
+
+<h2><a href="http://www.devoxx.com/display/FR13/Le+fantome%2C+le+zombie+et+testacular%2C+panorama+des+outils+de+tests+pour+application+web+moderne.">Le fantôme, le zombie et Testacular, panorama des outils de tests pour application web moderne</a></h2>
+
+<p><img src="/images/devoxxfr-2013-tests-js-1.jpg" alt="Qui fait vraiment des tests ?" /></p>
+
+<p>Photo par <a href="https://twitter.com/binout">@binout</a></p>
+
+<p>Pour commencer la journée et la conférence, <a href="http://www.devoxx.com/display/FR13/Jean-laurent+De+morlhon">Jean-Laurent de Morhlon</a> (<a href="https://twitter.com/morlhon">@morlhon</a>) et <a href="http://www.devoxx.com/display/FR13/Pierre+Gayvallet">Pierre Gayvallet</a> (<a href="https://twitter.com/wayofspark">@wayofspark</a>) nous proposent un tour d'horizon de ce qui se fait autour des tests JavaScript.</p>
+
+<p>Tout d'abord, un rappel des différents types de tests</p>
+
+<ul>
+<li>Tests <strong>unitaires</strong> : il s'agit ici de tests techniques. On les exécutera plutôt en isolation, c'est-à-dire côté en supprimant le maximum de choses autour du code : pas de base de données, de navigateur web, d'accès réseau, etc.</li>
+<li>Tests d'<strong>intégration</strong> : nous restons dans les techniques techniques, mais ici nous voulons mettre l'ensemble de l'application en test.</li>
+<li>Tests d'<strong>acceptance</strong> : ce sont avant tout des tests fonctionnels. Nous pouvons utiliser le <em>BDD</em> (<em>Behavior Driven Development</em>). Toutefois, ces tests doivent représenter une petite partie de l'ensemble des tests.</li>
+</ul>
+
+
+<p>Technique de l'<em>outside-in</em> :</p>
+
+<ul>
+<li>On écrit un test d'acceptance qui va échouer.</li>
+<li>Ensuite, on écrit un test unitaire qui va également échouer.</li>
+<li>Puis on code de façon à faire passer le test simplement.</li>
+<li>Une fois le test unitaire réussit, on procède au refactoring.</li>
+<li>Une fois que le test unitaire est au vert et que le refactoring est terminé, on peut terminer en faisant en sorte que le test d'acceptance réussisse.</li>
+</ul>
+
+
+<p>Un peu de vocabulaire maintenant : un navigateur <em>headless</em> ("<em>sans tête</em>") est un navigateur sans interface graphique. Cela servira beaucoup pour les tests, la partie graphique étant éliminée, nous gagnons ainsi beaucoup de temps. Quelques exemples : PhantomJS, HtmlUnit, Zombie.js...</p>
+
+<h3>PhantomJS</h3>
+
+<p><img src="/images/phantomjs.png" alt="PhantomJS" /></p>
+
+<p><a href="http://phantomjs.org">PhantomJS</a>, un navigateur <em>headless</em> dispose d'un vrai <em>rendering</em> (pas d'émulation), rapide, et offre une API JavaScript très complète.</p>
+
+<p>Voici un exemple de code avec PhantomJS :</p>
+
+<p>``` javascript
+console.log('Loading a web page');
+var page = require('webpage').create();
+var url = 'http://www.phantomjs.org/';
+page.open(url, function (status) {</p>
+
+<pre><code>//Page is loaded!
+phantom.exit();
+</code></pre>
+
+<p>});
+```</p>
+
+<p>L'une des particularité de PhantomJS est son double contexte d'exécution : client et serveur. Cela implique parfois des problèmes de communication entre les deux contextes, ce qui est souvent source d'erreur.</p>
+
+<p>La gestion du <em>rendering</em> de PhantomJS supporte quasiment tous les standards HTML5 et CSS3, avec quelques limites toutefois : pas de support de Flash (ô mon dieu :) ), pas de CSS 3D, de géolocalisation, WebGL, etc.
+Son écosystème est assez riche : GhostWriter (qui implémente la spécification WebDriver), des runners de tests (Poltergeist, Mocha, etc.), des frameworks de tests (Lotte, WebSpecter, CasperJS, etc.), mais aussi des outils pour réaliser des screenshots (capturejs, node-webshot...)</p>
+
+<h3>CasperJS</h3>
+
+<p><img src="/images/casperjs.jpg" alt="CasperJS" /></p>
+
+<p><a href="http://casperjs.org/">CasperJS</a> est une surcouche de PhantomJS pour ajouter ce qui manque à ce dernier :</p>
+
+<ul>
+<li>Gestion des callbacks, de l'asynchronisme</li>
+<li>API fluide (<em>fluent API</em>)</li>
+<li>Méthodes d'intéraction avec la page (support du clavier, etc.)</li>
+<li>Framework de tests</li>
+</ul>
+
+
+<p>Par exemple, le code suivant :</p>
+
+<p>``` javascript
+var page = require('webpage').create();</p>
+
+<p>page.open(url1, function(status) {</p>
+
+<pre><code>if (status == "fail") phantom.exit();
+page.open(url2, function(status) {
+    if (status == "fail") phantom.exit();
+    page.open(url3, function(status) {
+        if (status == "fail") phantom.exit();
+        page.open(url4, function(status) {
+            if (status == "fail") phantom.exit();
+            // Can I stop, now?
+        });
+    });
+});
+</code></pre>
+
+<p>});
+```</p>
+
+<p>s'écrira plus simplement avec CasperJS :</p>
+
+<p>``` javascript
+var casper = require('casper').create();</p>
+
+<p>casper.start(url1);
+casper.thenOpen(url2);
+casper.thenOpen(url3);
+casper.thenOpen(url4);</p>
+
+<p>casper.run();
+```</p>
+
+<p>Il faut noter qu'avec la version 1.1 de CasperJS (pas encore sortie), l'écriture des tests sera simplifiée, en particulier pour ce qui concerne le code à exécuter avant ou après des tests (<code>setUp</code> et <code>`tearDown</code>).</p>
+
+<p>S'ensuit une démonstration de l'outil CasperJS, pour tester de façon fluide est très simple des interactions sur un site web marchant : tests basiques d'une page (vérification d'un titre, du contenu), simulation de clics pour ajouter des éléments dans le panier, test de la validation d'un formulaire, etc.
+Point sympathique, il est possible de demander à CasperJS de réaliser une capture d'écran durant un test et de le copier dans un fichier avec une commande simple : <code>casper.capture("mon_image.png");</code> On peut donc faire du <em>Screenshot Driven Development</em> :)</p>
+
+<h3>Zombie.js</h3>
+
+<p><img src="/images/zombiejs.jpg" alt="ZombieJS" /></p>
+
+<p><a href="http://zombie.labnotes.org/">ZombieJS</a> est un navigateur <em>headless</em>, qui tourne sur node.js, et qui repose sur des bibliothèque d'émulation (c'est un avantage mais aussi un inconvénient). Ce n'est donc pas un <em>vrai</em> navigateur, bien qu'il supporte la plupart des fonctionnalités des navigateurs actuels : HTML5, sélecteurs CSS3, cookier, web storage, ajax, etc. Il se base sur certaines librairies tierces, telles que :</p>
+
+<ul>
+<li>JSDom</li>
+<li>HTML5</li>
+<li>Sizzle.js (sélecteurs CSS)</li>
+</ul>
+
+
+<p>L'API de Zombie.js est fluide, ce qui permet de rendre le code plus lisible (encore plus en utilisant CoffeeScript). Voici un exemple de code avec Zombie.js :</p>
+
+<p>``` javascript
+var Browser = require("zombie");
+var assert = require("assert");</p>
+
+<p>// Load the page from localhost
+browser = new Browser()
+browser.visit("http://localhost:3000/", function () {</p>
+
+<p>  // Fill email, password and submit form
+  browser.</p>
+
+<pre><code>fill("email", "zombie@underworld.dead").
+fill("password", "eat-the-living").
+pressButton("Sign Me Up!", function() {
+
+  // Form submitted, new page loaded.
+  assert.ok(browser.success);
+  assert.equal(browser.text("title"), "Welcome To Brains Depot");
+
+})
+</code></pre>
+
+<p>});
+```</p>
+
+<p>Un autre exemple de test avec les sélecteurs CSS :</p>
+
+<p><code>javascript
+brower.queryAll("#content &gt; .produit").length.should.equal(7);
+</code></p>
+
+<p>Avec Zombie, le code devient très lisible, ultra rapide. Toutefois, il a quelques défauts (assez importants pour certains) :</p>
+
+<ul>
+<li>Emule un navigateur.</li>
+<li>Difficile à intégrer dans un build java.</li>
+<li>Difficile à faire tourner sur Windows (aie !).</li>
+<li>Le développement est quelque peu en berne (aie aussi !).</li>
+<li>Les erreurs sont parfois cryptiques.</li>
+</ul>
+
+
+<p>Jean-Laurent passe ensuite à une démonstration de l'outil avec CoffeeScript.</p>
+
+<h3>QUnit</h3>
+
+<p><img src="/images/qunit.png" alt="QUnit" /></p>
+
+<p><a href="http://qunitjs.com">QUnit</a> est une librairie de tests JavaScript plus proche des JUnit, avec le système des assert. On est ici plutôt à destination des tests unitaires, pour faire du TDD.
+L'écosystème de QUnit est assez riche, il est également possible d'ajouter de nouvelles assertions (par défaut, QUnit n'en propose qu'une toute petite poignée) :</p>
+
+<p>``` javascript
+// Code du plugin QUnit closeEnough (https://github.com/jquery/qunit/tree/master/addons/close-enough)
+QUnit.extend( QUnit.assert, {</p>
+
+<pre><code>/**
+ * Checks that the first two arguments are equal, or are numbers close enough to be considered equal
+ * based on a specified maximum allowable difference.
+ */
+close: function(actual, expected, maxDifference, message) {
+    var passes = (actual === expected) || Math.abs(actual - expected) &lt;= maxDifference;
+    QUnit.push(passes, actual, expected, message);
+},
+
+/**
+ * Checks that the first two arguments are numbers with differences greater than the specified
+ * minimum difference.
+ */
+notClose: function(actual, expected, minDifference, message) {
+    QUnit.push(Math.abs(actual - expected) &gt; minDifference, actual, expected, message);
+}
+</code></pre>
+
+<p>});
+```</p>
+
+<p>L'utilisation de cette nouvelle assertion doit passer par l'objet <em>assert</em> :</p>
+
+<p>``` javascript
+test('Example unit test', function(assert) {</p>
+
+<pre><code>assert.close(3.141, Math.PI, 0.001);
+assert.notClose(3.1, Math.PI, 0.001);
+</code></pre>
+
+<p>}
+```</p>
+
+<h3>Sinon.js</h3>
+
+<p><a href="http://sinonjs.org/">Cette librairie</a> de tests a le gros avantage de pouvoir mocker pas mal de choses, dont les timers, des servers, des appels Ajax.
+Il dispose également d'une API assez complète pour les espions (<em>spy</em>) ou les <em>stubs</em>.
+Un petit exemple :</p>
+
+<p>```javascript
+it("calls original function with right this and args", function () {</p>
+
+<pre><code>var callback = sinon.spy();
+var proxy = once(callback);
+var obj = {};
+
+proxy.call(obj, 1, 2, 3);
+
+assert(callback.calledOn(obj));
+assert(callback.calledWith(1, 2, 3));
+</code></pre>
+
+<p>});
+```</p>
+
+<p>Un autre exemple, en mockant une requête Ajax :</p>
+
+<p>```javascript
+after(function () {</p>
+
+<pre><code>// When the test either fails or passes, restore the original
+// jQuery ajax function (Sinon.JS also provides tools to help
+// test frameworks automate clean-up like this)
+jQuery.ajax.restore();
+</code></pre>
+
+<p>});</p>
+
+<p>it("makes a GET request for todo items", function () {</p>
+
+<pre><code>sinon.stub(jQuery, "ajax");
+getTodos(42, sinon.spy());
+
+assert(jQuery.ajax.calledWithMatch({ url: "/todo/42/items" }));
+</code></pre>
+
+<p>});
+```</p>
+
+<h3>Karma (aka Testacular)</h3>
+
+<p><a href="http://karma-runner.github.com/0.8/index.html">Karma</a> (anciennement appelé Testacular) est un lanceur de tests multi-navigateurs, tournant sur node.js. Il a été développé par l'équipe d'AngularJS (Google).
+Il propose également des adaptateurs pour supporter différents frameworks de tests : Mocha, Jasmine, QUnit ou Angular Scenario.</p>
+
+<h3>Chai.js</h3>
+
+<p><img src="/images/chaijs.png" alt="Chaijs" /></p>
+
+<p><a href="http://chaijs.com/">ChaiJS</a> est une toute petite librairie d'assertions. Elle propose 3 types d'assertions :</p>
+
+<p>Le type <em>Assert</em> :</p>
+
+<p>``` javascript
+var assert = chai.assert;</p>
+
+<p>assert.typeOf(foo, 'string');
+assert.equal(foo, 'bar');
+assert.lengthOf(foo, 3)
+assert.property(tea, 'favors');
+assert.lengthOf(tea.flavors, 3);
+```</p>
+
+<p>Le type <em>Expect</em> :</p>
+
+<p>``` javascript
+var expect = chai.expect;</p>
+
+<p>expect(foo).to.be.a('string');
+expect(foo).to.equal('bar');
+expect(foo).to.have.length(3);
+expect(tea).to.have.property('flavors').with.length(3);
+```</p>
+
+<p>Ou encore le type du <em>Should</em> :</p>
+
+<p>``` javascript
+chai.should();</p>
+
+<p>foo.should.be.a('string');
+foo.should.equal('bar');
+foo.should.have.length(3);
+tea.should.have.property('flavors').with.length(3);
+```</p>
+
+<h3>Mocha</h3>
+
+<p><img src="/images/mocha.png" alt="Mocha" /></p>
+
+<p><a href="http://visionmedia.github.com/mocha/">Mocha</a> est un framework de test, tourne sur Node.js ou dans un navigateur.
+Il s'intègre parfaitement avec beaucoup d'autres choses : Jenkins, TeamCity, des outils comme chai.js.</p>
+
+<h3>JSCover</h3>
+
+<p><a href="http://tntim96.github.com/JSCover/">JSCover</a> (anciennement JsCoverage) permet de mesurer la couverture de code par les tests JS. Il offre également un export de type Cobertura, ce qui lui permet son intégration dans Jenkins (et a priori Sonar ?).</p>
+
+<h3>Plato</h3>
+
+<p><a href="http://jsoverson.github.com/plato/examples/jquery/">Plato</a> est un outil d'introspection des tests. Il donne ainsi un rapport détaillé du code JS, permet même d'estimer le nombre de bugs dans l'application :)
+Il met également en détails les erreurs levées par JsLint.</p>
+
+<p>Voilà une très bonne présentation pour commencer Devoxx France, avec beaucoup de beaux outils à tester. Peut-être même trop, les trois heures ont paru bien courtes :)</p>
+
+<hr/>
+
+
+<h2><a href="http://www.devoxx.com/display/FR13/Frontend+Live+Coding+++Tour+d%27horizon+de+l%27outillage+et+des+technos+web+d%27aujourd%27hui">Frontend live coding : tour d'horizon de l'outillage et des technos web d'aujourd'hui</a></h2>
+
+<p><a href="http://www.parleys.com/#play/51561f64e4b0c779d78813f3">Vidéo Parleys</a></p>
+
+<p><a href="http://www.devoxx.com/display/FR13/Frederic+Camblor">Frédéric Camblor</a> (<a href="https://twitter.com/fcamblor">@fcamblor</a>) nous propose un tour d'horizon des outils liés au développement web :</p>
+
+<ul>
+<li><strong>Yeoman</strong> / <strong>Grunt</strong> : orchestrateur des développements web ;</li>
+<li><strong>Sass</strong> / <strong>Compass</strong> : surcouche à CSS permettant notamment de variabiliser les feuilles de style ;</li>
+<li><strong>Bower</strong> : provisionneur de librairies JavaScript ;</li>
+<li><strong>RequireJS</strong> : injecteur de dépendances JavaScript à la demande ;</li>
+<li><strong>Handlebars</strong> : moteur de templating coté client ;</li>
+<li><strong>BackboneJS</strong> : framework MVC qui permet d'améliorer la maintenabilité du code JavaScript ;</li>
+<li>Un ensemble de tips de développement dans Chrome, dont vous ne soupçonnez peut-être pas l'existence.</li>
+</ul>
+
+
+<h3>Yeoman et Grunt</h3>
+
+<p><img src="/images/yeoman.png" alt="Yeoman" /></p>
+
+<p>Premier outil présenté par Frédéric, <a href="http://yeoman.io/">Yeoman</a>. C'est un ensemble d'outils pouvant jouer le rôle de <em>scaffolder</em>, c'est-à-dire qu'il va nous créer en un rien de temps une structure spécifique pour un projet, tout en forçant certaines bonnes pratiques (définition d'un cycle de vie pour l'application, exécution des tests, etc.). Quelque part, il y a pas mal de similitudes avec Maven ici.</p>
+
+<p>Frédéric démarre par générer une structure adaptée à une <em>webapp</em>, via un générateur dédié. Il existe plusieurs autres générateurs, pour faire de l'Angular, du Testacular (enfin Karma), du Backbone, etc. La similitude avec les Maven archetype est saisissante ici. Donc une simple commande <code>yo webapp</code> permet de tout générer.</p>
+
+<p>Une fois ceci généré, nous pouvons constater la présence d'un fichier <em>gruntfile.js</em> qui est utilisé par <a href="http://gruntjs.com/">Grunt</a> pour réaliser un certain nombre de tâches ("compilation", tests, démarrage d'un serveur, etc.). Frédéric le compare là aussi à Maven ou Gradle. Dans les faits, je trouve plus que cela s'approche de Gradle et de son approche scriptée, mais bon. A en voir le contenu, cela est un peu cryptique dans un premier temps, mais Frédéric nous indique qu'il n'est guère nécessaire de s'y attarder. En effet, ça fonctionne, et c'est tout ce qu'on lui demande ! On pourra bien sûr décider de s'intéresser au contenu de ce fichier, si les besoins au sein du projet le nécessite.</p>
+
+<h3>SASS</h3>
+
+<p><img src="/images/sass-lang.png" alt="SASS" /></p>
+
+<p><a href="http://sass-lang.com/">SASS</a>, à l'image de <a href="http://lesscss.org/">LESS</a> est une surcharge du langage CSS pour en offrir des améliorations. Parmi celles-ci, on notera surtout :</p>
+
+<ul>
+<li><code>@import</code> qui permet d'importer un autre fichier CSS, et donc de bien segmenter son code CSS.</li>
+<li>La possibilité d'imbriquer les classes (le <em>nesting</em>), offrant ainsi une bien meilleure lisibilité de son code, tout en l'architecturant mieux.</li>
+<li>Les variables, pratique pour éviter les redondances, et faciliter le refactoring.</li>
+<li>Des fonctions arithmétiques simples (on pourra faire <code>$largeurPanneau + 10px</code> par exemple).</li>
+<li>Des mixins, sortes de fonction permettant de regrouper sous un même bloc un code redondant.</li>
+</ul>
+
+
+<p>A noter qu'il existe un site, <a href="http://compass-style.org/">Compass</a> qui permet de disposer de nombreux mixins pour SASS.</p>
+
+<h3>Bower</h3>
+
+<p><a href="https://github.com/twitter/bower">Bower</a> est un module de gestion des dépendances, un peu à l'image de Maven. Le fichier <code>component.json</code>, que Frédéric avait généré via la commande <code>yo webapp</code>, est le descripteur des dépendances de notre projet web-app.
+Il est possible d'exécuter quelques commandes avec <code>bower</code> :</p>
+
+<ul>
+<li><code>bower install</code> pour installer en local les dépendances définies pour le projet. A noter que contrairement à Maven qui utilise un <em>repository</em> commun à tous les projets, Bower copie localement, <strong>pour chaque projet</strong> la liste des dépendances. Un peu dommage !</li>
+<li><code>bower search</code> recherche les dépendances présentes dans le <em>registry</em> Bower.</li>
+<li><code>bower info XXX</code>  donne toutes les versions présentes pour la librairie spécifiée.</li>
+</ul>
+
+
+<p>Il est également possible d'enregistrer sa propre librairie dans le <em>registry</em> de Bower, via une commande (<code>bower register [mon package] [mon repo git]</code>). Attention, il ne semble pas y avoir beaucoup de contrôles, et la librairie est de suite visible à tout le monde !</p>
+
+<p>Un point important, le <em>versioning</em> des dépendances hébergées sur Bower est assez strict, et respecte le <a href="http://semver.org/"><em>Semantic Versioning</em></a>. Pour faire simple, une version est généralement constituée de 3 chiffres (<code>x.y.z</code>), où nous avons la version majeure (<code>x</code>), la version mineure  (<code>y</code>) puis les bugfixes  (<code>z</code>). Cela nous permet d'obtenir une certaine flexibilité dans la définition des dépendances. Par exemple, si on définit une version <code>1.2.x</code>, cela signifie que l'on veut n'importe quelle version <code>1.2.*</code>, et que si une nouvelle version bugfixe apparait, alors Bower pourra l'utiliser directement.</p>
+
+<h3>RequireJS</h3>
+
+<p><img src="/images/requirejs.png" alt="Require.js" /></p>
+
+<p>Frédéric parle maintenant de <a href="http://requirejs.org/">Require.js</a>, une librairie qui a l'avantage de pouvoir charger des fichiers JavaScript à la demande. On peut également y définir des dépendances (par exemple il faut la librairie <em>foo.js</em> puis <em>bar.js</em> avant d'exécuter mon code).</p>
+
+<h3>Handlebars</h3>
+
+<p><img src="/images/handlebars.png" alt="Handlebars" /></p>
+
+<p>Il arrive fréquemment d'avoir besoin de recourir au <em>templating</em>, c'est-à-dire de placer de la donnée (généralement en format JSON) dans du code HTML (en particulier quand on doit itérer sur un ensemble d'éléments). Frédéric est parti pour utiliser <a href="http://handlebarsjs.com/">Handlebars</a>. Personnellement, j'ai plus l'habitude d'utiliser <a href="http://mustache.github.com/">Mustache.js</a>, mais les principes sont les mêmes.</p>
+
+<h3>Backbone.js</h3>
+
+<p><img src="/images/backbone.png" alt="Backbone.js" /></p>
+
+<p>Pour de multiples raisons, on peut être amené à développer toute une partie de l'application côté client. Ainsi, au lieu de développer le coeur de l'application côté serveur et de n'envoyer que la partie graphique au client, nous y envoyons un framework JavaScript, ainsi que toute une application côté client : la partie modèle, la partie controlleur et la partie vue se retrouvent dès lors sur le navigateur. Frédéric opte pour <a href="http://backbonejs.org/">Backbone.js</a>, mais il existe aussi <a href="http://emberjs.com/">Ember.js</a>, ou le très à la mode <a href="http://angularjs.org/">Angular.js</a> de Google.
+Un tel choix architectural n'est bien sûr pas à prendre à la légère, cela apporte certains avantages (rapidité, minimisation de l'utilisation de la bande passante, possibilité de faire fonctionner son application en mode déconnecté, etc.), mais il y a également des inconvénients, dont le principal à mon avis est la sécurité.</p>
+
+<h3>Rivets.js</h3>
+
+<p>Dernier choix de librairie de la session : <a href="http://rivetsjs.com/">Rivets.js</a> pour réaliser du <em>data-binding</em> bi-directionnel. Cela est nécessaire pour qu'une modification au niveau du modèle soit immédiatement répercutée côté DOM, et qu'une modification côté DOM soit répercutée côté modèle. Cette librairie s'intègre parfaitement à Backbone.js, mais aurait été tout à fait inutile avec Angular, car ce dernier intègre nativement cette fonctionnalité de <em>data-binding</em>.</p>
+
+<p>Pour résumer, cette deuxième université a été très intéressante aussi, car elle a montré une <em>stack</em> complète d'outils et de librairies pour le développement efficace d'une application en JavaScript. Seul bémol, la partie tests qui n'a pas été abordée. Toutefois, Frédéric nous avait prévenu au début qu'il n'était pas à l'aise dans ce domaine. De plus, l'université du matin en avait fait son thème principal, et cela aurait été sans doute redondant. J'aurais quand même apprécié de savoir quelles librairies de tests s'adaptaient le mieux avec la <em>stack</em> choisie par Frédéric.</p>
+
+<hr/>
+
+
+<h2><a href="http://www.devoxx.com/display/FR13/3615+Cloud+Devoxx">3615 Cloud @ Devoxx</a></h2>
+
+<p><img src="/images/devoxxfr-2013-minitel.jpg" alt="Le minitel, l'avenir de Maven ?" /></p>
+
+<p>Voici une session complètement décalée. <a href="http://www.devoxx.com/display/FR13/Nicolas+Loof">Nicolas Loof</a> et <a href="http://www.devoxx.com/display/FR13/Laurent+Huet">Laurent Huet</a> nous proposent d'intéragir avec une instance CloudBees grâce à... un minitel ! Oui, le minitel des années 80. Et sans trucage, juste du bricolage.
+Le montage est le suivant :</p>
+
+<ul>
+<li>Un bon vieux minitel sert de console : saisie des commandes et affichage (textuel bien entendu).</li>
+<li>Ensuite, un assemblage électronique réalisé par Laurent pour le connecter avec un Raspberry Pi.</li>
+<li>Un Raspberry Pi qui va s'occuper de la partie "intelligente" des opérations.</li>
+<li>Un MacBook Pro (celui de Nicolas, dont l'écran a rendu l'âme la semaine d'avant, grâce à un geste malheureux d'un enfant) pour la connexion à Internet. C'est aussi le MBP qui affichera la vidéo d'une caméra qui filme l'écran du minitel (eh oui, difficile de brancher un cable de vidéoprojecteur sur un minitel).</li>
+</ul>
+
+
+<p>Durant la présentation, on nous explique le montage électronique, puis ils exécuteront les tâches suivantes :</p>
+
+<ul>
+<li>Afficher le status de quelques jobs sur CloudBees, puis interagir avec eux : stopper ou démarrer ces jobs.</li>
+<li>Faire un <code>mvn package</code> ! (ils le lanceront en mode <code>offline</code> bien sûr :) ).</li>
+<li>Faire un commit avec git.</li>
+</ul>
+
+
+<p>Bref, une session très agréable, bien que tout à fait inutile !</p>
+
+<h2><a href="http://www.devoxx.com/display/FR13/Good+Bad+and+Ugly+Maven+-+a+puzzler+session">Good bad and ugly Maven - a puzzler session</a></h2>
+
+<p><img src="/images/devoxxfr-2013-maven.jpg" alt="In Maven dependencies hell" /></p>
+
+<p><a href="http://www.devoxx.com/display/FR13/Nicolas+Loof">Nicolas Loof</a> (encore lui), accompagné de son éternel ami <a href="http://www.devoxx.com/display/FR13/Arnaud+Heritier">Arnaud Héritier</a> nous ont proposé le jeu "<em>Qui veut gagner des millions</em>" mais à la sauce Maven. Au cours d'une série de 6 ou 7 questions, Nicolas présentait des situations plus ou moins compliquées avec Maven, souvent des problèmes de dépendances transitives avec des conflits de version. Arnaud, en bon candidat, devait donner la bonne réponse, avec parfois l'aide du public.</p>
+
+<p>Dans une ambiance décontractée et sympathique, j'ai donc terminé la première journée de Devoxx, avant de me rendre au repas du soir des speakers.</p>
+
+<h2>Conclusion</h2>
+
+<p>Comme l'année dernière, la première journée a été très riche à Devoxx France. Celle-ci est généralement plus calme, car il y a moins de monde, les sessions sont plus longues, surtout quand on assiste à des universités. J'ai fait un choix très orienté sur JavaScript cette année, avec 6 heures de démo, de code et de tests. A vrai dire, le programme que j'avais initialement établi le matin était différent. Je comptais en effet aller d'abord suivre <a href="http://www.devoxx.com/display/FR13/Introduction+iOS6+pour+les+developpeurs+Java">l'introduction à iOS pour un développeur Java</a> puis le <a href="http://www.devoxx.com/display/FR13/AngularJS%2C+ou+le+futur+du+developpement+Web">développement sur AngularJS</a>, mais à ma grande déception il s'agissait d'universités et non de <em>Labs</em> (ou <em>Hands On</em>). Ne codant pas moi-même, je craignais de ne pas retenir grand chose pour iOS (je n'ai aucune connaissance dans ce langage), et je n'aurais sans doute pas appris grand chose de nouveau sur Angular.js, que j'ai déjà un peu manipulé.</p>
+
+<p>Mon souhait pour Devoxx France 2014, ce serait que la conférence se déroule sur 4 jours :</p>
+
+<ul>
+<li>2 jours de Labs, <em>Hands On</em> et universités, mais avec une préférence pour les sessions on l'audience code;</li>
+<li>2 jours de conférences.</li>
+</ul>
+
+
+<p>Sait-on jamais :)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Du JavaScript propre ? Challenge Accepted]]></title>
@@ -30,6 +507,8 @@ A nouveau, j'aurais la chance d'être speaker, cette fois-ci pour présenter, co
 <p>Si vous êtes curieux des solutions que l'on va vous proposer, venez à la Seine B, vendredi matin à 10h40.</p>
 
 <p>Rendez-vous à Devoxx !</p>
+
+<p><strong>EDIT</strong> En attendant la vidéo sur le site de <a href="http://www.parleys.com">Parleys</a>, voici <a href="http://fr.slideshare.net/linsolas/java-script-devoxxfrance2013">les slides sur SlideShare</a>.</p>
 ]]></content>
   </entry>
   
@@ -153,181 +632,6 @@ Au programme pour moi : de l'Elastic Search, et le podcast des Cast Codeurs...</
 <p>Voilà, l'édition 2012 de Devoxx s'achève, il est temps de rentrer en France, avec un retour bien moins chaotique que l'aller, à voyager avec quelques personnes sympathiques dont Mathilde Lemée, Antonio Goncalves, ou encore José Paumard.</p>
 
 <p>Allez, pour rester dans l'esprit Devoxx, aujourd'hui s'est ouverte <a href="https://cfp.devoxx.com/">la soumission des sujets pour Devoxx France et Devoxx UK</a> (CFP, <em>Call For Paper</em>), et en moins d'une demi-heure, déjà 5 sujets ont été soumis ! Ne tardez pas trop, le CFP ferme fin janvier...</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Devoxx 2012 - Jour 2]]></title>
-    <link href="http://linsolas.github.com/blog/2012/11/20/devoxx-2012-jour-2/"/>
-    <updated>2012-11-20T08:58:00+01:00</updated>
-    <id>http://linsolas.github.com/blog/2012/11/20/devoxx-2012-jour-2</id>
-    <content type="html"><![CDATA[<p>Après <a href="http://linsolas.github.com/blog/2012/11/18/devoxx-2012-jour-1/">une première journée bien remplie</a>, place à la deuxième journée, qui s'annonce très chargée elle aussi...</p>
-
-<!-- more -->
-
-
-<h2>"Annonce" JBoss</h2>
-
-<p>La journée commence par 2 sessions plénières. Tout d'abord, une "annonce" par JBoss. Voilà un exemple parfait d'annonce ratée. Dans les faits, JBoss veut renommer son serveur d'applications (JBoss AS) et nous demande donc de <a href="http://www.jboss.org/vote">voter</a> pour notre préférence, parmi les noms suivants :</p>
-
-<ul>
-<li>BaseJump</li>
-<li>WildFly</li>
-<li>jBeret</li>
-<li>Petasos</li>
-<li>Jocron</li>
-</ul>
-
-
-<p>Personnellement, je ne les trouve pas terrible, le 4e est carrément affreux (du moins en français). Bref, on s'ennuie. Le bon côté des choses, c'est que cela ne dure que 10 minutes. Place à Google !</p>
-
-<h2>Google, Life online</h2>
-
-<p>Durant environ une heure, nous avons un discours de <a href="http://www.devoxx.com/display/DV12/Tim+Bray">Tim Bray</a> qui a parlé de la vie en ligne (<em>Life online</em>), ainsi que quelques démonstrations - plus commerciales que techniques - de certains produits de Google.
-Tim Bray a donc abordé le sujet de la vie en ligne, en insistant particulièrement sur un point : la sécurité. Premièrement, il est absolument indispensable de mettre en place le HTTPS sur son site, car il est de notre responsabilité de sécuriser la connexion avec nos utilisateurs. Certes cela coûte un peu d'argent (la génération des certificats étant payante), mais cela est simplement vital. Un autre message de Tim Bray concernait les mots de passe. Utiliser un même mot de passe pour plusieurs sites est généralement une mauvaise idée, on l'a vu récément avec le piratage de LinkedIn, laissant filer dans la nature des millions de mot de passes. Il insiste aussi sur l'intérêt d'utiliser les authentifications par tiers, comme avec Google, Twitter ou Facebook, bien que tous ces boutons enlaidissent un peu les pages de connexions...
-Dernier point important, la vérification en deux étapes, que tout le monde devrait adopter pour son compte Google. Le principe est d'utiliser une 2e méthode d'authentification en plus du mot de passe, à savoir un code reçu par texto pour se logguer. Si cette opération peut paraitre un peu contraignante, il n'en est rien en réalité, et cela peut vous éviter de bien graves désagréments, comme cela a pu arriver <a href="http://www.wired.com/gadgetlab/2012/08/apple-amazon-mat-honan-hacking/all/">à certaines personnes</a>.</p>
-
-<p>Bref, un discours pas forcément joyeux, mais plein de remarques de bon sens. La suite sera un peu plus légère, avec entre autre la présentation des nouveaux produits de Google, en particulier <a href="http://www.google.fr/nexus/4/">le téléphone Nexus 4</a>, <a href="http://www.google.fr/nexus/10/">la tablette Nexus 10</a>, ainsi que <a href="http://www.android.com/">la dernière version d'Android, Jelly Bean 4.2</a>. De bien belles machines, présentées par <a href="http://www.devoxx.com/display/DV12/Chet+Haase">Chet Haase</a> ainsi que <a href="http://www.android.com/">Romain Guy</a>, bien que le discours paraissait plutôt commercial...</p>
-
-<p><img src="http://linsolas.github.com/images/Devoxx2012-Google.JPG" alt="Présentation de la dernière version d'Android sur le Nexus 10 par Romain Guy"/></p>
-
-<p>Il a été aussi question des nouveautés de Google App Engine, comme l'intégration de Jenkins grâce à Cloudbees, ainsi que d'une fonctionnalité très intéressante, le <a href="https://developers.google.com/appengine/docs/adminconsole/trafficsplitting">Traffic Splitting</a>. L'idée est de dire à GAE de rediriger une partie du trafic de son site (exprimée en %) vers une autre version de son application, pour par exemple, permettre à quelques utilisateurs de tester la toute dernière version de son site. Simple et pratique !</p>
-
-<hr/>
-
-
-<h2><a href="http://www.devoxx.com/display/DV12/Bean+Validation+1.1++it%27s+not+Beansland+anymore">Bean Validation 1.1: It's not beansland anymore</a></h2>
-
-<p><img src="http://linsolas.github.com/images/Devoxx2012-Validation.JPG" alt="Bean Validation"/></p>
-
-<p>Allons jeter un oeil maintenant sur la présentation d'<a href="http://www.devoxx.com/display/DV12/Emmanuel+Bernard">Emmanuel Bernard</a> sur la nouvelle version de Bean Validation (<a href="http://jcp.org/en/jsr/detail?id=349">JSR 349</a>).</p>
-
-<h3>Rappels sur la version 1.0</h3>
-
-<p>Tout d'abord, un petit rappel de la version 1.0, qui a défini les bases de la validation, son standard. Des frameworks comme JPA, JSF, GWT, etc. l'utilisent déjà, ce qui est une bonne chose.
-Des contraintes existent déjà, comme <code>@NotNull</code>, <code>@Size</code>, etc. Il est toutefois possible de créer ses propres contraintes, tel que <code>@ZipCode</code>.
-La notion de groupes avait aussi été introduite : validation partielle, ordre des contraintes. On définit un groupe comme ceci :</p>
-
-<p>``` java</p>
-
-<pre><code>@NotNull(group=BasicPostal.class)
-String street;
-
-@ZipCode(group = BasicPostal.class)
-String zipCode;
-</code></pre>
-
-<p>```</p>
-
-<p>Le groupe étant une interface, ce qui plus facile à en contrôler la validité d'un point de vue du code qu'une chaine de caractères.</p>
-
-<h3>Bean Validation 1.1</h3>
-
-<p>Les annotations de Bean Validation peuvent être aussi utilisées pour valider des paramètres d'une fonction, d'un constructeur, comme par exemple ici :</p>
-
-<p>``` java</p>
-
-<pre><code>public User createUser(@NotNull String name, @Past Date birthDate) { ... }
-</code></pre>
-
-<p>```</p>
-
-<p>Mais il est aussi possible de demander de valider un objet, voire un graphe d'objets grâce à <code>@Valid</code> :</p>
-
-<p>``` java</p>
-
-<pre><code>public Order createOrder(..., @Valid User user) { ... }
-</code></pre>
-
-<p>```</p>
-
-<p>Si l'on souhaite également valider la valeur retournée par une méthode, alors on ajoutera simplement l'annotation au niveau de la méthode elle-même.</p>
-
-<p>Emmanuel Bernard vient à poser une question à l'assemblée. Doit-on valider les getters? La majorité de la salle vote "Non", considérant ainsi que les getters sont de simples accesseurs à une propriété, et qu'ils ne doivent donc pas lever d'exception si par exemple le champ à retourner vaut <code>null</code>. Le problème principal si l'on veut valider ces getters est que cela pourrait casser du code existant, car l'interprétation d'une violation peut être différente selon les frameworks.</p>
-
-<p>Autre nouveauté de la version 1.1 est l'introduction des conversions de groupes. Sous ce titre un peu barbare se cache la fonctionnalité qui permet d'altérer un groupe de validation lors du <em>cascading</em> de validation, c'est-à-dire que potentiellement, certaines règles de validation pourront être activées en fonction de la valeur de certains champs. Par exemple, on peut disposer de 2 types de validation d'une adresse : une validation simple et une validation complète, le choix de la validation étant fait selon certains critères du contexte.</p>
-
-<p>Bean Validation dispose également d'une meilleure intégration avec JAX-RS, JPA, CDI, etc. JAXB ne semble hélas pas faire partie du lot, les délais des JSR étant trop courts pour intégrer les nouveautés de la validation à JAXB.</p>
-
-<p>Question timing, <em>normalement</em>, la release du JCP est prévue pour mi-mars. Hibernate Validator 5 alpha 1 vient de sortir, donc si vous souhaitez y jeter un oeil, allez-y !</p>
-
-<hr/>
-
-
-<p>Il est l'heure de la pause déjeuner, je n'assiste pas aux sessions de midi, la salle où je voulais aller étant pleine. Un petit détour par Code Story, puis viennent les Quickies. Le premier, c'est <a href="http://www.devoxx.com/display/DV12/From+Zero+to+JavaEE+in+15+Minutes+%28or+Less%29">From Zero to JavaEE in 15 minutes</a>, présentée par <a href="http://www.devoxx.com/display/DV12/Koen+Aers">Koean Aers</a> ainsi qu'un autre collègue de JBoss. La démonstration consiste à utiliser JBoss Forge pour générer une application JSF à partir uniquement d'un schéma de base de données. L'application reste bien entendu basique, essentiellement destinée à des opérations de CRUD. Je suis moyennement convaincu, certes ça marche, mais j'ai déjà vu un peu mieux comme solutions, tel que <a href="http://www.jaxio.com/celerio.html">Celerio</a>, voire même Play! (qui ne génère certes pas le code depuis la base - quoique - mais qui dispose de toutes les briques pour faire du CRUD facilement).</p>
-
-<p>Le Quickie suivant était le mien, sur Hibernate Envers. Vous pouvez lire tout le détail dans <a href="http://linsolas.github.com/blog/2012/11/17/devoxx-2012-presentation-dhibernate-envers/">un billet précédent</a>.</p>
-
-<hr/>
-
-
-<h2><a href="http://devoxx.com/pages/viewpage.action?pageId=6391754">Javascript unit testing and build integration</a>&lt;</h2>
-
-<p><a href="http://devoxx.com/display/DV12/Wouter+Groeneveld">Wouter Groeneveld</a> nous parle des test en Javascript. A vrai dire, certaines parties m'ont rappelé <a href="http://www.devoxx.com/display/FR12/Chouchoutez+votre+code+JavaScript">ma session à Devoxx France</a>, la mienne ayant toutefois été plus axée sur la partie industrialisation, avec l'intégration de Sonar dans l'analyse du code. Wouter va plus dans le détail, en montrant les forces et les faiblesses des solutions proposées.</p>
-
-<p>Il part donc sur l'utilisation de <a href="http://pivotal.github.com/jasmine/">Jasmine</a> pour réaliser des tests du code Javascript, en montrant quelques exemples de code. Puis il en vient à la partie visuelle de son application. Comment la tester ? Tout d'abord, il opte pour Selenium, mais la relative lenteur et le besoin d'un navigateur sont des inconvénients assez importants dès que l'on a une grosse base de tests. Après avoir montré un runner spécifique, il parle de <a href="http://phantomjs.org/">PhantomJS</a>, un <em>headless browser</em> basé sur WebKit et offrant une API pour interagir avec le JavaScript. Du coup, plus besoin de "vrai" navigateur pour exécuter et tester son code JavaScript. Les tests s'exécutent très rapidement, le seul problème étant qu'aucun pont avec la JVM n'existe actuellement (les tests sont exécutés via Ant), et donc il n'y a pas vraiment d'intégration avec l'IDE ou un serveur d'intégration continue. Cela rend également le déboggage assez difficile.</p>
-
-<hr/>
-
-
-<h2><a href="http://devoxx.com/display/DV12/Code+but+not+as+we+know+it+-+Infrastructure+as+code">Code but not as we know it - Infrastructure as code</a></h2></h2>
-
-<p><a href="http://devoxx.com/display/DV12/Patrick+Debois">Patrick Debois</a> nous fait un état des lieux assez complet sur la gestion de la configuration, en parlant des principales solutions existantes aujourd'hui, à savoir :</p>
-
-<ul>
-<li><a href="http://cfengine.com/">CFEngine</a></li>
-<li><a href="http://puppetlabs.com/">Puppet</a></li>
-<li><a href="http://wiki.opscode.com/display/chef/Home">Chef</a></li>
-<li><a href="http://palletops.com/">Pallet</a></li>
-<li><a href="http://ansible.cc/">Ansible</a></li>
-</ul>
-
-
-<p>Il faut cependant dire qu'il insistera avant tout sur les deux plus connus, Puppet et Chef.
-En guise d'introduction, un rappel de pourquoi ces solutions existent, ainsi que des principes élémentaires, comme par exemple l'idempotence, qui stipule que si je relance le même "code", jalors e dois retrouver le même état à chaque fois. Ensuite, une explication rapide mais claire sur le langage utilisé par ces outils, ainsi que quelques notions importantes à savoir.
-Par exemple, Puppet utilise des <em>manifests</em> (fichiers .pp), et fait une compilation du catalogue avant son exécution, alors que Chef, qui utilise des <em>recipes</em> (fichiers .rb), va réaliser une exécution linéaire des scripts.</p>
-
-<p>Ensuite, Patrick Debois nous parle d'outils, d'éditeurs, en nous citant quelques solutions :</p>
-
-<ul>
-<li>Lexers</li>
-<li>vi(m)</li>
-<li>Geppetto, un plugin Eclipse</li>
-<li>JetBrains Rubymine support for Puppet</li>
-</ul>
-
-
-<p>Grâce à tout cela, ce domaine se rapproche de plus en plus à notre domaine de prédilection, le développement logiciel. On voit apparaitre des notions de règle de "codage", de patterns ou d'anti-patterns, voire même de tests et de déboggage (bien que cela est encore très restreint).
-C'est un sujet qui ne tient bien évidemment pas en une heure, mais cette session a le mérite d'exposer clairement la situation actuelle en la matière. A approfondir !</p>
-
-<hr/>
-
-
-<h2><a href="http://www.devoxx.com/display/DV12/Re-imagining+the+browser+with+AngularJS">Re-imagining the browser with AngularJS</a></h2>
-
-<p>La conférence sur <a href="http://angularjs.org/">AngularJS</a> présentée par <a href="http://www.devoxx.com/display/DV12/Igor+Minar">Igor Minar</a> et <a href="http://www.devoxx.com/display/DV12/Misko+Hevery">Miško Hevery</a> est, de l'avis d'une majorité des spectateurs, LA conférence qu'il fallait voir à Devoxx. Elle était quasi-parfaite sur tous les plans : 2 speakers excellents et parfaitement complémentaires, présentant un numéro sans faille, sur une technologie très attrayante. Bref, du 10/10.</p>
-
-<p>Cette conférence m'a vraiment beaucoup plu, et je vais essayer de faire un billet spécifiquement sur elle d'ici quelques jours. En attendant, les slides <a href="https://github.com/strangeloop/strangeloop2012/blob/master/slides/sessions/Hevery-Re-imagining%20the%20browser%20with%20AngularJS.pdf">sont visibles sur Internet</a>, bien qu'une bonne partie de la présentation était une démo...</p>
-
-<hr/>
-
-
-<h2><a href="http://devoxx.com/display/DV12/Progressing+Parleys.com%2C+a+Java+based+e-Learning+platform">Progressing Parleys</a></h2>
-
-<p>Pour la dernière conférence de la journée, je choisis de m'intéresser à l'évolution de Parleys. <a href="http://www.parleys.com/">Parleys.com</a> est un site hébergeant de nombreuses vidéos liées à l'informatique, ainsi que toutes les sessions des Devoxx, et certains JUG (<em>Java Users Group</em>). <a href="http://devoxx.com/display/DV12/Stephan+Janssen">Stephan Janssen</a> l'a créé en 2006. Il est également le fondateur du JUG Belge (BeJUG), et, excusez du peu, fondateur également de Devoxx (Javapolis à l'origine).
-Bref, lors de cette session, Stephan Janssen, <a href="http://devoxx.com/display/DV12/Jo+Voordeckers">Jo Voordeckers</a> et <a href="http://devoxx.com/display/DV12/Benjamin+Dobler">Benjamin Dobler</a>, nous parlent de la prochaine version de Parleys, disponible au plus tard pour Devoxx France. La stack technique est intéressante, comme on peut le voir ici :</p>
-
-<p><img src="http://linsolas.github.com/images/Devoxx2012-Parleys.JPG"/></p>
-
-<p>Et encore, cela ne semble pas tout, puisqu'ils utilisent également ElasticSearch...
-Le but final est de proposer une application plus riche, et moins limitée pour les solutions mobiles. En effet, le lecteur actuel étant basé sur Flash, il n'est ainsi pas compatible avec les iPhones ou les iPads. L'utilisation d'HTML 5 semble avoir été poussée loin, en particulier pour la partie d'édition des vidéos. L'autre objectif de cette nouvelle version de Parleys est justement de simplifier l'édition de ces vidéos, afin de les rendre accessibles le plus rapidement possible après leur enregistrement. Pour Devoxx France, il avait fallu attendre plusieurs semaines pour voir les vidéos des sessions disponibles sur Parleys. L'équipe veut ainsi réduire ce délai à seulement quelques jours ! En plus de cela, si j'ai bien compris, il est envisagé que les personnes regardant les vidéos puissent les éditer, par exemple s'il y a un décalage entre la vidéo et les slides diffusés en parallèle.</p>
-
-<p>Une session intéressante, où le choix techniques sont bien expliqués, et qui donne envie d'avoir en main cette nouvelle version de Parleys !</p>
-
-<hr/>
-
-
-<p>La deuxième journée de Devoxx 2012 se termine sur cette session, avant d'aller voir Skyfall, le dernier James Bond, dont la diffusion nous était offerte par Devoxx (ainsi que les popcorns :) ). D'ailleurs, j'ai vraiment beaucoup aimé ce James Bond. Beaucoup de personnes sont allés ensuite à la soirée au NoX, une boite de nuit proche du Métropolis. J'ai fait mon petit joueur en retournant à l'hôtel vers 23h30, encore un peu fatigué de la veille...</p>
 ]]></content>
   </entry>
   
