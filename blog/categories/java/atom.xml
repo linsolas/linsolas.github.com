@@ -4,7 +4,7 @@
   <title><![CDATA[Category: java | fr.romain:blog:3.0]]></title>
   <link href="http://linsolas.github.com/blog/categories/java/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2013-04-02T23:21:53+02:00</updated>
+  <updated>2013-04-02T23:46:50+02:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -12,6 +12,50 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Devoxx France 2013 - Bilan]]></title>
+    <link href="http://linsolas.github.com/blog/2013/04/02/devoxx-france-2013-bilan/"/>
+    <updated>2013-04-02T23:23:00+02:00</updated>
+    <id>http://linsolas.github.com/blog/2013/04/02/devoxx-france-2013-bilan</id>
+    <content type="html"><![CDATA[<p><img src="http://www.devoxx.com/download/attachments/6816022/DevoxxFR-2012-web-400-267.png" title="Devoxx France 2013" alt="Devoxx France" /></p>
+
+<p>L'édition française de Devoxx 2013 s'est donc achevée la semaine dernière. A nouveau, un énorme <strong>BRAVO</strong> à toute l'équipe organisatrice, aux sponsors, aux speakers, aux participants. C'était magique. Devoxx, c'est un peu le Disneyland du développeur geek. On y voit des "stars" (pas dans le mauvais sens du terme) et on s'amuse énormément.</p>
+
+<p>Allez, un petit bilan personnel :</p>
+
+<h3>Les plus</h3>
+
+<ul>
+<li>Les gens.</li>
+<li>L'organisation, toujours au poil.</li>
+<li>L'équipe des organisateurs, toujours gentils et disponibles.</li>
+<li>Les rencontres, surtout voir en vrai des personnes que l'on ne connait que <em>via</em> Twitter.</li>
+<li>Les présentations de qualité, plutôt variées et nombreuses.</li>
+<li>Les gens.</li>
+<li>Certains goodies. Personnellement, j'en ai un peu marre des t-shirts (sauf celui d'Atlassian qui est au top, et que je portais durant ma présentation) et des mugs. Certains sponsors innovent plus que d'autres en la matière : boite à Meuh d'OCTO, décapsuleurs, gants, etc.</li>
+<li>Les concours, bien que je n'ai rien gagné !</li>
+<li>Le site de Parleys qui diffuse toutes les sessions que l'on a dû rater parce que parfois c'était dur de choisir, ou que l'on discutait avec des personnes. En plus, le site a été refait en HTML 5 !</li>
+<li>Le diner des speakers.</li>
+<li>La soirée "<em>Meet &amp; greet</em>".</li>
+<li>Les gens.</li>
+</ul>
+
+
+<h3>Les moins</h3>
+
+<ul>
+<li>Pas assez de <em>Hands On</em> le mercredi. Comme je l'ai dit, j'aimerais beaucoup que Devoxx France 2014 se déroule en quatre jours : 2 jours d'universités et Labs avec une attention particulière pour les sessions où l'auditoire code vraiment, et 2 jours de conférences.</li>
+<li>Le Marriott devient trop petit. L'année passée, avec un peu plus de 1200 personnes, on se sentait à l'étroit. Cette année, avec 1400 et quelques participants, c'était encore plus vrai. De nombreuses personnes se sont faites recaler à l'entrée des salles de conférences pleines pour des raisons de sécurité. Cela se comprend, mais c'est rageant. Le problème est de trouver un lieu ayant une capacité d'accueil d'au moins 1500 personnes à Paris pour un budget raisonnable. Difficile à mon avis !</li>
+<li>La nourriture le midi. Sans être mauvaise, ce n'était quand même pas ça, et ça manquait un peu de variété. En plus, sauf erreur de ma part, il n'y avait pas de desserts le midi. A noter que cette année, contrairement à 2012, les boissons étaient toujours à disposition et ça c'est bien (petit bémol : pas de Coca light, que du Coca "normal" :o) ).</li>
+<li>Toujours pas de NAO à gagner :)</li>
+<li>Faute de place, les BOF sont toujours un peu tard le soir (certains finissent à 22h). Guère pratique quand on a déjà 2 jours de Devoxx dans les pates !</li>
+</ul>
+
+
+<p>Voilà, hormis le problème du lieu qui devient trop petit, rien de méchant. Devoxx confirme qu'il s'agit d'une superbe conférence, et encore une fois, j'étais très fier d'y assister, surtout en tant que speaker ! A l'année prochaine (et en fin d'année pour la version World à Anvers) !</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Devoxx France 2013 - Jour 3]]></title>
@@ -870,45 +914,6 @@ Peu présente l'année dernière, Adobe n'était même plus à Devoxx cette ann�
 <p>Autre thématique à ce Devoxx, qui disposait de son propre canal appelé le <em>Future<Devoxx></em>, était la <strong>robotique</strong>, avec les interactions avec le NAO ou les Raspberry Pi.</p>
 
 <p>Au final, des sujets d'actualité, et assez variés. Je me demande ce que nous réserve les trois Devoxx de 2013 !</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Devoxx 2012 - Jour 3]]></title>
-    <link href="http://linsolas.github.com/blog/2012/11/20/devoxx-2012-jour-3/"/>
-    <updated>2012-11-20T14:19:00+01:00</updated>
-    <id>http://linsolas.github.com/blog/2012/11/20/devoxx-2012-jour-3</id>
-    <content type="html"><![CDATA[<p>Et voilà, l'aventure Devoxx s'achève presque, avec ce 3e jour, ou plutôt demi-journée, car la conférence ferme ses portes à 13 heures. En arrivant le matin au Métropolis, on voit déjà que beaucoup de stands ont déjà plié bagage, l'ambiance est clairement plus calme.
-Au programme pour moi : de l'Elastic Search, et le podcast des Cast Codeurs...</p>
-
-<!-- more -->
-
-
-
-
-<hr/>
-
-
-<h2><a href="http://devoxx.com/display/DV12/Search%2C+the+Final+Frontier">Search, the Final Frontier</a></h2>
-
-<p><img src="http://linsolas.github.com/images/Devoxx2012-ElasticSearch.jpg" alt="Shay Banon présente Elastic Search"/></p>
-
-<p><a href="http://devoxx.com/display/DV12/Shay+Banon">Shay Banon</a>, le créateur d'Elastic Search, nous fait une démonstration live d'Elastic Search et de son API. Ici, point de slide, simplement 2 outils : un bloc note, rempli de commmand <em>curl</em>, et une terminal de commandes pour les exécuter (bon, ok, parfois un navigateur juste pour nous montrer l'état des noeuds d'Elastic Search) ! En utilisant <em>curl</em> (une commande utilisée ici pour faire des appels à l'API REST d'Elastic Search), Shay Banon nous montre comment il est possible d'intéragir avec son réseau Elastic Search et d'y exécuter différents types de recherche (stricte, phonétique, approximative, etc.).</p>
-
-<p>Pas facile de retranscrire ici les idées présentées ici, mais j'espère que Shay Banon mettra à disposition les commandes qu'il a utilisé, afin de pouvoir se familiariser un peu plus avec Elastic Search !</p>
-
-<hr/>
-
-
-<h2><a href="http://devoxx.com/display/DV12/Les+Cast+Codeurs+Podcast">Les Cast Codeurs</a></h2>
-
-<p><img src="http://linsolas.github.com/images/Devoxx2012-CastCodeurs.jpg" alt="Enregistrement du podcast des Cast Codeurs"/></p>
-
-<p>Pour terminer en beauté ce Devoxx, rien ne vaut un enregistrement live du <a href="http://lescastcodeurs.com/">podcast des Cast Codeurs</a> (l'épisode devrait être disponible sous peu). Beaucoup de membres des Duchess France, ainsi que les habitués des Cast Codeurs (Emmanuel Bernard, Vincent Massol, Guillaume Laforge, Antonio Goncalves, Arnaud Héritier) sont au micro pour nous donner leur avis sur cette édition, pour parler des thèmes abordés par les conférenciers, évoquer les présentations marquantes, et plein d'autres choses. Bien entendu, tout se fait dans une très bonne ambiance, vous ne tarderez pas à le découvrir dès que le podcast deviendra disponible. Et pour clore cet enregistrement, les gars géniaux d'Atlassian nous ont offert un buffet bière - pizza, l'alimentation de base du développeur :)</p>
-
-<p>Voilà, l'édition 2012 de Devoxx s'achève, il est temps de rentrer en France, avec un retour bien moins chaotique que l'aller, à voyager avec quelques personnes sympathiques dont Mathilde Lemée, Antonio Goncalves, ou encore José Paumard.</p>
-
-<p>Allez, pour rester dans l'esprit Devoxx, aujourd'hui s'est ouverte <a href="https://cfp.devoxx.com/">la soumission des sujets pour Devoxx France et Devoxx UK</a> (CFP, <em>Call For Paper</em>), et en moins d'une demi-heure, déjà 5 sujets ont été soumis ! Ne tardez pas trop, le CFP ferme fin janvier...</p>
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: devoxx | fr.romain:blog:3.0]]></title>
   <link href="http://linsolas.github.com/blog/categories/devoxx/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2013-04-02T23:21:53+02:00</updated>
+  <updated>2013-04-02T23:46:50+02:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -12,6 +12,50 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Devoxx France 2013 - Bilan]]></title>
+    <link href="http://linsolas.github.com/blog/2013/04/02/devoxx-france-2013-bilan/"/>
+    <updated>2013-04-02T23:23:00+02:00</updated>
+    <id>http://linsolas.github.com/blog/2013/04/02/devoxx-france-2013-bilan</id>
+    <content type="html"><![CDATA[<p><img src="http://www.devoxx.com/download/attachments/6816022/DevoxxFR-2012-web-400-267.png" title="Devoxx France 2013" alt="Devoxx France" /></p>
+
+<p>L'édition française de Devoxx 2013 s'est donc achevée la semaine dernière. A nouveau, un énorme <strong>BRAVO</strong> à toute l'équipe organisatrice, aux sponsors, aux speakers, aux participants. C'était magique. Devoxx, c'est un peu le Disneyland du développeur geek. On y voit des "stars" (pas dans le mauvais sens du terme) et on s'amuse énormément.</p>
+
+<p>Allez, un petit bilan personnel :</p>
+
+<h3>Les plus</h3>
+
+<ul>
+<li>Les gens.</li>
+<li>L'organisation, toujours au poil.</li>
+<li>L'équipe des organisateurs, toujours gentils et disponibles.</li>
+<li>Les rencontres, surtout voir en vrai des personnes que l'on ne connait que <em>via</em> Twitter.</li>
+<li>Les présentations de qualité, plutôt variées et nombreuses.</li>
+<li>Les gens.</li>
+<li>Certains goodies. Personnellement, j'en ai un peu marre des t-shirts (sauf celui d'Atlassian qui est au top, et que je portais durant ma présentation) et des mugs. Certains sponsors innovent plus que d'autres en la matière : boite à Meuh d'OCTO, décapsuleurs, gants, etc.</li>
+<li>Les concours, bien que je n'ai rien gagné !</li>
+<li>Le site de Parleys qui diffuse toutes les sessions que l'on a dû rater parce que parfois c'était dur de choisir, ou que l'on discutait avec des personnes. En plus, le site a été refait en HTML 5 !</li>
+<li>Le diner des speakers.</li>
+<li>La soirée "<em>Meet &amp; greet</em>".</li>
+<li>Les gens.</li>
+</ul>
+
+
+<h3>Les moins</h3>
+
+<ul>
+<li>Pas assez de <em>Hands On</em> le mercredi. Comme je l'ai dit, j'aimerais beaucoup que Devoxx France 2014 se déroule en quatre jours : 2 jours d'universités et Labs avec une attention particulière pour les sessions où l'auditoire code vraiment, et 2 jours de conférences.</li>
+<li>Le Marriott devient trop petit. L'année passée, avec un peu plus de 1200 personnes, on se sentait à l'étroit. Cette année, avec 1400 et quelques participants, c'était encore plus vrai. De nombreuses personnes se sont faites recaler à l'entrée des salles de conférences pleines pour des raisons de sécurité. Cela se comprend, mais c'est rageant. Le problème est de trouver un lieu ayant une capacité d'accueil d'au moins 1500 personnes à Paris pour un budget raisonnable. Difficile à mon avis !</li>
+<li>La nourriture le midi. Sans être mauvaise, ce n'était quand même pas ça, et ça manquait un peu de variété. En plus, sauf erreur de ma part, il n'y avait pas de desserts le midi. A noter que cette année, contrairement à 2012, les boissons étaient toujours à disposition et ça c'est bien (petit bémol : pas de Coca light, que du Coca "normal" :o) ).</li>
+<li>Toujours pas de NAO à gagner :)</li>
+<li>Faute de place, les BOF sont toujours un peu tard le soir (certains finissent à 22h). Guère pratique quand on a déjà 2 jours de Devoxx dans les pates !</li>
+</ul>
+
+
+<p>Voilà, hormis le problème du lieu qui devient trop petit, rien de méchant. Devoxx confirme qu'il s'agit d'une superbe conférence, et encore une fois, j'étais très fier d'y assister, surtout en tant que speaker ! A l'année prochaine (et en fin d'année pour la version World à Anvers) !</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Devoxx France 2013 - Jour 3]]></title>
@@ -841,39 +885,6 @@ A nouveau, j'aurais la chance d'être speaker, cette fois-ci pour présenter, co
 <p>Rendez-vous à Devoxx !</p>
 
 <p><strong>EDIT</strong> En attendant la vidéo sur le site de <a href="http://www.parleys.com">Parleys</a>, voici <a href="http://fr.slideshare.net/linsolas/java-script-devoxxfrance2013">les slides sur SlideShare</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Conférencier à Devoxx France 2013]]></title>
-    <link href="http://linsolas.github.com/blog/2013/02/21/conferencier-a-devoxx-france-2013/"/>
-    <updated>2013-02-21T00:08:00+01:00</updated>
-    <id>http://linsolas.github.com/blog/2013/02/21/conferencier-a-devoxx-france-2013</id>
-    <content type="html"><![CDATA[<p><img src="http://www.devoxx.com/download/attachments/6816022/DevoxxFR-2012-web-400-267.png"/></p>
-
-<p><em>tl;dr</em> Je serais à nouveau présentateur pour la conférence Devoxx France 2013, et ça fait mon bonheur, surtout qu'il s'agit d'une conférence (oui, je fais une conférence dans une conférence, normal quoi) !</p>
-
-<!-- more -->
-
-
-<p>La conférence <a href="http://www.devoxx.com">Devoxx</a> est arrivée assez tard dans ma vie professionnelle. J'en avais entendu parler il y a environ 4 ou 5 ans, et j'avais eu envie d'y assister à plusieurs reprises, en vain.
-Quand fin 2011 le comité Devoxx annonça qu'à partir de 2012 la conférence aurait sa <em>petite</em> soeur <strong>Devoxx France</strong>, il devenait hors de question pour moi de ne pas y assister. Et pour n'avoir aucun regrêt, j'avais même proposé deux sujets (un <em>Tools In Action</em> ainsi qu'un <em>Quickie</em>) au <em>CFP</em> (<em>Call for Papers</em>, ou en français <em>Appel à Orateur</em> ?). A ma grande surprise, les deux sujets ont été acceptés, et je me suis ainsi retrouvé à présenter ceci :</p>
-
-<ul>
-<li><a href="http://www.devoxx.com/display/FR12/Chouchoutez+votre+code+JavaScript">Chouchoutez votre code JavaScript</a>, où je montrais qu'industrialiser son développement JavaScript est aussi facile qu'en Java, et pour ne rien gâcher, avec les mêmes outils : Maven, Jenkins, Sonar.</li>
-<li><a href="http://www.devoxx.com/display/FR12/TestNG%2C+parce+que+vos+tests+le+valent+bien">TestNG, parce que vos tests le valent bien</a>, un petit <em>Quickie</em> pour montrer les atouts de TestNG par rapport à JUnit.</li>
-</ul>
-
-
-<p>Ca a été un grand moment, et quand est venu le <em>CFP</em> pour Devoxx World (la conférence originelle, tenue à Anvers), je me suis dit que j'allais également y proposer des sujets. Au final, mon <em>Quickie</em> <a href="http://www.devoxx.com/display/DV12/Easy+Entity+Auditing+with+Hibernate+Envers">Easy Entity Auditing With Hibernate Envers</a> a été retenu. Parler en anglais n'est pas forcément chose aisée, et le format <em>Quickie</em> - 15 minutes - s'adaptait à merveille !</p>
-
-<p>Et voilà que vient l'année 2013. Et donc les Devoxx. Cette année, en plus de Paris et Anvers, Londres s'est jointe à la fête. Mais pas question pour moi d'assister à DevoxxUK, Devoxx France restant la priorité (surtout que les deux conférences se chevauchent dans le calendrier).
-Vu l'excitation que m'avait procuré mes présentations lors des Devoxx 2012, je voulais absolument y retourner comme orateur. Par manque de temps et d'inspiration, je n'ai finalement proposé qu'un seul sujet, une conférence (format de 50 minutes). Pari risqué, car c'est le <em>slot</em> le plus demandé. Il me semble qu'il y a eu environ 310 propositions pour une trentaine de places. Près de 90% seront donc refusées. Par chance, la mienne fut retenue, tout comme celle de <a href="http://julien.jakubowski.fr/">Julien Jakubowski</a> (architecte <a href="http://www.octo.com">OCTO</a> et fondateur du <a href="http://chtijug.org/">Chti'JUG</a>), <a href="http://www.devoxx.com/display/FR13/Du+Javascript+propre+++Challenge+Accepted+%21"><em>Du JavaScript propre ? Challenge Accepted</em></a>.
-Etant donné la ressemblance de nos deux présentations, il a été décidé que nous présenterions tous les deux une conférence commune. C'est donc chose faite (enfin, on y travaille quoi).</p>
-
-<p>Je ne vais pas dévoiler le contenu de la présentation, mais il s'agira de lister les principaux travers lorsque l'on développe en JavaScript, et surtout de montrer les moyens de code proprement.</p>
-
-<p><em>Stay tuned</em>, et je l'espère que l'on se verra à la conférence Devoxx !</p>
 ]]></content>
   </entry>
   
