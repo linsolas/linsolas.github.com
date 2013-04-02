@@ -4,7 +4,7 @@
   <title><![CDATA[Category: javascript | fr.romain:blog:3.0]]></title>
   <link href="http://linsolas.github.com/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2013-04-01T14:50:28+02:00</updated>
+  <updated>2013-04-02T23:21:53+02:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -12,6 +12,158 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Devoxx France 2013 - Jour 3]]></title>
+    <link href="http://linsolas.github.com/blog/2013/03/29/devoxx-france-2013-jour-3/"/>
+    <updated>2013-03-29T09:17:00+01:00</updated>
+    <id>http://linsolas.github.com/blog/2013/03/29/devoxx-france-2013-jour-3</id>
+    <content type="html"><![CDATA[<p><img src="http://www.devoxx.com/download/attachments/6816022/DevoxxFR-2012-web-400-267.png" title="Devoxx France 2013" alt="Devoxx France" /></p>
+
+<p>Aie, déjà le dernier jour de la conférence Devoxx France. Que le temps passe vite ! Cette dernière journée reste toutefois très intense, en particulier parce qu'à 10h40, c'était ma présentation "<em>Du JavaScript propre ? Challenge Accepted!</em>" avec Julien Jakubowski. Je ferais un billet dédié à cette présentation.</p>
+
+<!-- more -->
+
+
+<h3><a href="http://www.devoxx.com/display/FR13/Web+Oriented+Architecture%2C+une+transmutation+des+pratiques+de+construction+des+SI">Web oriented architecture, une transmutation des pratiques de construction des SI</a></h3>
+
+<p>J'avais raté les keynotes du jeudi, je me suis dit qu'il serait dommage d'en faire autant le vendredi. Bon, j'ai raté une partie de la première keynote, celle d'<a href="http://www.devoxx.com/display/FR13/Alexis+Moussine-pouchkine">Alexis Moussine-Pouchkine</a>, "<a href="http://www.devoxx.com/display/FR13/Normal+ou+decafeine">Normal ou décafeiné</a>". En gros, le message de sa keynote est que l'avenir, en particulier le Cloud, peut - et doit - se faire avec Java.</p>
+
+<p>Passons à la deuxième keynote, celle de <a href="http://www.devoxx.com/display/FR13/Habib+Guergachi">Habib Guergachi</a>, CEO de <a href="http://zenexity.com/">Zenexity</a>. Je voulais la voir car il l'avait <a href="http://www.parleys.com/#play/5148922a0364bc17fc56c738">déjà jouée l'année passée</a> sous forme de conférence, et j'avais entendu d'excellents retours. Au delà du message, c'est vraiment le bonhomme qui impressionne. Il avait une telle énergie que cela en devenait contagieux. Rien de mieux pour bien démarrer une journée intense !</p>
+
+<p>Revenons au message lui-même. Il est un peu polémique, mais je crois qu'il n'a pas complètement tort sur un certain nombre de choses.</p>
+
+<p>Quand il s'agit de faire un choix important, il y a deux solutions possibles. On peut opter et pousser le changement, au risque d'innover. Certes, il y a le risque de se faire virer, mais ce sera dans la gloire :) L'autre chemin, c'est la soumission, et ne pas bousculer les choses établies. On ne risque pas de se faire virer à court terme, mais peut-être que dans 2 ans, on vous reprochera de ne pas avoir sû anticiper le changement, et vous vous ferez virer dans la honte !</p>
+
+<p>Ok, c'est une vision un peu simpliste, mais y a un soupçon de vérité là-dedans quand même.</p>
+
+<p>Habib, au cours de sa présentation, parle de <a href="http://www.playframework.com/">Play</a>. Bien entendu, il prêche pour sa paroisse, Zenexity est l'éditeur du framework. Il s'agit d'une innovation française. Pourtant, au début c'était plutôt un défaut, que ce soit pour les français (qui ne jurent que par des produits américains) ou par les américains eux-mêmes. Utiliser une technologie française c'est un peu comme voler dans un avion congolais : ça ne rassure pas vraiment ! Pourtant, Play! a été adopté par de grands noms (surtout américains), comme LinkedIn, Typesafe, etc. Dès lors, tout le monde, y compris les français, encense le framework.</p>
+
+<p>On ne peut pas tout comprendre, il faut savoir se concentrer sur un problème précis, un petit bout d'une architecture entière. Et si l'on se jette à l'eau, que l'on prend le problème à bras le corps, peut-être que l'on sera la personne qui a vraiment sû comprendre et aborder ce problème, et que la solution que l'on proposera deviendra la solution que tout le mondre utilisera. Mais pour cela, il faut se lancer !</p>
+
+<p>Pour résumer, la keynote de Habib Guergachi était pleine de panache, et donne à réflechir. Rien de mieux pour continuer la journée, surtout que la présentation suivante est celle de <a href="http://www.devoxx.com/display/FR13/Julien+Jakubowski">Julien Jakubowski</a> et... <a href="http://www.devoxx.com/display/FR13/Romain+Linsolas">moi-même</a>. J'y reviendrais très vite.</p>
+
+<hr/>
+
+
+<h3><a href="http://www.devoxx.com/display/FR13/Animez+vos+pages+HTML5++un+tour+d%27horizon+complet+des+techniques+d%27animation+en+HTML5">Animez vos pages HTML5: un tour d'horizon complet des techniques d'animation en HTML5</a></h3>
+
+<p><a href="http://www.devoxx.com/display/FR13/Martin+Gorner">Martin Gorner</a> (<a href="https://twitter.com/martingorner">@martingorner</a>) de Google nous parle d'animation en HTML5. Sa présentation est visible <a href="http://animateyourhtml5.appspot.com/pres/#1">en live sur ce site</a>.</p>
+
+<p>En CSS 3, <code>transition</code> permet d'animer des éléments. Le navigateur va calculer lui-même toutes les étapes intermédiaires.
+La propriété <code>animation</code> permet de faire des animations plus complexes, en définissant les propriétés CSS à appliquer à différentes étapes.
+Le CSS 3 dispose également de transformations géométriques 2D (rotation, agrandissement, étirement, etc.).
+Il y a également des transformations 3D : <code>translateZ</code>, <code>rotateY</code>, etc.
+A noter qu'il faut définir soi même la perspective via une propriété CSS : <code>-webkit-perspective: 1000px;</code>.
+Par défaut, la valeur par défaut est <code>-webkit-tansform-style: flat</code>. Ce n'est pas ce que l'on souhaite, il faut donc la mettre à <code>preserve-3d</code>. Attention, Internet Explorer 10 ne gère pas cette propriété (mais on peut bidouiller avec du JavaScript pour remplir cette lacune).</p>
+
+<p><img src="/images/devoxxfr-2013-animation-1.jpg" title="Finalement, animer un cube en CSS, ce n'est pas si compliqué" alt="Finalement, animer un cube en CSS, ce n'est pas si compliqué" /></p>
+
+<p>Les bonnes habitudes pour travailler en 3D :</p>
+
+<ul>
+<li>Créer un <code>div</code> qui représente la scène.</li>
+<li>Créer un objet qui supportera l'animation.</li>
+<li>Y affecter des images.</li>
+<li>Définir les propriétés d'animation.</li>
+</ul>
+
+
+<p>Après avoir passé en revue l'utilisation des Canvas 2D, Martin aborde le Canvas 3D, connu aussi sous le nom de <strong>WebGL</strong>. Après quelques explications, Martin propose d'aborder la partie pratique à l'aide de la librairie <a href="https://github.com/mrdoob/three.js/">Three.js</a>, qui permet de coder dans le moteur WebGL en JavaScript : définition de la scène, création d'une "caméra", des "lumières". Ensuite on peut ajouter des objets (des <em>Meshs</em>). Enfin, on définit les actions.
+Voici un exemple de code avec cette librairie :</p>
+
+<p>``` javascript</p>
+
+<p>var camera, scene, renderer;
+var geometry, material, mesh;</p>
+
+<p>init();
+animate();</p>
+
+<p>function init() {</p>
+
+<pre><code>camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 10000 );
+camera.position.z = 1000;
+scene = new THREE.Scene();
+geometry = new THREE.CubeGeometry( 200, 200, 200 );
+material = new THREE.MeshBasicMaterial( { color: 0xff0000, wireframe: true } );
+mesh = new THREE.Mesh( geometry, material );
+scene.add( mesh );
+renderer = new THREE.CanvasRenderer();
+renderer.setSize( window.innerWidth, window.innerHeight );
+document.body.appendChild( renderer.domElement );
+</code></pre>
+
+<p>}</p>
+
+<p>function animate() {</p>
+
+<pre><code>// note: three.js includes requestAnimationFrame shim
+requestAnimationFrame( animate );
+mesh.rotation.x += 0.01;
+mesh.rotation.y += 0.02;
+renderer.render( scene, camera );
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Three.js gère également des modèles d'objets 3D (via la spécification <a href="https://collada.org">Collada</a> par exemple).</p>
+
+<p>Un point sur les préfixes (ici <code>-webkit-*</code>) : il y a une "convention". Tant qu'une spécification n'est pas officielle, les navigateurs utilisent des préfixes. Une fois la spécification entérinée, alors le préfixe peut disparaître. On peut sinon utiliser des outils tels que <a href="http://leaverou.github.com/prefixfree/">prefixfree.js</a> ou <a href="http://sass-lang.com/">SASS</a> qui vont s'occuper d'ajouter les préfixes pour nous.</p>
+
+<p><img src="/images/devoxxfr-2013-animation-2.jpg" title="Les 4 possibilités d'animations en web" alt="Les 4 possibilités d'animations en web" /></p>
+
+<hr/>
+
+
+<h2><a href="http://www.devoxx.com/display/FR13/Peut+on+toujours+etre+developpeur+apres+40+ans">Peut on toujours être développeur après 40 ans ?</a></h2>
+
+<p><a href="http://www.devoxx.com/display/FR13/Benjamin+Marron">Benjamin Marron</a> (<a href="https://twitter.com/bmarron">@bmarron</a>) nous explique s'il est possible</p>
+
+<p>Être boucher à 40 ans ? Artisan à 40 ans ? La question ne se pose pas tant elle est évidente. Pourtant, pour un développeur, la question se pose.
+Y a-t-il une obscolescence des développeur ? Si la personne est concernée, se forme, alors non. Mais sans ces efforts, cela risque d'arriver. Et direction chef de projet :)</p>
+
+<p>Grâce à leur expérience, les développeurs expérimentés savent mieux filtrer les informations, choisir les outils ou les librairies.</p>
+
+<p><img src="/images/devoxxfr-2013-40ans.jpg" title="Développeur à 40 ans, c'est ça ?" alt="Développeur à 40 ans, c'est ça ?" /></p>
+
+<p>Alors la question est peut-être de savoir si nous sommes usés ?
+Il ne faut pas rester dans sa zone de confort.
+Les conférences comme Devoxx permettent de se gonfler à bloc, le leitmotiv c'est "<strong>soyez fiers d'être développeurs</strong>"</p>
+
+<p>Quid du choc générationnel ? Comme travailler avec des "petits jeunes" de 20 ans ? Il faut rester humble, dire que l'on a toujours à apprendre.</p>
+
+<p>Il y a aussi le problème de disponibilité, avec la vie de famille, les enfants, etc. Mais cela reste jouable, et le fait de ne pas être toujours 100% disponible pour son travail n'est pas un frein.</p>
+
+<p>Le message de Benjamin Marron est que la passion doit nous faire continuer dans cette voie, et que nous avons les moyens d'y parvenir. Un sujet n'a pas été vraiment abordé, si ce n'est lors des questions du public : la reconnaissance de l'expérience par l'employeur. Il est vrai qu'en France, niveau salaire, on a tendance à stagner assez vite (disons à partir d'une dizaine d'années d'expérience), et continuer sa progression n'est pas toujours facile. Ca reste compliqué aujourd'hui, mais les choses semblent changer. Doucement en tout cas.</p>
+
+<hr/>
+
+
+<h2><a href="http://www.devoxx.com/display/FR13/Winter+is+coming">Winter is coming</a></h2>
+
+<p><img src="/images/devoxxfr-2013-winter.jpg" title="Winter is coming" alt="Winter is coming" /></p>
+
+<p>Je finis (ou presque) ma journée avec la présentation de <a href="http://www.devoxx.com/display/FR13/Didier+Girard">Didier Girard</a> et <a href="http://www.devoxx.com/display/FR13/Aurelien+Pelletier">Aurélien Pelletier</a> de <a href="http://www.sfeir.com/">SFEIR</a>. J'avoue que j'ai un peu du mal à savoir quoi tirer de cette présentation, tant le message n'était pas très clair. L'idée, du moins une partie de ce qui a été dit, c'est de savoir comment juger de la pertinence d'un framework, d'une librairie, et de savoir estimer son espérance de vie, dans un monde très concurrentiel.</p>
+
+<p>Didier Girard décide donc d'utiliser <a href="http://www.google.com/trends/?hl=en">Google Trends</a> pour juger de la popularité d'un framework. Mais plutôt que simplement comparer deux noms de technologies via le site de Google, il décide d'y ajouter le terme <em>tutorial</em>, supposant que plus il y a de tutoriels sur une technologie, plus celle-ci intéresse les gens, et sera facile à maitriser.
+Bien sûr, Didier Girard insiste sur le fait que cela doit aider à se faire une opinion, mais que cela ne saurait suffire. Pourtant, il n'ira guère plus loin dans sa démonstration, ce qui est un peu contradictoire au final. Dommage.</p>
+
+<p>Pour résumer, on va dire que ce n'est pas forcément la présentation que j'ai préféré à Devoxx :)</p>
+
+<hr/>
+
+
+<h2><a href="http://www.devoxx.com/display/FR13/Les+Cast+Codeurs+Podcast...+putain+4+ans+deja%21">Les CastCodeurs, putain 4 ans déjà</a></h2>
+
+<p><img src="/images/devoxxfr-2013-castcodeurs.jpg" title="Merci Atlassian, une fois de plus !" alt="Merci Atlassian, une fois de plus !" /></p>
+
+<p>Ca devient une tradition, finir un Devoxx avec une session live des <a href="http://lescastcodeurs.com/">Cast Codeurs</a>. A vrai dire, je ne vois <strong>aucune</strong> raison de ne pas y assister : récapitulatif de la conférence, bonne ambiance, bonnes blagues (quoique ?) et bières offertes par Atlassian ! Rien de mieux pour terminer en beauté une magnifique conférence. Allez écouter le podcast, bientôt disponible. En attendant, il y a les podcasts de <a href="http://lescastcodeurs.com/2011/11/28/les-cast-codeurs-podcast-episode-49-devoxx-2011-les-dix-ans/">Devoxx 2011</a>, <a href="http://lescastcodeurs.com/2012/04/21/les-cast-codeurs-podcast-episode-57-en-direct-de-devoxx-france-2012/">Devoxx France 2012</a>, et enfin <a href="http://lescastcodeurs.com/2012/11/29/les-cast-codeurs-podcast-episode-68-devoxx-2012-et-les-putchettes/">Devoxx 2012</a>.</p>
+
+<p>A l'année prochaine !</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Devoxx France 2013 - Jour 2]]></title>
