@@ -1,0 +1,579 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Devoxx France 2013 - Du JavaScript propre ? Challenge Accepted - fr.romain:blog:3.0</title>
+  <meta name="author" content="Romain Linsolas">
+
+  
+  <meta name="description" content="Dernier billet sur la conférence Devoxx France 2013 (ouf !). Je vais parler de notre session, Du JavaScript propre ? Challenge Accepted!, présentée &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://linsolas.github.com/blog/2013/04/03/devoxx-france-2013-du-javascript-propre-challenge-accepted/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="fr.romain:blog:3.0" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-34711882-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">fr.romain:blog:3.0</a></h1>
+  
+    <h2>Un blog qu'il est bien pour le Java</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:linsolas.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">A propos</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Devoxx France 2013 - Du JavaScript Propre ? Challenge Accepted</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-03T08:59:00+02:00" pubdate data-updated="true">Apr 3<span>rd</span>, 2013</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><img src="/images/affiche-conference.jpg" title="Du JavaScript propre ? Challenge Accepted!" alt="Du JavaScript propre ? Challenge Accepted!" /></p>
+
+<p>Dernier billet sur la conférence Devoxx France 2013 (ouf !). Je vais parler de notre session, <a href="http://www.devoxx.com/display/FR13/Du+Javascript+propre+++Challenge+Accepted">Du JavaScript propre ? Challenge Accepted!</a>, présentée avec <a href="http://www.devoxx.com/display/FR13/Julien+Jakubowski">Julien Jakubowski</a> d&#8217;<a href="http://www.octo.com">OCTO</a>.</p>
+
+<!-- more -->
+
+
+<p>Alors pour la petite histoire, il faut savoir que Julien et moi ne nous connaissions pas personnellement un mois et demi avant Devoxx ! Nous avions tous les deux proposé une conférence durant le CFP (<em>Call For Paper</em>) très similaire.
+De son côté, Julien avait proposé une version améliorée de sa présentation <a href="http://fr.slideshare.net/jak78/javascript-ce-nest-pas-si-sale">Le JavaScript ce n&#8217;est pas si sale</a> qu&#8217;il avait faite au <a href="http://chtijug.org/">Ch&#8217;ti JUG</a> dont il est le fondateur.
+De mon côté, j&#8217;avais proposé à peu près la même chose, mais dont le but était plutôt de faire un état des lieux de l&#8217;écosystème autour de JavaScript en 2013, et montrer que celui-ci est extrêmement riche, presque à l&#8217;image de celui du monde Java.
+Le comité de direction, ne sachant qui choisir, nous a demandé s&#8217;il était possible de mixer nos présentations. Ce qui fut fait. On est donc parti de la présentation de Julien, puis on l&#8217;a améliorée, suite à nos nombreuses discussions. Je pense également que le fait de la présenter à deux la rend plus vivante, plus intéressante.</p>
+
+<p><img src="/images/devoxxfr-2013-salle-vide.jpg" title="Le calme avant la tempête" alt="Le calme avant la tempête" /></p>
+
+<h2>Le contenu</h2>
+
+<p>La session se divise en deux parties :</p>
+
+<ul>
+<li>Les problèmes courants en JavaScript.</li>
+<li>Les solutions que l&#8217;on propose pour coder proprement en JavaScript.</li>
+</ul>
+
+
+<h3>Les problèmes</h3>
+
+<p>Tout d&#8217;abord, nous expliquons pourquoi nous faisons cette présentation. Le constat est double :</p>
+
+<ul>
+<li>JavaScript est partout, et les sites sont de plus en plus riches en partie grâce à lui. On ne peut donc pas l&#8217;ignorer, surtout avec l&#8217;avénement du HTML5.</li>
+<li>JavaScript a une mauvaise réputation. Le langage est sale, plus adapté à la bidouille sur sa page HTML que pour faire de <em>vraies</em> applications, difficulté de trouver un bon environnement de travail.</li>
+</ul>
+
+
+<p>Bref, il y a du boulot pour redorer le blason de JavaScript. Après une petite partie ludique, où l&#8217;on montre quelques résultats <em>étonnants</em> de JavaScript (je vous conseille fortement de regarder <a href="https://www.destroyallsoftware.com/talks/wat">cette vidéo</a>), on passe aux vrais problèmes que l&#8217;on est susceptible de rencontrer dans ses projets :</p>
+
+<ul>
+<li><strong>Pollution de l&#8217;espace de nommage</strong>. Quand on définit des fonctions dans les fichiers JavaScript sans prendre garde, il se peut qu&#8217;il y ait des collisions entre plusieurs fonctions ayant le même nom. Par exemple, si l&#8217;on définit une méthode <code>checkForm()</code> dans un fichier JS, rien ne dit que nous n&#8217;aurons pas une méthode au même nom dans un autre fichier. Dans pareille situation, JS ne considère que la dernière méthode définie, et cela peut poser des problèmes.</li>
+<li><strong>Le scope global par défaut</strong>. Par défaut, les variables ont un scope global, et cela peut aussi entrainer des problèmes. Dans le code suivant, la variable <code>i</code> sera la même dans les 2 boucles, ce qui fait que nous n&#8217;applerons le <em>logger</em> que 10 fois et non 100 fois comme attendu :</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">subLoop</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">subLoop</span><span class="p">();</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li><strong>Tout est public par défaut</strong>. Difficile de cacher certains détails de son implémentation, le mot clé <code>private</code> n&#8217;existant pas en JS. Dans le code suivant, la variable censée être privée ne l&#8217;est pas du tout :</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">counter</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">privateValue</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">increment</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">counter</span><span class="p">.</span><span class="nx">privateValue</span><span class="o">++</span><span class="p">;</span>
+</span><span class='line'>      <span class="k">return</span> <span class="nx">counter</span><span class="p">.</span><span class="nx">privateValue</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">counter</span><span class="p">.</span><span class="nx">increment</span><span class="p">();</span> <span class="c1">// 1</span>
+</span><span class='line'><span class="nx">counter</span><span class="p">.</span><span class="nx">privateValue</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// Aie</span>
+</span><span class='line'><span class="nx">counter</span><span class="p">.</span><span class="nx">increment</span><span class="p">();</span> <span class="c1">// 1</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li><strong>Code non testé</strong>. Tout est dit :)</li>
+</ul>
+
+
+<p>Assez parlé des problèmes, voyons les solutions !</p>
+
+<h3>Les solutions</h3>
+
+<p>Première idée : on pourrait simplement déléguer le code JavaScript à son framework préféré (GWT, JSF, etc.) Nous ne souhaitons pas aller dans cette direction. Faisons du JavaScript ! Autre idée, pour au moins limiter les dégâts : utiliser <a href="https://code.google.com/p/dart/">Google Dart</a> ou <a href="http://coffeescript.org/">CoffeeScript</a> qui permettent une écriture plus fluide, plus sécurisée du code JavaScript.</p>
+
+<p>D&#8217;un point de vue architectural, donc assez haut niveau, il existe aujourd&#8217;hui une tendance à ne pas négliger : les architectures MVC/MVW/MV* <strong>côté client</strong>. Autrement dit, plutôt que d&#8217;avoir un serveur qui va s&#8217;occuper de toute la partie fonctionnelle (couches modèle, contrôleur et vue), on va déporter tout ou partie de ceci côté client. Pour se faire, on se fera aider de solutions telles que <a href="http://backbonejs.org/">Backbone.js</a>, <a href="http://emberjs.com/">Ember</a> ou le très à la mode <a href="http://angularjs.org/">AngularJS</a>. Ce type d&#8217;architecture offre d&#8217;autres avantages : comme le code est exécuté côté client, le temps de réponse est instantané, on transfère beaucoup moins d&#8217;informations entre le client et le serveur (ce qui privilégie les réseaux mobiles), et offre plus facilement un mode déconnecté à son application. Mais ce n&#8217;est pas magique, il faudra faire attention à d&#8217;autres points, en particulier l&#8217;aspect sécurité (bah oui, tout le code est sur le client, donc il lui est plus facile de le comprendre et de le contourner).</p>
+
+<p><img src="/images/devoxxfr-2013-architecture-mvc.png" title="Et si on déplaçait le code métier du côté client ?" alt="Et si on déplaçait le code métier du côté client ?" /></p>
+
+<p>On a cité, parmi les problèmes, le fait que tout est public par défaut. Pour le résoudre, on propose d&#8217;opter pour la modularité. Cela revient un peu à simuler une classe en Java (attention, ce n&#8217;est pas exactement ça, c&#8217;est juste pour faire comprendre l&#8217;idée), en n&#8217;exposant à l&#8217;extérieur que ce que l&#8217;on souhaite (une sorte d&#8217;interface). Le code de notre compteur devient au final quelque chose comme ça :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// Notre counter sera notre objet utilisé par la suite.</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">counter</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">privateValue</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">publicMethod</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">privateValue</span><span class="o">++</span><span class="p">;</span>
+</span><span class='line'>      <span class="k">return</span> <span class="nx">privateValue</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">};</span>
+</span><span class='line'>  <span class="c1">// On retourne un objet qui contient une méthode &quot;increment&quot;, seul élément qui sera visible de l&#39;extérieur.</span>
+</span><span class='line'>  <span class="k">return</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">increment</span><span class="o">:</span> <span class="nx">publicMethod</span>
+</span><span class='line'>  <span class="p">};</span>
+</span><span class='line'><span class="p">})();</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// On passe à l&#39;utilisation du compteur :</span>
+</span><span class='line'><span class="nx">counter</span><span class="p">.</span><span class="nx">increment</span><span class="p">();</span>  <span class="c1">// 1</span>
+</span><span class='line'><span class="nx">counter</span><span class="p">.</span><span class="nx">privateValue</span><span class="p">;</span> <span class="c1">// undefined</span>
+</span><span class='line'><span class="nx">counter</span><span class="p">.</span><span class="nx">privateValue</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// Cela ne pose pas de problème. JS va ajouter une propriété &quot;privateValue&quot; à l&#39;objet &quot;counter&quot;, mais elle sera différente du &quot;privateValue&quot; que nous utilisons dans notre implémentation. Pas de conflit du coup !</span>
+</span><span class='line'><span class="nx">counter</span><span class="p">.</span><span class="nx">increment</span><span class="p">();</span>  <span class="c1">// 2</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Pour accroitre encore la lisibilité et la propreté de son code, on pourra créer des sortes de packages pour nos modules :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">myapp</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">subpackage</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="nx">counter</span><span class="o">:</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>          <span class="c1">// ...</span>
+</span><span class='line'>      <span class="p">})()</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Et son utilisation :</span>
+</span><span class='line'><span class="nx">myapp</span><span class="p">.</span><span class="nx">subpackage</span><span class="p">.</span><span class="nx">counter</span><span class="p">.</span><span class="nx">increment</span><span class="p">();</span> <span class="c1">// 1</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>On aborde ensuite la question du chargement des librairies JS. Plutôt que d&#8217;avoir 15 fichiers JS chargés au chargement de la page (chargement séquentiel, qui plus est, ce qui ralentit d&#8217;autant le chargement), on va utiliser les principes de l&#8217;AMD (<em>Asynchronous Modules Definition</em>), par exemple grâce à la librairie <a href="http://requirejs.org/">require.js</a>. Cela apporte en particulier deux avantages :</p>
+
+<ul>
+<li>Chargement <strong>asynchrone</strong> et/ou en <strong>parallèle</strong>, et donc cela ne bloque pas le chargement des pages, qui se fait normalement de façon séquentielle.</li>
+<li>Chargement à la <strong>demande</strong>. Certaines fonctionnalités de la page peuvent ne pas être utilisées. Alors autant ne pas charger les ressources liées. On pourra ainsi dire &#8220;quand l&#8217;utilisateur souhaite faire ceci, alors on chargera <em>à ce moment-là</em> les librairies X et Y&#8221;.</li>
+<li>Définition des <strong>dépendances</strong>. Un peu comme dans le point précédent, on pourra indiquer que la librairie X dépend de Y, et donc on chargera Y avant X.</li>
+</ul>
+
+
+<p>Intéressons-nous au code en lui-même maintenant. Il existe des outils pour s&#8217;assurer que nous n&#8217;écrivons pas (trop) de bêtises dans notre code JavaScript, un peu comme le fait Checkstyle ou PMD en Java. Nous avons ainsi <a href="http://www.jslint.com/">JsLint</a> ou <a href="http://www.jshint.com/">JsHint</a> pour remplir cette tâche. On tâchera aussi d&#8217;écrire un code plus expressif, c&#8217;est-à-dire plus simple, plus lisible, plus concis. J&#8217;aime l&#8217;expression qui dit <em>qu&#8217;il faut écrire le code comme si la personne qui va le maintenir est un psychopathe qui connait mon adresse</em>, ça traduit bien l&#8217;intérêt d&#8217;écrire correctement son code.</p>
+
+<p>Un vieux code tel que celui-ci :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">checkForm</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">beerName</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;beer_name&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">beerName</span> <span class="o">===</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;beer_name&quot;</span><span class="p">).</span><span class="nx">className</span> <span class="o">+=</span> <span class="s2">&quot;invalid&quot;</span><span class="p">;</span>
+</span><span class='line'>      <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;error_box&quot;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s2">&quot;block&quot;</span><span class="p">;</span>
+</span><span class='line'>      <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>  <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>pourra être <em>refactoré</em> avec <a href="http://jquery.com/">jQuery</a> de cette façon, rendant le code plus lisible, plus facile à maintenir :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#beerForm&#39;</span><span class="p">).</span><span class="nx">submit</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#beer_name&#39;</span><span class="p">).</span><span class="nx">val</span><span class="p">()</span> <span class="o">===</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#beer_name&#39;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;invalid&#39;</span><span class="p">);</span>
+</span><span class='line'>      <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#error_box&#39;</span><span class="p">).</span><span class="nx">show</span><span class="p">();</span>
+</span><span class='line'>      <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>  <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Autre chose pour simplifier l&#8217;écriture : utiliser des moteurs de <em>templating</em>, tels que <a href="http://mustache.github.com/">Mustache.js</a> ou <a href="http://handlebarsjs.com/">Handlebars.js</a>, qui permettent d&#8217;insérer des données dans du HTML de façon fluide. Ainsi, si <code>beers</code> est un tableau de bières (au format JSON), on pourra écrire ceci :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">&lt;</span><span class="nx">ul</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&quot;beers-list&quot;</span><span class="o">&gt;</span>
+</span><span class='line'>  <span class="p">{{</span><span class="err">#</span><span class="nx">beers</span><span class="p">}}</span>
+</span><span class='line'>      <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span><span class="p">{{</span><span class="nx">name</span><span class="p">}}</span> <span class="o">-</span> <span class="p">{{</span><span class="nx">color</span><span class="p">}}</span> <span class="o">-</span> <span class="p">{{</span><span class="nx">alcohol</span><span class="p">}}</span><span class="o">%&lt;</span><span class="err">/li&gt;</span>
+</span><span class='line'>  <span class="p">{{</span><span class="err">/beers}}</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/ul&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">template</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#beers-list&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="c1">// Appel du moteur de rendu de Mustache</span>
+</span><span class='line'>  <span class="nx">template</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span> <span class="nx">Mustache</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="nx">template</span><span class="p">.</span><span class="nx">html</span><span class="p">(),</span> <span class="nx">data</span><span class="p">)</span> <span class="p">);</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/script&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Autre sujet important, les tests. Nous n&#8217;allons pas dans le détail, mais nous expliquons qu&#8217;il existe de nombreux outils pour cela : Jasmine, QUnit, Mocha, CapserJS, PhantomJS, Karma, etc. Je vous renvoie à l&#8217;<a href="http://linsolas.github.com/blog/2013/03/27/devoxx-france-2013-jour-1/">université de Jean-Laurent de Morlhon et Pierre Gayvallet à ce sujet</a>.</p>
+
+<p>Le message est clair : tous les outils sont là pour faire des tests, du TDD, du BDD, des tests d&#8217;intégration, etc. Bref, on n&#8217;a plus d&#8217;excuses !</p>
+
+<p><img src="/images/devoxxfr-2013-batmanrobin.png" title="Faites des tests en JavaScript" alt="Faites des tests en JavaScript" /></p>
+
+<p>Dernier point abordé : l&#8217;automatisation. On peut facilement intégrer son application JavaScript dans un serveur d&#8217;intégration continue comme Jenkins ou un outil d&#8217;analyse qualité tel que Sonar. Je vous renvoie <a href="http://www.parleys.com/#play/5148922a0364bc17fc56c7cf">à mon Tools In Action de l&#8217;année dernière pour voir tout ça en pratique</a>.
+Niveau IDE, nous recommandons <a href="http://www.jetbrains.com/idea/">IntelliJ IDEA de JetBrains</a> (ou <a href="http://www.jetbrains.com/webstorm/">WebStorm</a>) qui offre un <em>vrai</em> support des langages web comme le JavaScript, le HTML ou le CSS.</p>
+
+<h3>La présentation à Devoxx France</h3>
+
+<p>Voilà un retour personnel sur la présentation elle-même. Déjà, on était très content avec Julien, car la salle était pleine, ce qui fait 300 personnes à nous écouter (sans compter les millions qui nous verront sur Parleys). Si si, j&#8217;avais compté les chaises pendant que la salle était vide ! :o)</p>
+
+<p><img src="/images/devoxxfr-2013-salle-1.jpg" title="Y a du monde à gauche..." alt="Y a du monde à gauche" />
+<img src="/images/devoxxfr-2013-salle-2.jpg" title="... et aussi à droite !" alt="... et aussi à droite !" /></p>
+
+<p>On a plutôt bien géré notre temps, on a fini un peu en avance même - environ 8 minutes avant - ce qui nous a permis de prendre près d&#8217;une dizaine de questions. Les retours que j&#8217;ai eu en direct ou sur le Net semblent montrer que la présentation a été appréciée, et c&#8217;est ce qui nous rend encore plus heureux (<a href="http://blog.soat.fr/2013/04/devoxx-fr-2013-du-javascript-propre-challenge-accepted/">un exemple ici</a>).</p>
+
+<p>Une chose toutefois, que l&#8217;on fera peut-être si notre présentation est prise sur une autre conférence. Il semblerait, d&#8217;après les questions, que certaines personnes s&#8217;attendaient à avoir un peu la <em>stack</em> idéale pour développer en JavaScript. Tout d&#8217;abord, elle n&#8217;existe pas. Choisir un framework JavaScript va dépendre de vos besoins, mais aussi de votre maitrise du langage, et du risque que vous acceptez de courrir par rapport à la pérénnité de tel ou tel outil.
+Je ne conseillerais pas AngularJS ou Backbone.js sans connaitre le contexte. Partir sur une application exécutée côté clent, cela a un impact à plus ou moins long terme, et faire ce choix n&#8217;est pas anodin.</p>
+
+<p>L&#8217;un des points sur lequel il faut faire attention, c&#8217;est l&#8217;intégration des outils entre eux. Il n&#8217;est pas toujours évident de faire fonctionner X avec Y. Aussi, peut-être proposerons-nous dans une version améliorée de la présentation deux ou trois <em>stacks</em> qui fonctionnent bien ensemble.</p>
+
+<h3>Références</h3>
+
+<ul>
+<li>Les slides sur Slideshare <a href="http://fr.slideshare.net/linsolas/java-script-devoxxfrance2013">ici</a> ou <a href="http://fr.slideshare.net/jak78/java-script-devoxxfrance2013ppt">là</a>.</li>
+<li>Les slides et bientôt la vidéo sur <a href="http://www.parleys.com/#play/515aac03e4b0c779d7881496">Parleys</a>.</li>
+</ul>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Romain Linsolas</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-03T08:59:00+02:00" pubdate data-updated="true">Apr 3<span>rd</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/conference/'>conference</a>, <a class='category' href='/blog/categories/devoxx/'>devoxx</a>, <a class='category' href='/blog/categories/javascript/'>javascript</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://linsolas.github.com/blog/2013/04/03/devoxx-france-2013-du-javascript-propre-challenge-accepted/" data-via="romaintaz" data-counturl="http://linsolas.github.com/blog/2013/04/03/devoxx-france-2013-du-javascript-propre-challenge-accepted/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/04/02/devoxx-france-2013-bilan/" title="Previous Post: Devoxx France 2013 - Bilan">&laquo; Devoxx France 2013 - Bilan</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Derniers Billets</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/04/03/devoxx-france-2013-du-javascript-propre-challenge-accepted/">Devoxx France 2013 - Du JavaScript propre ? Challenge Accepted</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/04/02/devoxx-france-2013-bilan/">Devoxx France 2013 - Bilan</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/29/devoxx-france-2013-jour-3/">Devoxx France 2013 - Jour 3</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/28/devoxx-france-2013-jour-2/">Devoxx France 2013 - Jour 2</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/27/devoxx-france-2013-jour-1/">Devoxx France 2013 - Jour 1</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("romaintaz", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/romaintaz" class="twitter-follow-button" data-show-count="false">Follow @romaintaz</a>
+  
+</section>
+
+<section>
+  <h1>A propos</h1>
+  <p>Je m'appelle Romain Linsolas, et je suis un développeur Java et web. Voici mon blog, pour vous faire partager ma passion !</p>
+<a href="http://stackoverflow.com/users/26457/romaintaz"><img src="http://stackoverflow.com/users/flair/26457.png?theme=clean" width="208" height="58" alt="profile for romaintaz at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for romaintaz at Stack Overflow, Q&amp;A for professional and enthusiast programmers"></a>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Romain Linsolas -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'romain';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://linsolas.github.com/blog/2013/04/03/devoxx-france-2013-du-javascript-propre-challenge-accepted/';
+        var disqus_url = 'http://linsolas.github.com/blog/2013/04/03/devoxx-france-2013-du-javascript-propre-challenge-accepted/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

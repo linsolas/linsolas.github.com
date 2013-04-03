@@ -63,15 +63,21 @@
         <lastmod>2013-04-02T23:46:36+02:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://linsolas.github.com/blog/2013/04/03/devoxx-france-2013-du-javascript-propre-challenge-accepted/
+        </loc>
+        <lastmod>2013-04-03T14:16:15+02:00</lastmod>
+    </url>
+    <url>
         <loc>http://linsolas.github.com/about/</loc>
         <lastmod>2012-11-22T23:40:52+01:00</lastmod>
     </url>
     <url>
         <loc>http://linsolas.github.com/blog/archives/</loc>
-        <lastmod>2013-04-03T08:33:07+02:00</lastmod>
+        <lastmod>2013-04-03T14:16:15+02:00</lastmod>
     </url>
     <url>
         <loc>http://linsolas.github.com/</loc>
-        <lastmod>2013-04-03T08:33:07+02:00</lastmod>
+        <lastmod>2013-04-03T14:16:15+02:00</lastmod>
     </url>
 </urlset>
