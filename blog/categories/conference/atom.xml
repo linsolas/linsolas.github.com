@@ -4,7 +4,7 @@
   <title><![CDATA[Category: conference | fr.romain:blog:3.0]]></title>
   <link href="http://linsolas.github.com/blog/categories/conference/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2013-04-02T23:46:50+02:00</updated>
+  <updated>2013-04-03T08:33:35+02:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -191,7 +191,8 @@ Les conférences comme Devoxx permettent de se gonfler à bloc, le leitmotiv c'e
 
 <p>Je finis (ou presque) ma journée avec la présentation de <a href="http://www.devoxx.com/display/FR13/Didier+Girard">Didier Girard</a> et <a href="http://www.devoxx.com/display/FR13/Aurelien+Pelletier">Aurélien Pelletier</a> de <a href="http://www.sfeir.com/">SFEIR</a>. J'avoue que j'ai un peu du mal à savoir quoi tirer de cette présentation, tant le message n'était pas très clair. L'idée, du moins une partie de ce qui a été dit, c'est de savoir comment juger de la pertinence d'un framework, d'une librairie, et de savoir estimer son espérance de vie, dans un monde très concurrentiel.</p>
 
-<p>Didier Girard décide donc d'utiliser <a href="http://www.google.com/trends/?hl=en">Google Trends</a> pour juger de la popularité d'un framework. Mais plutôt que simplement comparer deux noms de technologies via le site de Google, il décide d'y ajouter le terme <em>tutorial</em>, supposant que plus il y a de tutoriels sur une technologie, plus celle-ci intéresse les gens, et sera facile à maitriser.
+<p>Didier Girard décide donc d'utiliser <a href="http://www.google.com/trends/?hl=en">Google Trends</a> pour juger de la popularité d'un framework. Cet outil de Google permet de mesurer, et comparer, le nombre de fois où tel ou tel mot est <em>recherché</em> sur Google.
+Plutôt que simplement comparer deux noms de technologies via le site de Google, il décide d'y ajouter le terme <em>tutorial</em>, supposant que plus on recherche de tutoriels sur une technologie, plus celle-ci intéresse les gens, et sera facile à maitriser.
 Bien sûr, Didier Girard insiste sur le fait que cela doit aider à se faire une opinion, mais que cela ne saurait suffire. Pourtant, il n'ira guère plus loin dans sa démonstration, ce qui est un peu contradictoire au final. Dommage.</p>
 
 <p>Pour résumer, on va dire que ce n'est pas forcément la présentation que j'ai préféré à Devoxx :)</p>
