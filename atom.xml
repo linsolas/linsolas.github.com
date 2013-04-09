@@ -4,7 +4,7 @@
   <title><![CDATA[fr.romain:blog:3.0]]></title>
   <link href="http://linsolas.github.com/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2013-04-03T14:17:10+02:00</updated>
+  <updated>2013-04-09T23:42:07+02:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -12,6 +12,609 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Faire du CasperJS en CoffeeScript sur Windows]]></title>
+    <link href="http://linsolas.github.com/blog/2013/04/09/faire-du-casperjs-en-coffeescript-sur-windows/"/>
+    <updated>2013-04-09T21:07:00+02:00</updated>
+    <id>http://linsolas.github.com/blog/2013/04/09/faire-du-casperjs-en-coffeescript-sur-windows</id>
+    <content type="html"><![CDATA[<h1><img src="http://linsolas.github.com/images/logo_windows.png" title="Windows" alt="Windows" /> + <img src="http://linsolas.github.com/images/casperjs_mini.jpg" title="CasperJS" alt="CasperJS" /> = <img src="http://linsolas.github.com/images/icon_love.png" title="Loooove" alt="Loooove" /></h1>
+
+<p>Je suis revenu de Devoxx France avec quelques idées en tête, dont celle de mettre du <a href="http://casperjs.org/">CasperJS</a> dans des applications (merci <a href="http://linsolas.github.io/blog/2013/03/27/devoxx-france-2013-jour-1/">Jean-Laurent et Pierre</a>). Pour faciliter les choses, ma machine tourne sur du Windows (version 7 en l&#8217;occurrence), ce qui n&#8217;est pas forcément le meilleur environnement pour ce type de chose. Mais on ne va pas se décourager si vite, hein ?</p>
+
+<!-- more -->
+
+
+<p>Commençons petit, et essayons de faire marcher un test simple en JavaScript sur CasperJS.</p>
+
+<h2>Installation des outils</h2>
+
+<p>La première chose à faire, c&#8217;est d&#8217;installer CasperJS sur la machine Windows. Mais avant cela, il est nécessaire de disposer d&#8217;une version assez récente de <a href="http://phantomjs.org">PhantomJS</a> (CasperJS utilise PhantomJS pour s&#8217;exécuter). Donc on <a href="http://phantomjs.org/download.html">télécharge PhantomJS</a> et on l&#8217;installe (enfin on décompresse le ZIP). Dans mon cas, il s&#8217;agit de la version <strong>1.9</strong>. Même chose ensuite, je dézippe le ZIP de CasperJS (v<strong>1.0.2</strong>), et je finis par ajouter dans mon <code>PATH</code> les chemins vers les exécutables. Voyons si ça marche bien :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>D:\dev&gt;phantomjs -v
+</span><span class='line'>1.9.0
+</span><span class='line'>D:\dev&gt;casperjs --version
+</span><span class='line'>1.0.2</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Les choses s&#8217;annoncent bien ! Exécutons un test maintenant. Prennons celui-ci, assez simple :</p>
+
+<figure class='code'><figcaption><span>Le code en version JavaScript</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">casper</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;casper&#39;</span><span class="p">).</span><span class="nx">create</span><span class="p">({</span>
+</span><span class='line'>    <span class="nx">verbose</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">logLevel</span><span class="o">:</span> <span class="s1">&#39;debug&#39;</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">casper</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span><span class="s1">&#39;https://mon-application:8080/login/&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">echo</span><span class="p">(</span><span class="s1">&#39;Log in&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">assertTitle</span><span class="p">(</span><span class="s1">&#39;Sign in&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">assertNotVisible</span><span class="p">(</span><span class="s1">&#39;label#error&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;form#loginForm&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span><span class='line'>        <span class="s1">&#39;j_username&#39;</span><span class="o">:</span> <span class="s1">&#39;romain.linsolas&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="s1">&#39;j_password&#39;</span><span class="o">:</span> <span class="s1">&#39;&#39;</span>
+</span><span class='line'>    <span class="p">},</span> <span class="kc">false</span><span class="p">);</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s2">&quot;form#loginForm input.button&quot;</span><span class="p">);</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">assertVisible</span><span class="p">(</span><span class="s1">&#39;label.error&#39;</span><span class="p">);</span> <span class="c1">// Une boite d&#39;erreur doit apparaitre</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;form#loginForm&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span><span class='line'>        <span class="s1">&#39;j_username&#39;</span><span class="o">:</span> <span class="s1">&#39;romain.linsolas&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="s1">&#39;j_password&#39;</span><span class="o">:</span> <span class="s1">&#39;abc123&#39;</span>
+</span><span class='line'>    <span class="p">},</span> <span class="kc">false</span><span class="p">);</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s2">&quot;form#loginForm input.button&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">casper</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">capture</span><span class="p">(</span><span class="s1">&#39;test-screen.png&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">assertTitle</span><span class="p">(</span><span class="s1">&#39;Hello World&#39;</span><span class="p">);</span> <span class="c1">// Nous sommes loggués</span>
+</span><span class='line'>    <span class="c1">// Suite du test</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">casper</span><span class="p">.</span><span class="nx">run</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">renderResults</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>En gros, il se divise ainsi :</p>
+
+<ul>
+<li>J&#8217;initialise un contexte <code>casper</code> (dans mon cas, je lui demande d&#8217;être un peu pipelette, ça facilitera les choses en cas de problème).</li>
+<li>Ensuite, je démarre un test où il va exécuter certaines tâches :
+
+<ul>
+<li>se connecter à une application ;</li>
+<li>vérifier le titre de la page ;</li>
+<li>remplir un formulaire de login sans le mot de passe ;</li>
+<li>cliquer sur un lien, et vérifier qu&#8217;un message d&#8217;erreur apparait ;</li>
+<li>retester en saisissant un mot de passe.</li>
+</ul>
+</li>
+<li>Enfin, je vérifie que je suis bien connecté (le titre de la page a changé) et pour le fun, je fais une capture d&#8217;écran de la page telle qu&#8217;elle est à ce moment-là.</li>
+</ul>
+
+
+<p>Allez zou, il est temps de tester. Le verdict va tomber très vite, il suffit d&#8217;écrire <code>casperjs [mon fichier].js</code> :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+</pre></td><td class='code'><pre><code class='text'><span class='line'>D:\dev&gt;casperjs test-casper.js
+</span><span class='line'>[info] [phantom] Starting...
+</span><span class='line'>[info] [phantom] Running suite: 3 steps
+</span><span class='line'>[debug] [phantom] opening url: https://mon-application:8080/login/, HTTP GET
+</span><span class='line'>[debug] [phantom] Navigation requested: url=https://mon-application:8080/login/, type=Other, lock=true, isMainFrame=true
+</span><span class='line'>[debug] [phantom] url changed to &quot;https://mon-application:8080/login/&quot;
+</span><span class='line'>[debug] [phantom] Successfully injected Casper client-side utilities
+</span><span class='line'>[info] [phantom] Step 2/3 https://mon-application:8080/login/ (HTTP 200)
+</span><span class='line'>Log in
+</span><span class='line'>PASS Page title is: &quot;Sign in&quot;
+</span><span class='line'>PASS Selector is not visible
+</span><span class='line'>[info] [remote] attempting to fetch form element from selector: &#39;form#loginForm&#39;
+</span><span class='line'>[debug] [remote] Set &quot;j_username&quot; field value to romain.linsolas
+</span><span class='line'>[debug] [remote] Set &quot;j_password&quot; field value to
+</span><span class='line'>[debug] [phantom] Mouse event &#39;click&#39; on selector: form#loginForm input.button
+</span><span class='line'>PASS Selector is visible
+</span><span class='line'>[info] [remote] attempting to fetch form element from selector: &#39;form#loginForm&#39;
+</span><span class='line'>[debug] [remote] Set &quot;j_username&quot; field value to romain.linsolas
+</span><span class='line'>[debug] [remote] Set &quot;j_password&quot; field value to ******
+</span><span class='line'>[debug] [phantom] Mouse event &#39;click&#39; on selector: form#loginForm input.button
+</span><span class='line'>[info] [phantom] Step 2/3: done in 718ms.
+</span><span class='line'>[debug] [phantom] Navigation requested: url=https://mon-application:8080/logincheck;jsessionid=808FD9D0EDD9D9C5CCAE7F11F4AE05DE, type=FormSubmitted, lock=true, isMainFrame=true
+</span><span class='line'>[debug] [phantom] Navigation requested: url=https://mon-application:8080/, type=FormSubmitted, lock=true, isMainFrame=true
+</span><span class='line'>[debug] [phantom] url changed to &quot;https://mon-application:8080/&quot;
+</span><span class='line'>[debug] [phantom] Successfully injected Casper client-side utilities
+</span><span class='line'>[info] [phantom] Step 3/3 https://mon-application:8080/ (HTTP 200)
+</span><span class='line'>[debug] [phantom] Capturing page to D:/dev/test-screen.png
+</span><span class='line'>[info] [phantom] Capture saved to D:/dev/.png
+</span><span class='line'>PASS Page title is: &quot;Hello World&quot;
+</span><span class='line'>[info] [phantom] Step 3/3: done in 1224ms.
+</span><span class='line'>[info] [phantom] Done 3 steps in 1226ms
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Cool, ça marche !</p>
+
+<h2>Passons au CoffeeScript</h2>
+
+<p><img src="http://linsolas.github.com/images/CoffeeScript.png" title="CoffeeScript" alt="CoffeeScript" /></p>
+
+<p>Le JavaScript c&#8217;est bien, mais c&#8217;est un peu verbeux, surtout quand le code des tests va grandissant. Tentons maintenant de passer à <a href="http://coffeescript.org/">CoffeeScript</a>. CasperJS est l&#8217;ami de CoffeeScript et accepte très bien que les scripts à exécuter soient écrits avec. D&#8217;après la documentation, il est écrit qu&#8217;il suffit de lancer simplement la commande <code>casperjs [mon fichier].coffee</code>. Ca a l&#8217;air pas mal. Ecrivons tout d&#8217;abord le même code de test, mais cette fois-ci en CoffeeScript. Cela nous donne quelque chose comme ça :</p>
+
+<figure class='code'><figcaption><span>Le code en version CoffeeScript</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+</pre></td><td class='code'><pre><code class='coffeescript'><span class='line'><span class="nv">casper = </span><span class="nx">require</span><span class="p">(</span><span class="s">&#39;casper&#39;</span><span class="p">).</span><span class="nx">create</span><span class="p">(</span>
+</span><span class='line'>    <span class="nv">verbose: </span><span class="kc">true</span>
+</span><span class='line'>    <span class="nv">logLevel: </span><span class="s">&#39;debug&#39;</span>
+</span><span class='line'><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">casper</span><span class="p">.</span><span class="nx">start</span> <span class="s">&#39;https://mon-application:8080/login/&#39;</span><span class="p">,</span> <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="nx">@echo</span> <span class="s">&#39;Log in&#39;</span>
+</span><span class='line'>    <span class="nx">@test</span><span class="p">.</span><span class="nx">assertTitle</span> <span class="s">&#39;Sign in&#39;</span>
+</span><span class='line'>    <span class="nx">@test</span><span class="p">.</span><span class="nx">assertNotVisible</span> <span class="s">&#39;label#error&#39;</span>
+</span><span class='line'>    <span class="nx">@fill</span> <span class="s">&#39;form#loginForm&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nv">j_username: </span><span class="s">&#39;romain.linsolas&#39;</span>
+</span><span class='line'>        <span class="nv">j_password: </span><span class="s">&#39;&#39;</span>
+</span><span class='line'>    <span class="p">},</span> <span class="kc">false</span>
+</span><span class='line'>    <span class="nx">@click</span> <span class="s">&quot;form</span><span class="err">#</span><span class="s">loginForm input.button&quot;</span>
+</span><span class='line'>    <span class="nx">@test</span><span class="p">.</span><span class="nx">assertVisible</span><span class="p">(</span><span class="s">&#39;label.error&#39;</span><span class="p">)</span> <span class="c1">## Error box is displayed</span>
+</span><span class='line'>    <span class="nx">@fill</span> <span class="s">&#39;form#loginForm&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nv">j_username: </span><span class="s">&#39;romain.linsolas&#39;</span>
+</span><span class='line'>        <span class="nv">j_password: </span><span class="s">&#39;abc123&#39;</span>
+</span><span class='line'>    <span class="p">},</span> <span class="kc">false</span>
+</span><span class='line'>    <span class="nx">@click</span> <span class="s">&quot;form</span><span class="err">#</span><span class="s">loginForm input.button&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">casper</span><span class="p">.</span><span class="k">then</span> <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="nx">@capture</span> <span class="s">&#39;test-screen.png&#39;</span>
+</span><span class='line'>    <span class="nx">@test</span><span class="p">.</span><span class="nx">assertTitle</span> <span class="s">&#39;Hello World&#39;</span> <span class="c1">## Now we are logged</span>
+</span><span class='line'>    <span class="c1">## Suite du test</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">casper</span><span class="p">.</span><span class="nx">run</span> <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="nx">@test</span><span class="p">.</span><span class="nx">renderResults</span> <span class="kc">true</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Allez, maintenant on exécute tout ça :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+</pre></td><td class='code'><pre><code class='text'><span class='line'>D:\dev\&gt;casperjs test-casper.coffee
+</span><span class='line'>[info] [phantom] Starting...
+</span><span class='line'>[info] [phantom] Running suite: 3 steps
+</span><span class='line'>[debug] [phantom] opening url: https://mon-application:8080/login/, HTTP GET
+</span><span class='line'>[debug] [phantom] Navigation requested: url=https://mon-application:8080/login/, type=Other, lock=true, isMainFrame=true
+</span><span class='line'>[debug] [phantom] url changed to &quot;https://mon-application:8080/login/&quot;
+</span><span class='line'>[debug] [phantom] Successfully injected Casper client-side utilities
+</span><span class='line'>[info] [phantom] Step 2/3 https://mon-application:8080/login/ (HTTP 200)
+</span><span class='line'>Log in
+</span><span class='line'>PASS Page title is: &quot;Sign in&quot;
+</span><span class='line'>PASS Selector is not visible
+</span><span class='line'>[info] [remote] attempting to fetch form element from selector: &#39;form#loginForm&#39;
+</span><span class='line'>[debug] [remote] Set &quot;j_username&quot; field value to romain.linsolas
+</span><span class='line'>[debug] [remote] Set &quot;j_password&quot; field value to
+</span><span class='line'>[debug] [phantom] Mouse event &#39;click&#39; on selector: form#loginForm input.button
+</span><span class='line'>PASS Selector is visible
+</span><span class='line'>[info] [remote] attempting to fetch form element from selector: &#39;form#loginForm&#39;
+</span><span class='line'>[debug] [remote] Set &quot;j_username&quot; field value to romain.linsolas
+</span><span class='line'>[debug] [remote] Set &quot;j_password&quot; field value to ******
+</span><span class='line'>[debug] [phantom] Mouse event &#39;click&#39; on selector: form#loginForm input.button
+</span><span class='line'>[info] [phantom] Step 2/3: done in 1099ms.
+</span><span class='line'>[debug] [phantom] Navigation requested: url=https://mon-application:8080/logincheck;jsessionid=0A26317CDA05D97D63D6538EE4212B07, type=FormSubmitted, lock=true, isMainFrame=true
+</span><span class='line'>[debug] [phantom] Navigation requested: url=https://mon-application:8080/, type=FormSubmitted, lock=true, isMainFrame=true
+</span><span class='line'>[debug] [phantom] url changed to &quot;https://mon-application:8080/&quot;
+</span><span class='line'>[debug] [phantom] Successfully injected Casper client-side utilities
+</span><span class='line'>[info] [phantom] Step 3/3 https://mon-application:8080/ (HTTP 200)
+</span><span class='line'>PASS Page title is: &quot;Hello World&quot;
+</span><span class='line'>[debug] [phantom] Mouse event &#39;click&#39; on selector: xpath selector: //*[text()=&quot;Administration&quot;]
+</span><span class='line'>[debug] [phantom] Navigation requested: url=https://mon-application:8080/domain/account/index, type=LinkClicked, lock=true, isMainFrame=true
+</span><span class='line'>[info] [phantom] Step 3/3: done in 1389ms.
+</span><span class='line'>[debug] [phantom] url changed to &quot;https://mon-application:8080/domain/account/index&quot;
+</span><span class='line'>[debug] [phantom] Successfully injected Casper client-side utilities
+</span><span class='line'>[info] [phantom] Done 3 steps in 1749ms
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Voilà qui est génial, CasperJS gère nativement le CoffeeScript sans avoir besoin de l&#8217;installer séparément. Mais on va quand même procéder à son installation, comme ça on disposera d&#8217;un compilateur CoffeeScript.</p>
+
+<p>La première étape, c&#8217;est l&#8217;installation de <a href="http://nodejs.org/">NodeJS</a>. Les choses se font assez simplement, il y a un <code>.msi</code> <a href="http://nodejs.org/download/">à télécharger</a>. Il me faudra juste ajouter le chemin d&#8217;installation de NodeJS dans mon <code>PATH</code> :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='text'><span class='line'>D:\dev&gt;node -v
+</span><span class='line'>v0.10.3
+</span><span class='line'>D:\dev&gt;npm -v
+</span><span class='line'>1.2.17
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Maintenant, installons CoffeeScript grâce à la commande <code>npm install -g coffee-script</code>.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='text'><span class='line'>D:\dev\nodejs&gt;npm install -g coffee-script
+</span><span class='line'>npm http GET https://registry.npmjs.org/coffee-script
+</span><span class='line'>npm http GET https://registry.npmjs.org/coffee-script
+</span><span class='line'>npm http GET https://registry.npmjs.org/coffee-script
+</span><span class='line'>npm ERR! Error: getaddrinfo ENOTFOUND
+</span><span class='line'>npm ERR!     at errnoException (dns.js:37:11)
+</span><span class='line'>npm ERR!     at Object.onanswer [as oncomplete] (dns.js:124:16)
+</span><span class='line'>npm ERR! If you need help, you may report this log at:
+</span><span class='line'>npm ERR!     &lt;http://github.com/isaacs/npm/issues&gt;
+</span><span class='line'>npm ERR! or email it to:
+</span><span class='line'>npm ERR!     &lt;npm-@googlegroups.com&gt;
+</span><span class='line'>npm ERR! System Windows_NT 6.1.7601
+</span><span class='line'>npm ERR! command &quot;D:\\dev\\nodejs\\\\node.exe&quot; &quot;D:\\dev\\nodejs\\node_modules\\npm\\bin\\npm-cli.js&quot; &quot;install&quot; &quot;-g&quot; &quot;coffee-script&quot;
+</span><span class='line'>npm ERR! cwd D:\dev\nodejs
+</span><span class='line'>npm ERR! node -v v0.10.3
+</span><span class='line'>npm ERR! npm -v 1.2.17
+</span><span class='line'>npm ERR! syscall getaddrinfo
+</span><span class='line'>npm ERR! code ENOTFOUND
+</span><span class='line'>npm ERR! errno ENOTFOUND
+</span><span class='line'>npm ERR!
+</span><span class='line'>npm ERR! Additional logging details can be found in:
+</span><span class='line'>npm ERR!     D:\dev\nodejs\npm-debug.log
+</span><span class='line'>npm ERR! not ok code 0
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Comme les choses ne sont pas simples chez moi, je suis derrière un proxy :) Il faut donc donner les informations de connexion à npm pour se connecter à Internet. Cela se fait dans le fichier <code>&lt;répertoire home&gt;\.npmrc</code> (par exemple <code>C:\Users\chuck.norris\.npmrc</code>). Dans ce fichier, on définit l&#8217;adresse des proxies ainsi que le registre npm :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='text'><span class='line'>proxy = http://[user]:[mot de passe]@[url proxy]:[port]/
+</span><span class='line'>https-proxy = http://[user]:[mot de passe]@[url proxy]:[port]/
+</span><span class='line'>registry = http://registry.npmjs.org
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>On relance la même commande, et cette fois-ci ça marche mieux :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='text'><span class='line'>D:\dev\nodejs&gt;npm install -g coffee-script
+</span><span class='line'>npm http GET http://registry.npmjs.org/coffee-script
+</span><span class='line'>npm http 200 http://registry.npmjs.org/coffee-script
+</span><span class='line'>npm http GET http://registry.npmjs.org/coffee-script/-/coffee-script-1.6.2.tgz
+</span><span class='line'>npm http 200 http://registry.npmjs.org/coffee-script/-/coffee-script-1.6.2.tgz
+</span><span class='line'>C:\Users\chuck.norris\AppData\Roaming\npm\cake -&gt; C:\Users\chuck.norris\AppData\Roaming\npm\node_modules\coffee-script\bin\cake
+</span><span class='line'>C:\Users\chuck.norris\AppData\Roaming\npm\coffee -&gt; C:\Users\chuck.norris\AppData\Roaming\npm\node_modules\coffee-script\bin\coffee
+</span><span class='line'>coffee-script@1.6.2 C:\Users\chuck.norris\AppData\Roaming\npm\node_modules\coffee-script
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Cool ! Voyons maintenant s&#8217;il est possible de lancer la commande <code>coffee</code> :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='text'><span class='line'>D:\dev&gt;coffee -v
+</span><span class='line'>CoffeeScript version 1.6.2
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Houra !</p>
+
+<h2>Intégration au build</h2>
+
+<p>Dernière étape de ce petit tutoriel : comment allons-nous faire pour exécuter automatiquement les tests CoffeeScript, pour les intégrer par exemple dans notre <em>build</em> continu sur Jenkins ? On pourrait effectivement ajouter une étape dans la configuration Jenkins qui irait lancer un script, mais ce n&#8217;est pas très propre.</p>
+
+<p>J&#8217;ai trouvé quelques plugins Maven, mais rien de folichon. J&#8217;ai donc décidé <a href="https://github.com/linsolas/casperjs-runner-maven-plugin">d&#8217;en créer un moi-même</a>, mais il n&#8217;est pas encore stabilisé.</p>
+
+<p>En attendant, je vais passer par un test <strong>JUnit</strong>, qui aura pour tâche de lister les <code>*.js</code> et <code>*.coffee</code> d&#8217;un répertoire donné. C&#8217;est une version très simple, elle ne gère que les cas standards (j&#8217;essaierais de faire les choses plus proprement dans mon plugin Maven). Elle ne supporte pas non plus les options de la commande <code>casperjs</code> (comme par exemple les <code>--pre</code> ou <code>--post</code>), mais c&#8217;est un premier pas et surtout, ça marche :)</p>
+
+<figure class='code'><figcaption><span>Classe JUnit d&#8217;exécution des fichiers JavaScript et CoffeeScript</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">package</span> <span class="n">fr</span><span class="o">.</span><span class="na">linsolas</span><span class="o">.</span><span class="na">javascript</span><span class="o">.</span><span class="na">casperjs</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kn">import</span> <span class="nn">org.apache.commons.exec.CommandLine</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">org.apache.commons.exec.DefaultExecutor</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">org.apache.commons.lang.StringUtils</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">org.junit.BeforeClass</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">org.junit.Test</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kn">import</span> <span class="nn">java.io.File</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">java.io.FilenameFilter</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kn">import</span> <span class="nn">static</span> <span class="n">org</span><span class="o">.</span><span class="na">fest</span><span class="o">.</span><span class="na">assertions</span><span class="o">.</span><span class="na">Assertions</span><span class="o">.</span><span class="na">assertThat</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/**</span>
+</span><span class='line'><span class="cm"> * Run CasperJS on any *.js or *.coffee files found in a specific folder.</span>
+</span><span class='line'><span class="cm"> * @author Romain Linsolas</span>
+</span><span class='line'><span class="cm"> */</span>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">RunCasperJSTest</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="n">casperFound</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+</span><span class='line'>    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">CASPER_JS</span> <span class="o">=</span> <span class="s">&quot;casperjs.bat %s&quot;</span><span class="o">;</span>
+</span><span class='line'>    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">TESTS_DIR</span> <span class="o">=</span> <span class="s">&quot;D:\\dev\\mon-application\\src\\test\\javascript\\casperjs&quot;</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nd">@BeforeClass</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">checkEnvironment</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>        <span class="c1">// Vérification que l&#39;on a bien CasperJS installé.</span>
+</span><span class='line'>        <span class="kt">int</span> <span class="n">res</span> <span class="o">=</span> <span class="n">execute</span><span class="o">(</span><span class="n">CASPER_JS</span><span class="o">,</span> <span class="s">&quot;--version&quot;</span><span class="o">);</span>
+</span><span class='line'>        <span class="n">assertThat</span><span class="o">(</span><span class="n">res</span><span class="o">).</span><span class="na">isNotEqualTo</span><span class="o">(-</span><span class="mi">1</span><span class="o">);</span>
+</span><span class='line'>        <span class="n">casperFound</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nd">@Test</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">runJavaScriptTests</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>        <span class="n">File</span><span class="o">[]</span> <span class="n">files</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="n">TESTS_DIR</span><span class="o">).</span><span class="na">listFiles</span><span class="o">(</span><span class="k">new</span> <span class="n">FilenameFilter</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>            <span class="nd">@Override</span>
+</span><span class='line'>            <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">accept</span><span class="o">(</span><span class="n">File</span> <span class="n">dir</span><span class="o">,</span> <span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>                <span class="k">return</span> <span class="n">StringUtils</span><span class="o">.</span><span class="na">endsWithIgnoreCase</span><span class="o">(</span><span class="n">name</span><span class="o">,</span> <span class="s">&quot;.js&quot;</span><span class="o">);</span>
+</span><span class='line'>            <span class="o">}</span>
+</span><span class='line'>        <span class="o">});</span>
+</span><span class='line'>        <span class="n">runTests</span><span class="o">(</span><span class="n">files</span><span class="o">);</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nd">@Test</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">runCoffeeScriptTests</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>        <span class="n">File</span><span class="o">[]</span> <span class="n">files</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="n">TESTS_DIR</span><span class="o">).</span><span class="na">listFiles</span><span class="o">(</span><span class="k">new</span> <span class="n">FilenameFilter</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>            <span class="nd">@Override</span>
+</span><span class='line'>            <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">accept</span><span class="o">(</span><span class="n">File</span> <span class="n">dir</span><span class="o">,</span> <span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>                <span class="k">return</span> <span class="n">StringUtils</span><span class="o">.</span><span class="na">endsWithIgnoreCase</span><span class="o">(</span><span class="n">name</span><span class="o">,</span> <span class="s">&quot;.coffee&quot;</span><span class="o">);</span>
+</span><span class='line'>            <span class="o">}</span>
+</span><span class='line'>        <span class="o">});</span>
+</span><span class='line'>        <span class="n">runTests</span><span class="o">(</span><span class="n">files</span><span class="o">);</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">runTests</span><span class="o">(</span><span class="n">File</span><span class="o">[]</span> <span class="n">files</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>        <span class="n">assertThat</span><span class="o">(</span><span class="n">casperFound</span><span class="o">).</span><span class="na">isTrue</span><span class="o">();</span>
+</span><span class='line'>        <span class="kt">int</span> <span class="n">ok</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+</span><span class='line'>        <span class="kt">int</span> <span class="n">ko</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+</span><span class='line'>        <span class="k">for</span> <span class="o">(</span><span class="n">File</span> <span class="n">f</span> <span class="o">:</span> <span class="n">files</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>            <span class="kt">int</span> <span class="n">res</span> <span class="o">=</span> <span class="n">execute</span><span class="o">(</span><span class="n">CASPER_JS</span><span class="o">,</span> <span class="n">f</span><span class="o">.</span><span class="na">getAbsolutePath</span><span class="o">());</span>
+</span><span class='line'>            <span class="k">if</span> <span class="o">(</span><span class="n">res</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span> <span class="n">ok</span><span class="o">++;</span> <span class="o">}</span> <span class="k">else</span> <span class="o">{</span> <span class="n">ko</span><span class="o">++;</span> <span class="o">}</span>
+</span><span class='line'>        <span class="o">}</span>
+</span><span class='line'>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Results: &quot;</span> <span class="o">+</span> <span class="n">ok</span> <span class="o">+</span> <span class="s">&quot; test(s) successful, &quot;</span> <span class="o">+</span> <span class="n">ko</span> <span class="o">+</span> <span class="s">&quot; test(s) failed. Total of &quot;</span> <span class="o">+</span> <span class="o">(</span><span class="n">ok</span> <span class="o">+</span> <span class="n">ko</span><span class="o">)</span> <span class="o">+</span> <span class="s">&quot; test(s).&quot;</span><span class="o">);</span>
+</span><span class='line'>        <span class="n">assertThat</span><span class="o">(</span><span class="n">ko</span><span class="o">).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">execute</span><span class="o">(</span><span class="n">String</span> <span class="n">command</span><span class="o">,</span> <span class="n">Object</span><span class="o">...</span> <span class="n">arguments</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>        <span class="n">DefaultExecutor</span> <span class="n">exec</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DefaultExecutor</span><span class="o">();</span>
+</span><span class='line'>        <span class="n">CommandLine</span> <span class="n">line</span> <span class="o">=</span> <span class="n">CommandLine</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="n">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">command</span><span class="o">,</span> <span class="n">arguments</span><span class="o">));</span>
+</span><span class='line'>        <span class="k">try</span> <span class="o">{</span>
+</span><span class='line'>            <span class="k">return</span> <span class="n">exec</span><span class="o">.</span><span class="na">execute</span><span class="o">(</span><span class="n">line</span><span class="o">);</span>
+</span><span class='line'>        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>            <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="o">;</span>
+</span><span class='line'>        <span class="o">}</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<hr>
+
+
+<p><small>Logo Windows<sup>>TM</sup> par <a href="http://www.yootheme.com/">YOOTheme</a>, image de coeur par <a href="http://www.icon-king.com">David Vignoni</a></small></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Devoxx France 2013 - Du JavaScript propre ? Challenge Accepted]]></title>
