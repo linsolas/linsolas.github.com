@@ -4,7 +4,7 @@
   <title><![CDATA[Category: javascript | fr.romain:blog:3.0]]></title>
   <link href="http://linsolas.github.com/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2013-04-09T23:42:07+02:00</updated>
+  <updated>2013-04-09T23:53:40+02:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -12,6 +12,387 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Faire du CasperJS en CoffeeScript sur Windows]]></title>
+    <link href="http://linsolas.github.com/blog/2013/04/09/faire-du-casperjs-en-coffeescript-sur-windows/"/>
+    <updated>2013-04-09T21:07:00+02:00</updated>
+    <id>http://linsolas.github.com/blog/2013/04/09/faire-du-casperjs-en-coffeescript-sur-windows</id>
+    <content type="html"><![CDATA[<h1><img src="/images/logo_windows.png" title="Windows" alt="Windows" /> + <img src="/images/casperjs_mini.jpg" title="CasperJS" alt="CasperJS" /> = <img src="/images/icon_love.png" title="Loooove" alt="Loooove" /></h1>
+
+<p>Je suis revenu de Devoxx France avec quelques idées en tête, dont celle de mettre du <a href="http://casperjs.org/">CasperJS</a> dans des applications (merci <a href="http://linsolas.github.io/blog/2013/03/27/devoxx-france-2013-jour-1/">Jean-Laurent et Pierre</a>). Pour faciliter les choses, ma machine tourne sur du Windows (version 7 en l'occurrence), ce qui n'est pas forcément le meilleur environnement pour ce type de chose. Mais on ne va pas se décourager si vite, hein ?</p>
+
+<!-- more -->
+
+
+<p>Commençons petit, et essayons de faire marcher un test simple en JavaScript sur CasperJS.</p>
+
+<h2>Installation des outils</h2>
+
+<p>La première chose à faire, c'est d'installer CasperJS sur la machine Windows. Mais avant cela, il est nécessaire de disposer d'une version assez récente de <a href="http://phantomjs.org">PhantomJS</a> (CasperJS utilise PhantomJS pour s'exécuter). Donc on <a href="http://phantomjs.org/download.html">télécharge PhantomJS</a> et on l'installe (enfin on décompresse le ZIP). Dans mon cas, il s'agit de la version <strong>1.9</strong>. Même chose ensuite, je dézippe le ZIP de CasperJS (v<strong>1.0.2</strong>), et je finis par ajouter dans mon <code>PATH</code> les chemins vers les exécutables. Voyons si ça marche bien :</p>
+
+<p><code>
+D:\dev&gt;phantomjs -v
+1.9.0
+D:\dev&gt;casperjs --version
+1.0.2
+</code></p>
+
+<p>Les choses s'annoncent bien ! Exécutons un test maintenant. Prennons celui-ci, assez simple :</p>
+
+<p>``` javascript Le code en version JavaScript
+var casper = require('casper').create({</p>
+
+<pre><code>verbose: true,
+logLevel: 'debug'
+</code></pre>
+
+<p>});</p>
+
+<p>casper.start('https://mon-application:8080/login/', function() {</p>
+
+<pre><code>this.echo('Log in');
+this.test.assertTitle('Sign in');
+this.test.assertNotVisible('label#error');
+this.fill('form#loginForm', {
+    'j_username': 'romain.linsolas',
+    'j_password': ''
+}, false);
+this.click("form#loginForm input.button");
+this.test.assertVisible('label.error'); // Une boite d'erreur doit apparaitre
+this.fill('form#loginForm', {
+    'j_username': 'romain.linsolas',
+    'j_password': 'abc123'
+}, false);
+this.click("form#loginForm input.button");
+</code></pre>
+
+<p>});</p>
+
+<p>casper.then(function() {</p>
+
+<pre><code>this.capture('test-screen.png');
+this.test.assertTitle('Hello World'); // Nous sommes loggués
+// Suite du test
+</code></pre>
+
+<p>});</p>
+
+<p>casper.run(function() {</p>
+
+<pre><code>this.test.renderResults(true);
+</code></pre>
+
+<p>});
+```</p>
+
+<p>En gros, il se divise ainsi :</p>
+
+<ul>
+<li>J'initialise un contexte <code>casper</code> (dans mon cas, je lui demande d'être un peu pipelette, ça facilitera les choses en cas de problème).</li>
+<li>Ensuite, je démarre un test où il va exécuter certaines tâches :
+
+<ul>
+<li>se connecter à une application ;</li>
+<li>vérifier le titre de la page ;</li>
+<li>remplir un formulaire de login sans le mot de passe ;</li>
+<li>cliquer sur un lien, et vérifier qu'un message d'erreur apparait ;</li>
+<li>retester en saisissant un mot de passe.</li>
+</ul>
+</li>
+<li>Enfin, je vérifie que je suis bien connecté (le titre de la page a changé) et pour le fun, je fais une capture d'écran de la page telle qu'elle est à ce moment-là.</li>
+</ul>
+
+
+<p>Allez zou, il est temps de tester. Le verdict va tomber très vite, il suffit d'écrire <code>casperjs [mon fichier].js</code> :</p>
+
+<p><code>text
+D:\dev&gt;casperjs test-casper.js
+[info] [phantom] Starting...
+[info] [phantom] Running suite: 3 steps
+[debug] [phantom] opening url: https://mon-application:8080/login/, HTTP GET
+[debug] [phantom] Navigation requested: url=https://mon-application:8080/login/, type=Other, lock=true, isMainFrame=true
+[debug] [phantom] url changed to "https://mon-application:8080/login/"
+[debug] [phantom] Successfully injected Casper client-side utilities
+[info] [phantom] Step 2/3 https://mon-application:8080/login/ (HTTP 200)
+Log in
+PASS Page title is: "Sign in"
+PASS Selector is not visible
+[info] [remote] attempting to fetch form element from selector: 'form#loginForm'
+[debug] [remote] Set "j_username" field value to romain.linsolas
+[debug] [remote] Set "j_password" field value to
+[debug] [phantom] Mouse event 'click' on selector: form#loginForm input.button
+PASS Selector is visible
+[info] [remote] attempting to fetch form element from selector: 'form#loginForm'
+[debug] [remote] Set "j_username" field value to romain.linsolas
+[debug] [remote] Set "j_password" field value to ******
+[debug] [phantom] Mouse event 'click' on selector: form#loginForm input.button
+[info] [phantom] Step 2/3: done in 718ms.
+[debug] [phantom] Navigation requested: url=https://mon-application:8080/logincheck;jsessionid=808FD9D0EDD9D9C5CCAE7F11F4AE05DE, type=FormSubmitted, lock=true, isMainFrame=true
+[debug] [phantom] Navigation requested: url=https://mon-application:8080/, type=FormSubmitted, lock=true, isMainFrame=true
+[debug] [phantom] url changed to "https://mon-application:8080/"
+[debug] [phantom] Successfully injected Casper client-side utilities
+[info] [phantom] Step 3/3 https://mon-application:8080/ (HTTP 200)
+[debug] [phantom] Capturing page to D:/dev/test-screen.png
+[info] [phantom] Capture saved to D:/dev/.png
+PASS Page title is: "Hello World"
+[info] [phantom] Step 3/3: done in 1224ms.
+[info] [phantom] Done 3 steps in 1226ms
+</code></p>
+
+<p>Cool, ça marche !</p>
+
+<h2>Passons au CoffeeScript</h2>
+
+<p><img src="/images/CoffeeScript.png" title="CoffeeScript" alt="CoffeeScript" /></p>
+
+<p>Le JavaScript c'est bien, mais c'est un peu verbeux, surtout quand le code des tests va grandissant. Tentons maintenant de passer à <a href="http://coffeescript.org/">CoffeeScript</a>. CasperJS est l'ami de CoffeeScript et accepte très bien que les scripts à exécuter soient écrits avec. D'après la documentation, il est écrit qu'il suffit de lancer simplement la commande <code>casperjs [mon fichier].coffee</code>. Ca a l'air pas mal. Ecrivons tout d'abord le même code de test, mais cette fois-ci en CoffeeScript. Cela nous donne quelque chose comme ça :</p>
+
+<p>``` coffeescript Le code en version CoffeeScript
+casper = require('casper').create(</p>
+
+<pre><code>verbose: true
+logLevel: 'debug'
+</code></pre>
+
+<p>)</p>
+
+<p>casper.start 'https://mon-application:8080/login/', -></p>
+
+<pre><code>@echo 'Log in'
+@test.assertTitle 'Sign in'
+@test.assertNotVisible 'label#error'
+@fill 'form#loginForm', {
+    j_username: 'romain.linsolas'
+    j_password: ''
+}, false
+@click "form#loginForm input.button"
+@test.assertVisible('label.error') ## Error box is displayed
+@fill 'form#loginForm', {
+    j_username: 'romain.linsolas'
+    j_password: 'abc123'
+}, false
+@click "form#loginForm input.button"
+</code></pre>
+
+<p>casper.then -></p>
+
+<pre><code>@capture 'test-screen.png'
+@test.assertTitle 'Hello World' ## Now we are logged
+## Suite du test
+</code></pre>
+
+<p>casper.run -></p>
+
+<pre><code>@test.renderResults true
+</code></pre>
+
+<p>```</p>
+
+<p>Allez, maintenant on exécute tout ça :</p>
+
+<p><code>text
+D:\dev\&gt;casperjs test-casper.coffee
+[info] [phantom] Starting...
+[info] [phantom] Running suite: 3 steps
+[debug] [phantom] opening url: https://mon-application:8080/login/, HTTP GET
+[debug] [phantom] Navigation requested: url=https://mon-application:8080/login/, type=Other, lock=true, isMainFrame=true
+[debug] [phantom] url changed to "https://mon-application:8080/login/"
+[debug] [phantom] Successfully injected Casper client-side utilities
+[info] [phantom] Step 2/3 https://mon-application:8080/login/ (HTTP 200)
+Log in
+PASS Page title is: "Sign in"
+PASS Selector is not visible
+[info] [remote] attempting to fetch form element from selector: 'form#loginForm'
+[debug] [remote] Set "j_username" field value to romain.linsolas
+[debug] [remote] Set "j_password" field value to
+[debug] [phantom] Mouse event 'click' on selector: form#loginForm input.button
+PASS Selector is visible
+[info] [remote] attempting to fetch form element from selector: 'form#loginForm'
+[debug] [remote] Set "j_username" field value to romain.linsolas
+[debug] [remote] Set "j_password" field value to ******
+[debug] [phantom] Mouse event 'click' on selector: form#loginForm input.button
+[info] [phantom] Step 2/3: done in 1099ms.
+[debug] [phantom] Navigation requested: url=https://mon-application:8080/logincheck;jsessionid=0A26317CDA05D97D63D6538EE4212B07, type=FormSubmitted, lock=true, isMainFrame=true
+[debug] [phantom] Navigation requested: url=https://mon-application:8080/, type=FormSubmitted, lock=true, isMainFrame=true
+[debug] [phantom] url changed to "https://mon-application:8080/"
+[debug] [phantom] Successfully injected Casper client-side utilities
+[info] [phantom] Step 3/3 https://mon-application:8080/ (HTTP 200)
+PASS Page title is: "Hello World"
+[debug] [phantom] Mouse event 'click' on selector: xpath selector: //*[text()="Administration"]
+[debug] [phantom] Navigation requested: url=https://mon-application:8080/domain/account/index, type=LinkClicked, lock=true, isMainFrame=true
+[info] [phantom] Step 3/3: done in 1389ms.
+[debug] [phantom] url changed to "https://mon-application:8080/domain/account/index"
+[debug] [phantom] Successfully injected Casper client-side utilities
+[info] [phantom] Done 3 steps in 1749ms
+</code></p>
+
+<p>Voilà qui est génial, CasperJS gère nativement le CoffeeScript sans avoir besoin de l'installer séparément. Mais on va quand même procéder à son installation, comme ça on disposera d'un compilateur CoffeeScript.</p>
+
+<p>La première étape, c'est l'installation de <a href="http://nodejs.org/">NodeJS</a>. Les choses se font assez simplement, il y a un <code>.msi</code> <a href="http://nodejs.org/download/">à télécharger</a>. Il me faudra juste ajouter le chemin d'installation de NodeJS dans mon <code>PATH</code> :</p>
+
+<p><code>text
+D:\dev&gt;node -v
+v0.10.3
+D:\dev&gt;npm -v
+1.2.17
+</code></p>
+
+<p>Maintenant, installons CoffeeScript grâce à la commande <code>npm install -g coffee-script</code>.</p>
+
+<p><code>
+D:\dev\nodejs&gt;npm install -g coffee-script
+npm http GET https://registry.npmjs.org/coffee-script
+npm http GET https://registry.npmjs.org/coffee-script
+npm http GET https://registry.npmjs.org/coffee-script
+npm ERR! Error: getaddrinfo ENOTFOUND
+npm ERR!     at errnoException (dns.js:37:11)
+npm ERR!     at Object.onanswer [as oncomplete] (dns.js:124:16)
+npm ERR! If you need help, you may report this log at:
+npm ERR!     &lt;http://github.com/isaacs/npm/issues&gt;
+npm ERR! or email it to:
+npm ERR!     &lt;npm-@googlegroups.com&gt;
+npm ERR! System Windows_NT 6.1.7601
+npm ERR! command "D:\\dev\\nodejs\\\\node.exe" "D:\\dev\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "-g" "coffee-script"
+npm ERR! cwd D:\dev\nodejs
+npm ERR! node -v v0.10.3
+npm ERR! npm -v 1.2.17
+npm ERR! syscall getaddrinfo
+npm ERR! code ENOTFOUND
+npm ERR! errno ENOTFOUND
+npm ERR!
+npm ERR! Additional logging details can be found in:
+npm ERR!     D:\dev\nodejs\npm-debug.log
+npm ERR! not ok code 0
+</code></p>
+
+<p>Comme les choses ne sont pas simples chez moi, je suis derrière un proxy :) Il faut donc donner les informations de connexion à npm pour se connecter à Internet. Cela se fait dans le fichier <code>&lt;répertoire home&gt;\.npmrc</code> (par exemple <code>C:\Users\chuck.norris\.npmrc</code>). Dans ce fichier, on définit l'adresse des proxies ainsi que le registre npm :</p>
+
+<p><code>
+proxy = http://[user]:[mot de passe]@[url proxy]:[port]/
+https-proxy = http://[user]:[mot de passe]@[url proxy]:[port]/
+registry = http://registry.npmjs.org
+</code></p>
+
+<p>On relance la même commande, et cette fois-ci ça marche mieux :</p>
+
+<p><code>
+D:\dev\nodejs&gt;npm install -g coffee-script
+npm http GET http://registry.npmjs.org/coffee-script
+npm http 200 http://registry.npmjs.org/coffee-script
+npm http GET http://registry.npmjs.org/coffee-script/-/coffee-script-1.6.2.tgz
+npm http 200 http://registry.npmjs.org/coffee-script/-/coffee-script-1.6.2.tgz
+C:\Users\chuck.norris\AppData\Roaming\npm\cake -&gt; C:\Users\chuck.norris\AppData\Roaming\npm\node_modules\coffee-script\bin\cake
+C:\Users\chuck.norris\AppData\Roaming\npm\coffee -&gt; C:\Users\chuck.norris\AppData\Roaming\npm\node_modules\coffee-script\bin\coffee
+coffee-script@1.6.2 C:\Users\chuck.norris\AppData\Roaming\npm\node_modules\coffee-script
+</code></p>
+
+<p>Cool ! Voyons maintenant s'il est possible de lancer la commande <code>coffee</code> :</p>
+
+<p><code>
+D:\dev&gt;coffee -v
+CoffeeScript version 1.6.2
+</code></p>
+
+<p>Houra !</p>
+
+<h2>Intégration au build</h2>
+
+<p>Dernière étape de ce petit tutoriel : comment allons-nous faire pour exécuter automatiquement les tests CoffeeScript, pour les intégrer par exemple dans notre <em>build</em> continu sur Jenkins ? On pourrait effectivement ajouter une étape dans la configuration Jenkins qui irait lancer un script, mais ce n'est pas très propre.</p>
+
+<p>J'ai trouvé quelques plugins Maven, mais rien de folichon. J'ai donc décidé <a href="https://github.com/linsolas/casperjs-runner-maven-plugin">d'en créer un moi-même</a>, mais il n'est pas encore stabilisé.</p>
+
+<p>En attendant, je vais passer par un test <strong>JUnit</strong>, qui aura pour tâche de lister les <code>*.js</code> et <code>*.coffee</code> d'un répertoire donné. C'est une version très simple, elle ne gère que les cas standards (j'essaierais de faire les choses plus proprement dans mon plugin Maven). Elle ne supporte pas non plus les options de la commande <code>casperjs</code> (comme par exemple les <code>--pre</code> ou <code>--post</code>), mais c'est un premier pas et surtout, ça marche :)</p>
+
+<p>``` java Classe JUnit d'exécution des fichiers JavaScript et CoffeeScript
+package fr.linsolas.javascript.casperjs;</p>
+
+<p>import org.apache.commons.exec.CommandLine;
+import org.apache.commons.exec.DefaultExecutor;
+import org.apache.commons.lang.StringUtils;
+import org.junit.BeforeClass;
+import org.junit.Test;</p>
+
+<p>import java.io.File;
+import java.io.FilenameFilter;
+import java.io.IOException;</p>
+
+<p>import static org.fest.assertions.Assertions.assertThat;</p>
+
+<p>/<em><em>
+ * Run CasperJS on any </em>.js or </em>.coffee files found in a specific folder.
+ * @author Romain Linsolas
+ */
+public class RunCasperJSTest {</p>
+
+<pre><code>private static boolean casperFound = false;
+private static final String CASPER_JS = "casperjs.bat %s";
+private static final String TESTS_DIR = "D:\\dev\\mon-application\\src\\test\\javascript\\casperjs";
+
+@BeforeClass
+public static void checkEnvironment() {
+    // Vérification que l'on a bien CasperJS installé.
+    int res = execute(CASPER_JS, "--version");
+    assertThat(res).isNotEqualTo(-1);
+    casperFound = true;
+}
+
+@Test
+public void runJavaScriptTests() {
+    File[] files = new File(TESTS_DIR).listFiles(new FilenameFilter() {
+        @Override
+        public boolean accept(File dir, String name) {
+            return StringUtils.endsWithIgnoreCase(name, ".js");
+        }
+    });
+    runTests(files);
+}
+
+@Test
+public void runCoffeeScriptTests() {
+    File[] files = new File(TESTS_DIR).listFiles(new FilenameFilter() {
+        @Override
+        public boolean accept(File dir, String name) {
+            return StringUtils.endsWithIgnoreCase(name, ".coffee");
+        }
+    });
+    runTests(files);
+}
+
+private void runTests(File[] files) {
+    assertThat(casperFound).isTrue();
+    int ok = 0;
+    int ko = 0;
+    for (File f : files) {
+        int res = execute(CASPER_JS, f.getAbsolutePath());
+        if (res == 0) { ok++; } else { ko++; }
+    }
+    System.out.println("Results: " + ok + " test(s) successful, " + ko + " test(s) failed. Total of " + (ok + ko) + " test(s).");
+    assertThat(ko).isEqualTo(0);
+}
+
+
+private static int execute(String command, Object... arguments) {
+    DefaultExecutor exec = new DefaultExecutor();
+    CommandLine line = CommandLine.parse(String.format(command, arguments));
+    try {
+        return exec.execute(line);
+    } catch (IOException e) {
+        return -1;
+    }
+}
+</code></pre>
+
+<p>}</p>
+
+<p>```</p>
+
+<hr>
+
+
+<p><small>Logo Windows<sup>>TM</sup> par <a href="http://www.yootheme.com/">YOOTheme</a>, image de coeur par <a href="http://www.icon-king.com">David Vignoni</a></small></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Devoxx France 2013 - Du JavaScript propre ? Challenge Accepted]]></title>
@@ -627,483 +1008,6 @@ On ne pas être sûr à 100% que la donnée soit présente, mais on est absolume
 
 
 <p>Une seconde journée moins chargée en terme de conférence en ce qui me concerne, car il me fallait encore préparer mon passage du lendemain avec Julien Jakubowski. J'ai également beaucoup discuté avec d'autres personnes, visiter un peu les stands, etc.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Devoxx France 2013 - Jour 1]]></title>
-    <link href="http://linsolas.github.com/blog/2013/03/27/devoxx-france-2013-jour-1/"/>
-    <updated>2013-03-27T09:42:00+01:00</updated>
-    <id>http://linsolas.github.com/blog/2013/03/27/devoxx-france-2013-jour-1</id>
-    <content type="html"><![CDATA[<p><img src="http://www.devoxx.com/download/attachments/6816022/DevoxxFR-2012-web-400-267.png" alt="Devoxx France" /></p>
-
-<p>Enfin, ça y est ! La deuxième édition de la conférence <a href="http://www.devoxx.com/display/FR13/Accueil">Devoxx France</a> a débuté. Comme l'année dernière, la conférence se déroule sur trois jours. Le mercredi est essentiellement constituée de démonstrations, de laboratoires, de mises en pratique d'un outil ou d'un langage, de <em>Tools in Action</em>.
-Ma journée débute donc avec une université sur les tests en JavaScript. L'après-midi contiendra quelques surprises, dont... un minitel :)</p>
-
-<!-- more -->
-
-
-<h2><a href="http://www.devoxx.com/display/FR13/Le+fantome%2C+le+zombie+et+testacular%2C+panorama+des+outils+de+tests+pour+application+web+moderne.">Le fantôme, le zombie et Testacular, panorama des outils de tests pour application web moderne</a></h2>
-
-<p><img src="/images/devoxxfr-2013-tests-js-1.jpg" alt="Qui fait vraiment des tests ?" /></p>
-
-<p>Photo par <a href="https://twitter.com/binout">@binout</a></p>
-
-<p>Pour commencer la journée et la conférence, <a href="http://www.devoxx.com/display/FR13/Jean-laurent+De+morlhon">Jean-Laurent de Morhlon</a> (<a href="https://twitter.com/morlhon">@morlhon</a>) et <a href="http://www.devoxx.com/display/FR13/Pierre+Gayvallet">Pierre Gayvallet</a> (<a href="https://twitter.com/wayofspark">@wayofspark</a>) nous proposent un tour d'horizon de ce qui se fait autour des tests JavaScript.</p>
-
-<p>Tout d'abord, un rappel des différents types de tests</p>
-
-<ul>
-<li>Tests <strong>unitaires</strong> : il s'agit ici de tests techniques. On les exécutera plutôt en isolation, c'est-à-dire côté en supprimant le maximum de choses autour du code : pas de base de données, de navigateur web, d'accès réseau, etc.</li>
-<li>Tests d'<strong>intégration</strong> : nous restons dans les techniques techniques, mais ici nous voulons mettre l'ensemble de l'application en test.</li>
-<li>Tests d'<strong>acceptance</strong> : ce sont avant tout des tests fonctionnels. Nous pouvons utiliser le <em>BDD</em> (<em>Behavior Driven Development</em>). Toutefois, ces tests doivent représenter une petite partie de l'ensemble des tests.</li>
-</ul>
-
-
-<p>Technique de l'<em>outside-in</em> :</p>
-
-<ul>
-<li>On écrit un test d'acceptance qui va échouer.</li>
-<li>Ensuite, on écrit un test unitaire qui va également échouer.</li>
-<li>Puis on code de façon à faire passer le test simplement.</li>
-<li>Une fois le test unitaire réussit, on procède au refactoring.</li>
-<li>Une fois que le test unitaire est au vert et que le refactoring est terminé, on peut terminer en faisant en sorte que le test d'acceptance réussisse.</li>
-</ul>
-
-
-<p>Un peu de vocabulaire maintenant : un navigateur <em>headless</em> ("<em>sans tête</em>") est un navigateur sans interface graphique. Cela servira beaucoup pour les tests, la partie graphique étant éliminée, nous gagnons ainsi beaucoup de temps. Quelques exemples : PhantomJS, HtmlUnit, Zombie.js...</p>
-
-<h3>PhantomJS</h3>
-
-<p><img src="/images/phantomjs.png" alt="PhantomJS" /></p>
-
-<p><a href="http://phantomjs.org">PhantomJS</a>, un navigateur <em>headless</em> dispose d'un vrai <em>rendering</em> (pas d'émulation), rapide, et offre une API JavaScript très complète.</p>
-
-<p>Voici un exemple de code avec PhantomJS :</p>
-
-<p>``` javascript
-console.log('Loading a web page');
-var page = require('webpage').create();
-var url = 'http://www.phantomjs.org/';
-page.open(url, function (status) {</p>
-
-<pre><code>//Page is loaded!
-phantom.exit();
-</code></pre>
-
-<p>});
-```</p>
-
-<p>L'une des particularité de PhantomJS est son double contexte d'exécution : client et serveur. Cela implique parfois des problèmes de communication entre les deux contextes, ce qui est souvent source d'erreur.</p>
-
-<p>La gestion du <em>rendering</em> de PhantomJS supporte quasiment tous les standards HTML5 et CSS3, avec quelques limites toutefois : pas de support de Flash (ô mon dieu :) ), pas de CSS 3D, de géolocalisation, WebGL, etc.
-Son écosystème est assez riche : GhostWriter (qui implémente la spécification WebDriver), des runners de tests (Poltergeist, Mocha, etc.), des frameworks de tests (Lotte, WebSpecter, CasperJS, etc.), mais aussi des outils pour réaliser des screenshots (capturejs, node-webshot...)</p>
-
-<h3>CasperJS</h3>
-
-<p><img src="/images/casperjs.jpg" alt="CasperJS" /></p>
-
-<p><a href="http://casperjs.org/">CasperJS</a> est une surcouche de PhantomJS pour ajouter ce qui manque à ce dernier :</p>
-
-<ul>
-<li>Gestion des callbacks, de l'asynchronisme</li>
-<li>API fluide (<em>fluent API</em>)</li>
-<li>Méthodes d'intéraction avec la page (support du clavier, etc.)</li>
-<li>Framework de tests</li>
-</ul>
-
-
-<p>Par exemple, le code suivant :</p>
-
-<p>``` javascript
-var page = require('webpage').create();</p>
-
-<p>page.open(url1, function(status) {</p>
-
-<pre><code>if (status == "fail") phantom.exit();
-page.open(url2, function(status) {
-    if (status == "fail") phantom.exit();
-    page.open(url3, function(status) {
-        if (status == "fail") phantom.exit();
-        page.open(url4, function(status) {
-            if (status == "fail") phantom.exit();
-            // Can I stop, now?
-        });
-    });
-});
-</code></pre>
-
-<p>});
-```</p>
-
-<p>s'écrira plus simplement avec CasperJS :</p>
-
-<p>``` javascript
-var casper = require('casper').create();</p>
-
-<p>casper.start(url1);
-casper.thenOpen(url2);
-casper.thenOpen(url3);
-casper.thenOpen(url4);</p>
-
-<p>casper.run();
-```</p>
-
-<p>Il faut noter qu'avec la version 1.1 de CasperJS (pas encore sortie), l'écriture des tests sera simplifiée, en particulier pour ce qui concerne le code à exécuter avant ou après des tests (<code>setUp</code> et <code>`tearDown</code>).</p>
-
-<p>S'ensuit une démonstration de l'outil CasperJS, pour tester de façon fluide est très simple des interactions sur un site web marchant : tests basiques d'une page (vérification d'un titre, du contenu), simulation de clics pour ajouter des éléments dans le panier, test de la validation d'un formulaire, etc.
-Point sympathique, il est possible de demander à CasperJS de réaliser une capture d'écran durant un test et de le copier dans un fichier avec une commande simple : <code>casper.capture("mon_image.png");</code> On peut donc faire du <em>Screenshot Driven Development</em> :)</p>
-
-<h3>Zombie.js</h3>
-
-<p><img src="/images/zombiejs.jpg" alt="ZombieJS" /></p>
-
-<p><a href="http://zombie.labnotes.org/">ZombieJS</a> est un navigateur <em>headless</em>, qui tourne sur node.js, et qui repose sur des bibliothèque d'émulation (c'est un avantage mais aussi un inconvénient). Ce n'est donc pas un <em>vrai</em> navigateur, bien qu'il supporte la plupart des fonctionnalités des navigateurs actuels : HTML5, sélecteurs CSS3, cookier, web storage, ajax, etc. Il se base sur certaines librairies tierces, telles que :</p>
-
-<ul>
-<li>JSDom</li>
-<li>HTML5</li>
-<li>Sizzle.js (sélecteurs CSS)</li>
-</ul>
-
-
-<p>L'API de Zombie.js est fluide, ce qui permet de rendre le code plus lisible (encore plus en utilisant CoffeeScript). Voici un exemple de code avec Zombie.js :</p>
-
-<p>``` javascript
-var Browser = require("zombie");
-var assert = require("assert");</p>
-
-<p>// Load the page from localhost
-browser = new Browser()
-browser.visit("http://localhost:3000/", function () {</p>
-
-<p>  // Fill email, password and submit form
-  browser.</p>
-
-<pre><code>fill("email", "zombie@underworld.dead").
-fill("password", "eat-the-living").
-pressButton("Sign Me Up!", function() {
-
-  // Form submitted, new page loaded.
-  assert.ok(browser.success);
-  assert.equal(browser.text("title"), "Welcome To Brains Depot");
-
-})
-</code></pre>
-
-<p>});
-```</p>
-
-<p>Un autre exemple de test avec les sélecteurs CSS :</p>
-
-<p><code>javascript
-brower.queryAll("#content &gt; .produit").length.should.equal(7);
-</code></p>
-
-<p>Avec Zombie, le code devient très lisible, ultra rapide. Toutefois, il a quelques défauts (assez importants pour certains) :</p>
-
-<ul>
-<li>Emule un navigateur.</li>
-<li>Difficile à intégrer dans un build java.</li>
-<li>Difficile à faire tourner sur Windows (aie !).</li>
-<li>Le développement est quelque peu en berne (aie aussi !).</li>
-<li>Les erreurs sont parfois cryptiques.</li>
-</ul>
-
-
-<p>Jean-Laurent passe ensuite à une démonstration de l'outil avec CoffeeScript.</p>
-
-<h3>QUnit</h3>
-
-<p><img src="/images/qunit.png" alt="QUnit" /></p>
-
-<p><a href="http://qunitjs.com">QUnit</a> est une librairie de tests JavaScript plus proche des JUnit, avec le système des assert. On est ici plutôt à destination des tests unitaires, pour faire du TDD.
-L'écosystème de QUnit est assez riche, il est également possible d'ajouter de nouvelles assertions (par défaut, QUnit n'en propose qu'une toute petite poignée) :</p>
-
-<p>``` javascript
-// Code du plugin QUnit closeEnough (https://github.com/jquery/qunit/tree/master/addons/close-enough)
-QUnit.extend( QUnit.assert, {</p>
-
-<pre><code>/**
- * Checks that the first two arguments are equal, or are numbers close enough to be considered equal
- * based on a specified maximum allowable difference.
- */
-close: function(actual, expected, maxDifference, message) {
-    var passes = (actual === expected) || Math.abs(actual - expected) &lt;= maxDifference;
-    QUnit.push(passes, actual, expected, message);
-},
-
-/**
- * Checks that the first two arguments are numbers with differences greater than the specified
- * minimum difference.
- */
-notClose: function(actual, expected, minDifference, message) {
-    QUnit.push(Math.abs(actual - expected) &gt; minDifference, actual, expected, message);
-}
-</code></pre>
-
-<p>});
-```</p>
-
-<p>L'utilisation de cette nouvelle assertion doit passer par l'objet <em>assert</em> :</p>
-
-<p>``` javascript
-test('Example unit test', function(assert) {</p>
-
-<pre><code>assert.close(3.141, Math.PI, 0.001);
-assert.notClose(3.1, Math.PI, 0.001);
-</code></pre>
-
-<p>}
-```</p>
-
-<h3>Sinon.js</h3>
-
-<p><a href="http://sinonjs.org/">Cette librairie</a> de tests a le gros avantage de pouvoir mocker pas mal de choses, dont les timers, des servers, des appels Ajax.
-Il dispose également d'une API assez complète pour les espions (<em>spy</em>) ou les <em>stubs</em>.
-Un petit exemple :</p>
-
-<p>```javascript
-it("calls original function with right this and args", function () {</p>
-
-<pre><code>var callback = sinon.spy();
-var proxy = once(callback);
-var obj = {};
-
-proxy.call(obj, 1, 2, 3);
-
-assert(callback.calledOn(obj));
-assert(callback.calledWith(1, 2, 3));
-</code></pre>
-
-<p>});
-```</p>
-
-<p>Un autre exemple, en mockant une requête Ajax :</p>
-
-<p>```javascript
-after(function () {</p>
-
-<pre><code>// When the test either fails or passes, restore the original
-// jQuery ajax function (Sinon.JS also provides tools to help
-// test frameworks automate clean-up like this)
-jQuery.ajax.restore();
-</code></pre>
-
-<p>});</p>
-
-<p>it("makes a GET request for todo items", function () {</p>
-
-<pre><code>sinon.stub(jQuery, "ajax");
-getTodos(42, sinon.spy());
-
-assert(jQuery.ajax.calledWithMatch({ url: "/todo/42/items" }));
-</code></pre>
-
-<p>});
-```</p>
-
-<h3>Karma (aka Testacular)</h3>
-
-<p><a href="http://karma-runner.github.com/0.8/index.html">Karma</a> (anciennement appelé Testacular) est un lanceur de tests multi-navigateurs, tournant sur node.js. Il a été développé par l'équipe d'AngularJS (Google).
-Il propose également des adaptateurs pour supporter différents frameworks de tests : Mocha, Jasmine, QUnit ou Angular Scenario.</p>
-
-<h3>Chai.js</h3>
-
-<p><img src="/images/chaijs.png" alt="Chaijs" /></p>
-
-<p><a href="http://chaijs.com/">ChaiJS</a> est une toute petite librairie d'assertions. Elle propose 3 types d'assertions :</p>
-
-<p>Le type <em>Assert</em> :</p>
-
-<p>``` javascript
-var assert = chai.assert;</p>
-
-<p>assert.typeOf(foo, 'string');
-assert.equal(foo, 'bar');
-assert.lengthOf(foo, 3)
-assert.property(tea, 'favors');
-assert.lengthOf(tea.flavors, 3);
-```</p>
-
-<p>Le type <em>Expect</em> :</p>
-
-<p>``` javascript
-var expect = chai.expect;</p>
-
-<p>expect(foo).to.be.a('string');
-expect(foo).to.equal('bar');
-expect(foo).to.have.length(3);
-expect(tea).to.have.property('flavors').with.length(3);
-```</p>
-
-<p>Ou encore le type du <em>Should</em> :</p>
-
-<p>``` javascript
-chai.should();</p>
-
-<p>foo.should.be.a('string');
-foo.should.equal('bar');
-foo.should.have.length(3);
-tea.should.have.property('flavors').with.length(3);
-```</p>
-
-<h3>Mocha</h3>
-
-<p><img src="/images/mocha.png" alt="Mocha" /></p>
-
-<p><a href="http://visionmedia.github.com/mocha/">Mocha</a> est un framework de test, tourne sur Node.js ou dans un navigateur.
-Il s'intègre parfaitement avec beaucoup d'autres choses : Jenkins, TeamCity, des outils comme chai.js.</p>
-
-<h3>JSCover</h3>
-
-<p><a href="http://tntim96.github.com/JSCover/">JSCover</a> (anciennement JsCoverage) permet de mesurer la couverture de code par les tests JS. Il offre également un export de type Cobertura, ce qui lui permet son intégration dans Jenkins (et a priori Sonar ?).</p>
-
-<h3>Plato</h3>
-
-<p><a href="http://jsoverson.github.com/plato/examples/jquery/">Plato</a> est un outil d'introspection des tests. Il donne ainsi un rapport détaillé du code JS, permet même d'estimer le nombre de bugs dans l'application :)
-Il met également en détails les erreurs levées par JsLint.</p>
-
-<p>Voilà une très bonne présentation pour commencer Devoxx France, avec beaucoup de beaux outils à tester. Peut-être même trop, les trois heures ont paru bien courtes :)</p>
-
-<hr/>
-
-
-<h2><a href="http://www.devoxx.com/display/FR13/Frontend+Live+Coding+++Tour+d%27horizon+de+l%27outillage+et+des+technos+web+d%27aujourd%27hui">Frontend live coding : tour d'horizon de l'outillage et des technos web d'aujourd'hui</a></h2>
-
-<p><a href="http://www.parleys.com/#play/51561f64e4b0c779d78813f3">Vidéo Parleys</a></p>
-
-<p><a href="http://www.devoxx.com/display/FR13/Frederic+Camblor">Frédéric Camblor</a> (<a href="https://twitter.com/fcamblor">@fcamblor</a>) nous propose un tour d'horizon des outils liés au développement web :</p>
-
-<ul>
-<li><strong>Yeoman</strong> / <strong>Grunt</strong> : orchestrateur des développements web ;</li>
-<li><strong>Sass</strong> / <strong>Compass</strong> : surcouche à CSS permettant notamment de variabiliser les feuilles de style ;</li>
-<li><strong>Bower</strong> : provisionneur de librairies JavaScript ;</li>
-<li><strong>RequireJS</strong> : injecteur de dépendances JavaScript à la demande ;</li>
-<li><strong>Handlebars</strong> : moteur de templating coté client ;</li>
-<li><strong>BackboneJS</strong> : framework MVC qui permet d'améliorer la maintenabilité du code JavaScript ;</li>
-<li>Un ensemble de tips de développement dans Chrome, dont vous ne soupçonnez peut-être pas l'existence.</li>
-</ul>
-
-
-<h3>Yeoman et Grunt</h3>
-
-<p><img src="/images/yeoman.png" alt="Yeoman" /></p>
-
-<p>Premier outil présenté par Frédéric, <a href="http://yeoman.io/">Yeoman</a>. C'est un ensemble d'outils pouvant jouer le rôle de <em>scaffolder</em>, c'est-à-dire qu'il va nous créer en un rien de temps une structure spécifique pour un projet, tout en forçant certaines bonnes pratiques (définition d'un cycle de vie pour l'application, exécution des tests, etc.). Quelque part, il y a pas mal de similitudes avec Maven ici.</p>
-
-<p>Frédéric démarre par générer une structure adaptée à une <em>webapp</em>, via un générateur dédié. Il existe plusieurs autres générateurs, pour faire de l'Angular, du Testacular (enfin Karma), du Backbone, etc. La similitude avec les Maven archetype est saisissante ici. Donc une simple commande <code>yo webapp</code> permet de tout générer.</p>
-
-<p>Une fois ceci généré, nous pouvons constater la présence d'un fichier <em>gruntfile.js</em> qui est utilisé par <a href="http://gruntjs.com/">Grunt</a> pour réaliser un certain nombre de tâches ("compilation", tests, démarrage d'un serveur, etc.). Frédéric le compare là aussi à Maven ou Gradle. Dans les faits, je trouve plus que cela s'approche de Gradle et de son approche scriptée, mais bon. A en voir le contenu, cela est un peu cryptique dans un premier temps, mais Frédéric nous indique qu'il n'est guère nécessaire de s'y attarder. En effet, ça fonctionne, et c'est tout ce qu'on lui demande ! On pourra bien sûr décider de s'intéresser au contenu de ce fichier, si les besoins au sein du projet le nécessite.</p>
-
-<h3>SASS</h3>
-
-<p><img src="/images/sass-lang.png" alt="SASS" /></p>
-
-<p><a href="http://sass-lang.com/">SASS</a>, à l'image de <a href="http://lesscss.org/">LESS</a> est une surcharge du langage CSS pour en offrir des améliorations. Parmi celles-ci, on notera surtout :</p>
-
-<ul>
-<li><code>@import</code> qui permet d'importer un autre fichier CSS, et donc de bien segmenter son code CSS.</li>
-<li>La possibilité d'imbriquer les classes (le <em>nesting</em>), offrant ainsi une bien meilleure lisibilité de son code, tout en l'architecturant mieux.</li>
-<li>Les variables, pratique pour éviter les redondances, et faciliter le refactoring.</li>
-<li>Des fonctions arithmétiques simples (on pourra faire <code>$largeurPanneau + 10px</code> par exemple).</li>
-<li>Des mixins, sortes de fonction permettant de regrouper sous un même bloc un code redondant.</li>
-</ul>
-
-
-<p>A noter qu'il existe un site, <a href="http://compass-style.org/">Compass</a> qui permet de disposer de nombreux mixins pour SASS.</p>
-
-<h3>Bower</h3>
-
-<p><a href="https://github.com/twitter/bower">Bower</a> est un module de gestion des dépendances, un peu à l'image de Maven. Le fichier <code>component.json</code>, que Frédéric avait généré via la commande <code>yo webapp</code>, est le descripteur des dépendances de notre projet web-app.
-Il est possible d'exécuter quelques commandes avec <code>bower</code> :</p>
-
-<ul>
-<li><code>bower install</code> pour installer en local les dépendances définies pour le projet. A noter que contrairement à Maven qui utilise un <em>repository</em> commun à tous les projets, Bower copie localement, <strong>pour chaque projet</strong> la liste des dépendances. Un peu dommage !</li>
-<li><code>bower search</code> recherche les dépendances présentes dans le <em>registry</em> Bower.</li>
-<li><code>bower info XXX</code>  donne toutes les versions présentes pour la librairie spécifiée.</li>
-</ul>
-
-
-<p>Il est également possible d'enregistrer sa propre librairie dans le <em>registry</em> de Bower, via une commande (<code>bower register [mon package] [mon repo git]</code>). Attention, il ne semble pas y avoir beaucoup de contrôles, et la librairie est de suite visible à tout le monde !</p>
-
-<p>Un point important, le <em>versioning</em> des dépendances hébergées sur Bower est assez strict, et respecte le <a href="http://semver.org/"><em>Semantic Versioning</em></a>. Pour faire simple, une version est généralement constituée de 3 chiffres (<code>x.y.z</code>), où nous avons la version majeure (<code>x</code>), la version mineure  (<code>y</code>) puis les bugfixes  (<code>z</code>). Cela nous permet d'obtenir une certaine flexibilité dans la définition des dépendances. Par exemple, si on définit une version <code>1.2.x</code>, cela signifie que l'on veut n'importe quelle version <code>1.2.*</code>, et que si une nouvelle version bugfixe apparait, alors Bower pourra l'utiliser directement.</p>
-
-<h3>RequireJS</h3>
-
-<p><img src="/images/requirejs.png" alt="Require.js" /></p>
-
-<p>Frédéric parle maintenant de <a href="http://requirejs.org/">Require.js</a>, une librairie qui a l'avantage de pouvoir charger des fichiers JavaScript à la demande. On peut également y définir des dépendances (par exemple il faut la librairie <em>foo.js</em> puis <em>bar.js</em> avant d'exécuter mon code).</p>
-
-<h3>Handlebars</h3>
-
-<p><img src="/images/handlebars.png" alt="Handlebars" /></p>
-
-<p>Il arrive fréquemment d'avoir besoin de recourir au <em>templating</em>, c'est-à-dire de placer de la donnée (généralement en format JSON) dans du code HTML (en particulier quand on doit itérer sur un ensemble d'éléments). Frédéric est parti pour utiliser <a href="http://handlebarsjs.com/">Handlebars</a>. Personnellement, j'ai plus l'habitude d'utiliser <a href="http://mustache.github.com/">Mustache.js</a>, mais les principes sont les mêmes.</p>
-
-<h3>Backbone.js</h3>
-
-<p><img src="/images/backbone.png" alt="Backbone.js" /></p>
-
-<p>Pour de multiples raisons, on peut être amené à développer toute une partie de l'application côté client. Ainsi, au lieu de développer le coeur de l'application côté serveur et de n'envoyer que la partie graphique au client, nous y envoyons un framework JavaScript, ainsi que toute une application côté client : la partie modèle, la partie controlleur et la partie vue se retrouvent dès lors sur le navigateur. Frédéric opte pour <a href="http://backbonejs.org/">Backbone.js</a>, mais il existe aussi <a href="http://emberjs.com/">Ember.js</a>, ou le très à la mode <a href="http://angularjs.org/">Angular.js</a> de Google.
-Un tel choix architectural n'est bien sûr pas à prendre à la légère, cela apporte certains avantages (rapidité, minimisation de l'utilisation de la bande passante, possibilité de faire fonctionner son application en mode déconnecté, etc.), mais il y a également des inconvénients, dont le principal à mon avis est la sécurité.</p>
-
-<h3>Rivets.js</h3>
-
-<p>Dernier choix de librairie de la session : <a href="http://rivetsjs.com/">Rivets.js</a> pour réaliser du <em>data-binding</em> bi-directionnel. Cela est nécessaire pour qu'une modification au niveau du modèle soit immédiatement répercutée côté DOM, et qu'une modification côté DOM soit répercutée côté modèle. Cette librairie s'intègre parfaitement à Backbone.js, mais aurait été tout à fait inutile avec Angular, car ce dernier intègre nativement cette fonctionnalité de <em>data-binding</em>.</p>
-
-<p>Pour résumer, cette deuxième université a été très intéressante aussi, car elle a montré une <em>stack</em> complète d'outils et de librairies pour le développement efficace d'une application en JavaScript. Seul bémol, la partie tests qui n'a pas été abordée. Toutefois, Frédéric nous avait prévenu au début qu'il n'était pas à l'aise dans ce domaine. De plus, l'université du matin en avait fait son thème principal, et cela aurait été sans doute redondant. J'aurais quand même apprécié de savoir quelles librairies de tests s'adaptaient le mieux avec la <em>stack</em> choisie par Frédéric.</p>
-
-<hr/>
-
-
-<h2><a href="http://www.devoxx.com/display/FR13/3615+Cloud+Devoxx">3615 Cloud @ Devoxx</a></h2>
-
-<p><img src="/images/devoxxfr-2013-minitel.jpg" alt="Le minitel, l'avenir de Maven ?" /></p>
-
-<p>Voici une session complètement décalée. <a href="http://www.devoxx.com/display/FR13/Nicolas+Loof">Nicolas Loof</a> et <a href="http://www.devoxx.com/display/FR13/Laurent+Huet">Laurent Huet</a> nous proposent d'intéragir avec une instance CloudBees grâce à... un minitel ! Oui, le minitel des années 80. Et sans trucage, juste du bricolage.
-Le montage est le suivant :</p>
-
-<ul>
-<li>Un bon vieux minitel sert de console : saisie des commandes et affichage (textuel bien entendu).</li>
-<li>Ensuite, un assemblage électronique réalisé par Laurent pour le connecter avec un Raspberry Pi.</li>
-<li>Un Raspberry Pi qui va s'occuper de la partie "intelligente" des opérations.</li>
-<li>Un MacBook Pro (celui de Nicolas, dont l'écran a rendu l'âme la semaine d'avant, grâce à un geste malheureux d'un enfant) pour la connexion à Internet. C'est aussi le MBP qui affichera la vidéo d'une caméra qui filme l'écran du minitel (eh oui, difficile de brancher un cable de vidéoprojecteur sur un minitel).</li>
-</ul>
-
-
-<p>Durant la présentation, on nous explique le montage électronique, puis ils exécuteront les tâches suivantes :</p>
-
-<ul>
-<li>Afficher le status de quelques jobs sur CloudBees, puis interagir avec eux : stopper ou démarrer ces jobs.</li>
-<li>Faire un <code>mvn package</code> ! (ils le lanceront en mode <code>offline</code> bien sûr :) ).</li>
-<li>Faire un commit avec git.</li>
-</ul>
-
-
-<p>Bref, une session très agréable, bien que tout à fait inutile !</p>
-
-<h2><a href="http://www.devoxx.com/display/FR13/Good+Bad+and+Ugly+Maven+-+a+puzzler+session">Good bad and ugly Maven - a puzzler session</a></h2>
-
-<p><img src="/images/devoxxfr-2013-maven.jpg" alt="In Maven dependencies hell" /></p>
-
-<p><a href="http://www.devoxx.com/display/FR13/Nicolas+Loof">Nicolas Loof</a> (encore lui), accompagné de son éternel ami <a href="http://www.devoxx.com/display/FR13/Arnaud+Heritier">Arnaud Héritier</a> nous ont proposé le jeu "<em>Qui veut gagner des millions</em>" mais à la sauce Maven. Au cours d'une série de 6 ou 7 questions, Nicolas présentait des situations plus ou moins compliquées avec Maven, souvent des problèmes de dépendances transitives avec des conflits de version. Arnaud, en bon candidat, devait donner la bonne réponse, avec parfois l'aide du public.</p>
-
-<p>Dans une ambiance décontractée et sympathique, j'ai donc terminé la première journée de Devoxx, avant de me rendre au repas du soir des speakers.</p>
-
-<h2>Conclusion</h2>
-
-<p>Comme l'année dernière, la première journée a été très riche à Devoxx France. Celle-ci est généralement plus calme, car il y a moins de monde, les sessions sont plus longues, surtout quand on assiste à des universités. J'ai fait un choix très orienté sur JavaScript cette année, avec 6 heures de démo, de code et de tests. A vrai dire, le programme que j'avais initialement établi le matin était différent. Je comptais en effet aller d'abord suivre <a href="http://www.devoxx.com/display/FR13/Introduction+iOS6+pour+les+developpeurs+Java">l'introduction à iOS pour un développeur Java</a> puis le <a href="http://www.devoxx.com/display/FR13/AngularJS%2C+ou+le+futur+du+developpement+Web">développement sur AngularJS</a>, mais à ma grande déception il s'agissait d'universités et non de <em>Labs</em> (ou <em>Hands On</em>). Ne codant pas moi-même, je craignais de ne pas retenir grand chose pour iOS (je n'ai aucune connaissance dans ce langage), et je n'aurais sans doute pas appris grand chose de nouveau sur Angular.js, que j'ai déjà un peu manipulé.</p>
-
-<p>Mon souhait pour Devoxx France 2014, ce serait que la conférence se déroule sur 4 jours :</p>
-
-<ul>
-<li>2 jours de Labs, <em>Hands On</em> et universités, mais avec une préférence pour les sessions on l'audience code;</li>
-<li>2 jours de conférences.</li>
-</ul>
-
-
-<p>Sait-on jamais :)</p>
 ]]></content>
   </entry>
   
