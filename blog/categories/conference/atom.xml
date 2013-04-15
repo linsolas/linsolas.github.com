@@ -4,7 +4,7 @@
   <title><![CDATA[Category: conference | fr.romain:blog:3.0]]></title>
   <link href="http://linsolas.github.com/blog/categories/conference/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2013-04-09T23:53:40+02:00</updated>
+  <updated>2013-04-15T22:14:45+02:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -12,6 +12,289 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Scrum Day 2013]]></title>
+    <link href="http://linsolas.github.com/blog/2013/04/15/scrum-day-2013/"/>
+    <updated>2013-04-15T22:10:00+02:00</updated>
+    <id>http://linsolas.github.com/blog/2013/04/15/scrum-day-2013</id>
+    <content type="html"><![CDATA[<p><img src="/images/Scrum-Day-2013.png" title="Scrum Day 2013" alt="Scrum Day 2013" /></p>
+
+<p>Le jeudi 11 avril s'est tenue la troisième édition du <a href="http://www.scrumday.fr/">Scrum Day</a>, un événement organisé par le <a href="http://www.frenchsug.org/">French Scrum User Group</a> (ou <em>FSUG</em>) autour de l'agilité.</p>
+
+<p>Avant d'aborder mon compte rendu, je tiens à remercier chaudement la société <a href="http://www.zenika.com/">Zenika</a> qui m'a permis d'assister à cette conférence. En tant que sponsor de l'événement, elle a proposé de gagner une place avec un peu jeu concours sur Twitter. Et c'est moi qui ai gagné \o/ Donc <strong>merci</strong> à eux.</p>
+
+<p>Pour nous accueillir, Xavier Warzee débute avec <a href="http://agenda2013.scrumday.fr/event/94">un discours d'ouverture</a> où il rappelle ce qu'est le FSUG, ses activités, son bilan. Il fait également venir les sponsors sur scène, pour une courte présentation. Puis il laisse la main à Robert Richman...</p>
+
+<!-- more -->
+
+
+<p><img src="/images/ScrumDay2013-Xavier.JPG" title="Xavier sur scène" alt="Xavier sur scène" /></p>
+
+<h2><a href="http://agenda2013.scrumday.fr/event/95">Keynote "Culture Hacking"</a></h2>
+
+<p>La journée commence vraiment avec la keynote de <a href="http://agenda2013.scrumday.fr/speakers/201">Robert Richman</a>. Il travaille dans le département <a href="http://www.zapposinsights.com/">Zappos Insights</a> de la société <a href="http://www.zappos.com/">Zappos</a>, l'un des leaders de la vente de chaussures sur Internet (eh oui), aujourd'hui rachetée par Amazon.</p>
+
+<p>Il se définit comme un <em>Culture Hacker</em>, il est également l'auteur du livre <a href="http://www.cultureblueprint.com/">Culture Blueprint</a>. Il nous incite ainsi à comprendre comment fonctionne une culture d'entreprise, de groupe, etc. Il débute en nous racontant une petite histoire à propos du <a href="http://www.burningman.com">Burning Man</a>. Il s'agit d'un rassemblement culturel et artistique qui a lieu chaque année dans le désert du Nevada, où se cotoient plusieurs dizaines de milliers de personnes. Cette rencontre pourrait s'apparenter à un chaos total, pourtant les gens s'y retrouvent avec bonne humeur, et une harmonie certaine. Le succès tient entre autres à un <a href="http://www.burningman.com/whatisburningman/about_burningman/principles.html">ensemble de règles régissant la communauté</a> :</p>
+
+<ul>
+<li><strong>Inclusion radicale</strong> : tout le monde est le bienvenu.</li>
+<li><strong>Pratique du don</strong> : pas d'argent, tout se fait par des cadeaux, des prestations, des dons.</li>
+<li><strong>Décommercialisation</strong> : pas de publicité, pratiquement aucune transaction financière.</li>
+<li><strong>Auto-suffisance médicale</strong>.</li>
+<li><strong>Expression de soi radicale</strong>, poussant ainsi les participants à s'exprimer sous des formes variées, en particulier à travers des oeuvres artistiques.</li>
+<li><strong>Effort en commun</strong>, où l'on favorise le travail d'équipe.</li>
+<li><strong>Responsabilité civique</strong>.</li>
+<li><strong>Pas de trace</strong> : malgré le grand nombre de participants et des manifestations, l'endroit doit être rendu tel qu'à l'origine. Le respect de l'environnement est omniprésent.</li>
+<li><strong>Participation</strong>.</li>
+<li><strong>Culture du moment présent</strong>.</li>
+</ul>
+
+
+<p>Robert Richman parle également de l'ouvrage "<a href="http://www.amazon.fr/Tribal-Leadership-Leveraging-Thriving-Organization/dp/0061251321/ref=sr_1_1?ie=UTF8&amp;qid=1365426131&amp;sr=8-1&amp;keywords=Tribal+Leadership">Tribal leadership</a>", de Dave Logan, où il est montré l'importance d'avoir une liste de règles pour qu'une communauté - ou une tribu - puisse fonctionner. Il nous montre qu'à Zappos, où il travaille, il est également établi <a href="http://about.zappos.com/our-unique-culture/zappos-core-values">une liste de règles</a>, définissant les valeurs communes de leur "famille" :</p>
+
+<ul>
+<li><em>Deliver WOW Through Service</em></li>
+<li><em>Embrace and Drive Change</em></li>
+<li><em>Create Fun and A Little Weirdness</em></li>
+<li><em>Be Adventurous, Creative, and Open-Minded</em></li>
+<li><em>Pursue Growth and Learning</em></li>
+<li><em>Build Open and Honest Relationships With Communication</em></li>
+<li><em>Build a Positive Team and Family Spirit</em></li>
+<li><em>Do More With Less</em></li>
+<li><em>Be Passionate and Determined</em></li>
+<li><em>Be Humble</em></li>
+</ul>
+
+
+<p><img src="/images/ScrumDay2013-Zappos.JPG" title="L'ambiance à Zappos" alt="L'ambiance à Zappos" /> <br> <small>L'ambiance à Zappos transparait dans l'excentricité des open spaces</small></p>
+
+<p>Robert Richman nous pose une question. Ne pourrait-on pas considérer qu'une culture est aussi un <strong>produit</strong> ? C'est un peu pour cela qu'à Zappos, ils créent des événements pour "promouvoir" leur propre culture. Il ajoute quelque chose qui est tout à fait vrai : parfois, lors de ce genre d'événement, on est satisfait par l'information que l'on en tire, mais c'est avant tout l'<strong>expérience</strong> que l'on vit qui est fantastique (<em>Information is OK, but experience is amazing</em>). Quand il a dit ça, j'ai tout de suite pensé à ma propre expérience à <a href="http://www.devoxx.com">Devoxx</a> : j'en tire beaucoup d'informations intéressantes, mais c'est vraiment l'expérience de la conférence elle-même qui reste un souvenir fantastique.</p>
+
+<p>Robert Richman nous fait maintenant une petite liste de <em>Culture Hacks</em> :</p>
+
+<ul>
+<li><em>How to walk into a room can shift a culture</em>. Lorsque l'on entre dans une pièce, il faut montrer son assurance, son énergie de façon à pouvoir faire la différence, créer une synergie.</li>
+<li><em>Destroy something</em>. Détruire est tellement plus puissant que créer, et cela apporte de l'énergie. Il faut détruire quelque chose d'inutile ou qui ne marche pas.</li>
+<li><em>Frustration is gold</em>. La frustration n'est jamais que de l'énergie bloquée.</li>
+<li><em>Use ritual for energy</em>. Robert Richman nous explique que des petits rituels peuvent créer de l'énergie au sein d'une équipe. Il nous explique qu'à Zappos chaque jeudi à 15h, tout le monde arrête de travailler pendant 10 minutes... pour danser ! C'est la <em>3PM Thursday Dance Party</em>.</li>
+</ul>
+
+
+<p>Pour finir, il nous rappelle que Scrum lui-même a ses propres valeurs :</p>
+
+<ul>
+<li><strong>Focus</strong></li>
+<li><strong>Engagement</strong></li>
+<li><strong>Respect</strong></li>
+<li><strong>Courage</strong></li>
+<li><strong>Ouverture</strong></li>
+</ul>
+
+
+<p>J'ai adoté cette keynote pour son côté énergique et rafraichissant. De façon générale, les orateurs américains ont un vrai sens du show, et ce n'est pas Robert Richman qui me fera penser le contraire. J'ai aussi beaucoup aimé la façon dont il a pu nous transmettre l'ambiance qui règne chez Zappos.</p>
+
+<hr>
+
+
+<h2><a href="http://agenda2013.scrumday.fr/event/57">Introduction au leadership tribal</a></h2>
+
+<p><a href="http://agenda2013.scrumday.fr/speakers/65">Florent Lothon</a> est coach agile pour CSC (<a href="http://www.agiliste.fr/">site agiliste.fr</a>). Il nous parle du <em>Leadership Tribal</em>, <a href="http://www.amazon.fr/Tribal-Leadership-Leveraging-Thriving-Organization/dp/0061251321/ref=sr_1_1?ie=UTF8&amp;qid=1365426131&amp;sr=8-1&amp;keywords=Tribal+Leadership">tiré d'un livre éponyme</a>. Cela fait une bonne transition avec la keynote précédente.</p>
+
+<p><img src="/images/Tribal-Leadership.jpg" title="Leadership Tribal" alt="Leadership Tribal" /></p>
+
+<p>A l'origine, il y a une étude, menée pendant 10 ans sur un panel d'environ 24,000 personnes. Cette étude s'est concentrée uniquement sur deux aspects : le <strong>langage</strong> et le <strong>comportement</strong> des personnes étudiées, considérant que les mots que l'on utilise influencent directement notre comportement. Cette étude a permis d'établir <strong>cinq</strong> stades, et donc cinq discours associés, au sein d'une <strong>tribu</strong>. Mais avant d'aller plus loin, il est nécessaire de définir ce qu'est une tribu.</p>
+
+<blockquote><p>Une tribu est un groupe, une organisation de 20 à 150 personnes qui se connaissent suffisament pour se saluer quand elles se croisent.
+Une petite entreprise est une tribu, tandis qu'une société de taille plus importante est une tribu de tribus.</p></blockquote>
+
+<h3>Les cinq stades</h3>
+
+<ol>
+<li><strong>La vie est nulle</strong> (~ 2%). Ces persones vont avoir un comportement de <em>sabotage</em> et un type de relation d'<em>exclusion</em>.</li>
+<li><strong>Ma vie est nulle</strong> (25%). Ces personnes, plutôt <em>isolées</em> se posent en <em>victimes passives</em>. Florent cite la bande dessinée <a href="http://www.dilbert.com">Dilbert</a> comme exemple.</li>
+<li><strong>Je suis génial</strong> (sous entendu "pas les autres") (49%). À ce stade, on rencontre plutôt des <em>guerriers solitaires</em> ayant une tendance à la <em>domination personnelle</em>.</li>
+<li><strong>Nous sommes géniaux</strong> (mais "pas les autres") (22%). À ce stade déjà très élevé, les membres ont une <em>fierté tribale</em>, et établissent des <em>partenariats stables</em>.</li>
+<li><strong>La vie est géniale</strong> (&lt; 2%). Le comportement de ces personnes est un <em>émerveillement innoncent</em>, et forme une véritable <em>équipe</em>. À un tel niveau, l'énergie de la tribu rayonne au delà de leur cercle, et "contamine" les personnes alentours. Florent nous cite l'histoire de <a href="http://www.wherethehellismatt.com/">Matt</a>, un anonyme qui a filmé ses scènes de danse au quatre coins du monde. Florent rebondit aussi sur la keynote précédente en citant Zappos comme exemple de société de niveau #5.</li>
+</ol>
+
+
+<h3>Les leviers d'évolution</h3>
+
+<p>Au delà de ce constat, la question que tout le monde se pose est de savoir comment on peut passer d'un niveau à l'autre ? Une chose importante est de savoir qu'il ne faut pas sauter des étapes. On ne pourra pas passer du stade #1 au stade #3 sans passer par le deuxième stade, car chaque stade se base sur les acquis du précédent.</p>
+
+<ol>
+<li><strong>Du Stade #1 au stade #2</strong>. Les principaux leviers à ce stade sont les suivants :</li>
+<li>Il faut aller là où est l'action : participer à des réunions, des conférences, ou simplement aller déjeuner avec les gens.</li>
+<li>Se convaincre que la vie peut fonctionner, même pour soi.</li>
+<li>Se couper des autres personnes qui stagnent à ce stade #1.</li>
+<li><strong>Du Stade #2 au stade #3</strong>, les leviers sont :</li>
+<li>La création des relations dyadiques (2 personnes).</li>
+<li>Souligner les compétences et les forces des personnes.</li>
+<li>Proposer des projets à court terme avec une forte probabilité de succès, et qui nécessite peu de suivi.</li>
+<li><strong>Du Stade #3 au stade #4</strong>. À ce niveau-là, les personnes ont appris à se faire confiance, mais ils ont tendance à vouloir conserver un certain nombre d'informations pour eux, pour garder une sorte de <strong>pouvoir</strong>. On pourra tenter de les élever au stade supérieur ainsi :</li>
+<li>Encourager des relations triadiques (3 personnes), et dont le succès nécessite un partenariat fort.</li>
+<li>Faire comprendre que le vrai pouvoir n'est pas dans les connaissances, mais dans les <strong>réseaux</strong>.</li>
+<li>Forcer la transparence grâce à une communication à outrance, plutôt que de n'y avoir recours qu'au besoin, en se limitant au strict nécessaire.</li>
+<li><strong>Du Stade #4 au stade #5</strong>. Au stade #4, le niveau est déjà élevé. Pour atteindre le nirvana, le stade #5, des leviers ne suffisent plus, il faut mettre en place une <strong>stratégie</strong>. Celle-ci doit résulter de la tribu dans son ensemble, selon le contexte, et non seulement d'une personne, d'un leader. La stratégie est celle-ci :</li>
+<li>Définir les <strong>valeurs fondamentales</strong> de la tribu. Ce sera la moteur de la stratégie.</li>
+<li>Les <strong>résultats</strong> : que voulons-nous atteindre ?</li>
+<li>Les <strong>actifs</strong> : qu'avons-nous ?</li>
+<li>Les <strong>actions</strong> : qu'allons nous faire ?</li>
+</ol>
+
+
+<p><img src="/images/strategie-leadership-tribal.png" title="La stratégie pour atteindre le niveau 5" alt="La stratégie pour atteindre le niveau 5" /> <br> <small>Image de Florent Lothon, http://www.agiliste.fr</small></p>
+
+<p>Florent termine la présentation par une citation tirée du livre de Dave Logan :</p>
+
+<blockquote><p>Alors que les leaders tribaux travaillent pour le bien du groupe, non pas pour eux même, ils sont récompensés par la loyauté, le travail acharné, l’innovation et la collaboration. La tribu produit un travail de la plus grande qualité en moins de temps. [...] L’avenir de l’entreprise est le stade 5.</p></blockquote>
+
+<p>Juste avant de nous laisser, il nous parle du <a href="http://www.culturesync.net/21days/">21 days challenge</a>, une sorte de challenge à réaliser en 3 semaines. L'idée est de regarder une petite vidéo chaque matin, qui va nous lancer une sorte de défi dont le but final est de faire de nous un meilleur leader. Il cite un exemple de défi : aller voir 3 personnes dans son entourage professionnel, et demander ce qu'ils pensent de nous, de notre réputation.</p>
+
+<p>A lire, <a href="http://www.agiliste.fr/items/introduction-au-leadership-tribal/">le billet sur son blog retraçant cette présentation</a> et sa <a href="http://prezi.com/0sz0zvudacdg/introduction-au-leadership-tribal/">présentation sous Prezi</a></p>
+
+<hr>
+
+
+<h2><a href="http://agenda2013.scrumday.fr/event/51">Transition agile dans une grande banque européenne à l'aide des Innovation Games</a></h2>
+
+<p><a href="http://agenda2013.scrumday.fr/speakers/58">Catherine Boudlal</a> et <a href="http://agenda2013.scrumday.fr/speakers/57">Xavier Warzee</a> de Palo-IT nous raconte comment ils ont mis en place l'agilité d'une grande banque (non, ce n'est pas la mienne ;o)) grâce aux <strong>Innovation Games</strong>. La situation est simple lorsqu'ils arrivent chez le client : l'agilité est totalement absente, mais ils veulent la mettre en place afin de pallier à leurs problèmes récurrents sur les développements, les mises en production, etc. Hélas, cela doit se faire en peu de temps (quelques semaines tout au plus). Xavier et Catherine décident donc d'opter pour les Innovation Games afin d'engager le processus de transformation agile. Les étapes sont les suivantes :</p>
+
+<ul>
+<li>Collecter des informations sur la situation actuelle, sur les blocages.</li>
+<li>Démarrer la transformation agile.</li>
+<li>Faire émerger de nouvelles organisations agiles.</li>
+</ul>
+
+
+<p><img src="/images/ScrumDay2013-Xavier_Catherine.JPG" title="Xavier et Catherine sur scène" alt="Xavier et Catherine sur scène" /></p>
+
+<p>Les jeux (qui sont appelés "ateliers" auprès du management, ça passe mieux !), sont les suivants :</p>
+
+<ul>
+<li><a href="http://innovationgames.com/swot-analysis-game/">SWOT</a>. Le principe de SWOT est l'identification des forces, des faiblesses, des opportunités et des risques. Ils ont ainsi pu collecter des informations sur les pratiques, identifier les problèmes et processus des développements. De ces informations sortent des recommandations, telles que la mise en place de l'intégration continue et d'autres outils, de la réorganisation des équipes et des espaces de travail, la définition de KPI simples, etc.</li>
+<li><a href="http://innovationgames.com/2020-vision/">20/20 vision</a>. Le but est d'apprendre à prioriser des fonctionnalités. Ainsi, on peut définir des sortes de <em>lois</em>, qui établiront un chemin commun vers l'agilité (cf http://guide.agilealliance.org/subway.html).</li>
+<li><a href="http://innovationgames.com/buy-a-feature/">$100 test</a>. Grâce à ce jeu, Xavier et Catherine ont pu mettre en place la transformation agile d'<em>une</em> équipe, et améliorer le fonctionnement de cette équipe en tant qu'équipe, et non plus en fonction d'individualité ou de coeur de métier.</li>
+<li><a href="http://www.gogamestorm.com/?p=636">Graphic Gameplan</a>. Ici, l'intérêt est de trouver les blocages, et de définir les étapes qui permettent de les résoudre.</li>
+</ul>
+
+
+<p>Xavier et Catherine nous ont aussi parlé de la façon dont les participants ont réagi par rapport à cette approche "ludique" de l'agilité. À part une poignée d'irreductibles, il semble que la grande majorité des personnes présentes lors de ces "ateliers" a apprécié la démarche et a joué le jeu.</p>
+
+<p>Au final, cette session était un retour intéressant, mais avec un bémol. Ils nous expliquent qu'une fois ce stade des IG terminée, ils ne sont pas restés dans la société (une autre entreprise a pris la suite). Du coup, nous n'avons pas pu savoir si cela a vraiment porté ses fruits, si l'agile a bien été adopté, et quel niveau de maturité pouvaient avoir les équipes aujourd'hui.</p>
+
+<hr>
+
+
+<h2><a href="http://agenda2013.scrumday.fr/event/46">Transformation à grande échelle, 18 mois plus tard... (SGCIB)</a></h2>
+
+<p>J'assiste donc à un retour d'expérience sur la transformation agile à la SGCIB, société que je connais plutôt bien :) Celle-ci nous est racontée par <a href="http://agenda2013.scrumday.fr/speakers/48">Clémo Charnay</a> et <a href="http://agenda2013.scrumday.fr/speakers/49">Myriam Roux</a> de la SGCIB ainsi que de <a href="http://agenda2013.scrumday.fr/speakers/50">Céline Stauder</a>, coach agile chez Coactiv.</p>
+
+<p>Ils nous présentent donc l'histoire de la transformation agile qu'ils ont initiée à la SGCIB pendant plus d'une année dans un service gérant environ 70 applications. Tout commence par un constat : le service informatique est en perte de contrôle du SI. Les mises en production sont sans cesse décalées, la qualité n'est pas au rendez-vous, et la complexité omniprésente. Ainsi, une demande peut faire intervenir jusqu'à 7 équipes différentes !</p>
+
+<p>Ils commencent par mettre en place 2 <em>PoC</em> :</p>
+
+<ul>
+<li>Le premier se fait dans un contexte favorable, où le projet démarre de rien, et où il est ainsi beaucoup plus facile d'y intégrer des notions d'agilité (TDD, intégration continue, etc.). Le succès est au rendez-vous.</li>
+<li>Dans la deuxième équipe, les choses sont plus compliquées, car le contexte est une application <em>legacy</em> - essentiellement de la maintenance ou du catalogue. Ici, le succès est plus mitigé, comme on pouvait s'y attendre.</li>
+</ul>
+
+
+<p>La mise en place de l'agilité permet de passer d'un rythme de 4 releases par an à une presque tous les mois. Toutefois, si cela peut paraitre une bonne chose, elle est aussi un défaut. En effet, cela implique une plus forte charge pour les équipes, et cela implique une certaine fatigue.</p>
+
+<p>Les trois présentateurs soulèvent 4 points importants à prendre en considération durant une transformation agile :</p>
+
+<ul>
+<li>Il faut savoir gérer les demandes du support. Le "<em>Production first</em>" ne doit absolument pas devenir le "<em>Production only</em>". Il faut savoir faire la part des choses.</li>
+<li>Faire attention aux process de release, parfois (souvent ?) trop lours.</li>
+<li>Le découpage d'un projet est souvent orienté coûts plutôt que valeurs.</li>
+<li>Il faut savoir prendre du recul, et se demander pourquoi on fait certaines choses.</li>
+</ul>
+
+
+<p>Au final, il y a une vraie prise de conscience que l'agilité est un plus. Mais il faut savoir comment la mettre en place. L'un des avantages de l'agilité, qui pourrait être vu comme un défaut par certains, est qu'elle a tendance à mettre en lumière des problèmes.</p>
+
+<p>Les orateurs finissent par citer quelques problèmes rencontrés lors de cette transformation :</p>
+
+<ul>
+<li>L'organisation même d'ITEC, qui impose certaines limites, en particulier au niveau des budgets.</li>
+<li>Pas de reconnaissance ni de valorisation des profils agiles par les Ressources Humaines (peut être anxiogène pour certains).</li>
+<li>La mise en place de beaucoup de chantiers dont beaucoup ne sont pas terminés est un processus épuisants.</li>
+</ul>
+
+
+<p>Voilà un retour d'expérience assez classique, rien de bien nouveau sous le soleil au final.</p>
+
+<hr>
+
+
+<h2><a href="http://agenda2013.scrumday.fr/event/47">Mon DSI veut un indicateur sur l'agilité : Cadeau ou Poison ? (REX Total)</a></h2>
+
+<p><a href="http://agenda2013.scrumday.fr/speakers/51">Yann Poles</a> travaille pour Total, et nous raconte son expérience sur la mise en place de l'agilité chez eux. La DSI y est assez importante, puisqu'elle concerne un millier de personnes pour environ 200 projets par an.</p>
+
+<p>En 2011, c'est le début de l'agilité chez Total, avec une vingtaine d'expériences plutôt concluantes. Toutefois, on reste dans une situation où le management laisse faire.</p>
+
+<p>En 2012, suite à une réorganisation importante, de nouvelles ambitions sont présentées. Parmi elles, il y a ce chiffre de <strong>50% de projets agiles</strong> d'ici 2017. Très bien, mais ce chiffre, que veut-il dire ? Que mesure-t-il ? Le souci est là justement : avec un tel indicateur, il n'est pas possible d'évaluer le degré de <strong>maturité</strong> de chaque équipe, leur niveau d'efficacité, de vélocité.</p>
+
+<p>Chez Total aussi la transformation agile pose une question importante : comment faire ? Les équipes sont perplexes, les managers, qui ne trouvent pas leur place dans l'agilité, sont bousculés.</p>
+
+<p>Les changements apportés par l'agilité vus par l'équipe :</p>
+
+<ul>
+<li>Travailler en équipe.</li>
+<li>Prendre des risques.</li>
+<li>S'engager.</li>
+<li>Être visible.</li>
+<li>Être autonome dans la prise de décision.</li>
+<li>Savoir se remettre en question.</li>
+</ul>
+
+
+<p>Du côté des managers :</p>
+
+<ul>
+<li>Accompagner le changement.</li>
+<li>Déléguer, donner de l'autonomie.</li>
+<li>Avoir une posture de <a href="http://en.wikipedia.org/wiki/Servant_leadership">Servant Leader</a>.</li>
+</ul>
+
+
+<p>Rendre visible cette transformation, c'est :</p>
+
+<ul>
+<li>Être plus exposé (dans ses réussites mais aussi dans ses échecs).</li>
+<li>Crainte de la course au label "Agile" (que le projet ait à tout prix le tampon "<em>Ici on est agile</em>" sans forcément faire de l'agilité).</li>
+<li>L'échelle n'est plus la même : on touche de plus grande équipe.</li>
+</ul>
+
+
+<p>Dernière question que pose Yann Poles : comment péréniser l'agilité, ancrer la transformation ?</p>
+
+<ul>
+<li>Du côté de l'individu, il faut recourir à un <strong>accompagnement</strong>, éventuellement des formations.</li>
+<li>Du côté de l'équipe, il faut investir dans la communauté IT. Savoir aussi mesurer et soutenir la vélocité, la fluidité, la réactivé, le moral des équipes, la satisfaction du client.</li>
+</ul>
+
+
+<p>Il termine par une citation de Gandhi :</p>
+
+<blockquote><p>Vous devez être le changement que vous voulez dans ce monde.</p></blockquote>
+
+<p>Un dernier point, en résonance à la mesure du nombre de projets qui sont agiles chez Total. Yann, ainsi qu'une partie de l'assistance, pense qu'il serait plus pertinent de mesure non pas le nombre de <strong>projets</strong>, mais d'<strong>équipes</strong> agiles.</p>
+
+<p>Un nouveau retour d'expérience. Je ne sais pas si c'est exactement ce que je m'attendais à avoir en venant dans cette salle, mais c'était tout de même intéressant.</p>
+
+<hr>
+
+
+<h2>L'organisation et bilan</h2>
+
+<p>C'était ma première participation au Scrum Day (c'était la 3<sup>ème</sup> édition), et je dois dire que cela m'a plu, j'ai eu toutefois une préférence sur mes sessions du matin, en particulier de l'excellente keynote de Robert Richman. J'ai vu plusieurs retour d'expérience sur des transformations agiles au sein de grandes sociétés (dont la mienne !) et j'ai quand même un peu l'impression d'entendre toujours les mêmes discours. Tant pis.</p>
+
+<p>Dans l'ensemble, l'organisation s'est bien déroulée, mais j'ai quand même 2 critiques à formuler. Premièrement, les locaux (merci à IBM pour les avoir fournis) n'étaient pas toujours adaptés, car certaines salles étaient trop petites pour profiter de certaines sessions, en particulier les ateliers. J'ai ainsi dû passer mon tour pour la session <a href="http://agenda2013.scrumday.fr/event/84">L'agilité selon Starcraft 2</a> à 12h45. L'autre reproche c'est peut-être un manque d'accompagnement des speakers et du cadrage des sessions. Certaines ont un peu débordé, ce qui fait que le timing n'était pas toujours respecté. Cela n'enlève en rien toutefois le travail formidable des organisateurs, et de leur travail bénévole.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Devoxx France 2013 - Du JavaScript propre ? Challenge Accepted]]></title>
@@ -627,483 +910,6 @@ On ne pas être sûr à 100% que la donnée soit présente, mais on est absolume
 
 
 <p>Une seconde journée moins chargée en terme de conférence en ce qui me concerne, car il me fallait encore préparer mon passage du lendemain avec Julien Jakubowski. J'ai également beaucoup discuté avec d'autres personnes, visiter un peu les stands, etc.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Devoxx France 2013 - Jour 1]]></title>
-    <link href="http://linsolas.github.com/blog/2013/03/27/devoxx-france-2013-jour-1/"/>
-    <updated>2013-03-27T09:42:00+01:00</updated>
-    <id>http://linsolas.github.com/blog/2013/03/27/devoxx-france-2013-jour-1</id>
-    <content type="html"><![CDATA[<p><img src="http://www.devoxx.com/download/attachments/6816022/DevoxxFR-2012-web-400-267.png" alt="Devoxx France" /></p>
-
-<p>Enfin, ça y est ! La deuxième édition de la conférence <a href="http://www.devoxx.com/display/FR13/Accueil">Devoxx France</a> a débuté. Comme l'année dernière, la conférence se déroule sur trois jours. Le mercredi est essentiellement constituée de démonstrations, de laboratoires, de mises en pratique d'un outil ou d'un langage, de <em>Tools in Action</em>.
-Ma journée débute donc avec une université sur les tests en JavaScript. L'après-midi contiendra quelques surprises, dont... un minitel :)</p>
-
-<!-- more -->
-
-
-<h2><a href="http://www.devoxx.com/display/FR13/Le+fantome%2C+le+zombie+et+testacular%2C+panorama+des+outils+de+tests+pour+application+web+moderne.">Le fantôme, le zombie et Testacular, panorama des outils de tests pour application web moderne</a></h2>
-
-<p><img src="/images/devoxxfr-2013-tests-js-1.jpg" alt="Qui fait vraiment des tests ?" /></p>
-
-<p>Photo par <a href="https://twitter.com/binout">@binout</a></p>
-
-<p>Pour commencer la journée et la conférence, <a href="http://www.devoxx.com/display/FR13/Jean-laurent+De+morlhon">Jean-Laurent de Morhlon</a> (<a href="https://twitter.com/morlhon">@morlhon</a>) et <a href="http://www.devoxx.com/display/FR13/Pierre+Gayvallet">Pierre Gayvallet</a> (<a href="https://twitter.com/wayofspark">@wayofspark</a>) nous proposent un tour d'horizon de ce qui se fait autour des tests JavaScript.</p>
-
-<p>Tout d'abord, un rappel des différents types de tests</p>
-
-<ul>
-<li>Tests <strong>unitaires</strong> : il s'agit ici de tests techniques. On les exécutera plutôt en isolation, c'est-à-dire côté en supprimant le maximum de choses autour du code : pas de base de données, de navigateur web, d'accès réseau, etc.</li>
-<li>Tests d'<strong>intégration</strong> : nous restons dans les techniques techniques, mais ici nous voulons mettre l'ensemble de l'application en test.</li>
-<li>Tests d'<strong>acceptance</strong> : ce sont avant tout des tests fonctionnels. Nous pouvons utiliser le <em>BDD</em> (<em>Behavior Driven Development</em>). Toutefois, ces tests doivent représenter une petite partie de l'ensemble des tests.</li>
-</ul>
-
-
-<p>Technique de l'<em>outside-in</em> :</p>
-
-<ul>
-<li>On écrit un test d'acceptance qui va échouer.</li>
-<li>Ensuite, on écrit un test unitaire qui va également échouer.</li>
-<li>Puis on code de façon à faire passer le test simplement.</li>
-<li>Une fois le test unitaire réussit, on procède au refactoring.</li>
-<li>Une fois que le test unitaire est au vert et que le refactoring est terminé, on peut terminer en faisant en sorte que le test d'acceptance réussisse.</li>
-</ul>
-
-
-<p>Un peu de vocabulaire maintenant : un navigateur <em>headless</em> ("<em>sans tête</em>") est un navigateur sans interface graphique. Cela servira beaucoup pour les tests, la partie graphique étant éliminée, nous gagnons ainsi beaucoup de temps. Quelques exemples : PhantomJS, HtmlUnit, Zombie.js...</p>
-
-<h3>PhantomJS</h3>
-
-<p><img src="/images/phantomjs.png" alt="PhantomJS" /></p>
-
-<p><a href="http://phantomjs.org">PhantomJS</a>, un navigateur <em>headless</em> dispose d'un vrai <em>rendering</em> (pas d'émulation), rapide, et offre une API JavaScript très complète.</p>
-
-<p>Voici un exemple de code avec PhantomJS :</p>
-
-<p>``` javascript
-console.log('Loading a web page');
-var page = require('webpage').create();
-var url = 'http://www.phantomjs.org/';
-page.open(url, function (status) {</p>
-
-<pre><code>//Page is loaded!
-phantom.exit();
-</code></pre>
-
-<p>});
-```</p>
-
-<p>L'une des particularité de PhantomJS est son double contexte d'exécution : client et serveur. Cela implique parfois des problèmes de communication entre les deux contextes, ce qui est souvent source d'erreur.</p>
-
-<p>La gestion du <em>rendering</em> de PhantomJS supporte quasiment tous les standards HTML5 et CSS3, avec quelques limites toutefois : pas de support de Flash (ô mon dieu :) ), pas de CSS 3D, de géolocalisation, WebGL, etc.
-Son écosystème est assez riche : GhostWriter (qui implémente la spécification WebDriver), des runners de tests (Poltergeist, Mocha, etc.), des frameworks de tests (Lotte, WebSpecter, CasperJS, etc.), mais aussi des outils pour réaliser des screenshots (capturejs, node-webshot...)</p>
-
-<h3>CasperJS</h3>
-
-<p><img src="/images/casperjs.jpg" alt="CasperJS" /></p>
-
-<p><a href="http://casperjs.org/">CasperJS</a> est une surcouche de PhantomJS pour ajouter ce qui manque à ce dernier :</p>
-
-<ul>
-<li>Gestion des callbacks, de l'asynchronisme</li>
-<li>API fluide (<em>fluent API</em>)</li>
-<li>Méthodes d'intéraction avec la page (support du clavier, etc.)</li>
-<li>Framework de tests</li>
-</ul>
-
-
-<p>Par exemple, le code suivant :</p>
-
-<p>``` javascript
-var page = require('webpage').create();</p>
-
-<p>page.open(url1, function(status) {</p>
-
-<pre><code>if (status == "fail") phantom.exit();
-page.open(url2, function(status) {
-    if (status == "fail") phantom.exit();
-    page.open(url3, function(status) {
-        if (status == "fail") phantom.exit();
-        page.open(url4, function(status) {
-            if (status == "fail") phantom.exit();
-            // Can I stop, now?
-        });
-    });
-});
-</code></pre>
-
-<p>});
-```</p>
-
-<p>s'écrira plus simplement avec CasperJS :</p>
-
-<p>``` javascript
-var casper = require('casper').create();</p>
-
-<p>casper.start(url1);
-casper.thenOpen(url2);
-casper.thenOpen(url3);
-casper.thenOpen(url4);</p>
-
-<p>casper.run();
-```</p>
-
-<p>Il faut noter qu'avec la version 1.1 de CasperJS (pas encore sortie), l'écriture des tests sera simplifiée, en particulier pour ce qui concerne le code à exécuter avant ou après des tests (<code>setUp</code> et <code>`tearDown</code>).</p>
-
-<p>S'ensuit une démonstration de l'outil CasperJS, pour tester de façon fluide est très simple des interactions sur un site web marchant : tests basiques d'une page (vérification d'un titre, du contenu), simulation de clics pour ajouter des éléments dans le panier, test de la validation d'un formulaire, etc.
-Point sympathique, il est possible de demander à CasperJS de réaliser une capture d'écran durant un test et de le copier dans un fichier avec une commande simple : <code>casper.capture("mon_image.png");</code> On peut donc faire du <em>Screenshot Driven Development</em> :)</p>
-
-<h3>Zombie.js</h3>
-
-<p><img src="/images/zombiejs.jpg" alt="ZombieJS" /></p>
-
-<p><a href="http://zombie.labnotes.org/">ZombieJS</a> est un navigateur <em>headless</em>, qui tourne sur node.js, et qui repose sur des bibliothèque d'émulation (c'est un avantage mais aussi un inconvénient). Ce n'est donc pas un <em>vrai</em> navigateur, bien qu'il supporte la plupart des fonctionnalités des navigateurs actuels : HTML5, sélecteurs CSS3, cookier, web storage, ajax, etc. Il se base sur certaines librairies tierces, telles que :</p>
-
-<ul>
-<li>JSDom</li>
-<li>HTML5</li>
-<li>Sizzle.js (sélecteurs CSS)</li>
-</ul>
-
-
-<p>L'API de Zombie.js est fluide, ce qui permet de rendre le code plus lisible (encore plus en utilisant CoffeeScript). Voici un exemple de code avec Zombie.js :</p>
-
-<p>``` javascript
-var Browser = require("zombie");
-var assert = require("assert");</p>
-
-<p>// Load the page from localhost
-browser = new Browser()
-browser.visit("http://localhost:3000/", function () {</p>
-
-<p>  // Fill email, password and submit form
-  browser.</p>
-
-<pre><code>fill("email", "zombie@underworld.dead").
-fill("password", "eat-the-living").
-pressButton("Sign Me Up!", function() {
-
-  // Form submitted, new page loaded.
-  assert.ok(browser.success);
-  assert.equal(browser.text("title"), "Welcome To Brains Depot");
-
-})
-</code></pre>
-
-<p>});
-```</p>
-
-<p>Un autre exemple de test avec les sélecteurs CSS :</p>
-
-<p><code>javascript
-brower.queryAll("#content &gt; .produit").length.should.equal(7);
-</code></p>
-
-<p>Avec Zombie, le code devient très lisible, ultra rapide. Toutefois, il a quelques défauts (assez importants pour certains) :</p>
-
-<ul>
-<li>Emule un navigateur.</li>
-<li>Difficile à intégrer dans un build java.</li>
-<li>Difficile à faire tourner sur Windows (aie !).</li>
-<li>Le développement est quelque peu en berne (aie aussi !).</li>
-<li>Les erreurs sont parfois cryptiques.</li>
-</ul>
-
-
-<p>Jean-Laurent passe ensuite à une démonstration de l'outil avec CoffeeScript.</p>
-
-<h3>QUnit</h3>
-
-<p><img src="/images/qunit.png" alt="QUnit" /></p>
-
-<p><a href="http://qunitjs.com">QUnit</a> est une librairie de tests JavaScript plus proche des JUnit, avec le système des assert. On est ici plutôt à destination des tests unitaires, pour faire du TDD.
-L'écosystème de QUnit est assez riche, il est également possible d'ajouter de nouvelles assertions (par défaut, QUnit n'en propose qu'une toute petite poignée) :</p>
-
-<p>``` javascript
-// Code du plugin QUnit closeEnough (https://github.com/jquery/qunit/tree/master/addons/close-enough)
-QUnit.extend( QUnit.assert, {</p>
-
-<pre><code>/**
- * Checks that the first two arguments are equal, or are numbers close enough to be considered equal
- * based on a specified maximum allowable difference.
- */
-close: function(actual, expected, maxDifference, message) {
-    var passes = (actual === expected) || Math.abs(actual - expected) &lt;= maxDifference;
-    QUnit.push(passes, actual, expected, message);
-},
-
-/**
- * Checks that the first two arguments are numbers with differences greater than the specified
- * minimum difference.
- */
-notClose: function(actual, expected, minDifference, message) {
-    QUnit.push(Math.abs(actual - expected) &gt; minDifference, actual, expected, message);
-}
-</code></pre>
-
-<p>});
-```</p>
-
-<p>L'utilisation de cette nouvelle assertion doit passer par l'objet <em>assert</em> :</p>
-
-<p>``` javascript
-test('Example unit test', function(assert) {</p>
-
-<pre><code>assert.close(3.141, Math.PI, 0.001);
-assert.notClose(3.1, Math.PI, 0.001);
-</code></pre>
-
-<p>}
-```</p>
-
-<h3>Sinon.js</h3>
-
-<p><a href="http://sinonjs.org/">Cette librairie</a> de tests a le gros avantage de pouvoir mocker pas mal de choses, dont les timers, des servers, des appels Ajax.
-Il dispose également d'une API assez complète pour les espions (<em>spy</em>) ou les <em>stubs</em>.
-Un petit exemple :</p>
-
-<p>```javascript
-it("calls original function with right this and args", function () {</p>
-
-<pre><code>var callback = sinon.spy();
-var proxy = once(callback);
-var obj = {};
-
-proxy.call(obj, 1, 2, 3);
-
-assert(callback.calledOn(obj));
-assert(callback.calledWith(1, 2, 3));
-</code></pre>
-
-<p>});
-```</p>
-
-<p>Un autre exemple, en mockant une requête Ajax :</p>
-
-<p>```javascript
-after(function () {</p>
-
-<pre><code>// When the test either fails or passes, restore the original
-// jQuery ajax function (Sinon.JS also provides tools to help
-// test frameworks automate clean-up like this)
-jQuery.ajax.restore();
-</code></pre>
-
-<p>});</p>
-
-<p>it("makes a GET request for todo items", function () {</p>
-
-<pre><code>sinon.stub(jQuery, "ajax");
-getTodos(42, sinon.spy());
-
-assert(jQuery.ajax.calledWithMatch({ url: "/todo/42/items" }));
-</code></pre>
-
-<p>});
-```</p>
-
-<h3>Karma (aka Testacular)</h3>
-
-<p><a href="http://karma-runner.github.com/0.8/index.html">Karma</a> (anciennement appelé Testacular) est un lanceur de tests multi-navigateurs, tournant sur node.js. Il a été développé par l'équipe d'AngularJS (Google).
-Il propose également des adaptateurs pour supporter différents frameworks de tests : Mocha, Jasmine, QUnit ou Angular Scenario.</p>
-
-<h3>Chai.js</h3>
-
-<p><img src="/images/chaijs.png" alt="Chaijs" /></p>
-
-<p><a href="http://chaijs.com/">ChaiJS</a> est une toute petite librairie d'assertions. Elle propose 3 types d'assertions :</p>
-
-<p>Le type <em>Assert</em> :</p>
-
-<p>``` javascript
-var assert = chai.assert;</p>
-
-<p>assert.typeOf(foo, 'string');
-assert.equal(foo, 'bar');
-assert.lengthOf(foo, 3)
-assert.property(tea, 'favors');
-assert.lengthOf(tea.flavors, 3);
-```</p>
-
-<p>Le type <em>Expect</em> :</p>
-
-<p>``` javascript
-var expect = chai.expect;</p>
-
-<p>expect(foo).to.be.a('string');
-expect(foo).to.equal('bar');
-expect(foo).to.have.length(3);
-expect(tea).to.have.property('flavors').with.length(3);
-```</p>
-
-<p>Ou encore le type du <em>Should</em> :</p>
-
-<p>``` javascript
-chai.should();</p>
-
-<p>foo.should.be.a('string');
-foo.should.equal('bar');
-foo.should.have.length(3);
-tea.should.have.property('flavors').with.length(3);
-```</p>
-
-<h3>Mocha</h3>
-
-<p><img src="/images/mocha.png" alt="Mocha" /></p>
-
-<p><a href="http://visionmedia.github.com/mocha/">Mocha</a> est un framework de test, tourne sur Node.js ou dans un navigateur.
-Il s'intègre parfaitement avec beaucoup d'autres choses : Jenkins, TeamCity, des outils comme chai.js.</p>
-
-<h3>JSCover</h3>
-
-<p><a href="http://tntim96.github.com/JSCover/">JSCover</a> (anciennement JsCoverage) permet de mesurer la couverture de code par les tests JS. Il offre également un export de type Cobertura, ce qui lui permet son intégration dans Jenkins (et a priori Sonar ?).</p>
-
-<h3>Plato</h3>
-
-<p><a href="http://jsoverson.github.com/plato/examples/jquery/">Plato</a> est un outil d'introspection des tests. Il donne ainsi un rapport détaillé du code JS, permet même d'estimer le nombre de bugs dans l'application :)
-Il met également en détails les erreurs levées par JsLint.</p>
-
-<p>Voilà une très bonne présentation pour commencer Devoxx France, avec beaucoup de beaux outils à tester. Peut-être même trop, les trois heures ont paru bien courtes :)</p>
-
-<hr/>
-
-
-<h2><a href="http://www.devoxx.com/display/FR13/Frontend+Live+Coding+++Tour+d%27horizon+de+l%27outillage+et+des+technos+web+d%27aujourd%27hui">Frontend live coding : tour d'horizon de l'outillage et des technos web d'aujourd'hui</a></h2>
-
-<p><a href="http://www.parleys.com/#play/51561f64e4b0c779d78813f3">Vidéo Parleys</a></p>
-
-<p><a href="http://www.devoxx.com/display/FR13/Frederic+Camblor">Frédéric Camblor</a> (<a href="https://twitter.com/fcamblor">@fcamblor</a>) nous propose un tour d'horizon des outils liés au développement web :</p>
-
-<ul>
-<li><strong>Yeoman</strong> / <strong>Grunt</strong> : orchestrateur des développements web ;</li>
-<li><strong>Sass</strong> / <strong>Compass</strong> : surcouche à CSS permettant notamment de variabiliser les feuilles de style ;</li>
-<li><strong>Bower</strong> : provisionneur de librairies JavaScript ;</li>
-<li><strong>RequireJS</strong> : injecteur de dépendances JavaScript à la demande ;</li>
-<li><strong>Handlebars</strong> : moteur de templating coté client ;</li>
-<li><strong>BackboneJS</strong> : framework MVC qui permet d'améliorer la maintenabilité du code JavaScript ;</li>
-<li>Un ensemble de tips de développement dans Chrome, dont vous ne soupçonnez peut-être pas l'existence.</li>
-</ul>
-
-
-<h3>Yeoman et Grunt</h3>
-
-<p><img src="/images/yeoman.png" alt="Yeoman" /></p>
-
-<p>Premier outil présenté par Frédéric, <a href="http://yeoman.io/">Yeoman</a>. C'est un ensemble d'outils pouvant jouer le rôle de <em>scaffolder</em>, c'est-à-dire qu'il va nous créer en un rien de temps une structure spécifique pour un projet, tout en forçant certaines bonnes pratiques (définition d'un cycle de vie pour l'application, exécution des tests, etc.). Quelque part, il y a pas mal de similitudes avec Maven ici.</p>
-
-<p>Frédéric démarre par générer une structure adaptée à une <em>webapp</em>, via un générateur dédié. Il existe plusieurs autres générateurs, pour faire de l'Angular, du Testacular (enfin Karma), du Backbone, etc. La similitude avec les Maven archetype est saisissante ici. Donc une simple commande <code>yo webapp</code> permet de tout générer.</p>
-
-<p>Une fois ceci généré, nous pouvons constater la présence d'un fichier <em>gruntfile.js</em> qui est utilisé par <a href="http://gruntjs.com/">Grunt</a> pour réaliser un certain nombre de tâches ("compilation", tests, démarrage d'un serveur, etc.). Frédéric le compare là aussi à Maven ou Gradle. Dans les faits, je trouve plus que cela s'approche de Gradle et de son approche scriptée, mais bon. A en voir le contenu, cela est un peu cryptique dans un premier temps, mais Frédéric nous indique qu'il n'est guère nécessaire de s'y attarder. En effet, ça fonctionne, et c'est tout ce qu'on lui demande ! On pourra bien sûr décider de s'intéresser au contenu de ce fichier, si les besoins au sein du projet le nécessite.</p>
-
-<h3>SASS</h3>
-
-<p><img src="/images/sass-lang.png" alt="SASS" /></p>
-
-<p><a href="http://sass-lang.com/">SASS</a>, à l'image de <a href="http://lesscss.org/">LESS</a> est une surcharge du langage CSS pour en offrir des améliorations. Parmi celles-ci, on notera surtout :</p>
-
-<ul>
-<li><code>@import</code> qui permet d'importer un autre fichier CSS, et donc de bien segmenter son code CSS.</li>
-<li>La possibilité d'imbriquer les classes (le <em>nesting</em>), offrant ainsi une bien meilleure lisibilité de son code, tout en l'architecturant mieux.</li>
-<li>Les variables, pratique pour éviter les redondances, et faciliter le refactoring.</li>
-<li>Des fonctions arithmétiques simples (on pourra faire <code>$largeurPanneau + 10px</code> par exemple).</li>
-<li>Des mixins, sortes de fonction permettant de regrouper sous un même bloc un code redondant.</li>
-</ul>
-
-
-<p>A noter qu'il existe un site, <a href="http://compass-style.org/">Compass</a> qui permet de disposer de nombreux mixins pour SASS.</p>
-
-<h3>Bower</h3>
-
-<p><a href="https://github.com/twitter/bower">Bower</a> est un module de gestion des dépendances, un peu à l'image de Maven. Le fichier <code>component.json</code>, que Frédéric avait généré via la commande <code>yo webapp</code>, est le descripteur des dépendances de notre projet web-app.
-Il est possible d'exécuter quelques commandes avec <code>bower</code> :</p>
-
-<ul>
-<li><code>bower install</code> pour installer en local les dépendances définies pour le projet. A noter que contrairement à Maven qui utilise un <em>repository</em> commun à tous les projets, Bower copie localement, <strong>pour chaque projet</strong> la liste des dépendances. Un peu dommage !</li>
-<li><code>bower search</code> recherche les dépendances présentes dans le <em>registry</em> Bower.</li>
-<li><code>bower info XXX</code>  donne toutes les versions présentes pour la librairie spécifiée.</li>
-</ul>
-
-
-<p>Il est également possible d'enregistrer sa propre librairie dans le <em>registry</em> de Bower, via une commande (<code>bower register [mon package] [mon repo git]</code>). Attention, il ne semble pas y avoir beaucoup de contrôles, et la librairie est de suite visible à tout le monde !</p>
-
-<p>Un point important, le <em>versioning</em> des dépendances hébergées sur Bower est assez strict, et respecte le <a href="http://semver.org/"><em>Semantic Versioning</em></a>. Pour faire simple, une version est généralement constituée de 3 chiffres (<code>x.y.z</code>), où nous avons la version majeure (<code>x</code>), la version mineure  (<code>y</code>) puis les bugfixes  (<code>z</code>). Cela nous permet d'obtenir une certaine flexibilité dans la définition des dépendances. Par exemple, si on définit une version <code>1.2.x</code>, cela signifie que l'on veut n'importe quelle version <code>1.2.*</code>, et que si une nouvelle version bugfixe apparait, alors Bower pourra l'utiliser directement.</p>
-
-<h3>RequireJS</h3>
-
-<p><img src="/images/requirejs.png" alt="Require.js" /></p>
-
-<p>Frédéric parle maintenant de <a href="http://requirejs.org/">Require.js</a>, une librairie qui a l'avantage de pouvoir charger des fichiers JavaScript à la demande. On peut également y définir des dépendances (par exemple il faut la librairie <em>foo.js</em> puis <em>bar.js</em> avant d'exécuter mon code).</p>
-
-<h3>Handlebars</h3>
-
-<p><img src="/images/handlebars.png" alt="Handlebars" /></p>
-
-<p>Il arrive fréquemment d'avoir besoin de recourir au <em>templating</em>, c'est-à-dire de placer de la donnée (généralement en format JSON) dans du code HTML (en particulier quand on doit itérer sur un ensemble d'éléments). Frédéric est parti pour utiliser <a href="http://handlebarsjs.com/">Handlebars</a>. Personnellement, j'ai plus l'habitude d'utiliser <a href="http://mustache.github.com/">Mustache.js</a>, mais les principes sont les mêmes.</p>
-
-<h3>Backbone.js</h3>
-
-<p><img src="/images/backbone.png" alt="Backbone.js" /></p>
-
-<p>Pour de multiples raisons, on peut être amené à développer toute une partie de l'application côté client. Ainsi, au lieu de développer le coeur de l'application côté serveur et de n'envoyer que la partie graphique au client, nous y envoyons un framework JavaScript, ainsi que toute une application côté client : la partie modèle, la partie controlleur et la partie vue se retrouvent dès lors sur le navigateur. Frédéric opte pour <a href="http://backbonejs.org/">Backbone.js</a>, mais il existe aussi <a href="http://emberjs.com/">Ember.js</a>, ou le très à la mode <a href="http://angularjs.org/">Angular.js</a> de Google.
-Un tel choix architectural n'est bien sûr pas à prendre à la légère, cela apporte certains avantages (rapidité, minimisation de l'utilisation de la bande passante, possibilité de faire fonctionner son application en mode déconnecté, etc.), mais il y a également des inconvénients, dont le principal à mon avis est la sécurité.</p>
-
-<h3>Rivets.js</h3>
-
-<p>Dernier choix de librairie de la session : <a href="http://rivetsjs.com/">Rivets.js</a> pour réaliser du <em>data-binding</em> bi-directionnel. Cela est nécessaire pour qu'une modification au niveau du modèle soit immédiatement répercutée côté DOM, et qu'une modification côté DOM soit répercutée côté modèle. Cette librairie s'intègre parfaitement à Backbone.js, mais aurait été tout à fait inutile avec Angular, car ce dernier intègre nativement cette fonctionnalité de <em>data-binding</em>.</p>
-
-<p>Pour résumer, cette deuxième université a été très intéressante aussi, car elle a montré une <em>stack</em> complète d'outils et de librairies pour le développement efficace d'une application en JavaScript. Seul bémol, la partie tests qui n'a pas été abordée. Toutefois, Frédéric nous avait prévenu au début qu'il n'était pas à l'aise dans ce domaine. De plus, l'université du matin en avait fait son thème principal, et cela aurait été sans doute redondant. J'aurais quand même apprécié de savoir quelles librairies de tests s'adaptaient le mieux avec la <em>stack</em> choisie par Frédéric.</p>
-
-<hr/>
-
-
-<h2><a href="http://www.devoxx.com/display/FR13/3615+Cloud+Devoxx">3615 Cloud @ Devoxx</a></h2>
-
-<p><img src="/images/devoxxfr-2013-minitel.jpg" alt="Le minitel, l'avenir de Maven ?" /></p>
-
-<p>Voici une session complètement décalée. <a href="http://www.devoxx.com/display/FR13/Nicolas+Loof">Nicolas Loof</a> et <a href="http://www.devoxx.com/display/FR13/Laurent+Huet">Laurent Huet</a> nous proposent d'intéragir avec une instance CloudBees grâce à... un minitel ! Oui, le minitel des années 80. Et sans trucage, juste du bricolage.
-Le montage est le suivant :</p>
-
-<ul>
-<li>Un bon vieux minitel sert de console : saisie des commandes et affichage (textuel bien entendu).</li>
-<li>Ensuite, un assemblage électronique réalisé par Laurent pour le connecter avec un Raspberry Pi.</li>
-<li>Un Raspberry Pi qui va s'occuper de la partie "intelligente" des opérations.</li>
-<li>Un MacBook Pro (celui de Nicolas, dont l'écran a rendu l'âme la semaine d'avant, grâce à un geste malheureux d'un enfant) pour la connexion à Internet. C'est aussi le MBP qui affichera la vidéo d'une caméra qui filme l'écran du minitel (eh oui, difficile de brancher un cable de vidéoprojecteur sur un minitel).</li>
-</ul>
-
-
-<p>Durant la présentation, on nous explique le montage électronique, puis ils exécuteront les tâches suivantes :</p>
-
-<ul>
-<li>Afficher le status de quelques jobs sur CloudBees, puis interagir avec eux : stopper ou démarrer ces jobs.</li>
-<li>Faire un <code>mvn package</code> ! (ils le lanceront en mode <code>offline</code> bien sûr :) ).</li>
-<li>Faire un commit avec git.</li>
-</ul>
-
-
-<p>Bref, une session très agréable, bien que tout à fait inutile !</p>
-
-<h2><a href="http://www.devoxx.com/display/FR13/Good+Bad+and+Ugly+Maven+-+a+puzzler+session">Good bad and ugly Maven - a puzzler session</a></h2>
-
-<p><img src="/images/devoxxfr-2013-maven.jpg" alt="In Maven dependencies hell" /></p>
-
-<p><a href="http://www.devoxx.com/display/FR13/Nicolas+Loof">Nicolas Loof</a> (encore lui), accompagné de son éternel ami <a href="http://www.devoxx.com/display/FR13/Arnaud+Heritier">Arnaud Héritier</a> nous ont proposé le jeu "<em>Qui veut gagner des millions</em>" mais à la sauce Maven. Au cours d'une série de 6 ou 7 questions, Nicolas présentait des situations plus ou moins compliquées avec Maven, souvent des problèmes de dépendances transitives avec des conflits de version. Arnaud, en bon candidat, devait donner la bonne réponse, avec parfois l'aide du public.</p>
-
-<p>Dans une ambiance décontractée et sympathique, j'ai donc terminé la première journée de Devoxx, avant de me rendre au repas du soir des speakers.</p>
-
-<h2>Conclusion</h2>
-
-<p>Comme l'année dernière, la première journée a été très riche à Devoxx France. Celle-ci est généralement plus calme, car il y a moins de monde, les sessions sont plus longues, surtout quand on assiste à des universités. J'ai fait un choix très orienté sur JavaScript cette année, avec 6 heures de démo, de code et de tests. A vrai dire, le programme que j'avais initialement établi le matin était différent. Je comptais en effet aller d'abord suivre <a href="http://www.devoxx.com/display/FR13/Introduction+iOS6+pour+les+developpeurs+Java">l'introduction à iOS pour un développeur Java</a> puis le <a href="http://www.devoxx.com/display/FR13/AngularJS%2C+ou+le+futur+du+developpement+Web">développement sur AngularJS</a>, mais à ma grande déception il s'agissait d'universités et non de <em>Labs</em> (ou <em>Hands On</em>). Ne codant pas moi-même, je craignais de ne pas retenir grand chose pour iOS (je n'ai aucune connaissance dans ce langage), et je n'aurais sans doute pas appris grand chose de nouveau sur Angular.js, que j'ai déjà un peu manipulé.</p>
-
-<p>Mon souhait pour Devoxx France 2014, ce serait que la conférence se déroule sur 4 jours :</p>
-
-<ul>
-<li>2 jours de Labs, <em>Hands On</em> et universités, mais avec une préférence pour les sessions on l'audience code;</li>
-<li>2 jours de conférences.</li>
-</ul>
-
-
-<p>Sait-on jamais :)</p>
 ]]></content>
   </entry>
   
