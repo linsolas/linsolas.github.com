@@ -4,7 +4,7 @@
   <title><![CDATA[Category: conference | fr.romain:blog:3.0]]></title>
   <link href="http://linsolas.github.com/blog/categories/conference/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2013-04-15T22:14:45+02:00</updated>
+  <updated>2013-08-19T22:10:56+02:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -12,6 +12,20 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Oyez oyez amis suisses]]></title>
+    <link href="http://linsolas.github.com/blog/2013/08/19/oyez-oyez-amis-suisses/"/>
+    <updated>2013-08-19T21:46:00+02:00</updated>
+    <id>http://linsolas.github.com/blog/2013/08/19/oyez-oyez-amis-suisses</id>
+    <content type="html"><![CDATA[<p><a href="http://soft-shake.ch/2013/program/authors/2013/10/24/romain-linsolas.html"><img src="/images/soft-shake-2013.png" title="Soft Shake 2013" alt="Soft Shake 2013" /></a></p>
+
+<p>Super nouvelle, la présentation "<a href="http://soft-shake.ch/2013/program/sessions/13_web_dev/2013/10/24/5-Du_Javascript_propre_Challenge_Accepted.html">Du Javascript propre? Challenge Accepted!</a>" a été retenue pour la conférence <a href="http://soft-shake.ch/2013/fr/">Soft Shake 2013</a> à Genève en Suisse, du 23 au 24 octobre.
+La présentation sera sensiblement la même que celle faite à Devoxx avec <a href="http://soft-shake.ch/2013/program/authors/2013/10/25/julien-jakubowski.html">Julien Jakubowski</a>, mais on essaiera de mettre à jour certaines parties.</p>
+
+<p>Si vous venez à la conférence, venez nous voir !</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Scrum Day 2013]]></title>
@@ -730,186 +744,6 @@ Bien sûr, Didier Girard insiste sur le fait que cela doit aider à se faire une
 <p>Ca devient une tradition, finir un Devoxx avec une session live des <a href="http://lescastcodeurs.com/">Cast Codeurs</a>. A vrai dire, je ne vois <strong>aucune</strong> raison de ne pas y assister : récapitulatif de la conférence, bonne ambiance, bonnes blagues (quoique ?) et bières offertes par Atlassian ! Rien de mieux pour terminer en beauté une magnifique conférence. Allez écouter le podcast, bientôt disponible. En attendant, il y a les podcasts de <a href="http://lescastcodeurs.com/2011/11/28/les-cast-codeurs-podcast-episode-49-devoxx-2011-les-dix-ans/">Devoxx 2011</a>, <a href="http://lescastcodeurs.com/2012/04/21/les-cast-codeurs-podcast-episode-57-en-direct-de-devoxx-france-2012/">Devoxx France 2012</a>, et enfin <a href="http://lescastcodeurs.com/2012/11/29/les-cast-codeurs-podcast-episode-68-devoxx-2012-et-les-putchettes/">Devoxx 2012</a>.</p>
 
 <p>A l'année prochaine !</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Devoxx France 2013 - Jour 2]]></title>
-    <link href="http://linsolas.github.com/blog/2013/03/28/devoxx-france-2013-jour-2/"/>
-    <updated>2013-03-28T11:31:00+01:00</updated>
-    <id>http://linsolas.github.com/blog/2013/03/28/devoxx-france-2013-jour-2</id>
-    <content type="html"><![CDATA[<p><img src="http://www.devoxx.com/download/attachments/6816022/DevoxxFR-2012-web-400-267.png" title="Devoxx France 2013" alt="Devoxx France" /></p>
-
-<p>Et c'est parti pour la seconde journée de Devoxx France 2013. Le jeudi est la première journée des conférences et quickies. Moins de code, mais toujours autant de fun.</p>
-
-<p>Pour cause de timing, j'ai hélas raté les keynotes du matin. <a href="http://www.devoxx.com/display/FR13/Bonjour+et+bienvenue">La première</a>, présentée par une partie de l'équipe organisatrice de l'événement, était essentiellement destinée à accueillir les personnes et donner un certain nombre de chiffres. Une annonce toutefois : la nouvelle version du site <a href="http://www.parleys.com">Parleys</a>, refait complètement en HTML 5. Exit le Flash, et c'est tant mieux !</p>
-
-<p><a href="http://www.devoxx.com/pages/viewpage.action?pageId=6818412">La seconde, L'Histoire des Ecritures</a>, présentée par <a href="http://www.devoxx.com/display/FR13/Clarisse+Herrenschmidt">Clarisse Herrenschmidt</a> retraçait l'histoire de l'écriture, au terme de nombreux siècles d'évolution. Une keynote visiblement passionnante, qui change un peu des thèmes très informatiques dont on a l'habitude. Certains l'ont comparée à la keynote de Michel Serres à l'USI, donc forcément un compliment ! L'ayant ratée, je pense qu'il s'agira de la première que je regarderais sur le site de Parleys.</p>
-
-<p><a href="http://www.devoxx.com/display/FR13/Objects+and+functions%2C+conflict+without+a+cause">Dernière keynote</a> fut celle de <a href="http://www.devoxx.com/display/FR13/Martin+Odersky">Martin Odersky</a>, le créateur de Scala. Il semble que les retours indiquent que la keynote n'a pas été dans la direction d'un apaisement entre les <em>Javaïstes</em> et les <em>Scalafistes</em>. Dommage.</p>
-
-<!-- more -->
-
-
-<h2><a href="http://www.devoxx.com/display/FR13/Elastifiez+votre+application+++du+SQL+au+NoSQL+en+moins+d%27une+heure">Elastifiez votre application : du SQL au NoSQL en moins d'une heure</a></h2>
-
-<p><img src="/images/devoxxfr-2013-nosql-1.jpg" title="David et Tug sur scène" alt="David et Tug sur scène" /></p>
-
-<p><a href="http://www.devoxx.com/display/FR13/David+Pilato">David Pilato</a> et <a href="http://www.devoxx.com/display/FR13/Tugdual%20Grall">Tugdual Grall</a> nous propose un guide pour migrer une application utilisant une base de données relationnelle vers une base de données NoSQL.</p>
-
-<p>Tout d'abord, une question : pourquoi migrer ?</p>
-
-<ul>
-<li>Il est aisé de faire de la scalabilité verticale : augmentation des serveurs, de la mémoire, etc. Mais cela ne suffit plus, on voudrait de la scalabilité horizontale.</li>
-<li>La recherche doit être structurée. On souhaiterait de la recherche full-text.</li>
-</ul>
-
-
-<p>Ils vont nous montrer le développement d'une application basée sur <a href="http://www.couchbase.com/">CouchBase</a> pour la base de données NoSQL et <a href="http://www.elasticsearch.org/">ElasticSearch</a> pour la partie recherche.</p>
-
-<p><img src="/images/devoxxfr-2013-nosql-2.jpg" title="Un petit problème, David ?" alt="Un petit problème, David ?" /></p>
-
-<p>On commence par une visite de l'application telle qu'elle est, dans sa version relationelle. Il s'agit d'une base assez simple, avec des fonctionnalités de CRUD, et une recherche assez limitée (la recherche n'est pas multi-champs, très stricte, etc.).</p>
-
-<p>Première étape du refactoring de l'application : mettre en place une API REST dans le serveur (utilisation de Spring MVC + <a href="http://jackson.codehaus.org/">Jackson</a>). Par exemple, on propose une méthode de récupération d'une personne par son ID (ou éventuellement par son nom).</p>
-
-<p>Deuxième étape, mise en place de <strong>CouchBase</strong>. Côté code, on ajoute la dépendance vers le client CouchBase dans le <code>pom.xml</code>. L'API utilisée ici est très claire et concise. Pour montrer que ça fonctionne, Tugdual montre des appels REST via la commande <code>curl</code>. Ce n'est pas sexy, mais ça marche effectivement.</p>
-
-<p>L'interface graphique de l'application se fait en Angular, mais ça n'a guère d'importance ici.</p>
-
-<p>Tout fonctionne bien, mais ce n'est pas encore ça. Par exemple, si on cherche <em>Joe Smith</em>, on trouvera des résultats, mais pas si l'on cherche <em>Smith Joe</em>. C'est là qu'intervient <strong>ElasticSearch</strong>. Une fois l'index dans ElasticSearch créé, on duplique les données de CouchBase vers ElasticSearch, tout ceci se faisant très simplement via l'interface web de CouchBase (la base de données est prévue pour fonctionner avec ElasticSearch).</p>
-
-<p>Maintenant, on modifie la partie de recherche - gérée par AngularJS - afin de taper directement sur ElasticSearch, sans passer par le serveur. Avec pratiquement aucune modification, la recherche bénéficie désormais de la puissance d'ElasticSearch : recherche multi-champs, recherche plus générique (désormais la recherche <em>Smith Joe</em> trouve effectivement <em>Joe Smith</em>), etc.</p>
-
-<p>Passons maintenant à l'analyse de données. David présente <a href="http://kibana.org/">Kibana</a>, un plugin d'Elastic Search qui permet de créer des dashboards dynamiques. En quelques clics, David arrive à créer un histogramme montrant la distribution des dates de naissance parmi la base de données contenant déjà plus d'un million d'entrées. Même chose pour créer un camembert pour la répartition par pays. Ce dashboard est dynamique. On peut ainsi naviguer dans nos données.</p>
-
-<p><img src="/images/devoxxfr-2013-nosql-3.jpg" title="Kibana, pour faire des dashboards rapides et efficaces" alt="Kibana, pour faire des dashboards rapides et efficaces" /></p>
-
-<p>Un autre point positif des bases NoSQL : les données sont sans schéma (<em>schema less</em>), c'est-à-dire qu'il est possible d'ajouter, modifier ou supprimer des champs sans aucun problème. Aucun <code>ALTER TABLE</code> à faire, pas de freeze de la base de données, pas d'update des données existantes.</p>
-
-<p>En moins d'une heure, David et Tug ont réussi leur pari de faire migrer leur application pour la rendre plus scalable, plus élastique. En prime, et ce n'est pas négligeable, ils ont ajouté de vraies fonctionnalités de recherche et de création de dashboards dynamiques, à moindre frais. Une telle migration n'est toutefois pas si aisée dans le monde réél, et se passer d'une base relationnelle n'est pas toujours simple, en particulier car il faut changer aussi sa façon de penser son modèle de données.</p>
-
-<hr/>
-
-
-<h2><a href="http://www.devoxx.com/display/FR13/Les+bronzes+font+du+dev">Les bronzés font du dév</a></h2>
-
-<p><img src="/images/devoxxfr-2013-ellene.jpg" title="Pas de machine ? Lis la doc en attendant !" alt="Pas de machine ? Lis la doc en attendant" /></p>
-
-<p><a href="http://www.devoxx.com/display/FR13/Ellene+Dijoux">Ellène Siber Dijoux</a> (<a href="https://twitter.com/ElleneSiber">@ElleneSiber</a>), durant un Quickie humoristique, nous montre la vie professionnelle de Martin Dutruc, jeune développeur fraichement débarqué de son école. La déconvenue va être totale, et nous voyons à travers cette petite histoire pas mal de travers de notre métier (quand il n'est pas exécuté par les bonnes personnes) ainsi qu'un certain nombre de clichés dans notre environnement :</p>
-
-<ul>
-<li>La société à "taille humaine" de 1200 personnes ;</li>
-<li>Le commercial qui était un ancien développeur et qui connait bien le monde du "<em>Java - J deux ZE</em>" ;</li>
-<li>Pas de machine lors de l'arrivée d'un nouveau dans l'équipe. Du coup on lui donne 1000 pages de documentation, fonctionnelle ou technique ;</li>
-<li>Le problème du build qui ne passe pas, alors il faut ignorer les tests ;</li>
-<li>La mauvaise gestion du temps, de la pseudo-agilité (vive les itérations de 2 mois !).</li>
-</ul>
-
-
-<p>Ellène s'en est bien sortie, le format de sa présentation n'était pas forcément facile. Hélas, ces travers sentaient beaucoup le vécu, y compris pour moi. En tout cas, bien vu Ellène :)</p>
-
-<hr/>
-
-
-<h2><a href="http://www.devoxx.com/display/FR13/Comparing+JVM+Web+Frameworks">Comparing JVM Web Frameworks</a></h2>
-
-<p><a href="http://www.devoxx.com/display/FR13/Matt+Raible">Matt Raible</a> (<a href="https://twitter.com/mraible">@mraible</a>) nous propose une comparaison de différents frameworks Web tournant sur la JVM. Tout d'abord une petite histoire sur le web et les frameworks web pour la JVM.</p>
-
-<p><img src="https://farm9.staticflickr.com/8529/8588701778_91aeb65377_o.png" title="L'historique des frameworks web de la JVM" alt="L'historique des frameworks web de la JVM" />
-<em>Image de <a href="http://raibledesigns.com/">Matt Raible</a> (Copyright Raible Designs)</em></p>
-
-<p>Y a t'il trop de frameworks web pour la JVM ? La salle pense en majorité que oui. L'arrivée des frameworks JavaScript ne change pas la donne, et posent d'autres problèmes : peu de scalabilité, problème de sécurité, code potentiellement critique côté client, etc.</p>
-
-<p>Passons au comparatif des frameworks. Tout d'abord, quels critères pour choisir les candidats ?</p>
-
-<ul>
-<li>Communauté / Support</li>
-<li>HTML 5</li>
-<li>REST</li>
-<li>Mobile</li>
-<li>Performances</li>
-<li>Rapidité des pages</li>
-</ul>
-
-
-<p>Matt décide de se "borner" à la plateforme JVM pour restreindre son choix. Cela laisse tout de même un large choix de langage : Java, Scala, Groovy, etc.</p>
-
-<p>Faire des comparatifs n'est pas simple. Il faut affronter communautés passionnées (surtout celles ayant une mauvaise note), critiques sur la façon de noter ou sur les notes. Il y aussi la possibilité de "tricher" avec les résultats.</p>
-
-<p>Pour Matt, l'une des très bonne comparaison de frameworks était la présentation <a href="http://www.parleys.com/#play/514892290364bc17fc56c52e/chapter0/about">World Wide Wait</a> lors du Devoxx 2011.
-Autre comparatif intéressant est le site <a href="http://devrates.com/stats/index">devrates.com</a> qui permet avant tout de connaitre la popularité d'un framework.</p>
-
-<p>S'il s'agit d'un framework <em>full stack</em>, Matt recommande avant tout de choisir en fonction du langage que l'on souhaite utiliser : JRuby, Groovy, Scala ou Java.</p>
-
-<p>Cette présentation n'était pas une comparaison en soi, mais plutôt les bonnes méthodes à suivre quand on veut faire soi même une comparaison de frameworks, afin de choisir ce qui permettra de mieux répondre à nos besoins. Une présentation intéressante, mais peut-être un peu en deça de ce que nous avait habitué Matt Raible par le passé.</p>
-
-<hr/>
-
-
-<h2><a href="http://www.devoxx.com/display/FR13/Structures+de+donnees+exotiques%2C+au+dela+de+ArrayList%2C+HashMap+et+autres+HashSet.">Structures de données exotiques, au delà de ArrayList, HashMap et autres HashSet</a></h2>
-
-<p><a href="http://www.devoxx.com/display/FR13/Sam+Bessalah">Sam Bessalah</a> (<a href="https://twitter.com/samklr">@samklr</a>)</p>
-
-<p>On a tendance à toujours sortir l'artillerie lourde, et pas de considérer vraiment le problème que l'on a. Comme il le dit, <em>quand on a un marteau, tout ressemble à un clou</em> ! Durant cette présentation, Sam nous présente 4 structures de données, un poil exotique.</p>
-
-<h3>Skiplist</h3>
-
-<ul>
-<li>Stockage de données ordonnées</li>
-<li>Insertion / suppression en <code>O(log N)</code></li>
-<li>Recherche en <code>O(log N)</code></li>
-</ul>
-
-
-<p>Plutôt que de parcourir toute la liste pour chercher un élément, on prend des "voies express", c'est-à-dire qu'on va sauter des éléments. Pour vulgariser un peu, Sam compare ça aux Métro 1 et au RER A. Par exemple, si l'on veut se rendre de La Défense à Châtelet, on peut prendre l'une ou l'autre des lignes. Le Métro 1 va mettre plus de temps, car il s'arrête à chaque station, alors que le RER prend une voie "express" (du moins en temps normal, quand il n'y a pas d'incident :) ). On arrive ainsi plus vite à destination. C'est le même principe pour les <code>SkipList</code> lorsqu'on la parcourt à la recherche d'un élément : on ne va pas aller d'élément en élément, mais on va plutôt prendre des "raccourcis".</p>
-
-<p>Depuis le JDK 1.6, il existe des implémentations de ce type de structure :</p>
-
-<ul>
-<li><a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/ConcurrentSkipListMap.html">java.util.concurrent.ConcurrentSkipListMap</a></li>
-<li><a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/ConcurrentSkipListSet.html">java.util.concurrent.ConcurrentSkipListSet</a></li>
-</ul>
-
-
-<h3>Tries</h3>
-
-<p>Cette structure est une sorte d'arbre ternaire. Pour une recherche de texte, la complexité va dépendre non de la taille de l'arbre, mais de la longueur de la chaine de recherche.
-Toutefois, cette structure reste assez gourmande en mémoire. Sam fait un focus sur la structure <code>Hash Array Mapped Trie</code> (<a href="http://en.wikipedia.org/wiki/Hash_array_mapped_trie">HAMT</a>). Dans ce type de structure, on code les clés sur 32 bits, du coup la profondeur de l'arbre ne dépassera jamais 7 niveaux.</p>
-
-<p>Pour la complexité nous avons d'excellents résultats :</p>
-
-<ul>
-<li>ajouter, premier, dernier, n-ième élément, mise à jour -> <code>O(1)</code>.</li>
-<li>concat, insert, preprend -> <code>O(N)</code> (N étant au maximum 7).</li>
-</ul>
-
-
-<p>A noter qu'il existe une <code>Concurrent Trie</code> (<a href="http://en.wikipedia.org/wiki/Ctrie">CTrie</a>) qui n'est pas bloquante.</p>
-
-<h3>Sketches</h3>
-
-<p>Prendre un ensemble de données, en extraire des informations, puis travailler sur ces informations et non sur les données elles-mêmes.</p>
-
-<h4>Bloom Filters</h4>
-
-<p>Structure de données probabiliste. Par exemple, est-ce qu'un élément appartient à un ensemble de données ?
-On ne pas être sûr à 100% que la donnée soit présente, mais on est absolument certain qu'elle n'y ait pas. Il ne peut donc pas y avoir de faux-négatif.</p>
-
-<p>Attention toutefois, si un <em>Bloom Filter</em> accepte les insertions, il ne peut pas y ajouter de suppression de données. Afin de supporter la suppression, il faudra utiliser un <em>Counting Bloom Filter</em>.</p>
-
-<p>On peut trouver une implémentation dans Guava, <a href="http://docs.guava-libraries.googlecode.com/git-history/v11.0/javadoc/com/google/common/hash/BloomFilter.html">BloomFilter</a></p>
-
-<h3>Count Min Sketches</h3>
-
-<p>Le <a href="http://en.wikipedia.org/wiki/Count-Min_sketch">Count Min Sketch</a> est une évolution du Bloom Filter. Cette structure garde l'information du nombre d'occurences de chaque élément. Une utilisation de ce genre de structure est de détecter quelle source change le plus souvent ses données, les IP qui consomment le plus de bande passante, etc.</p>
-
-<p>A voir sur GitHub, une <a href="https://github.com/clearspring/stream-lib">librairie de structure de données par flux</a>.</p>
-
-<hr/>
-
-
-<p>Une seconde journée moins chargée en terme de conférence en ce qui me concerne, car il me fallait encore préparer mon passage du lendemain avec Julien Jakubowski. J'ai également beaucoup discuté avec d'autres personnes, visiter un peu les stands, etc.</p>
 ]]></content>
   </entry>
   
