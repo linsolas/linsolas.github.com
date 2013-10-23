@@ -4,7 +4,7 @@
   <title><![CDATA[fr.romain:blog:3.0]]></title>
   <link href="http://linsolas.github.com/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2013-08-19T22:10:56+02:00</updated>
+  <updated>2013-10-23T23:40:58+02:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Et quatre à la suite]]></title>
+    <link href="http://linsolas.github.com/blog/2013/10/23/et-quatre-a-la-suite/"/>
+    <updated>2013-10-23T19:05:00+02:00</updated>
+    <id>http://linsolas.github.com/blog/2013/10/23/et-quatre-a-la-suite</id>
+    <content type="html"><![CDATA[<p>Quatre à la suite ? Ai-je participé à Questions pour un Champion ? Non !</p>
+
+<p>Bon, je n&#8217;ai pas blogué à ce sujet, mais j&#8217;aurais la chance dans trois semaines, d&#8217;assister à mon quatrième Devoxx. Et pour ne pas changer les bonnes habitudes, je me retrouve une nouvelle fois orateur !</p>
+
+<p>Le sujet, c&#8217;est &#8221;<em>The perfect ingredients for a JavaScript Software Factory</em>&#8221;. Oui, encore du JavaScript dans une conférence pourtant orientée Java. Cela prouve bien notre ouverture d&#8217;esprit, à nous autres Javaïstes !</p>
+
+<p>Bref, de quoi ça va parler ? En gros, de tout ce qu&#8217;il faut pour &#8220;industrialiser&#8221; son développement JavaScript. Un développeur Java dispose déjà de toute une panoplie d&#8217;outils et de pratiques pour développer correctement ses applications. Mais qu&#8217;en est-il pour un développeur JavaScript ? L&#8217;écosystème est-il désert ou au contraire fourmille-t-il de petites perles ?</p>
+
+<p>Hélas, il s&#8217;agit d&#8217;un <strong>Quickie</strong>, ce qui veut dire que je n&#8217;aurais que 15 minutes pour aborder ce sujet tellement vaste. Je serais donc amené à surtout éfleurer ce sujet, mais cela me semble une bonne approche pour un développeur qui souhaite s&#8217;intéresser vraiment à faire du JavaScript propre !</p>
+
+<p>Bref, si vous êtes à Anvers la semaine du 11 novembre, n&#8217;hésitez pas à venir jeter un oeil à ma présentation&#8230;</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Oyez oyez amis suisses]]></title>
