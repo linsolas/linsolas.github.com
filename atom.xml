@@ -4,7 +4,7 @@
   <title><![CDATA[fr.romain:blog:3.0]]></title>
   <link href="http://linsolas.github.com/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2013-10-23T23:40:58+02:00</updated>
+  <updated>2013-10-29T18:28:33+01:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -12,6 +12,518 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[SoftShake 2013 - deuxième jour]]></title>
+    <link href="http://linsolas.github.com/blog/2013/10/25/softshake-2013-deuxieme-jour/"/>
+    <updated>2013-10-25T16:19:00+02:00</updated>
+    <id>http://linsolas.github.com/blog/2013/10/25/softshake-2013-deuxieme-jour</id>
+    <content type="html"><![CDATA[<p><img src="http://linsolas.github.com/images/soft-shake-2013.png" title="Soft Shake 2013" alt="Soft Shake 2013" /></p>
+
+<p>Et c&#8217;est parti pour le second jour de la conférence <strong>Soft-Shake</strong>.</p>
+
+<!-- more -->
+
+
+<h2>Keynote collaborative</h2>
+
+<p>La première keynote de la journée était une keynote &#8220;collaborative&#8221;.
+Chaque responsable d&#8217;un track de sessions avait la parole pendant 4 minutes pour nous exposer sa vision à moyen terme (entre 2 et 5 ans) concernant sa technologie. Par exemple, le responsable de la partie &#8220;web&#8221; nous a dit que le JavaScript sera encore plus présent qu&#8217;aujourd&#8217;hui, en particulier du côté serveur.</p>
+
+<h2>Keynote Programatoo</h2>
+
+<p><img src="http://linsolas.github.com/images/note-4.5.png" title="4.5/5" alt="4.5/5" /></p>
+
+<p>La seconde keynote parlait de &#8221;<strong>Programatoo</strong>&#8221;, un projet lancé par Audrey Neveu (<a href="https://twitter.com/Audrey_Neveu">@Audrey_Neveu</a>) et Aline Paponaud (<a href="https://twitter.com/bootis">@bootis</a>) de <a href="http://www.sfeir.fr">SFEIR</a>.
+Qu&#8217;est-ce que Programatoo ?
+Il s&#8217;agit d&#8217;apprendre à coder à nos enfants, n&#8217;y plus n&#8217;y moins.</p>
+
+<p><img src="http://linsolas.github.com/images/programatoo.jpg" title="Programatoo" alt="Programatoo" /></p>
+
+<p>Revenons 20 ans en arrière pour comprendre la génèse de cette idée.
+Au milieu des années 80, Aline et Audrey sont des petites filles (très sages, forcément) déjà attirées par les mystères de l&#8217;informatique et des ordinateurs. Elles veulent comprendre comment ça marche. 10 ans plus tard, leur intérêt est toujours intact, mais hélas elles se heurtent souvent à des stéréotypes (&#8221;<em>ce n&#8217;est pas pour les filles !</em>&#8221;) ou l&#8217;incompréhension du milieu scolaire pour ce domaine.
+Audrey apprend avec joie qu&#8217;il y a des cours d&#8217;informatique dans son lycée. Elle s&#8217;y inscrit, mais cela se résumera à apprendre à utiliser Word ou Excel. C&#8217;est la déception.
+De son côté, Aline n&#8217;a guère plus de succès.
+Fort heureusement, elles ne baissent pas les bras, et embrassent le métier de programmeuse.</p>
+
+<p>En 2012, Aline va trouver Audrey pour proposer une idée géniale : et si on apprenait à coder à nos enfants ! C&#8217;est ainsi qu&#8217;en mars 2012 nait la première session &#8220;Programatoo&#8221;, avec les enfants des employés de SFEIR. Et c&#8217;est un succès.</p>
+
+<p>Les choses ne sont pas pour autant parfaites.
+Elles font un constat navrant. Parmi les participants, il y avait deux adolescentes. Celles-ci sont parfaitement à l&#8217;aise avec les ordinateurs, du moins quand il s&#8217;agit d&#8217;utiliser Facebook, YouTube et autres services du genre. Mais elles sont incapables de vraiment utiliser un ordinateur, de comprendre comment cela fonctionne, ni même voir en cette machine un merveilleux outil de créativité !</p>
+
+<p>On dit que la jeune génération est une génération &#8220;digitale&#8221;, qu&#8217;elle est née avec un smartphone dans les mains. Je le constate aussi, mon fils de 6 ans maitrise depuis un moment l&#8217;iPad, qui n&#8217;a plus de secret pour lui.
+Mais en réalité, nos enfants sont conditionnés pour &#8221;<strong>consommer</strong>&#8221; de l&#8217;informatique. Il faut les aider à en devenir des acteurs, des vrais utilisateurs.
+Finalement, c&#8217;est un peu comme une carte et un GPS : aujourd&#8217;hui, l&#8217;utilisation d&#8217;un GPS est plutôt intuitive et il nous mâche tout le travail, on n&#8217;a plus qu&#8217;à suivre bêtement ses instructions. Du coup, il devient obsolète de savoir lire une carte papier classique, et pourtant cela reste la base pour savoir se positionner quelque part&#8230;</p>
+
+<p>En tant qu&#8217;informaticien, il ne tient qu&#8217;à nous de changer la donne. Nous avons beaucoup d&#8217;outils, de langages destinés à l&#8217;aprentissage de la programmation, y compris destinés à de jeunes enfants.
+Ayant discuté ensuite avec Audrey, je vais sans doute essayer de mettre mon fils à la programmation.
+Bien entendu, point de Scala :) mais plutôt du <a href="http://scratch.mit.edu">Scratch</a> qui a l&#8217;avantage d&#8217;être très visuel et ludique.</p>
+
+<p>Il faut noter que le projet Programatoo n&#8217;est pas unique en son genre. Les conférences &#8220;Devoxx 4 Kids&#8221; s&#8217;organisent par-ci, par-là. Il y en avait justement une à Genève le samedi qui a suivi la conférence Soft-Shake.</p>
+
+<p>Programatoo a également gagné le &#8220;Duke Choice Awards 2013&#8221; à la conférence Java One. Une très belle consécration amplement méritée.
+Bravo Audrey et Aline !</p>
+
+<h2><a href="http://soft-shake.ch/2013/program/sessions/13_ruby/2013/10/25/01-speedup-your-web-app.html">Speed-up your webapp</a></h2>
+
+<p><a href="http://soft-shake.ch/2013/program/authors/2013/10/24/alexis-bernard.html">Alexis Bernard</a> (<a href="https://twitter.com/alexis_bernard">@alexis_bernard</a>)</p>
+
+<p><img src="http://linsolas.github.com/images/note-2.png" title="2/5" alt="2/5" /></p>
+
+<p>Je suis ouvert d&#8217;esprit, je vais donc dans le track &#8220;Ruby&#8221; pour la première session de la journée.
+Alexis nous parle d&#8217;optimisation quand on veut accélérer son site web.</p>
+
+<p>Première question : pourquoi le faire ?
+A cela, Alexis nous donne les exemples de Amazon et Yahoo! : pour le premier, diminuer le temps de réponse de 100ms, c&#8217;est un gain de revenu de l&#8217;ordre d&#8217;1%, ce qui n&#8217;est pas négligeable quand on voit leurs revenus&#8230;
+Pour le second, une diminution de 400ms de ce temps de réponse, et c&#8217;est 9% de traffic gagnés !
+Tout le monde n&#8217;est pas Amazon ou Yahoo! mais cela reste intéressant.</p>
+
+<p>La technique d&#8217;Alexis est simple : mesurer, optimiser et mesurer encore.</p>
+
+<p>Donc il faut mesurer. Pour cela, Alexis nous parle de quelques outils :</p>
+
+<ul>
+<li><a href="http://www.newrelic.com/">New Relic</a>, une solution SAAS visiblement assez poussée, qui historise en plus les mesures. Pratique pour comparer dans le temps. Mais c&#8217;est une solution assez chère visiblement (de l&#8217;ordre de 150€ par mois et par serveur).</li>
+<li><a href="https://github.com/MiniProfiler/rack-mini-profiler">Rack Mini Profiler</a>, un outil Ruby, un peu dans la même idée que New Relic, mais avec moins de fonctionnalités, et pas d&#8217;historisation.</li>
+<li><a href="https://www.pingdom.com/">Pingdom</a> dont l&#8217;une des fonctionnalités est de vérifier que les recommandations standard d&#8217;optimisations des sites-web sont bien respectées.</li>
+<li><a href="http://www.webpagetest.org/">WebPageTest</a>, qui a l&#8217;astuce de tester chaque requête 2 fois de suite. Cela permet ainsi de vérifier l&#8217;efficacité du système de cache des ressources.</li>
+<li>Chrome Dev Tools peut aussi être mis à profit pour mesurer les performances de l&#8217;application.</li>
+</ul>
+
+
+<p>Une fois les mesures faites, il faut corriger les problèmes. Alexis nous dit qu&#8217;il faut toujours optimser le <em>back-end</em> dans un premier temps. La plupart du temps cela va se résumer à optimiser la base de données, les requêtes, les indexes, etc.
+Une fois ceci fait, on peut s&#8217;intéresser à l&#8217;optimisation <em>front-end</em>. Là aussi des outils peuvent nous aider, Chrome Dev Tools par exemple, ou imageoptim.com, pour améliorer la compression des images.</p>
+
+<p>Une session intéressante, mais qui ne va pas à mon goût assez loin dans les détails. Les solutions proposées restent assez basiques au final.</p>
+
+<h2><a href="http://soft-shake.ch/2013/program/sessions/13_java/2013/10/25/02-Golo.html">Golo, le langage qui donne des super-pouvoirs</a></h2>
+
+<p><a href="http://soft-shake.ch/2013/program/authors/2013/10/24/philippe-charriere.html">Philippe Charrière</a> (<a href="https://twitter.com/k33g_org">@k33g_org</a>)</p>
+
+<p><img src="http://linsolas.github.com/images/note-3.5.png" title="3.5/5" alt="3.5/5" /></p>
+
+<p>Mais qu&#8217;est-ce que <strong>Golo</strong>, ce langage au nom rigolo ?
+C&#8217;est un langage créé par Julien Ponge (@jponge) qui tourne sur la JVM, avec Java 7 ou 8 (pas avant, car Golo nécessite <code>invokedynamic</code> pour tourner, introduit en Java 7).
+Ses principales forces sont sa simplicité, sa légèreté ainsi que la facilité d&#8217;étendre le langage.</p>
+
+<p>Philippe nous montre quelques exemples de code, la syntaxe reste assez compréhensible pour un développeur Java.
+Les lambdas, qui se font toujours attendre dans Java, sont là, tout comme les structures, des objets créés dynamiquement (<code>ObjectDynamic</code>) ou encore la possibilité d&#8217;étendre (<code>augment</code>) des classes existantes pour leur ajouter des fonctionnalités.</p>
+
+<p>Je vous invite à aller jeter un oeil sur le site du langage - <a href="http://golo-lang.org">http://golo-lang.org</a> - pour vous rendre compte de ce qu&#8217;offre ce langage, et voir quelques exemples concrets de code. Voilà un basique <em>Hello World</em> :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>module EchoArgs
+</span><span class='line'>
+</span><span class='line'>function main = |args| {
+</span><span class='line'>    println("Hello World...")
+</span><span class='line'>    foreach arg in args {
+</span><span class='line'>      println("-&gt;  " + arg)
+</span><span class='line'>    }
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>J&#8217;ai aimé cette présentation, qui nous a donné un bon aperçu de ce qu&#8217;est Golo.
+Toutefois, cela reste un langage dont le but m&#8217;échappe un peu - hormis le côté &#8220;fun&#8221; d&#8217;avoir créer son propre langage !</p>
+
+<h2><a href="http://soft-shake.ch/2013/program/sessions/13_mobile/2013/10/25/3-Mobile-troll-party.html">Mobile Troll Party</a></h2>
+
+<p><a href="http://soft-shake.ch/2013/program/authors/2013/10/24/xavier-bourguignon.html">Xavier Bourguignon</a> (<a href="https://twitter.com/xbourguignon">@xbourguignon</a>)</p>
+
+<p><img src="http://linsolas.github.com/images/note-3.png" title="3/5" alt="3/5" /></p>
+
+<p><img src="http://linsolas.github.com/images/softshake-2013-mobile-troll-party.jpg" title="Une session pleine de violences" alt="Une session pleine de violences" /></p>
+
+<p>Une session pour le fun. Le but ici est de troller sévèrement sur iOS et Android.
+Je m&#8217;attendait à un peu plus de trash, un peu plus de sujets polémiques. Le jeu des deux présentateurs n&#8217;était peut-être pas assez rodé je pense, mais d&#8217;après ce que j&#8217;ai compris, Xavier devait la faire seul jusqu&#8217;à la veille au soir où il a réussi à convaincre son partenaire de venir aussi.
+Malgré tout, c&#8217;était une bonne ambiance, et les trolls étaient effectivement nombreux !</p>
+
+<h2><a href="http://soft-shake.ch/2013/program/sessions/13_agile/2013/10/25/4-5-ans-et-500-releases-en-50-minutes.html">5 ans, 500 releases en 50 minutes</a></h2>
+
+<p><a href="http://soft-shake.ch/2013/program/authors/2013/10/25/freddy-mallet.html">Freddy Mallet</a> (<a href="https://twitter.com/FreddyMallet">@FreddyMallet</a>) et <a href="http://soft-shake.ch/2013/program/authors/2013/10/24/olivier-gaudin.html">Olivier Gaudin</a> (<a href="https://twitter.com/gaudol">@gaudol</a>)</p>
+
+<p><img src="http://linsolas.github.com/images/note-4.png" title="4/5" alt="4/5" /></p>
+
+<p>Compte tenu du temps imparti (45 minutes), cette session a été renommée &#8221;<em>4 ans, 400 releases en 40 minutes</em>&#8221; :)
+Cette session raconte la vie de la société SonarSource, éditeur de l&#8217;outil d&#8217;analyse de code SonarQube (connu anciennement simplement sous le nom Sonar).</p>
+
+<p>Lorsque SonarSource a été créée, il y a 5 ans, c&#8217;était une petite startup lancée par trois personnes (en particulier Olivier et Freddy), sur leurs fonds propres. La société marche bien aujourd&#8217;hui, et a bien grossi (une 20aine de personnes d&#8217;ici la fin de l&#8217;anée), mais il y a eu beaucoup de problèmes, de &#8220;douleurs&#8221;. En particulier 5 :</p>
+
+<ul>
+<li>Les tests.</li>
+<li>L&#8217;architecture.</li>
+<li>L&#8217;infrastructure.</li>
+<li>L&#8217;organisation.</li>
+<li>Sonar on Sonar.</li>
+</ul>
+
+
+<p>Un gros travail a été fait sur les tests. Les tests unitaires d&#8217;abord, mais aussi les tests d&#8217;intégration. Le fait que Sonar supporte 5 bases de données différentes, qu&#8217;il existe une soixante de plugins ne rend pas les choses simples. Toutefois, ils arrivent à tout tester de façon assez efficace.</p>
+
+<p>Initialement, HibernateORM et GWT avaient été choisis. Le premier car gérer 5 bases de données et autant de spécificités n&#8217;est jamais aisé. Le second, car à l&#8217;époque cela répondait bien aux besoins de l&#8217;équipe. Mais ces choix se sont finalement avérés être des maillons faibles, et progressivement ont été remplacés.</p>
+
+<p>Les développeurs ne font pas que des développements, il a fallu embaucher une personne dédiée à part entière pour gérer l&#8217;infrastructure et les releases. Mais un tel cloisonnement n&#8217;est jamais très efficace, et SonarSource a ainsi créer une équipe de &#8220;DevOps&#8221;.</p>
+
+<p>Afin de ne pas être désynchroniser avec les utilisateurs de l&#8217;outil, l&#8217;équipe de SonarSource utilise SonarQube directement. Le fameux principe du &#8221;<em>Eat your own dog food</em>&#8221; en somme. Ils ont ainsi une instance de &#8220;production&#8221; interne pour laquelle ils font des releases toutes les semaines. Cela implique donc d&#8217;être capable de faire des releases presque tous les jours, les développements de type &#8220;big bang&#8221; sont donc exclus.</p>
+
+<p>Un dernier point abordé par Freddy et Olivier concerne le <em>Quality Gate</em> (un sujet qui mériterait sans doute une session à part entière). Il s&#8217;agit d&#8217;une sorte de contrat de qualité pour pouvoir faire une release. En gros, il faut respecter certaines règles, atteindre certains objectifs pour engager la release : par exemple, avoir clos tous les tickets JIRA, avoir une note SQALE de A (la meilleure), ne pas avoir de violations bloquantes ou critiques, ou même de violations non revues par l&#8217;équipe.</p>
+
+<h2>Bilan</h2>
+
+<p>Au final, ce sont deux très belles journées qui viennent de s&#8217;écouler.
+La qualité des présentations et le niveau des speakers sont très bons.</p>
+
+<p>Les plus :</p>
+
+<ul>
+<li>Du beau monde. C&#8217;est toujours un plaisir de revoir des gens qu&#8217;on apprécie, et de rencontrer physiquement des personnes que l&#8217;on ne connait que par Twitter.</li>
+<li>De bons sujets.</li>
+<li>Des tracks très variés : Java, agilité, web, mobile, IA/Robotique, BigData et NoSQL, Microsoft, Ruby on Rails.</li>
+<li>Le repas des speakers (miam miam la fondue !)</li>
+<li>Genève, très jolie ville.</li>
+<li>Les organisateurs, très accueillants et toujours disponibles.</li>
+<li>Les dessins en live des sessions (voir prochain billet).</li>
+</ul>
+
+
+<p>Les moins :</p>
+
+<ul>
+<li>La séparation des salles. Elles se trouvaient soit au 1e étage, soit au 5e. Changer de salle pouvait ainsi demander un peu de gymnastique !</li>
+<li>A peu de choses près, les mêmes repas le midi sur les deux jours. Un peu plus de variété aurait été appréciable. Pas de problème au niveau de la quantité toutefois.</li>
+<li>J&#8217;aurais bien aimé que SoftShake se tienne en hiver, Genève sous la neige doit être très agréable.</li>
+</ul>
+
+
+<p>Pour résumer, Soft Shake est une très belle conférence, dans l&#8217;esprit de Devoxx ou Mix-IT. J&#8217;y retournerais avec grand plaisir !</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[SoftShake 2013 - premier jour]]></title>
+    <link href="http://linsolas.github.com/blog/2013/10/24/softshake-2013-premier-jour/"/>
+    <updated>2013-10-24T11:39:00+02:00</updated>
+    <id>http://linsolas.github.com/blog/2013/10/24/softshake-2013-premier-jour</id>
+    <content type="html"><![CDATA[<p><img src="http://linsolas.github.com/images/soft-shake-2013.png" title="Soft Shake 2013" alt="Soft Shake 2013" /></p>
+
+<p>Jacques Couvreur nous accueille pour <a href="http://soft-shake.ch/2013/fr/">cette session 2013 de la conférence Soft-Shake</a>. Ce sont 2 jours de conférences, neuf tracks en parallèle, une centaine d&#8217;orateurs, et 300 participants. A noter qu&#8217;environ un tiers des présentations se fait en anglais.
+Une bonne petite conférence donc !</p>
+
+<!-- more -->
+
+
+<p><img src="http://linsolas.github.com/images/softshake-2013-Geneve.jpg" title="Le fameux Jet d'Eau de Genève" alt="Le fameux Jet d'Eau de Genève" /></p>
+
+<p>Je vais <a href="http://www.touilleur-express.fr/2013/10/18/codeurs-en-seine-2013/">faire comme Nicolas Martignole</a> (a.k.a. le touilleur express), à savoir que je vais donner pour chaque session mon ROTI, le Retour sur le Temps Investi, autrement dit une note de 0 à 5 qui dénote l&#8217;intérêt que j&#8217;ai eu à suivre la présentation.</p>
+
+<h2>Keynote</h2>
+
+<p>Robin Cornelius</p>
+
+<p><img src="http://linsolas.github.com/images/note-3.5.png" title="3.5/5" alt="3.5/5" /></p>
+
+<p>Difficile de résumer cette keynote. C&#8217;était plus un discours de Robin Cornelius sur sa vie et celle de sa société, <a href="http://www.switcher">Switcher</a>.
+Mais c&#8217;était tout de même agréable de l&#8217;écouter parler. Robin fait partie des gens passionnés par son travail, sa société, et que l&#8217;on pourrait écouter pendant des heures.
+Bon démarrage donc&#8230;</p>
+
+<h2><a href="http://soft-shake.ch/2013/program/sessions/13_mobile/2013/10/24/1-votre-premiere-application-ios.html">Votre première application iOS</a></h2>
+
+<p><a href="http://soft-shake.ch/2013/program/authors/2013/10/24/marc-henri-primault.html">Marc-Henri Primault</a></p>
+
+<p><img src="http://linsolas.github.com/images/note-2.png" title="2/5" alt="2/5" /></p>
+
+<p>Présenter un langage en l&#8217;espace de 45 minutes, c&#8217;est compliqué, il y a forcément beaucoup de concepts à montrer.
+Je pense que Marc-Henri a bien montré les bases, mais il est vrai que la lisibilité du code dans les slides n&#8217;était pas extraordinaire. La coloration de certains mots clés en violet sur fond noir n&#8217;est jamais bien rendue par un vidéoprojecteur.</p>
+
+<p>Personnellement, j&#8217;ai eu du mal à accrocher car malheureusement le format de présentation ne se prête pas très bien à un tel apprentissage, en particulier pour des personnes comme moi qui n&#8217;y connaissent pas grand chose en développement iOS. Un &#8221;<em>Hands On</em>&#8221; s&#8217;y prêterait tellement mieux !</p>
+
+<h2><a href="http://soft-shake.ch/2013/program/sessions/13_web_dev/2013/10/24/2-Generating_tests_from_code_or_how_to_test_better_and_faster.html">Generating tests from code, or how to test better and faster</a></h2>
+
+<p><a href="http://soft-shake.ch/2013/program/authors/2013/10/24/renault-john-lecoultre.html">Renault John Lecoultre</a> (<a href="https://twitter.com/renajohn">@renajohn</a>)</p>
+
+<p><img src="http://linsolas.github.com/images/note-4.png" title="4/5" alt="4/5" /></p>
+
+<p>Tester une application JavaScript, c&#8217;est compliqué.
+Il existe deux types d&#8217;analyse de code : l&#8217;analyse statique et dynamique.</p>
+
+<p>La première se concentre à vérifier syntaxiquement si le code est correct.
+On détectera ici l&#8217;utilisation de mauvais patterns, ou du code qui peut présenter un risque fort de bug, comme par exemple l&#8217;utilisation du <code>==</code> au lieu du <code>===</code> en JavaScript. Des outils comme <a href="http://www.jslint.com/">JSLint</a>, <a href="http://www.jshint.com/">JSHint</a> ou encore <a href="http://www.sonarqube.org/">SonarQube</a> sont tout à fait adaptés pour ce type d&#8217;analyse. Mais cela a quand même des limites.</p>
+
+<p>L&#8217;analyse dynamique va exécuter le code pour en vérifier certaines règles, le cas le plus courant étant l&#8217;exécution de tests (unitaires, fonctionnels, etc.).</p>
+
+<p>Renault nous parle toutefois d&#8217;un troisième type d&#8217;analyse, à savoir <strong>l&#8217;analyse symbolique</strong>.
+Une rapide recherche sur Google me dit que &#8221;<em>L&#8217;analyse symbolique de données consiste en un mode d&#8217;analyse de tableaux de données statistiques arbitraires par perception cognitive de la surface expressionnelle du médium.</em>&#8221;
+Bon, je crois qu&#8217;on va laisser tomber la définition et voir directement comment Renault l&#8217;illustre dans sa démonstration.</p>
+
+<p>Il nous parle de l&#8217;outil <a href="https://unite.bugbuster.com/">Unite</a> de sa société <a href="http://bugbuster.com/">BugBuster</a>.
+L&#8217;idée derrière cet outil est de lui fournir une fonction en entrée, et lui va essayer de trouver un jeu d&#8217;entrées (<em>inputs</em>) afin de pouvoir tester tous les chemins possibles dans la fonction.
+Prenons l&#8217;exemple suivant :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// params : {x: Number}</span>
+</span><span class='line'><span class="kd">function</span> <span class="nx">puzzle</span><span class="p">(</span><span class="nx">x</span><span class="p">){</span>
+</span><span class='line'>  <span class="k">if</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">else</span>
+</span><span class='line'>    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>On le voit, pour parcourir les deux branches de cette fonction, nous devons faire en sorte d&#8217;évaluer à <code>true</code> la condition <code>if</code>, puis également à <code>false</code>. C&#8217;est là qu&#8217;intervient Unite. Il va analyser le code de la fonction pour nous trouver les deux valeurs d&#8217;entrée, ici <code>x = 0</code> puis <code>x = 1</code>.
+Là où l&#8217;outil devient plus intéressant, c&#8217;est quand on a du code plus complexe. Prenons un nouvel exemple, avec une fonction de validation d&#8217;email (avec une expression régulière simple) :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// params : {email: String}</span>
+</span><span class='line'><span class="kd">function</span> <span class="nx">puzzle</span><span class="p">(</span><span class="nx">email</span><span class="p">){</span>
+</span><span class='line'>  <span class="k">if</span><span class="p">(</span><span class="nx">email</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/</span><span class="p">))</span>
+</span><span class='line'>    <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">else</span>
+</span><span class='line'>    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Unite va nous trouver deux entrées possibles : <code>`email = "a"</code> pour l&#8217;évaluation négative de la condition, et <code>email = "9@B.PH"</code> pour son évaluation positive.</p>
+
+<p>Je dois dire que l&#8217;outil s&#8217;avère très intéressant, bien qu&#8217;encore à l&#8217;état de bêta. Reste la question de l&#8217;industrialisation d&#8217;un tel outil. Pour le moment, je le vois bien comme utilisation <em>one shot</em> pour trouver un bon ensemble de jeux de données pour tester une fonction.
+En tout cas, c&#8217;est un outil à suivre de près&#8230;</p>
+
+<h2><a href="http://soft-shake.ch/2013/program/sessions/13_web_dev/2013/10/24/3-Backbone_et_marionette_le_dev_js_simplifie.html">Backbone.js et Marionette, le développement JavaScript simplifié</a></h2>
+
+<p><a href="http://soft-shake.ch/2013/program/authors/2013/10/24/xavier-bourguignon.html">Xavier Bourguignon</a> (<a href="https://twitter.com/xbourguignon">@xbourguignon</a>) et <a href="http://soft-shake.ch/2013/program/authors/2013/10/24/philippe-charriere.html">Philippe Charrière</a> (<a href="https://twitter.com/k33g_org">@k33g_org</a>)</p>
+
+<p><img src="http://linsolas.github.com/images/note-4.png" title="4/5" alt="4/5" /></p>
+
+<p>Backbone est une librairie légère pour faire du single page application (&#8220;MVC&#8221; / &#8220;MVP&#8221; côté client). Il se base sur la librarie <a href="http://underscorejs.org/">underscore</a>, pour le templating par exemple.
+Backbone dispose d&#8217;un modèle objet. Son intérêt réside également dans sa facilité d&#8217;extension.</p>
+
+<p>Philippe commence à nous montrer des exemples de code avec Backbone. Mais de l&#8217;avis de Xavier, &#8221;<em>Backbone c&#8217;est bien, sauf la partie vue</em>&#8221;.
+Et c&#8217;est vrai que je trouve le code côté vue assez verbeux. C&#8217;est pour cela qu&#8217;il introduit la librairie <a href="http://marionettejs.com/">Marionette.js</a>, qui joue ainsi le rôle de surcouche à BackBone pour gérer la partie Vue. Ainsi, Marionette permet de faire du vrai <em>Single Page Application</em> avec BackBone.</p>
+
+<p>Xavier et Philippe nous offrent ainsi une vision assez claire de ce framework, en montrant ses atouts mais aussi ses limites. J&#8217;avoue que je préfère toujours AngularJS, bien que ce dernier ait un côté un peu plus &#8220;magique&#8221; que Backbone qui semble plus accessible et plus compréhensible.</p>
+
+<h2><a href="http://soft-shake.ch/2013/program/sessions/13_web_dev/2013/10/24/4-Web_Components_lavenir_des_developpeurs_web.html">Web Components, l&#8217;avenir des développeurs web</a></h2>
+
+<p><a href="http://soft-shake.ch/2013/program/authors/2013/10/24/julien-vey.html">Julien Vey</a> (<a href="https://twitter.com/julienvey">@julienvey</a>)</p>
+
+<p><img src="http://linsolas.github.com/images/note-4.png" title="4/5" alt="4/5" /></p>
+
+<p>Les applications web sont aujourd&#8217;hui de plus en plus riches, et le langage HTML atteint vite ses limites.
+C&#8217;est pour cela que le concept de <strong>composants web</strong> est arrivé.
+Il s&#8217;agit d&#8217;un standard W3C en cours de rédaction, partiellement implémenté par les navigateurs (particulièrement Chrome).</p>
+
+<p>L&#8217;idée est de créer des &#8220;éléments customs&#8221;. Imaginons le bouton &#8220;Twitter&#8221; que l&#8217;on peut ajouter sur son site, afin de permettre au visiteur du site de suivre votre compte Twitter.
+Si vous regardez le code de ce bouton, vous verrez un truc illisible fait de HTML et JavaScript. Ne serait-ce pas plus simple d&#8217;avoir un tag <code>&lt;twitter user="romaintaz"/&gt;</code> par exemple ? De même, un composant pour noter un article n&#8217;aurait-il pas plus de sens sous la forme <code>&lt;ranking note="3"/&gt;</code> ?</p>
+
+<p>Eh bien c&#8217;est (à peu près) possible aujourd&#8217;hui !</p>
+
+<h3>Les templates</h3>
+
+<p>La première brique à connaître, ce sont les templates. Ils permettent la séparation du fond et de la forme <em>via</em> l&#8217;utilisation de <code>&lt;template&gt;</code> :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;template</span> <span class="na">id=</span><span class="s">&quot;monTemplate&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  // code HTML du template.
+</span><span class='line'>  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;comment&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+</span><span class='line'><span class="nt">&lt;/template&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ce template est parsé, mais pas affiché. Les balises <code>&lt;script/&gt;</code> ne sont pas exécutées, et les images ne sont pas chargées. Le code ci-dessus est donc parfaitement valide. Pour l&#8217;instancier, il suffit d&#8217;un peu de code JavaScript :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">t</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#monTemplate&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">t</span><span class="p">.</span><span class="nx">content</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;img&#39;</span><span class="p">).</span><span class="nx">src</span> <span class="o">=</span> <span class="s2">&quot;...&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">t</span><span class="p">.</span><span class="nx">content</span><span class="p">.</span><span class="nx">cloneNode</span><span class="p">(</span><span class="kc">true</span><span class="p">));</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>A ce moment-là, les scripts sont exécutés, les images chargées et le DOM affiché.</p>
+
+<h3>Encapsulation</h3>
+
+<p>Passons à la deuxième brique : l&#8217;encapsulation.
+Aujourd&#8217;hui, on utiliserait des <code>&lt;iframe&gt;</code>. Mais pouah !
+Avec les web components, on utilise le principe du &#8221;<strong>shadow DOM</strong>&#8221;, c&#8217;est-à-dire du DOM masqué du reste de l&#8217;application. Exemple :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;video</span> <span class="na">controls</span> <span class="na">src=</span><span class="s">&quot;/ma/video&quot;</span><span class="nt">&gt;&lt;/video&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Avec Chrome Tools, on peut faire afficher le shadow DOM pour cette balise vidéo, sous un &#8220;tag&#8221; <code>#document-fragment</code> :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;host&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'><span class="nt">&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">host</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#monTemplate&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">show</span> <span class="o">=</span> <span class="nx">host</span><span class="p">.</span><span class="nx">createShadowRoot</span><span class="p">();</span>
+</span><span class='line'><span class="nx">shadow</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s1">&#39;&lt;h2&gt;Hello&lt;/h2&gt;&#39;</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>On peut aussi passer par des templates :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">shadow</span><span class="p">.</span><span class="nx">webkitCreateShadowRoot</span><span class="p">();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Il existe aussi le concept d&#8217;<em>Insertion point</em>, avec utilisation de <code>&lt;content&gt;&lt;/content&gt;</code> dans le shadow DOM. Le contenu de la balise du web component est injecté à la place du <code>&lt;content&gt;&lt;/content&gt;</code> défini dans le shadow DOM.</p>
+
+<p>On peut aussi utiliser des sélecteurs pour ne récupérer qu&#8217;une partie du code HTML du composant web : <code>&lt;content select="h2"&gt;&lt;/content&gt;</code> qui récupèrera uniquement le code du <code>h2</code>, <code>&lt;content select="h1:first-child"&gt;&lt;/content&gt;</code> pour le premier élément de <code>h1</code> ou <code>&lt;content select="*"&gt;&lt;/content&gt;</code> pour récupérer le reste.</p>
+
+<h3>Externalisation</h3>
+
+<p>Comment peut-on créer des composants web et les utiliser ailleurs ? Cela se fait grâce à la balise <code>&lt;element&gt;</code> qui permet de créer ces nouveaux éléments :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;element</span> <span class="na">name=</span><span class="s">&quot;megabutton&quot;</span> <span class="na">extends=</span><span class="s">&quot;button&quot;</span> <span class="na">constructor=</span><span class="s">&quot;MegaButton&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;template&gt;</span>
+</span><span class='line'>      ...
+</span><span class='line'>  <span class="nt">&lt;/template&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;script&gt;</span>
+</span><span class='line'>      <span class="p">...</span>
+</span><span class='line'>  <span class="nt">&lt;/script&gt;</span>
+</span><span class='line'><span class="nt">&lt;/element&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Et pour l&#8217;utiliser dans une autre page :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;link</span> <span class="na">rek=</span><span class="s">&quot;component&quot;</span> <span class="na">href=</span><span class="s">&quot;megabutton.html&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>...
+</span><span class='line'><span class="nt">&lt;megabutton&gt;</span>Clique ici<span class="nt">&lt;/megabutton&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ces éléments ont également un cycle de vie sur lequel il est possible d&#8217;intéragir grâce à des fonctions JavaScript : <code>created</code>, <code>attributeChanged</code>, <code>inserted</code> ou <code>removed</code> :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="k">this</span><span class="p">.</span><span class="nx">lifecycle</span><span class="p">({</span>
+</span><span class='line'>  <span class="nx">inserted</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="p">...</span> <span class="p">},</span>
+</span><span class='line'>  <span class="nx">removed</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+</span><span class='line'><span class="p">})</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Mutation Observer</h3>
+
+<p>Ces éléments sont utilisés pour détecter des modifications dans le code JavaScript.</p>
+
+<h3>Object.observe()</h3>
+
+<p>Il s&#8217;agit ici du monitoring des modifications des objects JS, bien plus performante que tout autre solution existante aujourd&#8217;hui.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">observeChanges</span><span class="p">(</span><span class="nx">changes</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">changes</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">change</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">change</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>                  <span class="c1">// Name</span>
+</span><span class='line'>      <span class="nx">change</span><span class="p">.</span><span class="nx">type</span><span class="p">;</span>                  <span class="c1">// Type</span>
+</span><span class='line'>      <span class="nx">change</span><span class="p">.</span><span class="nx">oldValue</span><span class="p">;</span>          <span class="c1">// Ancienne valeur</span>
+</span><span class='line'>      <span class="nx">change</span><span class="p">.</span><span class="nx">object</span><span class="p">[</span><span class="nx">change</span><span class="p">.</span><span class="nx">name</span><span class="p">];</span> <span class="c1">// Nouvelle valeur</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ainsi, entre le <em>Dirty checking</em> et le <em>Object.observe()</em>, le gain de performances peut être de l&#8217;ordre de 20 fois !</p>
+
+<h3>Etat actuel</h3>
+
+<p>AngularJS apporte sa philosophie, déclaratif plutôt qu&#8217;impératif.
+Les directives d&#8217;Angular sont un peu les customs éléments.</p>
+
+<p>Le projet &#8221;<a href="http://www.polymer-project.org/polymer.html">polymer.js</a>&#8221; vise à intégrer ces nouveautés dans les navigateurs.</p>
+
+<p>Il existe aussi le projet Polymer.Dart pour le langage Dart.</p>
+
+<p>Le site &#8221;<a href="http://jonrimmer.github.io/are-we-componentized-yet/">Are we componentized yet?</a>&#8221;, montre l&#8217;état actuel de l&#8217;implémentation dans Chrome.
+Du côté de Firefox, il existe des projets similaires Brick, X-Tag&#8230;</p>
+
+<h3>Mon avis</h3>
+
+<p>Une excellente session où j&#8217;ai appris pas mal de choses que je ne connaissais pas !</p>
+
+<h2><a href="http://soft-shake.ch/2013/program/sessions/13_web_dev/2013/10/24/5-Du_Javascript_propre_Challenge_Accepted.html">Du JavaScript propre ? Challenge Accepted!</a></h2>
+
+<p><a href="http://soft-shake.ch/2013/program/authors/2013/10/24/romain-linsolas.html">Romain Linsolas</a> (<a href="https://twitter.com/romaintaz">@romaintaz</a>) et <a href="http://soft-shake.ch/2013/program/authors/2013/10/25/julien-jakubowski.html">Julien Jakubowski</a> (<a href="https://twitter.com/jak78">@jak78</a>)</p>
+
+<p><img src="http://linsolas.github.com/images/note-5.png" title="5/5" alt="5/5" /></p>
+
+<p>Présentation tout simplement parfaite, sur un sujet somptueux. Du grand art !
+Comment ça, je ne suis pas objectif ?</p>
+
+<p>Bon, si vous voulez en savoir plus, revenez un peu en arrière sur mon blog, j&#8217;ai déjà parlé de cette présentation faite avec Julien à Devoxx.
+Elle a encore plu, ça nous a fait très plaisir !</p>
+
+<h2><a href="http://soft-shake.ch/2013/program/sessions/13_bigdata/2013/10/24/07-make-sense-of-your-big-data.html">Make sense of your (Big) Data</a></h2>
+
+<p><a href="http://soft-shake.ch/2013/program/authors/2013/10/24/david-pilato.html">David Pilato</a> (<a href="https://twitter.com/dadoonet">@dadoonet</a>)</p>
+
+<p><img src="http://linsolas.github.com/images/note-4.png" title="4/5" alt="4/5" /></p>
+
+<p>David Pilato est &#8220;évangeliste&#8221; (à ne pas confondre avec Eve Angeli !) pour <a href="http://www.elasticsearch.org/">ElasticSearch</a>, un outil très puissant et très sympathique pour faire de la recherche.
+Associé avec <a href="http://www.elasticsearch.org/overview/kibana/">Kibana</a>, David nous montre comment il est possible pratiquement en temps réel de construire un dashboard très complet sur un grand jeu de données - stockées dans des noeuds ElasticSearch. Autrement dit, <em>comment donner du sens à ses données</em>.</p>
+
+<p>J&#8217;essaierais de faire un billet dédié, je trouve que cette session est très intéressante car la solution mise en place est fichtrement simple pour un résultat franchement étonnant !</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Et quatre à la suite]]></title>
@@ -3054,17 +3566,6 @@ Dans ce petit projet, je démarre une base en mémoire (H2) contenant 3 tables (
 
 
 <p><a href="http://www.flickr.com/photos/bejug/sets/72157632019400699/">Photo tirées des photos officielles de Devooxx</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[I'm back]]></title>
-    <link href="http://linsolas.github.com/blog/2012/11/17/im-back/"/>
-    <updated>2012-11-17T22:28:00+01:00</updated>
-    <id>http://linsolas.github.com/blog/2012/11/17/im-back</id>
-    <content type="html"><![CDATA[<p>Cette fois-ci, ce devrait être la bonne. Bye bye mon <a href="http://linsolas.free.fr/wordpress">ancien blog</a>, l&#8217;hébergement chez Free devenant trop contraignant. Welcome donc à GitHub pages, avec <a href="http://octopress.org/">Octopress</a> par dessus.</p>
-
-<p>Maintenant que les fondations sont là, place au contenu !</p>
 ]]></content>
   </entry>
   

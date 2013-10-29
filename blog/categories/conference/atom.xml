@@ -4,7 +4,7 @@
   <title><![CDATA[Category: conference | fr.romain:blog:3.0]]></title>
   <link href="http://linsolas.github.com/blog/categories/conference/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2013-10-23T23:40:58+02:00</updated>
+  <updated>2013-10-29T18:28:33+01:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -12,6 +12,487 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[SoftShake 2013 - deuxième jour]]></title>
+    <link href="http://linsolas.github.com/blog/2013/10/25/softshake-2013-deuxieme-jour/"/>
+    <updated>2013-10-25T16:19:00+02:00</updated>
+    <id>http://linsolas.github.com/blog/2013/10/25/softshake-2013-deuxieme-jour</id>
+    <content type="html"><![CDATA[<p><img src="/images/soft-shake-2013.png" title="Soft Shake 2013" alt="Soft Shake 2013" /></p>
+
+<p>Et c'est parti pour le second jour de la conférence <strong>Soft-Shake</strong>.</p>
+
+<!-- more -->
+
+
+<h2>Keynote collaborative</h2>
+
+<p>La première keynote de la journée était une keynote "collaborative".
+Chaque responsable d'un track de sessions avait la parole pendant 4 minutes pour nous exposer sa vision à moyen terme (entre 2 et 5 ans) concernant sa technologie. Par exemple, le responsable de la partie "web" nous a dit que le JavaScript sera encore plus présent qu'aujourd'hui, en particulier du côté serveur.</p>
+
+<h2>Keynote Programatoo</h2>
+
+<p><img src="/images/note-4.5.png" title="4.5/5" alt="4.5/5" /></p>
+
+<p>La seconde keynote parlait de "<strong>Programatoo</strong>", un projet lancé par Audrey Neveu (<a href="https://twitter.com/Audrey_Neveu">@Audrey_Neveu</a>) et Aline Paponaud (<a href="https://twitter.com/bootis">@bootis</a>) de <a href="http://www.sfeir.fr">SFEIR</a>.
+Qu'est-ce que Programatoo ?
+Il s'agit d'apprendre à coder à nos enfants, n'y plus n'y moins.</p>
+
+<p><img src="/images/programatoo.jpg" title="Programatoo" alt="Programatoo" /></p>
+
+<p>Revenons 20 ans en arrière pour comprendre la génèse de cette idée.
+Au milieu des années 80, Aline et Audrey sont des petites filles (très sages, forcément) déjà attirées par les mystères de l'informatique et des ordinateurs. Elles veulent comprendre comment ça marche. 10 ans plus tard, leur intérêt est toujours intact, mais hélas elles se heurtent souvent à des stéréotypes ("<em>ce n'est pas pour les filles !</em>") ou l'incompréhension du milieu scolaire pour ce domaine.
+Audrey apprend avec joie qu'il y a des cours d'informatique dans son lycée. Elle s'y inscrit, mais cela se résumera à apprendre à utiliser Word ou Excel. C'est la déception.
+De son côté, Aline n'a guère plus de succès.
+Fort heureusement, elles ne baissent pas les bras, et embrassent le métier de programmeuse.</p>
+
+<p>En 2012, Aline va trouver Audrey pour proposer une idée géniale : et si on apprenait à coder à nos enfants ! C'est ainsi qu'en mars 2012 nait la première session "Programatoo", avec les enfants des employés de SFEIR. Et c'est un succès.</p>
+
+<p>Les choses ne sont pas pour autant parfaites.
+Elles font un constat navrant. Parmi les participants, il y avait deux adolescentes. Celles-ci sont parfaitement à l'aise avec les ordinateurs, du moins quand il s'agit d'utiliser Facebook, YouTube et autres services du genre. Mais elles sont incapables de vraiment utiliser un ordinateur, de comprendre comment cela fonctionne, ni même voir en cette machine un merveilleux outil de créativité !</p>
+
+<p>On dit que la jeune génération est une génération "digitale", qu'elle est née avec un smartphone dans les mains. Je le constate aussi, mon fils de 6 ans maitrise depuis un moment l'iPad, qui n'a plus de secret pour lui.
+Mais en réalité, nos enfants sont conditionnés pour "<strong>consommer</strong>" de l'informatique. Il faut les aider à en devenir des acteurs, des vrais utilisateurs.
+Finalement, c'est un peu comme une carte et un GPS : aujourd'hui, l'utilisation d'un GPS est plutôt intuitive et il nous mâche tout le travail, on n'a plus qu'à suivre bêtement ses instructions. Du coup, il devient obsolète de savoir lire une carte papier classique, et pourtant cela reste la base pour savoir se positionner quelque part...</p>
+
+<p>En tant qu'informaticien, il ne tient qu'à nous de changer la donne. Nous avons beaucoup d'outils, de langages destinés à l'aprentissage de la programmation, y compris destinés à de jeunes enfants.
+Ayant discuté ensuite avec Audrey, je vais sans doute essayer de mettre mon fils à la programmation.
+Bien entendu, point de Scala :) mais plutôt du <a href="http://scratch.mit.edu">Scratch</a> qui a l'avantage d'être très visuel et ludique.</p>
+
+<p>Il faut noter que le projet Programatoo n'est pas unique en son genre. Les conférences "Devoxx 4 Kids" s'organisent par-ci, par-là. Il y en avait justement une à Genève le samedi qui a suivi la conférence Soft-Shake.</p>
+
+<p>Programatoo a également gagné le "Duke Choice Awards 2013" à la conférence Java One. Une très belle consécration amplement méritée.
+Bravo Audrey et Aline !</p>
+
+<h2><a href="http://soft-shake.ch/2013/program/sessions/13_ruby/2013/10/25/01-speedup-your-web-app.html">Speed-up your webapp</a></h2>
+
+<p><a href="http://soft-shake.ch/2013/program/authors/2013/10/24/alexis-bernard.html">Alexis Bernard</a> (<a href="https://twitter.com/alexis_bernard">@alexis_bernard</a>)</p>
+
+<p><img src="/images/note-2.png" title="2/5" alt="2/5" /></p>
+
+<p>Je suis ouvert d'esprit, je vais donc dans le track "Ruby" pour la première session de la journée.
+Alexis nous parle d'optimisation quand on veut accélérer son site web.</p>
+
+<p>Première question : pourquoi le faire ?
+A cela, Alexis nous donne les exemples de Amazon et Yahoo! : pour le premier, diminuer le temps de réponse de 100ms, c'est un gain de revenu de l'ordre d'1%, ce qui n'est pas négligeable quand on voit leurs revenus...
+Pour le second, une diminution de 400ms de ce temps de réponse, et c'est 9% de traffic gagnés !
+Tout le monde n'est pas Amazon ou Yahoo! mais cela reste intéressant.</p>
+
+<p>La technique d'Alexis est simple : mesurer, optimiser et mesurer encore.</p>
+
+<p>Donc il faut mesurer. Pour cela, Alexis nous parle de quelques outils :</p>
+
+<ul>
+<li><a href="http://www.newrelic.com/">New Relic</a>, une solution SAAS visiblement assez poussée, qui historise en plus les mesures. Pratique pour comparer dans le temps. Mais c'est une solution assez chère visiblement (de l'ordre de 150€ par mois et par serveur).</li>
+<li><a href="https://github.com/MiniProfiler/rack-mini-profiler">Rack Mini Profiler</a>, un outil Ruby, un peu dans la même idée que New Relic, mais avec moins de fonctionnalités, et pas d'historisation.</li>
+<li><a href="https://www.pingdom.com/">Pingdom</a> dont l'une des fonctionnalités est de vérifier que les recommandations standard d'optimisations des sites-web sont bien respectées.</li>
+<li><a href="http://www.webpagetest.org/">WebPageTest</a>, qui a l'astuce de tester chaque requête 2 fois de suite. Cela permet ainsi de vérifier l'efficacité du système de cache des ressources.</li>
+<li>Chrome Dev Tools peut aussi être mis à profit pour mesurer les performances de l'application.</li>
+</ul>
+
+
+<p>Une fois les mesures faites, il faut corriger les problèmes. Alexis nous dit qu'il faut toujours optimser le <em>back-end</em> dans un premier temps. La plupart du temps cela va se résumer à optimiser la base de données, les requêtes, les indexes, etc.
+Une fois ceci fait, on peut s'intéresser à l'optimisation <em>front-end</em>. Là aussi des outils peuvent nous aider, Chrome Dev Tools par exemple, ou imageoptim.com, pour améliorer la compression des images.</p>
+
+<p>Une session intéressante, mais qui ne va pas à mon goût assez loin dans les détails. Les solutions proposées restent assez basiques au final.</p>
+
+<h2><a href="http://soft-shake.ch/2013/program/sessions/13_java/2013/10/25/02-Golo.html">Golo, le langage qui donne des super-pouvoirs</a></h2>
+
+<p><a href="http://soft-shake.ch/2013/program/authors/2013/10/24/philippe-charriere.html">Philippe Charrière</a> (<a href="https://twitter.com/k33g_org">@k33g_org</a>)</p>
+
+<p><img src="/images/note-3.5.png" title="3.5/5" alt="3.5/5" /></p>
+
+<p>Mais qu'est-ce que <strong>Golo</strong>, ce langage au nom rigolo ?
+C'est un langage créé par Julien Ponge (@jponge) qui tourne sur la JVM, avec Java 7 ou 8 (pas avant, car Golo nécessite <code>invokedynamic</code> pour tourner, introduit en Java 7).
+Ses principales forces sont sa simplicité, sa légèreté ainsi que la facilité d'étendre le langage.</p>
+
+<p>Philippe nous montre quelques exemples de code, la syntaxe reste assez compréhensible pour un développeur Java.
+Les lambdas, qui se font toujours attendre dans Java, sont là, tout comme les structures, des objets créés dynamiquement (<code>ObjectDynamic</code>) ou encore la possibilité d'étendre (<code>augment</code>) des classes existantes pour leur ajouter des fonctionnalités.</p>
+
+<p>Je vous invite à aller jeter un oeil sur le site du langage - <a href="http://golo-lang.org">http://golo-lang.org</a> - pour vous rendre compte de ce qu'offre ce langage, et voir quelques exemples concrets de code. Voilà un basique <em>Hello World</em> :</p>
+
+<p>```
+module EchoArgs</p>
+
+<p>function main = |args| {</p>
+
+<pre><code>println("Hello World...")
+foreach arg in args {
+  println("-&gt;  " + arg)
+}
+</code></pre>
+
+<p>}
+```</p>
+
+<p>J'ai aimé cette présentation, qui nous a donné un bon aperçu de ce qu'est Golo.
+Toutefois, cela reste un langage dont le but m'échappe un peu - hormis le côté "fun" d'avoir créer son propre langage !</p>
+
+<h2><a href="http://soft-shake.ch/2013/program/sessions/13_mobile/2013/10/25/3-Mobile-troll-party.html">Mobile Troll Party</a></h2>
+
+<p><a href="http://soft-shake.ch/2013/program/authors/2013/10/24/xavier-bourguignon.html">Xavier Bourguignon</a> (<a href="https://twitter.com/xbourguignon">@xbourguignon</a>)</p>
+
+<p><img src="/images/note-3.png" title="3/5" alt="3/5" /></p>
+
+<p><img src="/images/softshake-2013-mobile-troll-party.jpg" title="Une session pleine de violences" alt="Une session pleine de violences" /></p>
+
+<p>Une session pour le fun. Le but ici est de troller sévèrement sur iOS et Android.
+Je m'attendait à un peu plus de trash, un peu plus de sujets polémiques. Le jeu des deux présentateurs n'était peut-être pas assez rodé je pense, mais d'après ce que j'ai compris, Xavier devait la faire seul jusqu'à la veille au soir où il a réussi à convaincre son partenaire de venir aussi.
+Malgré tout, c'était une bonne ambiance, et les trolls étaient effectivement nombreux !</p>
+
+<h2><a href="http://soft-shake.ch/2013/program/sessions/13_agile/2013/10/25/4-5-ans-et-500-releases-en-50-minutes.html">5 ans, 500 releases en 50 minutes</a></h2>
+
+<p><a href="http://soft-shake.ch/2013/program/authors/2013/10/25/freddy-mallet.html">Freddy Mallet</a> (<a href="https://twitter.com/FreddyMallet">@FreddyMallet</a>) et <a href="http://soft-shake.ch/2013/program/authors/2013/10/24/olivier-gaudin.html">Olivier Gaudin</a> (<a href="https://twitter.com/gaudol">@gaudol</a>)</p>
+
+<p><img src="/images/note-4.png" title="4/5" alt="4/5" /></p>
+
+<p>Compte tenu du temps imparti (45 minutes), cette session a été renommée "<em>4 ans, 400 releases en 40 minutes</em>" :)
+Cette session raconte la vie de la société SonarSource, éditeur de l'outil d'analyse de code SonarQube (connu anciennement simplement sous le nom Sonar).</p>
+
+<p>Lorsque SonarSource a été créée, il y a 5 ans, c'était une petite startup lancée par trois personnes (en particulier Olivier et Freddy), sur leurs fonds propres. La société marche bien aujourd'hui, et a bien grossi (une 20aine de personnes d'ici la fin de l'anée), mais il y a eu beaucoup de problèmes, de "douleurs". En particulier 5 :</p>
+
+<ul>
+<li>Les tests.</li>
+<li>L'architecture.</li>
+<li>L'infrastructure.</li>
+<li>L'organisation.</li>
+<li>Sonar on Sonar.</li>
+</ul>
+
+
+<p>Un gros travail a été fait sur les tests. Les tests unitaires d'abord, mais aussi les tests d'intégration. Le fait que Sonar supporte 5 bases de données différentes, qu'il existe une soixante de plugins ne rend pas les choses simples. Toutefois, ils arrivent à tout tester de façon assez efficace.</p>
+
+<p>Initialement, HibernateORM et GWT avaient été choisis. Le premier car gérer 5 bases de données et autant de spécificités n'est jamais aisé. Le second, car à l'époque cela répondait bien aux besoins de l'équipe. Mais ces choix se sont finalement avérés être des maillons faibles, et progressivement ont été remplacés.</p>
+
+<p>Les développeurs ne font pas que des développements, il a fallu embaucher une personne dédiée à part entière pour gérer l'infrastructure et les releases. Mais un tel cloisonnement n'est jamais très efficace, et SonarSource a ainsi créer une équipe de "DevOps".</p>
+
+<p>Afin de ne pas être désynchroniser avec les utilisateurs de l'outil, l'équipe de SonarSource utilise SonarQube directement. Le fameux principe du "<em>Eat your own dog food</em>" en somme. Ils ont ainsi une instance de "production" interne pour laquelle ils font des releases toutes les semaines. Cela implique donc d'être capable de faire des releases presque tous les jours, les développements de type "big bang" sont donc exclus.</p>
+
+<p>Un dernier point abordé par Freddy et Olivier concerne le <em>Quality Gate</em> (un sujet qui mériterait sans doute une session à part entière). Il s'agit d'une sorte de contrat de qualité pour pouvoir faire une release. En gros, il faut respecter certaines règles, atteindre certains objectifs pour engager la release : par exemple, avoir clos tous les tickets JIRA, avoir une note SQALE de A (la meilleure), ne pas avoir de violations bloquantes ou critiques, ou même de violations non revues par l'équipe.</p>
+
+<h2>Bilan</h2>
+
+<p>Au final, ce sont deux très belles journées qui viennent de s'écouler.
+La qualité des présentations et le niveau des speakers sont très bons.</p>
+
+<p>Les plus :</p>
+
+<ul>
+<li>Du beau monde. C'est toujours un plaisir de revoir des gens qu'on apprécie, et de rencontrer physiquement des personnes que l'on ne connait que par Twitter.</li>
+<li>De bons sujets.</li>
+<li>Des tracks très variés : Java, agilité, web, mobile, IA/Robotique, BigData et NoSQL, Microsoft, Ruby on Rails.</li>
+<li>Le repas des speakers (miam miam la fondue !)</li>
+<li>Genève, très jolie ville.</li>
+<li>Les organisateurs, très accueillants et toujours disponibles.</li>
+<li>Les dessins en live des sessions (voir prochain billet).</li>
+</ul>
+
+
+<p>Les moins :</p>
+
+<ul>
+<li>La séparation des salles. Elles se trouvaient soit au 1e étage, soit au 5e. Changer de salle pouvait ainsi demander un peu de gymnastique !</li>
+<li>A peu de choses près, les mêmes repas le midi sur les deux jours. Un peu plus de variété aurait été appréciable. Pas de problème au niveau de la quantité toutefois.</li>
+<li>J'aurais bien aimé que SoftShake se tienne en hiver, Genève sous la neige doit être très agréable.</li>
+</ul>
+
+
+<p>Pour résumer, Soft Shake est une très belle conférence, dans l'esprit de Devoxx ou Mix-IT. J'y retournerais avec grand plaisir !</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[SoftShake 2013 - premier jour]]></title>
+    <link href="http://linsolas.github.com/blog/2013/10/24/softshake-2013-premier-jour/"/>
+    <updated>2013-10-24T11:39:00+02:00</updated>
+    <id>http://linsolas.github.com/blog/2013/10/24/softshake-2013-premier-jour</id>
+    <content type="html"><![CDATA[<p><img src="/images/soft-shake-2013.png" title="Soft Shake 2013" alt="Soft Shake 2013" /></p>
+
+<p>Jacques Couvreur nous accueille pour <a href="http://soft-shake.ch/2013/fr/">cette session 2013 de la conférence Soft-Shake</a>. Ce sont 2 jours de conférences, neuf tracks en parallèle, une centaine d'orateurs, et 300 participants. A noter qu'environ un tiers des présentations se fait en anglais.
+Une bonne petite conférence donc !</p>
+
+<!-- more -->
+
+
+<p><img src="/images/softshake-2013-Geneve.jpg" title="Le fameux Jet d'Eau de Genève" alt="Le fameux Jet d'Eau de Genève" /></p>
+
+<p>Je vais <a href="http://www.touilleur-express.fr/2013/10/18/codeurs-en-seine-2013/">faire comme Nicolas Martignole</a> (a.k.a. le touilleur express), à savoir que je vais donner pour chaque session mon ROTI, le Retour sur le Temps Investi, autrement dit une note de 0 à 5 qui dénote l'intérêt que j'ai eu à suivre la présentation.</p>
+
+<h2>Keynote</h2>
+
+<p>Robin Cornelius</p>
+
+<p><img src="/images/note-3.5.png" title="3.5/5" alt="3.5/5" /></p>
+
+<p>Difficile de résumer cette keynote. C'était plus un discours de Robin Cornelius sur sa vie et celle de sa société, <a href="http://www.switcher">Switcher</a>.
+Mais c'était tout de même agréable de l'écouter parler. Robin fait partie des gens passionnés par son travail, sa société, et que l'on pourrait écouter pendant des heures.
+Bon démarrage donc...</p>
+
+<h2><a href="http://soft-shake.ch/2013/program/sessions/13_mobile/2013/10/24/1-votre-premiere-application-ios.html">Votre première application iOS</a></h2>
+
+<p><a href="http://soft-shake.ch/2013/program/authors/2013/10/24/marc-henri-primault.html">Marc-Henri Primault</a></p>
+
+<p><img src="/images/note-2.png" title="2/5" alt="2/5" /></p>
+
+<p>Présenter un langage en l'espace de 45 minutes, c'est compliqué, il y a forcément beaucoup de concepts à montrer.
+Je pense que Marc-Henri a bien montré les bases, mais il est vrai que la lisibilité du code dans les slides n'était pas extraordinaire. La coloration de certains mots clés en violet sur fond noir n'est jamais bien rendue par un vidéoprojecteur.</p>
+
+<p>Personnellement, j'ai eu du mal à accrocher car malheureusement le format de présentation ne se prête pas très bien à un tel apprentissage, en particulier pour des personnes comme moi qui n'y connaissent pas grand chose en développement iOS. Un "<em>Hands On</em>" s'y prêterait tellement mieux !</p>
+
+<h2><a href="http://soft-shake.ch/2013/program/sessions/13_web_dev/2013/10/24/2-Generating_tests_from_code_or_how_to_test_better_and_faster.html">Generating tests from code, or how to test better and faster</a></h2>
+
+<p><a href="http://soft-shake.ch/2013/program/authors/2013/10/24/renault-john-lecoultre.html">Renault John Lecoultre</a> (<a href="https://twitter.com/renajohn">@renajohn</a>)</p>
+
+<p><img src="/images/note-4.png" title="4/5" alt="4/5" /></p>
+
+<p>Tester une application JavaScript, c'est compliqué.
+Il existe deux types d'analyse de code : l'analyse statique et dynamique.</p>
+
+<p>La première se concentre à vérifier syntaxiquement si le code est correct.
+On détectera ici l'utilisation de mauvais patterns, ou du code qui peut présenter un risque fort de bug, comme par exemple l'utilisation du <code>==</code> au lieu du <code>===</code> en JavaScript. Des outils comme <a href="http://www.jslint.com/">JSLint</a>, <a href="http://www.jshint.com/">JSHint</a> ou encore <a href="http://www.sonarqube.org/">SonarQube</a> sont tout à fait adaptés pour ce type d'analyse. Mais cela a quand même des limites.</p>
+
+<p>L'analyse dynamique va exécuter le code pour en vérifier certaines règles, le cas le plus courant étant l'exécution de tests (unitaires, fonctionnels, etc.).</p>
+
+<p>Renault nous parle toutefois d'un troisième type d'analyse, à savoir <strong>l'analyse symbolique</strong>.
+Une rapide recherche sur Google me dit que "<em>L'analyse symbolique de données consiste en un mode d'analyse de tableaux de données statistiques arbitraires par perception cognitive de la surface expressionnelle du médium.</em>"
+Bon, je crois qu'on va laisser tomber la définition et voir directement comment Renault l'illustre dans sa démonstration.</p>
+
+<p>Il nous parle de l'outil <a href="https://unite.bugbuster.com/">Unite</a> de sa société <a href="http://bugbuster.com/">BugBuster</a>.
+L'idée derrière cet outil est de lui fournir une fonction en entrée, et lui va essayer de trouver un jeu d'entrées (<em>inputs</em>) afin de pouvoir tester tous les chemins possibles dans la fonction.
+Prenons l'exemple suivant :</p>
+
+<p>``` javascript
+// params : {x: Number}
+function puzzle(x){
+  if(x)</p>
+
+<pre><code>return true;
+</code></pre>
+
+<p>  else</p>
+
+<pre><code>return false;
+</code></pre>
+
+<p>}
+```</p>
+
+<p>On le voit, pour parcourir les deux branches de cette fonction, nous devons faire en sorte d'évaluer à <code>true</code> la condition <code>if</code>, puis également à <code>false</code>. C'est là qu'intervient Unite. Il va analyser le code de la fonction pour nous trouver les deux valeurs d'entrée, ici <code>x = 0</code> puis <code>x = 1</code>.
+Là où l'outil devient plus intéressant, c'est quand on a du code plus complexe. Prenons un nouvel exemple, avec une fonction de validation d'email (avec une expression régulière simple) :</p>
+
+<p>``` javascript
+// params : {email: String}
+function puzzle(email){
+  if(email.match(/<sup>\w+@[a-zA-Z_]+?.[a-zA-Z]{2,3}$/))</sup></p>
+
+<pre><code>return true;
+</code></pre>
+
+<p>  else</p>
+
+<pre><code>return false;
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Unite va nous trouver deux entrées possibles : <code>`email = "a"</code> pour l'évaluation négative de la condition, et <code>email = "9@B.PH"</code> pour son évaluation positive.</p>
+
+<p>Je dois dire que l'outil s'avère très intéressant, bien qu'encore à l'état de bêta. Reste la question de l'industrialisation d'un tel outil. Pour le moment, je le vois bien comme utilisation <em>one shot</em> pour trouver un bon ensemble de jeux de données pour tester une fonction.
+En tout cas, c'est un outil à suivre de près...</p>
+
+<h2><a href="http://soft-shake.ch/2013/program/sessions/13_web_dev/2013/10/24/3-Backbone_et_marionette_le_dev_js_simplifie.html">Backbone.js et Marionette, le développement JavaScript simplifié</a></h2>
+
+<p><a href="http://soft-shake.ch/2013/program/authors/2013/10/24/xavier-bourguignon.html">Xavier Bourguignon</a> (<a href="https://twitter.com/xbourguignon">@xbourguignon</a>) et <a href="http://soft-shake.ch/2013/program/authors/2013/10/24/philippe-charriere.html">Philippe Charrière</a> (<a href="https://twitter.com/k33g_org">@k33g_org</a>)</p>
+
+<p><img src="/images/note-4.png" title="4/5" alt="4/5" /></p>
+
+<p>Backbone est une librairie légère pour faire du single page application ("MVC" / "MVP" côté client). Il se base sur la librarie <a href="http://underscorejs.org/">underscore</a>, pour le templating par exemple.
+Backbone dispose d'un modèle objet. Son intérêt réside également dans sa facilité d'extension.</p>
+
+<p>Philippe commence à nous montrer des exemples de code avec Backbone. Mais de l'avis de Xavier, "<em>Backbone c'est bien, sauf la partie vue</em>".
+Et c'est vrai que je trouve le code côté vue assez verbeux. C'est pour cela qu'il introduit la librairie <a href="http://marionettejs.com/">Marionette.js</a>, qui joue ainsi le rôle de surcouche à BackBone pour gérer la partie Vue. Ainsi, Marionette permet de faire du vrai <em>Single Page Application</em> avec BackBone.</p>
+
+<p>Xavier et Philippe nous offrent ainsi une vision assez claire de ce framework, en montrant ses atouts mais aussi ses limites. J'avoue que je préfère toujours AngularJS, bien que ce dernier ait un côté un peu plus "magique" que Backbone qui semble plus accessible et plus compréhensible.</p>
+
+<h2><a href="http://soft-shake.ch/2013/program/sessions/13_web_dev/2013/10/24/4-Web_Components_lavenir_des_developpeurs_web.html">Web Components, l'avenir des développeurs web</a></h2>
+
+<p><a href="http://soft-shake.ch/2013/program/authors/2013/10/24/julien-vey.html">Julien Vey</a> (<a href="https://twitter.com/julienvey">@julienvey</a>)</p>
+
+<p><img src="/images/note-4.png" title="4/5" alt="4/5" /></p>
+
+<p>Les applications web sont aujourd'hui de plus en plus riches, et le langage HTML atteint vite ses limites.
+C'est pour cela que le concept de <strong>composants web</strong> est arrivé.
+Il s'agit d'un standard W3C en cours de rédaction, partiellement implémenté par les navigateurs (particulièrement Chrome).</p>
+
+<p>L'idée est de créer des "éléments customs". Imaginons le bouton "Twitter" que l'on peut ajouter sur son site, afin de permettre au visiteur du site de suivre votre compte Twitter.
+Si vous regardez le code de ce bouton, vous verrez un truc illisible fait de HTML et JavaScript. Ne serait-ce pas plus simple d'avoir un tag <code>&lt;twitter user="romaintaz"/&gt;</code> par exemple ? De même, un composant pour noter un article n'aurait-il pas plus de sens sous la forme <code>&lt;ranking note="3"/&gt;</code> ?</p>
+
+<p>Eh bien c'est (à peu près) possible aujourd'hui !</p>
+
+<h3>Les templates</h3>
+
+<p>La première brique à connaître, ce sont les templates. Ils permettent la séparation du fond et de la forme <em>via</em> l'utilisation de <code>&lt;template&gt;</code> :</p>
+
+<p>``` html
+<template id="monTemplate"></p>
+
+<pre><code>// code HTML du template.
+&lt;img src=""&gt;
+&lt;div class="comment"&gt;&lt;/div&gt;
+</code></pre>
+
+<p></template>
+```</p>
+
+<p>Ce template est parsé, mais pas affiché. Les balises <code>&lt;script/&gt;</code> ne sont pas exécutées, et les images ne sont pas chargées. Le code ci-dessus est donc parfaitement valide. Pour l'instancier, il suffit d'un peu de code JavaScript :</p>
+
+<p><code>javascript
+var t = document.querySelector('#monTemplate');
+t.content.querySelector('img').src = "...";
+document.body.appendChild(t.content.cloneNode(true));
+</code></p>
+
+<p>A ce moment-là, les scripts sont exécutés, les images chargées et le DOM affiché.</p>
+
+<h3>Encapsulation</h3>
+
+<p>Passons à la deuxième brique : l'encapsulation.
+Aujourd'hui, on utiliserait des <code>&lt;iframe&gt;</code>. Mais pouah !
+Avec les web components, on utilise le principe du "<strong>shadow DOM</strong>", c'est-à-dire du DOM masqué du reste de l'application. Exemple :</p>
+
+<p><code>html
+&lt;video controls src="http://linsolas.github.com/ma/video"&gt;&lt;/video&gt;
+</code></p>
+
+<p>Avec Chrome Tools, on peut faire afficher le shadow DOM pour cette balise vidéo, sous un "tag" <code>#document-fragment</code> :</p>
+
+<p>``` html</p>
+
+<div id="host">
+</div>
+
+
+<p>```</p>
+
+<p><code>javascript
+var host = document.querySelector('#monTemplate');
+show = host.createShadowRoot();
+shadow.innerHTML = '&lt;h2&gt;Hello&lt;/h2&gt;';
+</code></p>
+
+<p>On peut aussi passer par des templates :</p>
+
+<p><code>
+shadow.webkitCreateShadowRoot();
+</code></p>
+
+<p>Il existe aussi le concept d'<em>Insertion point</em>, avec utilisation de <code>&lt;content&gt;&lt;/content&gt;</code> dans le shadow DOM. Le contenu de la balise du web component est injecté à la place du <code>&lt;content&gt;&lt;/content&gt;</code> défini dans le shadow DOM.</p>
+
+<p>On peut aussi utiliser des sélecteurs pour ne récupérer qu'une partie du code HTML du composant web : <code>&lt;content select="h2"&gt;&lt;/content&gt;</code> qui récupèrera uniquement le code du <code>h2</code>, <code>&lt;content select="h1:first-child"&gt;&lt;/content&gt;</code> pour le premier élément de <code>h1</code> ou <code>&lt;content select="*"&gt;&lt;/content&gt;</code> pour récupérer le reste.</p>
+
+<h3>Externalisation</h3>
+
+<p>Comment peut-on créer des composants web et les utiliser ailleurs ? Cela se fait grâce à la balise <code>&lt;element&gt;</code> qui permet de créer ces nouveaux éléments :</p>
+
+<p>``` html
+<element name="megabutton" extends="button" constructor="MegaButton"></p>
+
+<pre><code>&lt;template&gt;
+    ...
+&lt;/template&gt;
+&lt;script&gt;
+    ...
+&lt;/script&gt;
+</code></pre>
+
+<p></element>
+```</p>
+
+<p>Et pour l'utiliser dans une autre page :</p>
+
+<p><code>html
+&lt;link rek="component" href="megabutton.html"&gt;
+...
+&lt;megabutton&gt;Clique ici&lt;/megabutton&gt;
+</code></p>
+
+<p>Ces éléments ont également un cycle de vie sur lequel il est possible d'intéragir grâce à des fonctions JavaScript : <code>created</code>, <code>attributeChanged</code>, <code>inserted</code> ou <code>removed</code> :</p>
+
+<p>``` javascript
+this.lifecycle({</p>
+
+<pre><code>inserted: function() { ... },
+removed: function() { ... }
+</code></pre>
+
+<p>})
+```</p>
+
+<h3>Mutation Observer</h3>
+
+<p>Ces éléments sont utilisés pour détecter des modifications dans le code JavaScript.</p>
+
+<h3>Object.observe()</h3>
+
+<p>Il s'agit ici du monitoring des modifications des objects JS, bien plus performante que tout autre solution existante aujourd'hui.</p>
+
+<p>``` javascript
+function observeChanges(changes) {</p>
+
+<pre><code>changes.forEach(function(change) {
+    change.name;                // Name
+    change.type;                // Type
+    change.oldValue;            // Ancienne valeur
+    change.object[change.name]; // Nouvelle valeur
+});
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Ainsi, entre le <em>Dirty checking</em> et le <em>Object.observe()</em>, le gain de performances peut être de l'ordre de 20 fois !</p>
+
+<h3>Etat actuel</h3>
+
+<p>AngularJS apporte sa philosophie, déclaratif plutôt qu'impératif.
+Les directives d'Angular sont un peu les customs éléments.</p>
+
+<p>Le projet "<a href="http://www.polymer-project.org/polymer.html">polymer.js</a>" vise à intégrer ces nouveautés dans les navigateurs.</p>
+
+<p>Il existe aussi le projet Polymer.Dart pour le langage Dart.</p>
+
+<p>Le site "<a href="http://jonrimmer.github.io/are-we-componentized-yet/">Are we componentized yet?</a>", montre l'état actuel de l'implémentation dans Chrome.
+Du côté de Firefox, il existe des projets similaires Brick, X-Tag...</p>
+
+<h3>Mon avis</h3>
+
+<p>Une excellente session où j'ai appris pas mal de choses que je ne connaissais pas !</p>
+
+<h2><a href="http://soft-shake.ch/2013/program/sessions/13_web_dev/2013/10/24/5-Du_Javascript_propre_Challenge_Accepted.html">Du JavaScript propre ? Challenge Accepted!</a></h2>
+
+<p><a href="http://soft-shake.ch/2013/program/authors/2013/10/24/romain-linsolas.html">Romain Linsolas</a> (<a href="https://twitter.com/romaintaz">@romaintaz</a>) et <a href="http://soft-shake.ch/2013/program/authors/2013/10/25/julien-jakubowski.html">Julien Jakubowski</a> (<a href="https://twitter.com/jak78">@jak78</a>)</p>
+
+<p><img src="/images/note-5.png" title="5/5" alt="5/5" /></p>
+
+<p>Présentation tout simplement parfaite, sur un sujet somptueux. Du grand art !
+Comment ça, je ne suis pas objectif ?</p>
+
+<p>Bon, si vous voulez en savoir plus, revenez un peu en arrière sur mon blog, j'ai déjà parlé de cette présentation faite avec Julien à Devoxx.
+Elle a encore plu, ça nous a fait très plaisir !</p>
+
+<h2><a href="http://soft-shake.ch/2013/program/sessions/13_bigdata/2013/10/24/07-make-sense-of-your-big-data.html">Make sense of your (Big) Data</a></h2>
+
+<p><a href="http://soft-shake.ch/2013/program/authors/2013/10/24/david-pilato.html">David Pilato</a> (<a href="https://twitter.com/dadoonet">@dadoonet</a>)</p>
+
+<p><img src="/images/note-4.png" title="4/5" alt="4/5" /></p>
+
+<p>David Pilato est "évangeliste" (à ne pas confondre avec Eve Angeli !) pour <a href="http://www.elasticsearch.org/">ElasticSearch</a>, un outil très puissant et très sympathique pour faire de la recherche.
+Associé avec <a href="http://www.elasticsearch.org/overview/kibana/">Kibana</a>, David nous montre comment il est possible pratiquement en temps réel de construire un dashboard très complet sur un grand jeu de données - stockées dans des noeuds ElasticSearch. Autrement dit, <em>comment donner du sens à ses données</em>.</p>
+
+<p>J'essaierais de faire un billet dédié, je trouve que cette session est très intéressante car la solution mise en place est fichtrement simple pour un résultat franchement étonnant !</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Et quatre à la suite]]></title>
@@ -326,290 +807,6 @@ Une petite entreprise est une tribu, tandis qu'une société de taille plus impo
 <p>C'était ma première participation au Scrum Day (c'était la 3<sup>ème</sup> édition), et je dois dire que cela m'a plu, j'ai eu toutefois une préférence sur mes sessions du matin, en particulier de l'excellente keynote de Robert Richman. J'ai vu plusieurs retour d'expérience sur des transformations agiles au sein de grandes sociétés (dont la mienne !) et j'ai quand même un peu l'impression d'entendre toujours les mêmes discours. Tant pis.</p>
 
 <p>Dans l'ensemble, l'organisation s'est bien déroulée, mais j'ai quand même 2 critiques à formuler. Premièrement, les locaux (merci à IBM pour les avoir fournis) n'étaient pas toujours adaptés, car certaines salles étaient trop petites pour profiter de certaines sessions, en particulier les ateliers. J'ai ainsi dû passer mon tour pour la session <a href="http://agenda2013.scrumday.fr/event/84">L'agilité selon Starcraft 2</a> à 12h45. L'autre reproche c'est peut-être un manque d'accompagnement des speakers et du cadrage des sessions. Certaines ont un peu débordé, ce qui fait que le timing n'était pas toujours respecté. Cela n'enlève en rien toutefois le travail formidable des organisateurs, et de leur travail bénévole.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Devoxx France 2013 - Du JavaScript propre ? Challenge Accepted]]></title>
-    <link href="http://linsolas.github.com/blog/2013/04/03/devoxx-france-2013-du-javascript-propre-challenge-accepted/"/>
-    <updated>2013-04-03T08:59:00+02:00</updated>
-    <id>http://linsolas.github.com/blog/2013/04/03/devoxx-france-2013-du-javascript-propre-challenge-accepted</id>
-    <content type="html"><![CDATA[<p><img src="/images/affiche-conference.jpg" title="Du JavaScript propre ? Challenge Accepted!" alt="Du JavaScript propre ? Challenge Accepted!" /></p>
-
-<p>Dernier billet sur la conférence Devoxx France 2013 (ouf !). Je vais parler de notre session, <a href="http://www.devoxx.com/display/FR13/Du+Javascript+propre+++Challenge+Accepted">Du JavaScript propre ? Challenge Accepted!</a>, présentée avec <a href="http://www.devoxx.com/display/FR13/Julien+Jakubowski">Julien Jakubowski</a> d'<a href="http://www.octo.com">OCTO</a>.</p>
-
-<!-- more -->
-
-
-<p>Alors pour la petite histoire, il faut savoir que Julien et moi ne nous connaissions pas personnellement un mois et demi avant Devoxx ! Nous avions tous les deux proposé une conférence durant le CFP (<em>Call For Paper</em>) très similaire.
-De son côté, Julien avait proposé une version améliorée de sa présentation <a href="http://fr.slideshare.net/jak78/javascript-ce-nest-pas-si-sale">Le JavaScript ce n'est pas si sale</a> qu'il avait faite au <a href="http://chtijug.org/">Ch'ti JUG</a> dont il est le fondateur.
-De mon côté, j'avais proposé à peu près la même chose, mais dont le but était plutôt de faire un état des lieux de l'écosystème autour de JavaScript en 2013, et montrer que celui-ci est extrêmement riche, presque à l'image de celui du monde Java.
-Le comité de direction, ne sachant qui choisir, nous a demandé s'il était possible de mixer nos présentations. Ce qui fut fait. On est donc parti de la présentation de Julien, puis on l'a améliorée, suite à nos nombreuses discussions. Je pense également que le fait de la présenter à deux la rend plus vivante, plus intéressante.</p>
-
-<p><img src="/images/devoxxfr-2013-salle-vide.jpg" title="Le calme avant la tempête" alt="Le calme avant la tempête" /></p>
-
-<h2>Le contenu</h2>
-
-<p>La session se divise en deux parties :</p>
-
-<ul>
-<li>Les problèmes courants en JavaScript.</li>
-<li>Les solutions que l'on propose pour coder proprement en JavaScript.</li>
-</ul>
-
-
-<h3>Les problèmes</h3>
-
-<p>Tout d'abord, nous expliquons pourquoi nous faisons cette présentation. Le constat est double :</p>
-
-<ul>
-<li>JavaScript est partout, et les sites sont de plus en plus riches en partie grâce à lui. On ne peut donc pas l'ignorer, surtout avec l'avénement du HTML5.</li>
-<li>JavaScript a une mauvaise réputation. Le langage est sale, plus adapté à la bidouille sur sa page HTML que pour faire de <em>vraies</em> applications, difficulté de trouver un bon environnement de travail.</li>
-</ul>
-
-
-<p>Bref, il y a du boulot pour redorer le blason de JavaScript. Après une petite partie ludique, où l'on montre quelques résultats <em>étonnants</em> de JavaScript (je vous conseille fortement de regarder <a href="https://www.destroyallsoftware.com/talks/wat">cette vidéo</a>), on passe aux vrais problèmes que l'on est susceptible de rencontrer dans ses projets :</p>
-
-<ul>
-<li><strong>Pollution de l'espace de nommage</strong>. Quand on définit des fonctions dans les fichiers JavaScript sans prendre garde, il se peut qu'il y ait des collisions entre plusieurs fonctions ayant le même nom. Par exemple, si l'on définit une méthode <code>checkForm()</code> dans un fichier JS, rien ne dit que nous n'aurons pas une méthode au même nom dans un autre fichier. Dans pareille situation, JS ne considère que la dernière méthode définie, et cela peut poser des problèmes.</li>
-<li><strong>Le scope global par défaut</strong>. Par défaut, les variables ont un scope global, et cela peut aussi entrainer des problèmes. Dans le code suivant, la variable <code>i</code> sera la même dans les 2 boucles, ce qui fait que nous n'applerons le <em>logger</em> que 10 fois et non 100 fois comme attendu :</li>
-</ul>
-
-
-<p>``` javascript
-function subLoop() {</p>
-
-<pre><code>for (i = 0; i &lt; 10; i++) {
-    console.log(i);
-}
-</code></pre>
-
-<p>}</p>
-
-<p>for (var i = 0; i &lt; 10; i++) {</p>
-
-<pre><code>subLoop();
-</code></pre>
-
-<p>}
-<code>
-* **Tout est public par défaut**. Difficile de cacher certains détails de son implémentation, le mot clé</code>private``` n'existant pas en JS. Dans le code suivant, la variable censée être privée ne l'est pas du tout :</p>
-
-<p>``` javascript
-var counter = {</p>
-
-<pre><code>privateValue: 0,
-increment: function() {
-    counter.privateValue++;
-    return counter.privateValue;
-}
-</code></pre>
-
-<p>}</p>
-
-<p>counter.increment(); // 1
-counter.privateValue = 0; // Aie
-counter.increment(); // 1</p>
-
-<p>```
-* <strong>Code non testé</strong>. Tout est dit :)</p>
-
-<p>Assez parlé des problèmes, voyons les solutions !</p>
-
-<h3>Les solutions</h3>
-
-<p>Première idée : on pourrait simplement déléguer le code JavaScript à son framework préféré (GWT, JSF, etc.) Nous ne souhaitons pas aller dans cette direction. Faisons du JavaScript ! Autre idée, pour au moins limiter les dégâts : utiliser <a href="https://code.google.com/p/dart/">Google Dart</a> ou <a href="http://coffeescript.org/">CoffeeScript</a> qui permettent une écriture plus fluide, plus sécurisée du code JavaScript.</p>
-
-<p>D'un point de vue architectural, donc assez haut niveau, il existe aujourd'hui une tendance à ne pas négliger : les architectures MVC/MVW/MV* <strong>côté client</strong>. Autrement dit, plutôt que d'avoir un serveur qui va s'occuper de toute la partie fonctionnelle (couches modèle, contrôleur et vue), on va déporter tout ou partie de ceci côté client. Pour se faire, on se fera aider de solutions telles que <a href="http://backbonejs.org/">Backbone.js</a>, <a href="http://emberjs.com/">Ember</a> ou le très à la mode <a href="http://angularjs.org/">AngularJS</a>. Ce type d'architecture offre d'autres avantages : comme le code est exécuté côté client, le temps de réponse est instantané, on transfère beaucoup moins d'informations entre le client et le serveur (ce qui privilégie les réseaux mobiles), et offre plus facilement un mode déconnecté à son application. Mais ce n'est pas magique, il faudra faire attention à d'autres points, en particulier l'aspect sécurité (bah oui, tout le code est sur le client, donc il lui est plus facile de le comprendre et de le contourner).</p>
-
-<p><img src="/images/devoxxfr-2013-architecture-mvc.png" title="Et si on déplaçait le code métier du côté client ?" alt="Et si on déplaçait le code métier du côté client ?" /></p>
-
-<p>On a cité, parmi les problèmes, le fait que tout est public par défaut. Pour le résoudre, on propose d'opter pour la modularité. Cela revient un peu à simuler une classe en Java (attention, ce n'est pas exactement ça, c'est juste pour faire comprendre l'idée), en n'exposant à l'extérieur que ce que l'on souhaite (une sorte d'interface). Le code de notre compteur devient au final quelque chose comme ça :</p>
-
-<p>``` javascript
-// Notre counter sera notre objet utilisé par la suite.
-var counter = (function() {</p>
-
-<pre><code>var privateValue = 0;
-var publicMethod = function() {
-    privateValue++;
-    return privateValue;
-};
-// On retourne un objet qui contient une méthode "increment", seul élément qui sera visible de l'extérieur.
-return {
-    increment: publicMethod
-};
-</code></pre>
-
-<p>})();</p>
-
-<p>// On passe à l'utilisation du compteur :
-counter.increment();  // 1
-counter.privateValue; // undefined
-counter.privateValue = 0; // Cela ne pose pas de problème. JS va ajouter une propriété "privateValue" à l'objet "counter", mais elle sera différente du "privateValue" que nous utilisons dans notre implémentation. Pas de conflit du coup !
-counter.increment();  // 2
-```</p>
-
-<p>Pour accroitre encore la lisibilité et la propreté de son code, on pourra créer des sortes de packages pour nos modules :</p>
-
-<p>``` javascript
-var myapp = {</p>
-
-<pre><code>subpackage: {
-
-    counter: (function() {
-        // ...
-    })()
-
-}
-</code></pre>
-
-<p>}</p>
-
-<p>// Et son utilisation :
-myapp.subpackage.counter.increment(); // 1
-```</p>
-
-<p>On aborde ensuite la question du chargement des librairies JS. Plutôt que d'avoir 15 fichiers JS chargés au chargement de la page (chargement séquentiel, qui plus est, ce qui ralentit d'autant le chargement), on va utiliser les principes de l'AMD (<em>Asynchronous Modules Definition</em>), par exemple grâce à la librairie <a href="http://requirejs.org/">require.js</a>. Cela apporte en particulier deux avantages :</p>
-
-<ul>
-<li>Chargement <strong>asynchrone</strong> et/ou en <strong>parallèle</strong>, et donc cela ne bloque pas le chargement des pages, qui se fait normalement de façon séquentielle.</li>
-<li>Chargement à la <strong>demande</strong>. Certaines fonctionnalités de la page peuvent ne pas être utilisées. Alors autant ne pas charger les ressources liées. On pourra ainsi dire "quand l'utilisateur souhaite faire ceci, alors on chargera <em>à ce moment-là</em> les librairies X et Y".</li>
-<li>Définition des <strong>dépendances</strong>. Un peu comme dans le point précédent, on pourra indiquer que la librairie X dépend de Y, et donc on chargera Y avant X.</li>
-</ul>
-
-
-<p>Intéressons-nous au code en lui-même maintenant. Il existe des outils pour s'assurer que nous n'écrivons pas (trop) de bêtises dans notre code JavaScript, un peu comme le fait Checkstyle ou PMD en Java. Nous avons ainsi <a href="http://www.jslint.com/">JsLint</a> ou <a href="http://www.jshint.com/">JsHint</a> pour remplir cette tâche. On tâchera aussi d'écrire un code plus expressif, c'est-à-dire plus simple, plus lisible, plus concis. J'aime l'expression qui dit <em>qu'il faut écrire le code comme si la personne qui va le maintenir est un psychopathe qui connait mon adresse</em>, ça traduit bien l'intérêt d'écrire correctement son code.</p>
-
-<p>Un vieux code tel que celui-ci :</p>
-
-<p>``` javascript
-function checkForm() {</p>
-
-<pre><code>var beerName = document.getElementById("beer_name").value;
-if (beerName === '') {
-    document.getElementById("beer_name").className += "invalid";
-    document.getElementById("error_box").style.display = "block";
-    return false;
-}
-return true;
-</code></pre>
-
-<p>}
-```</p>
-
-<p>pourra être <em>refactoré</em> avec <a href="http://jquery.com/">jQuery</a> de cette façon, rendant le code plus lisible, plus facile à maintenir :</p>
-
-<p>``` javascript
-$('#beerForm').submit(function() {</p>
-
-<pre><code>if ($('#beer_name').val() === "") {
-    $('#beer_name').addClass('invalid');
-    $('#error_box').show();
-    return false;
-}
-return true;
-</code></pre>
-
-<p>});
-```</p>
-
-<p>Autre chose pour simplifier l'écriture : utiliser des moteurs de <em>templating</em>, tels que <a href="http://mustache.github.com/">Mustache.js</a> ou <a href="http://handlebarsjs.com/">Handlebars.js</a>, qui permettent d'insérer des données dans du HTML de façon fluide. Ainsi, si <code>beers</code> est un tableau de bières (au format JSON), on pourra écrire ceci :</p>
-
-<p>
-```</p>
-
-<ul id="beers-list">
-    {{#beers}}
-        <li>{{name}} - {{color}} - {{alcohol}}%</li>
-    {{/beers}}
-</ul>
-
-
-<script type="text/javascript">
-    var template = $('#beers-list');
-    // Appel du moteur de rendu de Mustache
-    template.html( Mustache.render(template.html(), data) );
-</script>
-
-
-<p>```
-</p>
-
-<p>Autre sujet important, les tests. Nous n'allons pas dans le détail, mais nous expliquons qu'il existe de nombreux outils pour cela : Jasmine, QUnit, Mocha, CapserJS, PhantomJS, Karma, etc. Je vous renvoie à l'<a href="http://linsolas.github.com/blog/2013/03/27/devoxx-france-2013-jour-1/">université de Jean-Laurent de Morlhon et Pierre Gayvallet à ce sujet</a>.</p>
-
-<p>Le message est clair : tous les outils sont là pour faire des tests, du TDD, du BDD, des tests d'intégration, etc. Bref, on n'a plus d'excuses !</p>
-
-<p><img src="/images/devoxxfr-2013-batmanrobin.png" title="Faites des tests en JavaScript" alt="Faites des tests en JavaScript" /></p>
-
-<p>Dernier point abordé : l'automatisation. On peut facilement intégrer son application JavaScript dans un serveur d'intégration continue comme Jenkins ou un outil d'analyse qualité tel que Sonar. Je vous renvoie <a href="http://www.parleys.com/#play/5148922a0364bc17fc56c7cf">à mon Tools In Action de l'année dernière pour voir tout ça en pratique</a>.
-Niveau IDE, nous recommandons <a href="http://www.jetbrains.com/idea/">IntelliJ IDEA de JetBrains</a> (ou <a href="http://www.jetbrains.com/webstorm/">WebStorm</a>) qui offre un <em>vrai</em> support des langages web comme le JavaScript, le HTML ou le CSS.</p>
-
-<h3>La présentation à Devoxx France</h3>
-
-<p>Voilà un retour personnel sur la présentation elle-même. Déjà, on était très content avec Julien, car la salle était pleine, ce qui fait 300 personnes à nous écouter (sans compter les millions qui nous verront sur Parleys). Si si, j'avais compté les chaises pendant que la salle était vide ! :o)</p>
-
-<p><img src="/images/devoxxfr-2013-salle-1.jpg" title="Y a du monde à gauche..." alt="Y a du monde à gauche" />
-<img src="/images/devoxxfr-2013-salle-2.jpg" title="... et aussi à droite !" alt="... et aussi à droite !" /></p>
-
-<p>On a plutôt bien géré notre temps, on a fini un peu en avance même - environ 8 minutes avant - ce qui nous a permis de prendre près d'une dizaine de questions. Les retours que j'ai eu en direct ou sur le Net semblent montrer que la présentation a été appréciée, et c'est ce qui nous rend encore plus heureux (<a href="http://blog.soat.fr/2013/04/devoxx-fr-2013-du-javascript-propre-challenge-accepted/">un exemple ici</a>).</p>
-
-<p>Une chose toutefois, que l'on fera peut-être si notre présentation est prise sur une autre conférence. Il semblerait, d'après les questions, que certaines personnes s'attendaient à avoir un peu la <em>stack</em> idéale pour développer en JavaScript. Tout d'abord, elle n'existe pas. Choisir un framework JavaScript va dépendre de vos besoins, mais aussi de votre maitrise du langage, et du risque que vous acceptez de courrir par rapport à la pérénnité de tel ou tel outil.
-Je ne conseillerais pas AngularJS ou Backbone.js sans connaitre le contexte. Partir sur une application exécutée côté clent, cela a un impact à plus ou moins long terme, et faire ce choix n'est pas anodin.</p>
-
-<p>L'un des points sur lequel il faut faire attention, c'est l'intégration des outils entre eux. Il n'est pas toujours évident de faire fonctionner X avec Y. Aussi, peut-être proposerons-nous dans une version améliorée de la présentation deux ou trois <em>stacks</em> qui fonctionnent bien ensemble.</p>
-
-<h3>Références</h3>
-
-<ul>
-<li>Les slides sur Slideshare <a href="http://fr.slideshare.net/linsolas/java-script-devoxxfrance2013">ici</a> ou <a href="http://fr.slideshare.net/jak78/java-script-devoxxfrance2013ppt">là</a>.</li>
-<li>Les slides et bientôt la vidéo sur <a href="http://www.parleys.com/#play/515aac03e4b0c779d7881496">Parleys</a>.</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Devoxx France 2013 - Bilan]]></title>
-    <link href="http://linsolas.github.com/blog/2013/04/02/devoxx-france-2013-bilan/"/>
-    <updated>2013-04-02T23:23:00+02:00</updated>
-    <id>http://linsolas.github.com/blog/2013/04/02/devoxx-france-2013-bilan</id>
-    <content type="html"><![CDATA[<p><img src="http://www.devoxx.com/download/attachments/6816022/DevoxxFR-2012-web-400-267.png" title="Devoxx France 2013" alt="Devoxx France" /></p>
-
-<p>L'édition française de Devoxx 2013 s'est donc achevée la semaine dernière. A nouveau, un énorme <strong>BRAVO</strong> à toute l'équipe organisatrice, aux sponsors, aux speakers, aux participants. C'était magique. Devoxx, c'est un peu le Disneyland du développeur geek. On y voit des "stars" (pas dans le mauvais sens du terme) et on s'amuse énormément.</p>
-
-<p>Allez, un petit bilan personnel :</p>
-
-<h3>Les plus</h3>
-
-<ul>
-<li>Les gens.</li>
-<li>L'organisation, toujours au poil.</li>
-<li>L'équipe des organisateurs, toujours gentils et disponibles.</li>
-<li>Les rencontres, surtout voir en vrai des personnes que l'on ne connait que <em>via</em> Twitter.</li>
-<li>Les présentations de qualité, plutôt variées et nombreuses.</li>
-<li>Les gens.</li>
-<li>Certains goodies. Personnellement, j'en ai un peu marre des t-shirts (sauf celui d'Atlassian qui est au top, et que je portais durant ma présentation) et des mugs. Certains sponsors innovent plus que d'autres en la matière : boite à Meuh d'OCTO, décapsuleurs, gants, etc.</li>
-<li>Les concours, bien que je n'ai rien gagné !</li>
-<li>Le site de Parleys qui diffuse toutes les sessions que l'on a dû rater parce que parfois c'était dur de choisir, ou que l'on discutait avec des personnes. En plus, le site a été refait en HTML 5 !</li>
-<li>Le diner des speakers.</li>
-<li>La soirée "<em>Meet &amp; greet</em>".</li>
-<li>Les gens.</li>
-</ul>
-
-
-<h3>Les moins</h3>
-
-<ul>
-<li>Pas assez de <em>Hands On</em> le mercredi. Comme je l'ai dit, j'aimerais beaucoup que Devoxx France 2014 se déroule en quatre jours : 2 jours d'universités et Labs avec une attention particulière pour les sessions où l'auditoire code vraiment, et 2 jours de conférences.</li>
-<li>Le Marriott devient trop petit. L'année passée, avec un peu plus de 1200 personnes, on se sentait à l'étroit. Cette année, avec 1400 et quelques participants, c'était encore plus vrai. De nombreuses personnes se sont faites recaler à l'entrée des salles de conférences pleines pour des raisons de sécurité. Cela se comprend, mais c'est rageant. Le problème est de trouver un lieu ayant une capacité d'accueil d'au moins 1500 personnes à Paris pour un budget raisonnable. Difficile à mon avis !</li>
-<li>La nourriture le midi. Sans être mauvaise, ce n'était quand même pas ça, et ça manquait un peu de variété. En plus, sauf erreur de ma part, il n'y avait pas de desserts le midi. A noter que cette année, contrairement à 2012, les boissons étaient toujours à disposition et ça c'est bien (petit bémol : pas de Coca light, que du Coca "normal" :o) ).</li>
-<li>Toujours pas de NAO à gagner :)</li>
-<li>Faute de place, les BOF sont toujours un peu tard le soir (certains finissent à 22h). Guère pratique quand on a déjà 2 jours de Devoxx dans les pates !</li>
-</ul>
-
-
-<p>Voilà, hormis le problème du lieu qui devient trop petit, rien de méchant. Devoxx confirme qu'il s'agit d'une superbe conférence, et encore une fois, j'étais très fier d'y assister, surtout en tant que speaker ! A l'année prochaine (et en fin d'année pour la version World à Anvers) !</p>
 ]]></content>
   </entry>
   
