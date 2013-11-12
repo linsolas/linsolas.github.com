@@ -4,7 +4,7 @@
   <title><![CDATA[Category: conference | fr.romain:blog:3.0]]></title>
   <link href="http://linsolas.github.com/blog/categories/conference/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2013-10-29T18:51:36+01:00</updated>
+  <updated>2013-11-12T19:44:39+01:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -12,6 +12,59 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Mon programme pour Devoxx 2013]]></title>
+    <link href="http://linsolas.github.com/blog/2013/11/12/mon-programme-pour-devoxx-2013/"/>
+    <updated>2013-11-12T19:35:00+01:00</updated>
+    <id>http://linsolas.github.com/blog/2013/11/12/mon-programme-pour-devoxx-2013</id>
+    <content type="html"><![CDATA[<p><img src="/images/devoxx_logo.gif" title="Devoxx 2013" alt="Devoxx 2013" /></p>
+
+<p>Et c'est parti mon Kiki !</p>
+
+<p>LA conférence de l'année a débuté ce lundi 11 novembre, je veux bien sûr parler de <a href="http://devoxx.be/">Devoxx</a> !
+Pour la 4e fois d'affilée, et la 2e en ce qui concerne la version "World" en Belgique, j'y serais à partir de demain mercredi.</p>
+
+<p>Mon programme n'est bien sûr pas encore défini, mais j'ai noté quelques sessions qui m'intéressent déjà.</p>
+
+<!-- more -->
+
+
+<ul>
+<li>Je commencerais sans doute par <a href="http://devoxx.be/dv13-sven-peters.html?presId=3143">How To Do Kick-Ass Software Development</a> de <a href="https://twitter.com/@svenpet">Sven Peters</a>. J'avais assisté à sa conférence l'année passée <a href="http://linsolas.github.io/blog/2012/11/18/devoxx-2012-jour-1/">7 things: How to make good teams great</a> que j'avais beaucoup apprécié. Je ne sais pas s'il y aura beaucoup de nouveautés, mais je pense que ça vaut quand même le coup d'oeil. Il y a également <a href="http://devoxx.be/dv13-dierk-knig.html?presId=3563">UI Engineer - the missing profession</a> par <a href="https://twitter.com/@mittie">Dierk König</a>, qui pourra être ma session de backup.</li>
+<li>Pour entamer les Quickies, j'opterais pour <a href="http://devoxx.be/dv13-chet-haase.html?presId=3193">Patterns, Shmatterns</a>, une présentation par <a href="https://twitter.com/@chethaase">Chet Haase</a> qui devrait être du même niveau que sa présentation <a href="http://linsolas.github.io/blog/2012/11/18/devoxx-2012-jour-1/">The Future of Software Development Process Methodology Effectiveness</a> faite l'année dernière : complètement décalée et très drôle.</li>
+<li>Pour le Quickie suivant, ce sera peut-être encore Sven Peters avec <a href="http://devoxx.be/dv13-sven-peters.html?presId=3144">Don't use Git</a> ou <a href="http://devoxx.be/dv13-xavier-coulon.html?presId=3586">HTTP caching in practice</a>.</li>
+<li>Pour la digestion, je me laisserais bien tenté par un <a href="http://devoxx.be/dv13-nikolay-chashnikov.html?presId=3772">Efficient coding in IntelliJ IDEA</a> par <a href="http://devoxx.be/dv13-nikolay-chashnikov.html?presId=3772">Nikolay Chashnikov</a>, parce qu'on ne connait pas assez son IDE. Au cas où, il y a bien une session avec un robot avec <a href="http://devoxx.be/dv13-tobias-antonsson.html?presId=3730">The Crazyflie Nano Quadcopter development platform</a> par <a href="http://devoxx.be/dv13-tobias-antonsson.html">Tobias Antonsson</a>.</li>
+<li>Puis, un petit <a href="http://devoxx.be/dv13-tugdual-grall.html?presId=3281">Elastify your app: from SQL to NoSQL in less than one hour!</a> par mes amis <a href="https://twitter.com/@tgrall">Tugdual Grall</a> et <a href="https://twitter.com/@dadoonet">David Pilato</a>, qui montrent qu'il est possible d'intégrer facilement du NoSQL dans une application Legacy. Je me dis d'ailleurs qu'avec leurs bons conseils et ceux de <a href="http://devoxx.be/dv13-david-gageot.html?presId=3108">David Gageot</a>, on pourrait faire passer une application Legacy dans le cloud avec NoSQL en 120 minutes chrono :o)</li>
+<li>Pour continuer, j'hésite entre <a href="http://devoxx.be/dv13-luke-daley.html?presId=3680">Taming Functional Web Testing (with Spock &amp; Geb)</a> par <a href="https://twitter.com/@ldaley">Luke Daley</a> et <a href="http://devoxx.be/dv13-attila-szegedi.html?presId=3732">The Curious Case of JavaScript on the JVM</a> par <a href="https://twitter.com/@szegedi">Attila Szegedi</a>.</li>
+</ul>
+
+
+<p>Je ne sais pas encore comment je finirais ma première journée, mais elle aura déjà été bien remplie !
+Pour le jeudi, quelques idées :</p>
+
+<ul>
+<li><a href="http://devoxx.be/dv13-francesc-campoy-flores.html?presId=3493">Go see all the ships in the world</a> par <a href="https://twitter.com/@francesc">Francesc Campoy Flores</a> qui se propose de construire une visualisation dynamique de la position et trajectoire de tous les bateaux du monde ! Un vaste programme...</li>
+<li>Pour la suite, j'aimerais bien assister à <a href="http://devoxx.be/dv13-igor-minar.html?presId=3468">What is in store for the future of Angular</a> par <a href="https://twitter.com/@IgorMinar">Igor Minar</a> et <a href="https://twitter.com/@mhevery">Misko Hevery</a>, mais je pense que ce sera l'une des sessions les plus blindées, tant AngularJS est populaire en ce moment !</li>
+<li>Mon premier Quickie aurait bien été <a href="http://devoxx.be/dv13-david-pilato.html?presId=3282">Make sense of your (BIG) data!</a> par <a href="https://twitter.com/@dadoonet">David Pilato</a>, mais il se trouve que je passe à la même heure que lui ! Ce sera donc <a href="http://devoxx.be/dv13-romain-linsolas.html?presId=3545">The ingredients for a perfect JavaScript Software Factory</a> par <a href="https://twitter.com/@romaintaz">moi-même</a> !</li>
+<li>Pour la suite, ce sera peut-être <a href="http://devoxx.be/dv13-sam-brannen.html?presId=3235">Spring Framework 4.0 - The Next Generation</a> par <a href="https://twitter.com/@sam_brannen">Sam Brannen</a>, ou l'enregistrement du PodCast <a href="http://devoxx.be/dv13-dick-wall.html?presId=3713">JavaPosse</a>.</li>
+<li>Je continuerais par du Continuous Delivery avec <a href="http://devoxx.be/dv13-andrzej-grzesik.html?presId=3500">Continuous Delivery antipatterns</a> par <a href="http://devoxx.be/dv13-andrzej-grzesik.html">Andrzej Grzesik</a> puis <a href="http://devoxx.be/dv13-hans-dockter.html?presId=3604">Continuous Delivery Patterns for Large Software Stacks</a> de <a href="https://twitter.com/@gradleware">Hans Dockter</a>.</li>
+</ul>
+
+
+<p>Je crois bien que ma journée de jeudi s'achèvera par le film proposé par Devoxx, <a href="http://www.allocine.fr/film/fichefilm_gen_cfilm=202971.html">The Counselor, Le Cartel</a> de Ridley Scott.
+Pour la dernière journée (enfin, demi-journée), mon programme :</p>
+
+<ul>
+<li>Je commencerais peut-être par <a href="http://devoxx.be/dv13-scott-kurz.html?presId=3728">Batch Applications for the Java Platform (JSR 352)</a> de <a href="http://devoxx.be/dv13-scott-kurz.html">Scott Kurz</a>.</li>
+<li>Bien évidemment, un Devoxx ne serait rien sans son enregistrement live des <a href="http://devoxx.be/dv13-vincent-massol.html?presId=3430">CastCodeurs</a>. Ma place y est donc déjà réservée :o)</li>
+<li>Pour terminer cette conférence, je me laisserais bien tenté par <a href="http://devoxx.be/dv13-jean-franois-denise.html?presId=3759">Avatar.js, Server-Side JavaScript on the Java Platform</a> par <a href="http://devoxx.be/dv13-jean-franois-denise.html">Jean-François Denise</a>.</li>
+</ul>
+
+
+<p>Voilà, mon programme est établi. Bien entendu, celui-ci va sans aucun doute beaucoup évoluer quand je serais sur place. On verra vendredi après-midi si j'avais bien jugé ou pas...</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[SoftShake 2013 - facilitation graphique]]></title>
@@ -532,20 +585,6 @@ Associé avec <a href="http://www.elasticsearch.org/overview/kibana/">Kibana</a>
 <p>Hélas, il s'agit d'un <strong>Quickie</strong>, ce qui veut dire que je n'aurais que 15 minutes pour aborder ce sujet tellement vaste. Je serais donc amené à surtout éfleurer ce sujet, mais cela me semble une bonne approche pour un développeur qui souhaite s'intéresser vraiment à faire du JavaScript propre !</p>
 
 <p>Bref, si vous êtes à Anvers la semaine du 11 novembre, n'hésitez pas à venir jeter un oeil à ma présentation...</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Oyez oyez amis suisses]]></title>
-    <link href="http://linsolas.github.com/blog/2013/08/19/oyez-oyez-amis-suisses/"/>
-    <updated>2013-08-19T21:46:00+02:00</updated>
-    <id>http://linsolas.github.com/blog/2013/08/19/oyez-oyez-amis-suisses</id>
-    <content type="html"><![CDATA[<p><a href="http://soft-shake.ch/2013/program/authors/2013/10/24/romain-linsolas.html"><img src="/images/soft-shake-2013.png" title="Soft Shake 2013" alt="Soft Shake 2013" /></a></p>
-
-<p>Super nouvelle, la présentation "<a href="http://soft-shake.ch/2013/program/sessions/13_web_dev/2013/10/24/5-Du_Javascript_propre_Challenge_Accepted.html">Du Javascript propre? Challenge Accepted!</a>" a été retenue pour la conférence <a href="http://soft-shake.ch/2013/fr/">Soft Shake 2013</a> à Genève en Suisse, du 23 au 24 octobre.
-La présentation sera sensiblement la même que celle faite à Devoxx avec <a href="http://soft-shake.ch/2013/program/authors/2013/10/25/julien-jakubowski.html">Julien Jakubowski</a>, mais on essaiera de mettre à jour certaines parties.</p>
-
-<p>Si vous venez à la conférence, venez nous voir !</p>
 ]]></content>
   </entry>
   

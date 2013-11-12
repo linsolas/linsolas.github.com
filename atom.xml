@@ -4,7 +4,7 @@
   <title><![CDATA[fr.romain:blog:3.0]]></title>
   <link href="http://linsolas.github.com/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2013-10-29T18:51:36+01:00</updated>
+  <updated>2013-11-12T19:44:39+01:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -12,6 +12,59 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Mon programme pour Devoxx 2013]]></title>
+    <link href="http://linsolas.github.com/blog/2013/11/12/mon-programme-pour-devoxx-2013/"/>
+    <updated>2013-11-12T19:35:00+01:00</updated>
+    <id>http://linsolas.github.com/blog/2013/11/12/mon-programme-pour-devoxx-2013</id>
+    <content type="html"><![CDATA[<p><img src="http://linsolas.github.com/images/devoxx_logo.gif" title="Devoxx 2013" alt="Devoxx 2013" /></p>
+
+<p>Et c&#8217;est parti mon Kiki !</p>
+
+<p>LA conférence de l&#8217;année a débuté ce lundi 11 novembre, je veux bien sûr parler de <a href="http://devoxx.be/">Devoxx</a> !
+Pour la 4e fois d&#8217;affilée, et la 2e en ce qui concerne la version &#8220;World&#8221; en Belgique, j&#8217;y serais à partir de demain mercredi.</p>
+
+<p>Mon programme n&#8217;est bien sûr pas encore défini, mais j&#8217;ai noté quelques sessions qui m&#8217;intéressent déjà.</p>
+
+<!-- more -->
+
+
+<ul>
+<li>Je commencerais sans doute par <a href="http://devoxx.be/dv13-sven-peters.html?presId=3143">How To Do Kick-Ass Software Development</a> de <a href="https://twitter.com/@svenpet">Sven Peters</a>. J&#8217;avais assisté à sa conférence l&#8217;année passée <a href="http://linsolas.github.io/blog/2012/11/18/devoxx-2012-jour-1/">7 things: How to make good teams great</a> que j&#8217;avais beaucoup apprécié. Je ne sais pas s&#8217;il y aura beaucoup de nouveautés, mais je pense que ça vaut quand même le coup d&#8217;oeil. Il y a également <a href="http://devoxx.be/dv13-dierk-knig.html?presId=3563">UI Engineer - the missing profession</a> par <a href="https://twitter.com/@mittie">Dierk König</a>, qui pourra être ma session de backup.</li>
+<li>Pour entamer les Quickies, j&#8217;opterais pour <a href="http://devoxx.be/dv13-chet-haase.html?presId=3193">Patterns, Shmatterns</a>, une présentation par <a href="https://twitter.com/@chethaase">Chet Haase</a> qui devrait être du même niveau que sa présentation <a href="http://linsolas.github.io/blog/2012/11/18/devoxx-2012-jour-1/">The Future of Software Development Process Methodology Effectiveness</a> faite l&#8217;année dernière : complètement décalée et très drôle.</li>
+<li>Pour le Quickie suivant, ce sera peut-être encore Sven Peters avec <a href="http://devoxx.be/dv13-sven-peters.html?presId=3144">Don&#8217;t use Git</a> ou <a href="http://devoxx.be/dv13-xavier-coulon.html?presId=3586">HTTP caching in practice</a>.</li>
+<li>Pour la digestion, je me laisserais bien tenté par un <a href="http://devoxx.be/dv13-nikolay-chashnikov.html?presId=3772">Efficient coding in IntelliJ IDEA</a> par <a href="http://devoxx.be/dv13-nikolay-chashnikov.html?presId=3772">Nikolay Chashnikov</a>, parce qu&#8217;on ne connait pas assez son IDE. Au cas où, il y a bien une session avec un robot avec <a href="http://devoxx.be/dv13-tobias-antonsson.html?presId=3730">The Crazyflie Nano Quadcopter development platform</a> par <a href="http://devoxx.be/dv13-tobias-antonsson.html">Tobias Antonsson</a>.</li>
+<li>Puis, un petit <a href="http://devoxx.be/dv13-tugdual-grall.html?presId=3281">Elastify your app: from SQL to NoSQL in less than one hour!</a> par mes amis <a href="https://twitter.com/@tgrall">Tugdual Grall</a> et <a href="https://twitter.com/@dadoonet">David Pilato</a>, qui montrent qu&#8217;il est possible d&#8217;intégrer facilement du NoSQL dans une application Legacy. Je me dis d&#8217;ailleurs qu&#8217;avec leurs bons conseils et ceux de <a href="http://devoxx.be/dv13-david-gageot.html?presId=3108">David Gageot</a>, on pourrait faire passer une application Legacy dans le cloud avec NoSQL en 120 minutes chrono :o)</li>
+<li>Pour continuer, j&#8217;hésite entre <a href="http://devoxx.be/dv13-luke-daley.html?presId=3680">Taming Functional Web Testing (with Spock &amp; Geb)</a> par <a href="https://twitter.com/@ldaley">Luke Daley</a> et <a href="http://devoxx.be/dv13-attila-szegedi.html?presId=3732">The Curious Case of JavaScript on the JVM</a> par <a href="https://twitter.com/@szegedi">Attila Szegedi</a>.</li>
+</ul>
+
+
+<p>Je ne sais pas encore comment je finirais ma première journée, mais elle aura déjà été bien remplie !
+Pour le jeudi, quelques idées :</p>
+
+<ul>
+<li><a href="http://devoxx.be/dv13-francesc-campoy-flores.html?presId=3493">Go see all the ships in the world</a> par <a href="https://twitter.com/@francesc">Francesc Campoy Flores</a> qui se propose de construire une visualisation dynamique de la position et trajectoire de tous les bateaux du monde ! Un vaste programme&#8230;</li>
+<li>Pour la suite, j&#8217;aimerais bien assister à <a href="http://devoxx.be/dv13-igor-minar.html?presId=3468">What is in store for the future of Angular</a> par <a href="https://twitter.com/@IgorMinar">Igor Minar</a> et <a href="https://twitter.com/@mhevery">Misko Hevery</a>, mais je pense que ce sera l&#8217;une des sessions les plus blindées, tant AngularJS est populaire en ce moment !</li>
+<li>Mon premier Quickie aurait bien été <a href="http://devoxx.be/dv13-david-pilato.html?presId=3282">Make sense of your (BIG) data!</a> par <a href="https://twitter.com/@dadoonet">David Pilato</a>, mais il se trouve que je passe à la même heure que lui ! Ce sera donc <a href="http://devoxx.be/dv13-romain-linsolas.html?presId=3545">The ingredients for a perfect JavaScript Software Factory</a> par <a href="https://twitter.com/@romaintaz">moi-même</a> !</li>
+<li>Pour la suite, ce sera peut-être <a href="http://devoxx.be/dv13-sam-brannen.html?presId=3235">Spring Framework 4.0 - The Next Generation</a> par <a href="https://twitter.com/@sam_brannen">Sam Brannen</a>, ou l&#8217;enregistrement du PodCast <a href="http://devoxx.be/dv13-dick-wall.html?presId=3713">JavaPosse</a>.</li>
+<li>Je continuerais par du Continuous Delivery avec <a href="http://devoxx.be/dv13-andrzej-grzesik.html?presId=3500">Continuous Delivery antipatterns</a> par <a href="http://devoxx.be/dv13-andrzej-grzesik.html">Andrzej Grzesik</a> puis <a href="http://devoxx.be/dv13-hans-dockter.html?presId=3604">Continuous Delivery Patterns for Large Software Stacks</a> de <a href="https://twitter.com/@gradleware">Hans Dockter</a>.</li>
+</ul>
+
+
+<p>Je crois bien que ma journée de jeudi s&#8217;achèvera par le film proposé par Devoxx, <a href="http://www.allocine.fr/film/fichefilm_gen_cfilm=202971.html">The Counselor, Le Cartel</a> de Ridley Scott.
+Pour la dernière journée (enfin, demi-journée), mon programme :</p>
+
+<ul>
+<li>Je commencerais peut-être par <a href="http://devoxx.be/dv13-scott-kurz.html?presId=3728">Batch Applications for the Java Platform (JSR 352)</a> de <a href="http://devoxx.be/dv13-scott-kurz.html">Scott Kurz</a>.</li>
+<li>Bien évidemment, un Devoxx ne serait rien sans son enregistrement live des <a href="http://devoxx.be/dv13-vincent-massol.html?presId=3430">CastCodeurs</a>. Ma place y est donc déjà réservée :o)</li>
+<li>Pour terminer cette conférence, je me laisserais bien tenté par <a href="http://devoxx.be/dv13-jean-franois-denise.html?presId=3759">Avatar.js, Server-Side JavaScript on the Java Platform</a> par <a href="http://devoxx.be/dv13-jean-franois-denise.html">Jean-François Denise</a>.</li>
+</ul>
+
+
+<p>Voilà, mon programme est établi. Bien entendu, celui-ci va sans aucun doute beaucoup évoluer quand je serais sur place. On verra vendredi après-midi si j&#8217;avais bien jugé ou pas&#8230;</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[SoftShake 2013 - facilitation graphique]]></title>
@@ -3114,223 +3167,6 @@ Le but final est de proposer une application plus riche, et moins limitée pour 
 
 
 <p>La deuxième journée de Devoxx 2012 se termine sur cette session, avant d&#8217;aller voir Skyfall, le dernier James Bond, dont la diffusion nous était offerte par Devoxx (ainsi que les popcorns :) ). D&#8217;ailleurs, j&#8217;ai vraiment beaucoup aimé ce James Bond. Beaucoup de personnes sont allés ensuite à la soirée au NoX, une boite de nuit proche du Métropolis. J&#8217;ai fait mon petit joueur en retournant à l&#8217;hôtel vers 23h30, encore un peu fatigué de la veille&#8230;</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Devoxx 2012 - Jour 1]]></title>
-    <link href="http://linsolas.github.com/blog/2012/11/18/devoxx-2012-jour-1/"/>
-    <updated>2012-11-18T14:14:00+01:00</updated>
-    <id>http://linsolas.github.com/blog/2012/11/18/devoxx-2012-jour-1</id>
-    <content type="html"><![CDATA[<p><img src="http://linsolas.github.com/images/Devoxx2012_WeCodeInPeace.gif" alt="Devoxx 2012"/></p>
-
-<p>2012 est une année très Devoxx pour moi : participation au Devoxx France pour sa première édition, et première participation pour moi au &#8220;Devoxx World&#8221;, pour sa 11e édition. Et pour courronner le tout, je suis orateur les 2 fois.</p>
-
-<p>Si Devoxx World se déroule sur 5 jours, je ne suis présent qu&#8217;aux 3 derniers, journées des conférences, Quickies et autres BOF.
-Mercredi matin, 6h. Les choses ne commencent pas bien. Une grève en Belgique (eh oui, ce n&#8217;est pas une spécificité française :) ) rend les choses plus compliquées que prévu et notre train, après avoir été retardé puis annulé, fini par partir quand même. Je passe toutefois un très bon moment dans le Thalys à parler avec David Pilato, directeur technique d&#8217;<a href="http://www.ideotechnologies.com/">Ideo Technologies</a>. Bref, nous arrivons finalement au Metropolis vers 11h30, ce qui nous a fait raté la Keynote. La principale annonce, c&#8217;est que la famille Devoxx s&#8217;agrandit ! En 2011, il y avait 1 Devoxx, à Anvers. 2012 a vu l&#8217;arrivée de Devoxx France en avril. 2013 sera donc l&#8217;année de la première session de Devoxx UK, qui se tiendra les 26 et 27 mars prochains, suivi par Devoxx France, qui se tiendra au même lieu et au même format (3 jours) qu&#8217;en 2012. Le mercredi 27 mars sera le dernier jour de Devoxx UK, mais aussi le premier de Devoxx France. Les organisateurs espèrent ainsi attirer à Paris des speakers américains, qui en profiteraient pour participer aux deux conférences. Espérons ainsi que les speakers de Google viendront présenter AngularJS à Devoxx France. Je reviendrais sur ce sujet plus tard&#8230;</p>
-
-<p>En attendant, voyons les conférences auxquelles j&#8217;ai assisté pour ce premier jour de Devoxx&#8230;</p>
-
-<!-- more -->
-
-
-<h2><a href="http://www.devoxx.com/display/DV12/7+Things++How+to+make+good+teams+great">7 things: How to make good teams great</a></h2>
-
-<p><img src="http://linsolas.github.com/images/Devoxx-2012-7thing.JPG" alt="7 things to make a good team great"/></p>
-
-<p><a href="http://www.devoxx.com/display/DV12/Sven+Peters">Sven Peters</a>, d&#8217;Atlassian, nous donne 7 conseils pour qu&#8217;une bonne équipe devienne une excellente équipe. Pour chaque conseil, il donne également une note sur 5 pour la faisabilité, ainsi qu&#8217;une autre sur l&#8217;<em>awesomeness</em>.</p>
-
-<p><strong>1. Flowtime</strong> : généralement, on dit que le bureau individuel est plus adapté à la performance, car on est ainsi moins sujet aux perturbations des autres personnes, qui nous dérange à tout moment. Pourtant, chez Atlassian, c&#8217;est bel et bien l&#8217;open space qui a été privilégié. Et ça marche. Il suffit d&#8217;y inclure quelques règles. Par exemple, durant les premières heures de l&#8217;après-midi, interdiction de déranger les gens. Si on a besoin d&#8217;aide sur un problème précis, alors une personne dédiée est chargée d&#8217;y répondre. Bien entendu, cette personne n&#8217;est jamais la même !
-Note: <em>4/5</em> et <em>2/5</em>.</p>
-
-<p><strong>2. Feed your brain</strong> : le développement informatique a cette particularité qu&#8217;il est <em>nécessaire</em> d&#8217;apprendre en permanence. Certes, on peut apprendre par soi-même, mais c&#8217;est quand même plus fun de le faire à plusieurs. Sven propose quelques idées à mettre en place durant ses pauses déjeuner : session de codage, histoire d&#8217;utiliser un nouveau langage, un nouveau framework, ou simplement apprendre à gérer telle ou telle situation. Le &#8221;<em>Brown Bag Lunch</em>&#8221; est aussi une idée intéressante, où les gens apportent à manger pour suivre une petite session présentée par quelqu&#8217;un. D&#8217;ailleurs <a href="http://blog.javabien.net/2012/11/05/bbl/">David Gageot se propose de le faire chez vous</a> ! Dernière idée : pourquoi ne pas regarder une conférence sur Parleys pendant l&#8217;heure du déjeuner ? Cela permettra peut-être aussi de faire connaître Devoxx à vos collègues !
-Note: <em>5/5</em> et <em>2/5</em>.</p>
-
-<p><strong>3. Say &#8220;well done&#8221;</strong> : savoir qu&#8217;on fait du bon boulot, c&#8217;est bien. Que d&#8217;autres nous le disent, c&#8217;est encore mieux. Il faut savoir (ré)apprendre à féliciter les gens pour leurs réalisations, mais il faut que cela se fasse facilement (nul besoin de faire une soirée pour fêter le million de revenu, ou ce genre de chose un peu pompeux et assez froid), n&#8217;importe quand, et par n&#8217;importe qui.
-Note: <em>2/5</em> et <em>3/5</em>.</p>
-
-<p><strong>4. Report robot</strong> : les données, on en a plein, de toutes sortes. Il faut savoir les agréger, mais aussi les analyser, en faire des rapports pertinents (tant qu&#8217;à faire dynamiques) et les rendre aussi facilement accessibles que possible. On rejoint ici les idées d&#8217;<em>Extreme Feedback</em>, où un écran va afficher par exemple l&#8217;état des builds dans l&#8217;usine logicielle, où encore le traffic en live de son site web.
-Note: <em>2/5</em> et <em>4/5</em>.</p>
-
-<p><strong>5. Eat your own dog food</strong> : quoi de mieux que de tester soi-même son application pour en connaître les forces et les faiblesses ? Être soi même les alpha-testeurs, il n&#8217;y a rien de mieux. Et tant qu&#8217;à faire, autant le faire tester par tout le monde : les développeurs, les chefs, les secretaires, etc. Bien entendu, la faisabilité d&#8217;une telle approche n&#8217;est pas toujours facile, selon le type de produits sur lesquels on travaille. C&#8217;est sans doute plus facile pour Atlassian, qui développe des outils utilisés - en partie - par des développeurs. Le contexte se prête donc parfaitement ici, ce qui n&#8217;est pas toujours le cas.
-Note: <em>2/5</em> et <em>5/5</em>.</p>
-
-<p><strong>6. Do a special day</strong> : il est évident que pour un développeur, écrire de la documentation, ce n&#8217;est pas sa tasse de thé (enfin, son mug de café dirais-je plutôt). Toutefois, on pourrait organiser des journées spéciales (ou des demi-journées, selon le thème) dédiées à une thématique donnée. Pour que cela marche, il faut bien entendu préparer le terrain, favoriser l&#8217;environnement à la tâche donnée. Pour reprendre l&#8217;idée de la journée dédiée à l&#8217;écriture de la documentation, on peut regrouper l&#8217;équipe dans une salle ou un open-space, donner des rôles de relecteurs, etc. pour améliorer l&#8217;efficacité de l&#8217;équipe. Il y a bien entendu d&#8217;autres thématiques envisageables, comme le &#8221;<em>Focus on one task</em>&#8221;, &#8221;<em>Blitz Testing</em>&#8221;, &#8221;<em>Clean up day</em>&#8221;, etc.
-Note: <em>5/5</em> et <em>3/5</em>.</p>
-
-<p><strong>7. Experimentation time</strong> : le fameux &#8221;<em>20% time</em>&#8221;, popularisé en son temps par Google. Le principe : laisser au développeur 20% de son temps à des sujets libres, pour développer ce qu&#8217;il veut, apprendre une nouvelle technologie, etc. On peut aussi imaginer laisser ce temps pour développer des fonctionnalités dont on a envie de voir sur l&#8217;application, ce qui profite à la fois au projet et au développeur. Toutefois, c&#8217;est souvent un principe difficile à mettre en place au sein d&#8217;une société, et souvent ce temps imparti est loin d&#8217;atteindre les 20%, à cause de différents types de conflits&#8230;
-Note: <em>2-4/5</em> et <em>5/5</em>.</p>
-
-<p>Voilà quelques conseils de bon sens, et comme le dit Sven, il <strong>faut</strong> essayer! Certes des fois on échouera, mais il ne faut pas être idiot, et anticiper tant que possible ces situations. Bref, <em>be different</em>.</p>
-
-<p>A noter que sa présentation est <a href="http://fr.slideshare.net/svenpeters/how-to-make-good-teams-great">disponible sur SlideShare</a>.</p>
-
-<hr/>
-
-
-<h2><a href="http://www.devoxx.com/display/DV12/The+Future+of+Software+Development+Process+Methodology+Effectiveness+%28Part+1+2%29">The Future of Software Development Process Methodology Effectiveness</a></h2>
-
-<p><img src="http://linsolas.github.com/images/Devoxx2012-Processes.JPG" alt="Future of processes"/></p>
-
-<p><a href="http://www.devoxx.com/display/DV12/Chet+Haase">Chet Haase</a>, de Google, est un orateur formidable. Cette session (ainsi que les autres sur Android), le prouve bien. Ce double-quickie a tellement eu de succès que les organisateurs lui ont demandé de le rejouer jeudi soir, en le filmant pour qu&#8217;il soit disponible sur Parleys.
-Durant son talk, il nous a présenté des &#8220;nouvelles&#8221; méthodologies de développement logicielles, basées sur des existantes. Difficile de retranscrire ici l&#8217;esprit de la session, mais en gros, voici quelques idées qu&#8217;il a présenté, ce qui devrait vous donner une idée du ton de son quickie :</p>
-
-<ul>
-<li><strong>MDD</strong> pour <em>Metrics Driven Development</em>, qui dit que plus nous avons de données, de métriques, plus la qualité est au rendez-vous.</li>
-<li><strong>SELF</strong> pour <em>Somebody ELse&#8217;s Fault</em>, où l&#8217;important est avant tout de se dédouaner (hélas, je crains que certaines personnes dans ma boite appliquent effectivement cette méthodologie).</li>
-<li><strong>EBN</strong> pour <em>Efficiency By Necessity</em>, l&#8217;efficacité par la nécessité. Autrement dit, plus on place de meetings dans la journée d&#8217;un développeur, moins il aura de temps pour coder, et sera donc plus efficace sur ce temps-là !</li>
-<li><strong>MBH</strong>, <em>More Billable Hours</em>. Le titre en dit long !</li>
-<li>L&#8217;<em>Agile Development</em> devient le <em>Fragile Development</em>, où il faut commiter le plus vite possible pour faire remonter les problèmes le plus rapidement possible.</li>
-<li>Et ainsi de suite&#8230;</li>
-</ul>
-
-
-<p>Bref, une très bonne session, plein d&#8217;humour, de graphiques sans queue ni tête. Excellent !</p>
-
-<hr/>
-
-
-<p>Je passerais rapidement sur la session suivante à laquelle j&#8217;ai assisté, sur Java 8 et les closures. Le sujet a déjà été abordé plusieurs fois, le contenu n&#8217;était pas inintéressant, mais au bout de 50 slides de 20 lignes chacun, j&#8217;avais une certaine indigestion. Un conseil si vous voulez faire une présentation attractive : pensez <strong>Présentation Zen</strong> !</p>
-
-<hr/>
-
-
-<h2><a href="http://devoxx.com/display/DV12/Behaviour+Driven+Development+on+the+JVM+-+a+State+of+the+Union">BDD on the JVM, a state of the Union</a></h2>
-
-<p><img src="http://linsolas.github.com/images/Devoxx2012-BDD.jpg" alt="BDD State of the union"/></p>
-
-<p><a href="http://devoxx.com/display/DV12/John+Smart">John Smart</a> nous présente le BDD, <em>Behavior Driven Development</em>, et en particulier son intégration au sein de l&#8217;écosystème Java.
-La première partie est un rappel de ce qu&#8217;est le BDD, dont le but principal est l&#8217;écriture dans un langage commun à toutes les parties d&#8217;un projet (développeurs, analystes, testeurs, etc.) de spéfications exécutables. L&#8217;idée étant d&#8217;écrire un scénario en partant d&#8217;un contexte (<em>Given</em>), d&#8217;une action (<em>When</em>), on s&#8217;attend à un résultat précis (<em>Then</em>).</p>
-
-<p>La seconde partie concernait les outils, en particulier :</p>
-
-<ul>
-<li><a href="http://jbehave.org/">JBehave</a></li>
-<li><a href="http://cukes.info/">Cucumber</a></li>
-<li><a href="http://www.easyb.org/">EasyB</a></li>
-<li><a href="http://java.net/projects/thucydides/">Thucydides</a></li>
-<li><a href="http://code.google.com/p/spock/">Spock</a> qui utilise la syntaxe Groovy pour l&#8217;écriture des tests. Il s&#8217;agit toutefois là d&#8217;un outil plutôt destiné au BDD pour les développeurs.</li>
-<li><a href="http://etorreborre.github.com/specs2/">Spec2</a>, ou le BDD pour Scala.</li>
-<li><a href="http://pivotal.github.com/jasmine/">Jasmine</a>, dédié au langage JavaScript.</li>
-</ul>
-
-
-<p>A vrai dire, les syntaxes des solutions de BDD pour Java sont très similaires. Voyons par exemple celle de Cucumber :</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Feature:
-</span><span class='line'>In order to increase sales of advertised articles
-</span><span class='line'>As a Seller
-</span><span class='line'>I want buyers to be able to easily find ads for articles they want to buy
-</span><span class='line'>
-</span><span class='line'>Scenario: Search by keyword and location
-</span><span class='line'>
-</span><span class='line'>Given Sally wants to buy a "puppy" for her son
-</span><span class='line'>When she looks for "puppy" in the "Pets and animals" category
-</span><span class='line'>Then she should obtain a list of "puppy" ads</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Ces scénarios sont écrits en anglais (voire même en français) avec de <em>vraies phrases</em>, et donc sont accessibles aussi à des non techniciens (par exemple, les analystes business pourront eux mêmes écrire ces tests). Derrière cela, des classes JUnit seront écrites pour &#8220;traduire&#8221; le langage Cucumber en Java, pour initialiser le contexte (<code>Given</code>), réaliser des actions (<code>When</code>) et les vérifications (<code>Then</code>).</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">SearchAdsSteps</span> <span class="o">{</span>
-</span><span class='line'>  
-</span><span class='line'>  <span class="nd">@Steps</span>
-</span><span class='line'>  <span class="n">BuyerSteps</span> <span class="n">buyer</span><span class="o">;</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="nd">@Given</span><span class="o">(</span><span class="s">&quot;^Sally wants to buy a \&quot;([^\&quot;]*)\&quot; for her son$&quot;</span><span class="o">)</span>
-</span><span class='line'>  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">buyingAPresent</span><span class="o">(</span><span class="n">String</span> <span class="n">present</span><span class="o">)</span> <span class="o">{</span>
-</span><span class='line'>      <span class="n">buyer</span><span class="o">.</span><span class="na">open_home_page</span><span class="o">();</span>
-</span><span class='line'>  <span class="o">}</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="nd">@When</span><span class="o">(</span><span class="s">&quot;^she looks for \&quot;([^\&quot;]*)\&quot; in the \&quot;([^\&quot;]*)\&quot; category$&quot;</span><span class="o">)</span>
-</span><span class='line'>  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addSearchCategoryAndKeyword</span><span class="o">(</span><span class="n">String</span> <span class="n">category</span><span class="o">,</span> <span class="n">String</span> <span class="n">keyword</span><span class="o">)</span> <span class="o">{</span>
-</span><span class='line'>      <span class="n">buyer</span><span class="o">.</span><span class="na">choose_category_and_keyword</span><span class="o">(</span><span class="n">category</span><span class="o">,</span> <span class="n">keyword</span><span class="o">);</span>
-</span><span class='line'>      <span class="n">buyer</span><span class="o">.</span><span class="na">perform_search</span><span class="o">();</span>
-</span><span class='line'>  <span class="o">}</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="nd">@Then</span><span class="o">(</span><span class="s">&quot;she should obtain a list of \&quot;([^\&quot;]*)\&quot; ads&quot;</span><span class="o">)</span>
-</span><span class='line'>  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">shouldOnlySeeAdsContainingKeyword</span><span class="o">(</span><span class="n">String</span> <span class="n">keyword</span><span class="o">)</span> <span class="o">{</span>
-</span><span class='line'>      <span class="n">buyer</span><span class="o">.</span><span class="na">should_only_see_results_with_titles_containing</span><span class="o">(</span><span class="n">keyword</span><span class="o">);</span>
-</span><span class='line'>  <span class="o">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Cucumber JVM dispose donc d&#8217;annotations propres aux mots clés des <em>features</em> (comme <code>@When</code>), qui prend en argument la phrase du test lui-même, sous forme d&#8217;expression régulière. On voit également que les éléments variables de ces phrases sont directement passés en paramètre à la méthode de test.</p>
-
-<p>Bref, une bonne session pour se familiariser avec le BDD, ou de connaitre un peu mieux les outils.</p>
-
-<p>Retrouvez <a href="http://fr.slideshare.net/wakaleo/bdd-stateoftheunion">les slides sur SlideShare</a></p>
-
-<hr/>
-
-
-<h2><a href="http://devoxx.com/display/DV12/Code+Story">Code Story</a></h2>
-
-<p>Je m&#8217;accorde ensuite une petite pause, pour discuter avec quelques personnes, visiter les stands, et assister un peu à <a href="http://code-story.net/">Code Story</a>. Les 4 compères français réédite leur performances de Devoxx France, à savoir de coder en <em>live</em> une application. Cette fois-ci, ils ont développé une application de &#8220;combat&#8221;, disponible <a href="http://fight.code-story.net/">ici</a>. Le principe : on rentre 2 mots clé (nom d&#8217;un speaker, d&#8217;une session, etc.), et l&#8217;application donne le résultat du combat. Ce score dépend - je crois - des votes que les internautes avaient préalablement donné sur les sessions. Le <a href="https://github.com/CodeStory/code-story-fight">code final est sur GitHub</a>.
-Encore une fois, une très belle session, mais hélas pas aussi populaire qu&#8217;à Devoxx France. Le fait qu&#8217;ils n&#8217;aient pas eu une salle à eux, et qu&#8217;ils soient situés dans le grand hall, un peu trop bruyant, n&#8217;a sans doute pas aidé. Un manque de publicité lors de la keynote a pu aussi jouer en leur défaveur.</p>
-
-<hr/>
-
-
-<h2><a href="http://www.devoxx.com/display/DV12/The+Chrome+Dev+Tools+can+do+THAT">The Chrome Dev Tools can do THAT</a></h2>
-
-<p><img src="http://linsolas.github.com/images/Devoxx2012-ChromDevTools.JPG" alt="Chrome can do THAT"/></p>
-
-<p>Les speakers de Google présents à Devoxx sont des bons. Celui qui a présenté Chrome Dev Tools, <a href="http://www.devoxx.com/display/DV12/Ilya+Grigorik">Ilya Grigorik</a> ne déroge pas à la règle. Ce développeur Google nous présente donc <a href="https://developers.google.com/chrome-developer-tools/docs/overview">Chrome Dev Tools</a> et ses fonctionnalités.</p>
-
-<p>On commence avec du classique, rien de super impressionnant, moi qui utilise fréquemment Firebug (je n&#8217;ai hélas pas accès à Chrome à mon boulot) : édition du HTML, CSS, JavaScript, etc. Quelques fonctionnalités intéressantes sont là, comme le glisser - déposer qui permet de modifier le DOM facilement.
-Ilya passe ensuite sur la présentation du <em>Network Timeline</em>, qui nous montre où passe le temps quand on charge une page : le temps d&#8217;attente pour obtenir une ressoure, le temps de la télécharger, sa taille (compressée et totale). Chrome Dev Tools indique qui a demandé la ressource (ça peut être la page, un script, etc.). Ces données sont importantes, et permettent de mieux ordonner le chargement des ressources pour accélerer l&#8217;affichage de la page. Toutes ces informations sont également exportables sous un format HAR, ce qui permet par exemple d&#8217;attacher ces informations dans un ticket JIRA en cas de souci, d&#8217;analyser ces trames plus tard, etc.</p>
-
-<p>Par la suite, Ilya nous explique que la fluidité de son site est aussi un critère extrêmement important pour l&#8217;utilisateur. Cela est particulièrement vrai dès que l&#8217;on intègre des animations (en JS ou CSS) dans sa page, et que l&#8217;utilisateur scrolle en même temps. Chrome Dev Tools dispose d&#8217;outils pour comprendre où le navigateur va passer son temps durant des animations, ce qui est très instructif, bien qu&#8217;il me semble qu&#8217;on arrive là à un niveau assez élevé d&#8217;optimisation&#8230; Ici aussi, les données sont exportables (sous format JSon) pour une analyse ultérieure.</p>
-
-<p>Chrome Dev Tools a également un outil de profilage permettant de détecter des fuites mémoire, ainsi qu&#8217;un outil d&#8217;audit. Ce dernier va inspecter de très nombreux points sur votre site, permettant de gagner ci ou là quelques millisecondes. Ilya nous montre ainsi l&#8217;exemple du site de la CNN, où l&#8217;outil d&#8217;audit détecte que beaucoup d&#8217;images pourraient être allégées en utilisant un meilleur algorithme de compression. Chrome Dev Tools va même à montrer en exemple l&#8217;image ainsi compressée ! Je trouve ça excellent, et il manque juste à mon avis un bouton &#8221;<em>Ok, commit that to Git</em>&#8221; :)
-Chrome Dev Tools est également compatible avec <a href="https://developers.google.com/speed/pagespeed/insights">PageSpeed Insight</a> qui liste différentes améliorations de performances.</p>
-
-<p>Ilya nous montre ensuite l&#8217;extensibilité de Chrome Dev Tools, en détaillant le protocole utilisé par l&#8217;outil pour faire par exemple du débogage à distance. Ainsi, il devient facile de lancer un navigateur sur un téléphone Android, et de tout analyser dans un autre navigateur Chrome, installé par exemple sur son laptop. Comme Chrome expose toutes les données via un WebSocket, il est même possible d&#8217;interagir avec d&#8217;autres logiciels que Chrome. C&#8217;est ainsi qu&#8217;il est possible de débugguer une application iOS grâce à Chrome !</p>
-
-<p>La présentation se termine par l&#8217;outil de <em>benchmark</em> grâce auquel il est possible d&#8217;analyser les performances de son site.</p>
-
-<p>Au final, nous avons eu une conférence technique de haut niveau, avec des fonctionnalités vraiment épatantes de la part de Chrome, bien que certaines sont à mon avis bien trop précise pour être vraiment utile (sauf si on veut aussi débugguer Chrome lui-même :) ).</p>
-
-<p>La présentation est <a href="http://www.igvita.com/slides/2012/devtools-tips-and-tricks/#1">visible en ligne</a>.</p>
-
-<hr/>
-
-
-<p>Voilà, c&#8217;est tout (!) pour une première journée déjà très chargée, bien qu&#8217;amputée d&#8217;une grosse partie de la matinée à cause des grèves. La soirée se terminera dans le bar / restaurant à côté du Métropolis, l&#8217;Axxis, où l&#8217;on a retrouvé une partie des développeurs Play! de Belgique (peu nombreux) ainsi que des frenchies (dont Nicolas Martignole). Retour à l&#8217;hôtel vers 23h / 23h30, presque prêt à attaquer la 2e journée !</p>
 ]]></content>
   </entry>
   
