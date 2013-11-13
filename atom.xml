@@ -4,7 +4,7 @@
   <title><![CDATA[fr.romain:blog:3.0]]></title>
   <link href="http://linsolas.github.com/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2013-11-12T19:44:39+01:00</updated>
+  <updated>2013-11-13T17:13:11+01:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -12,6 +12,164 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Devoxx 2013 - premier jour]]></title>
+    <link href="http://linsolas.github.com/blog/2013/11/13/devoxx-2013-premier-jour/"/>
+    <updated>2013-11-13T08:56:00+01:00</updated>
+    <id>http://linsolas.github.com/blog/2013/11/13/devoxx-2013-premier-jour</id>
+    <content type="html"><![CDATA[<p><img src="http://linsolas.github.com/images/devoxx_logo.gif" title="Devoxx 2013" alt="Devoxx 2013" /></p>
+
+<p>Et voilà, ma deuxième expérience belge de Devoxx est entamée.</p>
+
+<!-- more -->
+
+
+<h2><a href="http://devoxx.be/dv13-sven-peters.html?presId=3143">How To Do Kick-Ass Software Development</a></h2>
+
+<p><img src="http://linsolas.github.com/images/note-4.png" title="4/5" alt="4/5" /></p>
+
+<p><img src="http://linsolas.github.com/images/devoxx-2013-kickass.jpg" title="Kick-ass development" alt="Kick-ass Development" /></p>
+
+<p>J&#8217;ai choisi cette présentation de <a href="https://twitter.com/@svenpet">Sven Peters</a> d&#8217;Atlassian, car j&#8217;avais beaucoup apprécié sa présentation l&#8217;année passée sur <a href="http://linsolas.github.io/blog/2012/11/18/devoxx-2012-jour-1/">7 things to make a good team great</a>. Il y présentait 7 trucs pour rendre une bonne équipe encore meilleure. C&#8217;est d&#8217;ailleurs lors de cette présentation qu&#8217;il m&#8217;est venue l&#8217;idée de mettre les <a href="http://www.brownbaglunch.fr">Brown Bag Lunch</a> à la SGCIB (via l&#8217;idée &#8221;<em>Feed you brain</em>&#8221;), peu de temps avant que ce mouvement ne prenne de l&#8217;ampleur en France.</p>
+
+<p>Sven s&#8217;est intéressé au film <a href="http://www.imdb.com/title/tt1250777/">Kick-Ass</a>, où une personne quelconque souhaite devenir un super-héros, juste en portant un costume. Forcément, au début il se fait dérouiller, mais persiste. Et c&#8217;est le message de Sven : se prendre des gamèles, mais toujours se relever.</p>
+
+<p>Mais que souhaite t-on atteindre avec son équipe ?</p>
+
+<ul>
+<li>un meilleur software ;</li>
+<li>moins d&#8217;<em>overhead</em> ;</li>
+<li>un développement plus rapide ;</li>
+<li>des clients heureux ;</li>
+<li>des développeurs heureux.</li>
+</ul>
+
+
+<p>Il y a quelques temps, la solution à tous les problèmes était l&#8217;agilité. Mais qu&#8217;en est-il en 2013 ?
+Le problème de toute méthodologie ou technologie c&#8217;est qu&#8217;au début c&#8217;est super, mais très vite les soucis commencent à surgir, jusqu&#8217;à s&#8217;apercevoir que cette solution ne résoud pas tous les problèmes (voir la <a href="http://en.wikipedia.org/wiki/Hype_cycle">Gartner Hype Curve</a>).</p>
+
+<p>Il faut toujours garder à l&#8217;esprit de construire la bonne chose (&#8221;<em>Building the right thing</em>&#8221;).
+Une idée est le &#8221;<em>Fake it til you make it</em>&#8221;.
+Sven nous montre l&#8217;exemple à ne pas suivre avec le <a href="http://en.wikipedia.org/wiki/Microsoft_Kin">téléphone Kin</a> de Microsoft. Censé être très adapté à la nouvelle génération, il fut un échec très retentissant, sorti de la vente à peine au bout de deux semaines, et aura fait perder plus d&#8217;un milliard de dollars à la firme !</p>
+
+<p><img src="http://www.digitaltrends.com/wp-content/uploads/2010/06/043775-microsoft-kin.jpg" title="Microsoft Kin" alt="Image Microsoft Kin" /></p>
+
+<p>A l&#8217;opposé, IBM a voulu tester une application de reconnaissance vocale.
+Plutôt que de développer un système complexe, ils ont triché en mettant une personne réelle dont le rôle était d&#8217;exécuter les tâches dictées par un cobaye. L&#8217;expérimentation n&#8217;ayant pas convaincue, il fut décidé que l&#8217;application réelle ne serait pas développée.</p>
+
+<p>Passons à l&#8217;importance du feedback. Celui-ci doit répondre à trois critères :</p>
+
+<ul>
+<li>facile à trouver ;</li>
+<li>simple ;</li>
+<li>rapide à soumettre.</li>
+</ul>
+
+
+<p>Il ne faut pas embêter directement les développeurs avec les feedbacks. Par exemple, pour l&#8217;équipe GMail, il y a 100 développeurs pour 425M utilisateurs. Imaginer que ce soit les développeurs qui traitent directement les feedbacks des utilisateurs. Le développement de l&#8217;application n&#8217;avancerait jamais.
+Cependant, tous doivent être conscients de ce qui ne va pas.</p>
+
+<p>Chaque jour, l&#8217;équipe d&#8217;Atlassian se réunit 45 minutes pour revoir ces feedbacks et en faire quelque chose de personnel.
+De plus, chaque développeur passe une semaine par an au support de premier niveau, pour être en contact directement avec les problèmes des utilisateurs.</p>
+
+<p>Autre point, ce qu&#8217;ils appellent le <em>Developer on Test</em>. Il s&#8217;agit de faire remplir le rôle de testeur aux développeurs.
+Pour cela, six astuces :</p>
+
+<ul>
+<li>Le training. Comment penser comme un testeur ?</li>
+<li>Faire du <em>pairing</em> entre un testeur et un développeur.</li>
+<li><em>Blitz Test</em> : durant une journée, toute la compagnie - et pas seulement les développeurs et les testeurs - teste une nouvelle vesion.</li>
+<li>Définir des recettes de tests.</li>
+<li>Instaurere des sessions séparées : pendant une heure, deux équipes testent les mêmes choses, puis comparent leurs résultats.</li>
+<li>La chasse aux bugs : pendant une semaine, un développeur est dédié à la chasse aux bugs sur tous les éléments marqués comme Terminés.</li>
+</ul>
+
+
+<p>Sven nous rappelle alors que &#8220;La qualité est la responsabilité de chacun&#8221;.</p>
+
+<p>Sven passe ensuite sur le design. A Atlassian, les développeurs font aussi du design.
+Ils n&#8217;étaient pas forcément mauvais, mais cela avait tendance à partir dans tous les sens.
+Ce dont ils ont besoin, c&#8217;est de lignes directrices, de <em>design guidances</em> (<a href="https://developer.atlassian.com/design">les guidlines de design d&#8217;Atlassian</a>).</p>
+
+<p>Ils organisent également des workshops pour les développeurs.</p>
+
+<p>Comme un développement complet requiert la collaboration de plusieurs départements, il est important de supprimer les frictions qui peuvent apparaitre entre eux.</p>
+
+<p>Atlassian définit également des <em>guidelines</em> pour le développement. Ainsi, pour chaque tâche une branche est créée sur Git.
+Leur durée de vie est ainsi très courte (environ 2 jours).
+Puis, pour merger le code, ils passent par des <em>push requests</em>, ce qui fait que le nouveau code est revu et validé par ses pairs. Ce nouveau code n&#8217;est donc plus de la responsabilité d&#8217;un seul développeur.</p>
+
+<p>Dernier point : l&#8217;automatisation. Le principe est d&#8217;échouer rapidement (<em>Fail fast</em>). 4 choses à retenir :</p>
+
+<ul>
+<li>Mettre à disposition les artifacts générés.</li>
+<li>Paralleliser les tests pour les accélérer.</li>
+<li>Avoir une stratégie de builds. Créer des couches de tests selon leur catégorie, leur intérêt.</li>
+<li>Toujours avoir un oeil sur les statistiques. Savoir par exemple ce qui prend du temps sur un build, pour être en mesure de l&#8217;accélérer.</li>
+</ul>
+
+
+<p>Encore une belle présentation de Sven Peters.</p>
+
+<h2><a href="http://devoxx.be/dv13-chet-haase.html?presId=3193">Patterns, Shmatterns</a></h2>
+
+<p><img src="http://linsolas.github.com/images/note-4.png" title="4/5" alt="4/5" /></p>
+
+<p>Pourquoi cette présentation ? Tout simplement pour son orateur, <a href="https://twitter.com/@chethaase">Chet Haase</a>. L&#8217;année passée, il avait aussi présenté un Quickie (<a href="">The Future of Software Development Process Methodology Effectiveness</a>) qui avait été un beau succès.</p>
+
+<p>Encore une fois, la salle était comble. Chet Haase a cette fois-ci passé en revue un certain nombre de patterns et les a comparé avec ses propres patterns, ce qui en faisait quelque chose d&#8217;assez drôle.</p>
+
+<p><img src="http://linsolas.github.com/images/devoxx-2013-chethaase.jpg" title="Le design pattern Refactory" alt="Le design pattern Refactory" /></p>
+
+<h2><a href="http://devoxx.be/dv13-sven-peters.html?presId=3144">Don&#8217;t use Git</a></h2>
+
+<p><img src="http://linsolas.github.com/images/note-4.png" title="4/5" alt="4/5" /></p>
+
+<p>A nouveau, <a href="https://twitter.com/@svenpet">Sven Peters</a> sur la scène. Le titre de la conférence peut paraître provocateur, tant Git est utilisé partout (Atlassian a même Stash dans son catalogue, un gestionnaire de repositories Git).
+Mais cela est en fait une façon de promouvoir ce système de gestion de sources.</p>
+
+<p>Sous le ton de l&#8217;ironie, Sven essaie de démonter les arguments qui font de Git un vrai succès. Git permet de travailler en mode déconnecté ? Mais c&#8217;est la fin du travail collaboratif ! Git rend les merges faciles et presque automatiques ? Mais le travail de merge sur SVN est une ôde à la cohésion d&#8217;équipe&#8230;</p>
+
+<p>Bien entendu, tout cela n&#8217;est que prétexte pour montrer en quoi Git est supérieur aux anciens gestionnaires de sources comme SVN.</p>
+
+<h2><a href="http://devoxx.be/dv13-nikolay-chashnikov.html?presId=3772">Efficient coding in IntelliJ IDEA</a></h2>
+
+<p><img src="http://linsolas.github.com/images/note-2.png" title="2/5" alt="2/5" /></p>
+
+<p><a href="http://devoxx.be/dv13-nikolay-chashnikov.html?presId=3772">Nikolay Chashnikov</a> est aux commandes pour nous montrer comment bien maitriser son IDE IntelliJ IDEA de JetBrains.
+Après pas mal d&#8217;essais ratés, je suis finalement passé définitivement sur cet IDE depuis un an, et clairement, je ne reviendrais pas en arrière. Mais je suis conscient de n&#8217;utiliser qu&#8217;une toute petite partie des capacités de l&#8217;outil. J&#8217;attends donc de cette session qu&#8217;elle me donne plein de bons conseils.</p>
+
+<p>Hélas, je resterais sur ma faim. Une bonne première partie de la session montre surtout les capacités d&#8217;autocomplétion proposées par IntelliJ. Le reste est avant tout la découverte (ou non) d&#8217;un certain nombre de raccourcis claviers. Bref, pas grand chose à se mettre sous la dent, si ce n&#8217;est 2 ou 3 nouveaux raccourcis. C&#8217;est chez payé pour une conférence d&#8217;une heure !</p>
+
+<p>Je pense que cette session peut être intéressante pour une personne utilisant Eclipse et souhaitant comprendre pourquoi IntelliJ est si puissant. Mais pour un utilisateur d&#8217;IntelliJ, même un non expert comme moi, peu d&#8217;informations à en tirer. Dommage.</p>
+
+<h2><a href="http://devoxx.be/dv13-tugdual-grall.html?presId=3281">Elastify your app: from SQL to NoSQL in less than one hour!</a></h2>
+
+<p><img src="http://linsolas.github.com/images/note-4.png" title="4/5" alt="4/5" /></p>
+
+<p>J&#8217;avais déjà assisté à cette présentation <a href="">lors de Devoxx France 2013</a>, toujours faite par <a href="https://twitter.com/@tgrall">Tugdual Grall</a> et <a href="https://twitter.com/@dadoonet">David Pilato</a>.
+Je me suis dit que j&#8217;allais quand même y jeter un oeil pour mieux l&#8217;apprécier.</p>
+
+<p><img src="http://linsolas.github.com/images/devoxx-2013-elastify.jpg" title="Elastify your application" alt="Elastify your application" /></p>
+
+<p>N&#8217;hésitez pas à relire <a href="http://linsolas.github.io/blog/2013/03/28/devoxx-france-2013-jour-2/">mon résumé lors de Devoxx France 2013</a>.</p>
+
+<h2><a href="http://devoxx.be/dv13-attila-szegedi.html?presId=3732">The Curious Case of JavaScript on the JVM</a></h2>
+
+<p><img src="http://linsolas.github.com/images/note-3.png" title="3/5" alt="3/5" /></p>
+
+<p>J&#8217;aime Java, j&#8217;aime le JavaScript. Je me dis qu&#8217;une session mélangeant les deux pourrait être intéressante.
+Je me décide donc d&#8217;aller voir ce qu&#8217;en dit <a href="https://twitter.com/@szegedi">Attila Szegedi</a>.
+Il y était question de <a href="http://openjdk.java.net/projects/nashorn/">Nashorn</a>, qui est l&#8217;implémentation d&#8217;un <em>runtime</em> JavaScript hautes performances sur la JVM.</p>
+
+<p>En gros, on écrit du JavaScript mélangé à du Java - à moins que ce ne soit l&#8217;inverse ? A noter que Nashorn devrait être <em>normalement</em> inclus dans le JDK 1.8.</p>
+
+<p>J&#8217;ai un peu de mal à voir l&#8217;intérêt de ce mélange, mais pourquoi pas. C&#8217;est aussi ce genre de chose qui fait la richesse de la plateforme de la JVM :)</p>
+
+<p>Voilà une première journée déjà bien intéressante, j&#8217;attends avec impatience la deuxième fournée de conférences, qui s&#8217;annonce de belle qualité.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Mon programme pour Devoxx 2013]]></title>
@@ -2994,179 +3152,6 @@ Au programme pour moi : de l&#8217;Elastic Search, et le podcast des Cast Codeur
 <p>Voilà, l&#8217;édition 2012 de Devoxx s&#8217;achève, il est temps de rentrer en France, avec un retour bien moins chaotique que l&#8217;aller, à voyager avec quelques personnes sympathiques dont Mathilde Lemée, Antonio Goncalves, ou encore José Paumard.</p>
 
 <p>Allez, pour rester dans l&#8217;esprit Devoxx, aujourd&#8217;hui s&#8217;est ouverte <a href="https://cfp.devoxx.com/">la soumission des sujets pour Devoxx France et Devoxx UK</a> (CFP, <em>Call For Paper</em>), et en moins d&#8217;une demi-heure, déjà 5 sujets ont été soumis ! Ne tardez pas trop, le CFP ferme fin janvier&#8230;</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Devoxx 2012 - Jour 2]]></title>
-    <link href="http://linsolas.github.com/blog/2012/11/20/devoxx-2012-jour-2/"/>
-    <updated>2012-11-20T08:58:00+01:00</updated>
-    <id>http://linsolas.github.com/blog/2012/11/20/devoxx-2012-jour-2</id>
-    <content type="html"><![CDATA[<p>Après <a href="http://linsolas.github.com/blog/2012/11/18/devoxx-2012-jour-1/">une première journée bien remplie</a>, place à la deuxième journée, qui s&#8217;annonce très chargée elle aussi&#8230;</p>
-
-<!-- more -->
-
-
-<h2>&#8220;Annonce&#8221; JBoss</h2>
-
-<p>La journée commence par 2 sessions plénières. Tout d&#8217;abord, une &#8220;annonce&#8221; par JBoss. Voilà un exemple parfait d&#8217;annonce ratée. Dans les faits, JBoss veut renommer son serveur d&#8217;applications (JBoss AS) et nous demande donc de <a href="http://www.jboss.org/vote">voter</a> pour notre préférence, parmi les noms suivants :</p>
-
-<ul>
-<li>BaseJump</li>
-<li>WildFly</li>
-<li>jBeret</li>
-<li>Petasos</li>
-<li>Jocron</li>
-</ul>
-
-
-<p>Personnellement, je ne les trouve pas terrible, le 4e est carrément affreux (du moins en français). Bref, on s&#8217;ennuie. Le bon côté des choses, c&#8217;est que cela ne dure que 10 minutes. Place à Google !</p>
-
-<h2>Google, Life online</h2>
-
-<p>Durant environ une heure, nous avons un discours de <a href="http://www.devoxx.com/display/DV12/Tim+Bray">Tim Bray</a> qui a parlé de la vie en ligne (<em>Life online</em>), ainsi que quelques démonstrations - plus commerciales que techniques - de certains produits de Google.
-Tim Bray a donc abordé le sujet de la vie en ligne, en insistant particulièrement sur un point : la sécurité. Premièrement, il est absolument indispensable de mettre en place le HTTPS sur son site, car il est de notre responsabilité de sécuriser la connexion avec nos utilisateurs. Certes cela coûte un peu d&#8217;argent (la génération des certificats étant payante), mais cela est simplement vital. Un autre message de Tim Bray concernait les mots de passe. Utiliser un même mot de passe pour plusieurs sites est généralement une mauvaise idée, on l&#8217;a vu récément avec le piratage de LinkedIn, laissant filer dans la nature des millions de mot de passes. Il insiste aussi sur l&#8217;intérêt d&#8217;utiliser les authentifications par tiers, comme avec Google, Twitter ou Facebook, bien que tous ces boutons enlaidissent un peu les pages de connexions&#8230;
-Dernier point important, la vérification en deux étapes, que tout le monde devrait adopter pour son compte Google. Le principe est d&#8217;utiliser une 2e méthode d&#8217;authentification en plus du mot de passe, à savoir un code reçu par texto pour se logguer. Si cette opération peut paraitre un peu contraignante, il n&#8217;en est rien en réalité, et cela peut vous éviter de bien graves désagréments, comme cela a pu arriver <a href="http://www.wired.com/gadgetlab/2012/08/apple-amazon-mat-honan-hacking/all/">à certaines personnes</a>.</p>
-
-<p>Bref, un discours pas forcément joyeux, mais plein de remarques de bon sens. La suite sera un peu plus légère, avec entre autre la présentation des nouveaux produits de Google, en particulier <a href="http://www.google.fr/nexus/4/">le téléphone Nexus 4</a>, <a href="http://www.google.fr/nexus/10/">la tablette Nexus 10</a>, ainsi que <a href="http://www.android.com/">la dernière version d&#8217;Android, Jelly Bean 4.2</a>. De bien belles machines, présentées par <a href="http://www.devoxx.com/display/DV12/Chet+Haase">Chet Haase</a> ainsi que <a href="http://www.android.com/">Romain Guy</a>, bien que le discours paraissait plutôt commercial&#8230;</p>
-
-<p><img src="http://linsolas.github.com/images/Devoxx2012-Google.JPG" alt="Présentation de la dernière version d'Android sur le Nexus 10 par Romain Guy"/></p>
-
-<p>Il a été aussi question des nouveautés de Google App Engine, comme l&#8217;intégration de Jenkins grâce à Cloudbees, ainsi que d&#8217;une fonctionnalité très intéressante, le <a href="https://developers.google.com/appengine/docs/adminconsole/trafficsplitting">Traffic Splitting</a>. L&#8217;idée est de dire à GAE de rediriger une partie du trafic de son site (exprimée en %) vers une autre version de son application, pour par exemple, permettre à quelques utilisateurs de tester la toute dernière version de son site. Simple et pratique !</p>
-
-<hr/>
-
-
-<h2><a href="http://www.devoxx.com/display/DV12/Bean+Validation+1.1++it%27s+not+Beansland+anymore">Bean Validation 1.1: It&#8217;s not beansland anymore</a></h2>
-
-<p><img src="http://linsolas.github.com/images/Devoxx2012-Validation.JPG" alt="Bean Validation"/></p>
-
-<p>Allons jeter un oeil maintenant sur la présentation d&#8217;<a href="http://www.devoxx.com/display/DV12/Emmanuel+Bernard">Emmanuel Bernard</a> sur la nouvelle version de Bean Validation (<a href="http://jcp.org/en/jsr/detail?id=349">JSR 349</a>).</p>
-
-<h3>Rappels sur la version 1.0</h3>
-
-<p>Tout d&#8217;abord, un petit rappel de la version 1.0, qui a défini les bases de la validation, son standard. Des frameworks comme JPA, JSF, GWT, etc. l&#8217;utilisent déjà, ce qui est une bonne chose.
-Des contraintes existent déjà, comme <code>@NotNull</code>, <code>@Size</code>, etc. Il est toutefois possible de créer ses propres contraintes, tel que <code>@ZipCode</code>.
-La notion de groupes avait aussi été introduite : validation partielle, ordre des contraintes. On définit un groupe comme ceci :</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="nd">@NotNull</span><span class="o">(</span><span class="n">group</span><span class="o">=</span><span class="n">BasicPostal</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
-</span><span class='line'><span class="n">String</span> <span class="n">street</span><span class="o">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nd">@ZipCode</span><span class="o">(</span><span class="n">group</span> <span class="o">=</span> <span class="n">BasicPostal</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
-</span><span class='line'><span class="n">String</span> <span class="n">zipCode</span><span class="o">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Le groupe étant une interface, ce qui plus facile à en contrôler la validité d&#8217;un point de vue du code qu&#8217;une chaine de caractères.</p>
-
-<h3>Bean Validation 1.1</h3>
-
-<p>Les annotations de Bean Validation peuvent être aussi utilisées pour valider des paramètres d&#8217;une fonction, d&#8217;un constructeur, comme par exemple ici :</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="n">User</span> <span class="nf">createUser</span><span class="o">(</span><span class="nd">@NotNull</span> <span class="n">String</span> <span class="n">name</span><span class="o">,</span> <span class="nd">@Past</span> <span class="n">Date</span> <span class="n">birthDate</span><span class="o">)</span> <span class="o">{</span> <span class="o">...</span> <span class="o">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Mais il est aussi possible de demander de valider un objet, voire un graphe d&#8217;objets grâce à <code>@Valid</code> :</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="n">Order</span> <span class="nf">createOrder</span><span class="o">(...,</span> <span class="nd">@Valid</span> <span class="n">User</span> <span class="n">user</span><span class="o">)</span> <span class="o">{</span> <span class="o">...</span> <span class="o">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Si l&#8217;on souhaite également valider la valeur retournée par une méthode, alors on ajoutera simplement l&#8217;annotation au niveau de la méthode elle-même.</p>
-
-<p>Emmanuel Bernard vient à poser une question à l&#8217;assemblée. Doit-on valider les getters? La majorité de la salle vote &#8220;Non&#8221;, considérant ainsi que les getters sont de simples accesseurs à une propriété, et qu&#8217;ils ne doivent donc pas lever d&#8217;exception si par exemple le champ à retourner vaut <code>null</code>. Le problème principal si l&#8217;on veut valider ces getters est que cela pourrait casser du code existant, car l&#8217;interprétation d&#8217;une violation peut être différente selon les frameworks.</p>
-
-<p>Autre nouveauté de la version 1.1 est l&#8217;introduction des conversions de groupes. Sous ce titre un peu barbare se cache la fonctionnalité qui permet d&#8217;altérer un groupe de validation lors du <em>cascading</em> de validation, c&#8217;est-à-dire que potentiellement, certaines règles de validation pourront être activées en fonction de la valeur de certains champs. Par exemple, on peut disposer de 2 types de validation d&#8217;une adresse : une validation simple et une validation complète, le choix de la validation étant fait selon certains critères du contexte.</p>
-
-<p>Bean Validation dispose également d&#8217;une meilleure intégration avec JAX-RS, JPA, CDI, etc. JAXB ne semble hélas pas faire partie du lot, les délais des JSR étant trop courts pour intégrer les nouveautés de la validation à JAXB.</p>
-
-<p>Question timing, <em>normalement</em>, la release du JCP est prévue pour mi-mars. Hibernate Validator 5 alpha 1 vient de sortir, donc si vous souhaitez y jeter un oeil, allez-y !</p>
-
-<hr/>
-
-
-<p>Il est l&#8217;heure de la pause déjeuner, je n&#8217;assiste pas aux sessions de midi, la salle où je voulais aller étant pleine. Un petit détour par Code Story, puis viennent les Quickies. Le premier, c&#8217;est <a href="http://www.devoxx.com/display/DV12/From+Zero+to+JavaEE+in+15+Minutes+%28or+Less%29">From Zero to JavaEE in 15 minutes</a>, présentée par <a href="http://www.devoxx.com/display/DV12/Koen+Aers">Koean Aers</a> ainsi qu&#8217;un autre collègue de JBoss. La démonstration consiste à utiliser JBoss Forge pour générer une application JSF à partir uniquement d&#8217;un schéma de base de données. L&#8217;application reste bien entendu basique, essentiellement destinée à des opérations de CRUD. Je suis moyennement convaincu, certes ça marche, mais j&#8217;ai déjà vu un peu mieux comme solutions, tel que <a href="http://www.jaxio.com/celerio.html">Celerio</a>, voire même Play! (qui ne génère certes pas le code depuis la base - quoique - mais qui dispose de toutes les briques pour faire du CRUD facilement).</p>
-
-<p>Le Quickie suivant était le mien, sur Hibernate Envers. Vous pouvez lire tout le détail dans <a href="http://linsolas.github.com/blog/2012/11/17/devoxx-2012-presentation-dhibernate-envers/">un billet précédent</a>.</p>
-
-<hr/>
-
-
-<h2><a href="http://devoxx.com/pages/viewpage.action?pageId=6391754">Javascript unit testing and build integration</a>&lt;</h2>
-
-<p><a href="http://devoxx.com/display/DV12/Wouter+Groeneveld">Wouter Groeneveld</a> nous parle des test en Javascript. A vrai dire, certaines parties m&#8217;ont rappelé <a href="http://www.devoxx.com/display/FR12/Chouchoutez+votre+code+JavaScript">ma session à Devoxx France</a>, la mienne ayant toutefois été plus axée sur la partie industrialisation, avec l&#8217;intégration de Sonar dans l&#8217;analyse du code. Wouter va plus dans le détail, en montrant les forces et les faiblesses des solutions proposées.</p>
-
-<p>Il part donc sur l&#8217;utilisation de <a href="http://pivotal.github.com/jasmine/">Jasmine</a> pour réaliser des tests du code Javascript, en montrant quelques exemples de code. Puis il en vient à la partie visuelle de son application. Comment la tester ? Tout d&#8217;abord, il opte pour Selenium, mais la relative lenteur et le besoin d&#8217;un navigateur sont des inconvénients assez importants dès que l&#8217;on a une grosse base de tests. Après avoir montré un runner spécifique, il parle de <a href="http://phantomjs.org/">PhantomJS</a>, un <em>headless browser</em> basé sur WebKit et offrant une API pour interagir avec le JavaScript. Du coup, plus besoin de &#8220;vrai&#8221; navigateur pour exécuter et tester son code JavaScript. Les tests s&#8217;exécutent très rapidement, le seul problème étant qu&#8217;aucun pont avec la JVM n&#8217;existe actuellement (les tests sont exécutés via Ant), et donc il n&#8217;y a pas vraiment d&#8217;intégration avec l&#8217;IDE ou un serveur d&#8217;intégration continue. Cela rend également le déboggage assez difficile.</p>
-
-<hr/>
-
-
-<h2><a href="http://devoxx.com/display/DV12/Code+but+not+as+we+know+it+-+Infrastructure+as+code">Code but not as we know it - Infrastructure as code</a></h2></h2>
-
-<p><a href="http://devoxx.com/display/DV12/Patrick+Debois">Patrick Debois</a> nous fait un état des lieux assez complet sur la gestion de la configuration, en parlant des principales solutions existantes aujourd&#8217;hui, à savoir :</p>
-
-<ul>
-<li><a href="http://cfengine.com/">CFEngine</a></li>
-<li><a href="http://puppetlabs.com/">Puppet</a></li>
-<li><a href="http://wiki.opscode.com/display/chef/Home">Chef</a></li>
-<li><a href="http://palletops.com/">Pallet</a></li>
-<li><a href="http://ansible.cc/">Ansible</a></li>
-</ul>
-
-
-<p>Il faut cependant dire qu&#8217;il insistera avant tout sur les deux plus connus, Puppet et Chef.
-En guise d&#8217;introduction, un rappel de pourquoi ces solutions existent, ainsi que des principes élémentaires, comme par exemple l&#8217;idempotence, qui stipule que si je relance le même &#8220;code&#8221;, jalors e dois retrouver le même état à chaque fois. Ensuite, une explication rapide mais claire sur le langage utilisé par ces outils, ainsi que quelques notions importantes à savoir.
-Par exemple, Puppet utilise des <em>manifests</em> (fichiers .pp), et fait une compilation du catalogue avant son exécution, alors que Chef, qui utilise des <em>recipes</em> (fichiers .rb), va réaliser une exécution linéaire des scripts.</p>
-
-<p>Ensuite, Patrick Debois nous parle d&#8217;outils, d&#8217;éditeurs, en nous citant quelques solutions :</p>
-
-<ul>
-<li>Lexers</li>
-<li>vi(m)</li>
-<li>Geppetto, un plugin Eclipse</li>
-<li>JetBrains Rubymine support for Puppet</li>
-</ul>
-
-
-<p>Grâce à tout cela, ce domaine se rapproche de plus en plus à notre domaine de prédilection, le développement logiciel. On voit apparaitre des notions de règle de &#8220;codage&#8221;, de patterns ou d&#8217;anti-patterns, voire même de tests et de déboggage (bien que cela est encore très restreint).
-C&#8217;est un sujet qui ne tient bien évidemment pas en une heure, mais cette session a le mérite d&#8217;exposer clairement la situation actuelle en la matière. A approfondir !</p>
-
-<hr/>
-
-
-<h2><a href="http://www.devoxx.com/display/DV12/Re-imagining+the+browser+with+AngularJS">Re-imagining the browser with AngularJS</a></h2>
-
-<p>La conférence sur <a href="http://angularjs.org/">AngularJS</a> présentée par <a href="http://www.devoxx.com/display/DV12/Igor+Minar">Igor Minar</a> et <a href="http://www.devoxx.com/display/DV12/Misko+Hevery">Miško Hevery</a> est, de l&#8217;avis d&#8217;une majorité des spectateurs, LA conférence qu&#8217;il fallait voir à Devoxx. Elle était quasi-parfaite sur tous les plans : 2 speakers excellents et parfaitement complémentaires, présentant un numéro sans faille, sur une technologie très attrayante. Bref, du 10/10.</p>
-
-<p>Cette conférence m&#8217;a vraiment beaucoup plu, et je vais essayer de faire un billet spécifiquement sur elle d&#8217;ici quelques jours. En attendant, les slides <a href="https://github.com/strangeloop/strangeloop2012/blob/master/slides/sessions/Hevery-Re-imagining%20the%20browser%20with%20AngularJS.pdf">sont visibles sur Internet</a>, bien qu&#8217;une bonne partie de la présentation était une démo&#8230;</p>
-
-<hr/>
-
-
-<h2><a href="http://devoxx.com/display/DV12/Progressing+Parleys.com%2C+a+Java+based+e-Learning+platform">Progressing Parleys</a></h2>
-
-<p>Pour la dernière conférence de la journée, je choisis de m&#8217;intéresser à l&#8217;évolution de Parleys. <a href="http://www.parleys.com/">Parleys.com</a> est un site hébergeant de nombreuses vidéos liées à l&#8217;informatique, ainsi que toutes les sessions des Devoxx, et certains JUG (<em>Java Users Group</em>). <a href="http://devoxx.com/display/DV12/Stephan+Janssen">Stephan Janssen</a> l&#8217;a créé en 2006. Il est également le fondateur du JUG Belge (BeJUG), et, excusez du peu, fondateur également de Devoxx (Javapolis à l&#8217;origine).
-Bref, lors de cette session, Stephan Janssen, <a href="http://devoxx.com/display/DV12/Jo+Voordeckers">Jo Voordeckers</a> et <a href="http://devoxx.com/display/DV12/Benjamin+Dobler">Benjamin Dobler</a>, nous parlent de la prochaine version de Parleys, disponible au plus tard pour Devoxx France. La stack technique est intéressante, comme on peut le voir ici :</p>
-
-<p><img src="http://linsolas.github.com/images/Devoxx2012-Parleys.JPG"/></p>
-
-<p>Et encore, cela ne semble pas tout, puisqu&#8217;ils utilisent également ElasticSearch&#8230;
-Le but final est de proposer une application plus riche, et moins limitée pour les solutions mobiles. En effet, le lecteur actuel étant basé sur Flash, il n&#8217;est ainsi pas compatible avec les iPhones ou les iPads. L&#8217;utilisation d&#8217;HTML 5 semble avoir été poussée loin, en particulier pour la partie d&#8217;édition des vidéos. L&#8217;autre objectif de cette nouvelle version de Parleys est justement de simplifier l&#8217;édition de ces vidéos, afin de les rendre accessibles le plus rapidement possible après leur enregistrement. Pour Devoxx France, il avait fallu attendre plusieurs semaines pour voir les vidéos des sessions disponibles sur Parleys. L&#8217;équipe veut ainsi réduire ce délai à seulement quelques jours ! En plus de cela, si j&#8217;ai bien compris, il est envisagé que les personnes regardant les vidéos puissent les éditer, par exemple s&#8217;il y a un décalage entre la vidéo et les slides diffusés en parallèle.</p>
-
-<p>Une session intéressante, où le choix techniques sont bien expliqués, et qui donne envie d&#8217;avoir en main cette nouvelle version de Parleys !</p>
-
-<hr/>
-
-
-<p>La deuxième journée de Devoxx 2012 se termine sur cette session, avant d&#8217;aller voir Skyfall, le dernier James Bond, dont la diffusion nous était offerte par Devoxx (ainsi que les popcorns :) ). D&#8217;ailleurs, j&#8217;ai vraiment beaucoup aimé ce James Bond. Beaucoup de personnes sont allés ensuite à la soirée au NoX, une boite de nuit proche du Métropolis. J&#8217;ai fait mon petit joueur en retournant à l&#8217;hôtel vers 23h30, encore un peu fatigué de la veille&#8230;</p>
 ]]></content>
   </entry>
   

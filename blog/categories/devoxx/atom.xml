@@ -4,7 +4,7 @@
   <title><![CDATA[Category: devoxx | fr.romain:blog:3.0]]></title>
   <link href="http://linsolas.github.com/blog/categories/devoxx/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2013-11-12T19:44:39+01:00</updated>
+  <updated>2013-11-13T17:13:11+01:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -12,6 +12,164 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Devoxx 2013 - premier jour]]></title>
+    <link href="http://linsolas.github.com/blog/2013/11/13/devoxx-2013-premier-jour/"/>
+    <updated>2013-11-13T08:56:00+01:00</updated>
+    <id>http://linsolas.github.com/blog/2013/11/13/devoxx-2013-premier-jour</id>
+    <content type="html"><![CDATA[<p><img src="/images/devoxx_logo.gif" title="Devoxx 2013" alt="Devoxx 2013" /></p>
+
+<p>Et voilà, ma deuxième expérience belge de Devoxx est entamée.</p>
+
+<!-- more -->
+
+
+<h2><a href="http://devoxx.be/dv13-sven-peters.html?presId=3143">How To Do Kick-Ass Software Development</a></h2>
+
+<p><img src="/images/note-4.png" title="4/5" alt="4/5" /></p>
+
+<p><img src="/images/devoxx-2013-kickass.jpg" title="Kick-ass development" alt="Kick-ass Development" /></p>
+
+<p>J'ai choisi cette présentation de <a href="https://twitter.com/@svenpet">Sven Peters</a> d'Atlassian, car j'avais beaucoup apprécié sa présentation l'année passée sur <a href="http://linsolas.github.io/blog/2012/11/18/devoxx-2012-jour-1/">7 things to make a good team great</a>. Il y présentait 7 trucs pour rendre une bonne équipe encore meilleure. C'est d'ailleurs lors de cette présentation qu'il m'est venue l'idée de mettre les <a href="http://www.brownbaglunch.fr">Brown Bag Lunch</a> à la SGCIB (via l'idée "<em>Feed you brain</em>"), peu de temps avant que ce mouvement ne prenne de l'ampleur en France.</p>
+
+<p>Sven s'est intéressé au film <a href="http://www.imdb.com/title/tt1250777/">Kick-Ass</a>, où une personne quelconque souhaite devenir un super-héros, juste en portant un costume. Forcément, au début il se fait dérouiller, mais persiste. Et c'est le message de Sven : se prendre des gamèles, mais toujours se relever.</p>
+
+<p>Mais que souhaite t-on atteindre avec son équipe ?</p>
+
+<ul>
+<li>un meilleur software ;</li>
+<li>moins d'<em>overhead</em> ;</li>
+<li>un développement plus rapide ;</li>
+<li>des clients heureux ;</li>
+<li>des développeurs heureux.</li>
+</ul>
+
+
+<p>Il y a quelques temps, la solution à tous les problèmes était l'agilité. Mais qu'en est-il en 2013 ?
+Le problème de toute méthodologie ou technologie c'est qu'au début c'est super, mais très vite les soucis commencent à surgir, jusqu'à s'apercevoir que cette solution ne résoud pas tous les problèmes (voir la <a href="http://en.wikipedia.org/wiki/Hype_cycle">Gartner Hype Curve</a>).</p>
+
+<p>Il faut toujours garder à l'esprit de construire la bonne chose ("<em>Building the right thing</em>").
+Une idée est le "<em>Fake it til you make it</em>".
+Sven nous montre l'exemple à ne pas suivre avec le <a href="http://en.wikipedia.org/wiki/Microsoft_Kin">téléphone Kin</a> de Microsoft. Censé être très adapté à la nouvelle génération, il fut un échec très retentissant, sorti de la vente à peine au bout de deux semaines, et aura fait perder plus d'un milliard de dollars à la firme !</p>
+
+<p><img src="http://www.digitaltrends.com/wp-content/uploads/2010/06/043775-microsoft-kin.jpg" title="Microsoft Kin" alt="Image Microsoft Kin" /></p>
+
+<p>A l'opposé, IBM a voulu tester une application de reconnaissance vocale.
+Plutôt que de développer un système complexe, ils ont triché en mettant une personne réelle dont le rôle était d'exécuter les tâches dictées par un cobaye. L'expérimentation n'ayant pas convaincue, il fut décidé que l'application réelle ne serait pas développée.</p>
+
+<p>Passons à l'importance du feedback. Celui-ci doit répondre à trois critères :</p>
+
+<ul>
+<li>facile à trouver ;</li>
+<li>simple ;</li>
+<li>rapide à soumettre.</li>
+</ul>
+
+
+<p>Il ne faut pas embêter directement les développeurs avec les feedbacks. Par exemple, pour l'équipe GMail, il y a 100 développeurs pour 425M utilisateurs. Imaginer que ce soit les développeurs qui traitent directement les feedbacks des utilisateurs. Le développement de l'application n'avancerait jamais.
+Cependant, tous doivent être conscients de ce qui ne va pas.</p>
+
+<p>Chaque jour, l'équipe d'Atlassian se réunit 45 minutes pour revoir ces feedbacks et en faire quelque chose de personnel.
+De plus, chaque développeur passe une semaine par an au support de premier niveau, pour être en contact directement avec les problèmes des utilisateurs.</p>
+
+<p>Autre point, ce qu'ils appellent le <em>Developer on Test</em>. Il s'agit de faire remplir le rôle de testeur aux développeurs.
+Pour cela, six astuces :</p>
+
+<ul>
+<li>Le training. Comment penser comme un testeur ?</li>
+<li>Faire du <em>pairing</em> entre un testeur et un développeur.</li>
+<li><em>Blitz Test</em> : durant une journée, toute la compagnie - et pas seulement les développeurs et les testeurs - teste une nouvelle vesion.</li>
+<li>Définir des recettes de tests.</li>
+<li>Instaurere des sessions séparées : pendant une heure, deux équipes testent les mêmes choses, puis comparent leurs résultats.</li>
+<li>La chasse aux bugs : pendant une semaine, un développeur est dédié à la chasse aux bugs sur tous les éléments marqués comme Terminés.</li>
+</ul>
+
+
+<p>Sven nous rappelle alors que "La qualité est la responsabilité de chacun".</p>
+
+<p>Sven passe ensuite sur le design. A Atlassian, les développeurs font aussi du design.
+Ils n'étaient pas forcément mauvais, mais cela avait tendance à partir dans tous les sens.
+Ce dont ils ont besoin, c'est de lignes directrices, de <em>design guidances</em> (<a href="https://developer.atlassian.com/design">les guidlines de design d'Atlassian</a>).</p>
+
+<p>Ils organisent également des workshops pour les développeurs.</p>
+
+<p>Comme un développement complet requiert la collaboration de plusieurs départements, il est important de supprimer les frictions qui peuvent apparaitre entre eux.</p>
+
+<p>Atlassian définit également des <em>guidelines</em> pour le développement. Ainsi, pour chaque tâche une branche est créée sur Git.
+Leur durée de vie est ainsi très courte (environ 2 jours).
+Puis, pour merger le code, ils passent par des <em>push requests</em>, ce qui fait que le nouveau code est revu et validé par ses pairs. Ce nouveau code n'est donc plus de la responsabilité d'un seul développeur.</p>
+
+<p>Dernier point : l'automatisation. Le principe est d'échouer rapidement (<em>Fail fast</em>). 4 choses à retenir :</p>
+
+<ul>
+<li>Mettre à disposition les artifacts générés.</li>
+<li>Paralleliser les tests pour les accélérer.</li>
+<li>Avoir une stratégie de builds. Créer des couches de tests selon leur catégorie, leur intérêt.</li>
+<li>Toujours avoir un oeil sur les statistiques. Savoir par exemple ce qui prend du temps sur un build, pour être en mesure de l'accélérer.</li>
+</ul>
+
+
+<p>Encore une belle présentation de Sven Peters.</p>
+
+<h2><a href="http://devoxx.be/dv13-chet-haase.html?presId=3193">Patterns, Shmatterns</a></h2>
+
+<p><img src="/images/note-4.png" title="4/5" alt="4/5" /></p>
+
+<p>Pourquoi cette présentation ? Tout simplement pour son orateur, <a href="https://twitter.com/@chethaase">Chet Haase</a>. L'année passée, il avait aussi présenté un Quickie (<a href="">The Future of Software Development Process Methodology Effectiveness</a>) qui avait été un beau succès.</p>
+
+<p>Encore une fois, la salle était comble. Chet Haase a cette fois-ci passé en revue un certain nombre de patterns et les a comparé avec ses propres patterns, ce qui en faisait quelque chose d'assez drôle.</p>
+
+<p><img src="/images/devoxx-2013-chethaase.jpg" title="Le design pattern Refactory" alt="Le design pattern Refactory" /></p>
+
+<h2><a href="http://devoxx.be/dv13-sven-peters.html?presId=3144">Don't use Git</a></h2>
+
+<p><img src="/images/note-4.png" title="4/5" alt="4/5" /></p>
+
+<p>A nouveau, <a href="https://twitter.com/@svenpet">Sven Peters</a> sur la scène. Le titre de la conférence peut paraître provocateur, tant Git est utilisé partout (Atlassian a même Stash dans son catalogue, un gestionnaire de repositories Git).
+Mais cela est en fait une façon de promouvoir ce système de gestion de sources.</p>
+
+<p>Sous le ton de l'ironie, Sven essaie de démonter les arguments qui font de Git un vrai succès. Git permet de travailler en mode déconnecté ? Mais c'est la fin du travail collaboratif ! Git rend les merges faciles et presque automatiques ? Mais le travail de merge sur SVN est une ôde à la cohésion d'équipe...</p>
+
+<p>Bien entendu, tout cela n'est que prétexte pour montrer en quoi Git est supérieur aux anciens gestionnaires de sources comme SVN.</p>
+
+<h2><a href="http://devoxx.be/dv13-nikolay-chashnikov.html?presId=3772">Efficient coding in IntelliJ IDEA</a></h2>
+
+<p><img src="/images/note-2.png" title="2/5" alt="2/5" /></p>
+
+<p><a href="http://devoxx.be/dv13-nikolay-chashnikov.html?presId=3772">Nikolay Chashnikov</a> est aux commandes pour nous montrer comment bien maitriser son IDE IntelliJ IDEA de JetBrains.
+Après pas mal d'essais ratés, je suis finalement passé définitivement sur cet IDE depuis un an, et clairement, je ne reviendrais pas en arrière. Mais je suis conscient de n'utiliser qu'une toute petite partie des capacités de l'outil. J'attends donc de cette session qu'elle me donne plein de bons conseils.</p>
+
+<p>Hélas, je resterais sur ma faim. Une bonne première partie de la session montre surtout les capacités d'autocomplétion proposées par IntelliJ. Le reste est avant tout la découverte (ou non) d'un certain nombre de raccourcis claviers. Bref, pas grand chose à se mettre sous la dent, si ce n'est 2 ou 3 nouveaux raccourcis. C'est chez payé pour une conférence d'une heure !</p>
+
+<p>Je pense que cette session peut être intéressante pour une personne utilisant Eclipse et souhaitant comprendre pourquoi IntelliJ est si puissant. Mais pour un utilisateur d'IntelliJ, même un non expert comme moi, peu d'informations à en tirer. Dommage.</p>
+
+<h2><a href="http://devoxx.be/dv13-tugdual-grall.html?presId=3281">Elastify your app: from SQL to NoSQL in less than one hour!</a></h2>
+
+<p><img src="/images/note-4.png" title="4/5" alt="4/5" /></p>
+
+<p>J'avais déjà assisté à cette présentation <a href="">lors de Devoxx France 2013</a>, toujours faite par <a href="https://twitter.com/@tgrall">Tugdual Grall</a> et <a href="https://twitter.com/@dadoonet">David Pilato</a>.
+Je me suis dit que j'allais quand même y jeter un oeil pour mieux l'apprécier.</p>
+
+<p><img src="/images/devoxx-2013-elastify.jpg" title="Elastify your application" alt="Elastify your application" /></p>
+
+<p>N'hésitez pas à relire <a href="http://linsolas.github.io/blog/2013/03/28/devoxx-france-2013-jour-2/">mon résumé lors de Devoxx France 2013</a>.</p>
+
+<h2><a href="http://devoxx.be/dv13-attila-szegedi.html?presId=3732">The Curious Case of JavaScript on the JVM</a></h2>
+
+<p><img src="/images/note-3.png" title="3/5" alt="3/5" /></p>
+
+<p>J'aime Java, j'aime le JavaScript. Je me dis qu'une session mélangeant les deux pourrait être intéressante.
+Je me décide donc d'aller voir ce qu'en dit <a href="https://twitter.com/@szegedi">Attila Szegedi</a>.
+Il y était question de <a href="http://openjdk.java.net/projects/nashorn/">Nashorn</a>, qui est l'implémentation d'un <em>runtime</em> JavaScript hautes performances sur la JVM.</p>
+
+<p>En gros, on écrit du JavaScript mélangé à du Java - à moins que ce ne soit l'inverse ? A noter que Nashorn devrait être <em>normalement</em> inclus dans le JDK 1.8.</p>
+
+<p>J'ai un peu de mal à voir l'intérêt de ce mélange, mais pourquoi pas. C'est aussi ce genre de chose qui fait la richesse de la plateforme de la JVM :)</p>
+
+<p>Voilà une première journée déjà bien intéressante, j'attends avec impatience la deuxième fournée de conférences, qui s'annonce de belle qualité.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Mon programme pour Devoxx 2013]]></title>
@@ -366,159 +524,6 @@ Je ne conseillerais pas AngularJS ou Backbone.js sans connaitre le contexte. Par
 
 
 <p>Voilà, hormis le problème du lieu qui devient trop petit, rien de méchant. Devoxx confirme qu'il s'agit d'une superbe conférence, et encore une fois, j'étais très fier d'y assister, surtout en tant que speaker ! A l'année prochaine (et en fin d'année pour la version World à Anvers) !</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Devoxx France 2013 - Jour 3]]></title>
-    <link href="http://linsolas.github.com/blog/2013/03/29/devoxx-france-2013-jour-3/"/>
-    <updated>2013-03-29T09:17:00+01:00</updated>
-    <id>http://linsolas.github.com/blog/2013/03/29/devoxx-france-2013-jour-3</id>
-    <content type="html"><![CDATA[<p><img src="http://www.devoxx.com/download/attachments/6816022/DevoxxFR-2012-web-400-267.png" title="Devoxx France 2013" alt="Devoxx France" /></p>
-
-<p>Aie, déjà le dernier jour de la conférence Devoxx France. Que le temps passe vite ! Cette dernière journée reste toutefois très intense, en particulier parce qu'à 10h40, c'était ma présentation "<em>Du JavaScript propre ? Challenge Accepted!</em>" avec Julien Jakubowski. Je ferais un billet dédié à cette présentation.</p>
-
-<!-- more -->
-
-
-<h3><a href="http://www.devoxx.com/display/FR13/Web+Oriented+Architecture%2C+une+transmutation+des+pratiques+de+construction+des+SI">Web oriented architecture, une transmutation des pratiques de construction des SI</a></h3>
-
-<p>J'avais raté les keynotes du jeudi, je me suis dit qu'il serait dommage d'en faire autant le vendredi. Bon, j'ai raté une partie de la première keynote, celle d'<a href="http://www.devoxx.com/display/FR13/Alexis+Moussine-pouchkine">Alexis Moussine-Pouchkine</a>, "<a href="http://www.devoxx.com/display/FR13/Normal+ou+decafeine">Normal ou décafeiné</a>". En gros, le message de sa keynote est que l'avenir, en particulier le Cloud, peut - et doit - se faire avec Java.</p>
-
-<p>Passons à la deuxième keynote, celle de <a href="http://www.devoxx.com/display/FR13/Habib+Guergachi">Habib Guergachi</a>, CEO de <a href="http://zenexity.com/">Zenexity</a>. Je voulais la voir car il l'avait <a href="http://www.parleys.com/#play/5148922a0364bc17fc56c738">déjà jouée l'année passée</a> sous forme de conférence, et j'avais entendu d'excellents retours. Au delà du message, c'est vraiment le bonhomme qui impressionne. Il avait une telle énergie que cela en devenait contagieux. Rien de mieux pour bien démarrer une journée intense !</p>
-
-<p>Revenons au message lui-même. Il est un peu polémique, mais je crois qu'il n'a pas complètement tort sur un certain nombre de choses.</p>
-
-<p>Quand il s'agit de faire un choix important, il y a deux solutions possibles. On peut opter et pousser le changement, au risque d'innover. Certes, il y a le risque de se faire virer, mais ce sera dans la gloire :) L'autre chemin, c'est la soumission, et ne pas bousculer les choses établies. On ne risque pas de se faire virer à court terme, mais peut-être que dans 2 ans, on vous reprochera de ne pas avoir sû anticiper le changement, et vous vous ferez virer dans la honte !</p>
-
-<p>Ok, c'est une vision un peu simpliste, mais y a un soupçon de vérité là-dedans quand même.</p>
-
-<p>Habib, au cours de sa présentation, parle de <a href="http://www.playframework.com/">Play</a>. Bien entendu, il prêche pour sa paroisse, Zenexity est l'éditeur du framework. Il s'agit d'une innovation française. Pourtant, au début c'était plutôt un défaut, que ce soit pour les français (qui ne jurent que par des produits américains) ou par les américains eux-mêmes. Utiliser une technologie française c'est un peu comme voler dans un avion congolais : ça ne rassure pas vraiment ! Pourtant, Play! a été adopté par de grands noms (surtout américains), comme LinkedIn, Typesafe, etc. Dès lors, tout le monde, y compris les français, encense le framework.</p>
-
-<p>On ne peut pas tout comprendre, il faut savoir se concentrer sur un problème précis, un petit bout d'une architecture entière. Et si l'on se jette à l'eau, que l'on prend le problème à bras le corps, peut-être que l'on sera la personne qui a vraiment sû comprendre et aborder ce problème, et que la solution que l'on proposera deviendra la solution que tout le mondre utilisera. Mais pour cela, il faut se lancer !</p>
-
-<p>Pour résumer, la keynote de Habib Guergachi était pleine de panache, et donne à réflechir. Rien de mieux pour continuer la journée, surtout que la présentation suivante est celle de <a href="http://www.devoxx.com/display/FR13/Julien+Jakubowski">Julien Jakubowski</a> et... <a href="http://www.devoxx.com/display/FR13/Romain+Linsolas">moi-même</a>. J'y reviendrais très vite.</p>
-
-<hr/>
-
-
-<h3><a href="http://www.devoxx.com/display/FR13/Animez+vos+pages+HTML5++un+tour+d%27horizon+complet+des+techniques+d%27animation+en+HTML5">Animez vos pages HTML5: un tour d'horizon complet des techniques d'animation en HTML5</a></h3>
-
-<p><a href="http://www.devoxx.com/display/FR13/Martin+Gorner">Martin Gorner</a> (<a href="https://twitter.com/martingorner">@martingorner</a>) de Google nous parle d'animation en HTML5. Sa présentation est visible <a href="http://animateyourhtml5.appspot.com/pres/#1">en live sur ce site</a>.</p>
-
-<p>En CSS 3, <code>transition</code> permet d'animer des éléments. Le navigateur va calculer lui-même toutes les étapes intermédiaires.
-La propriété <code>animation</code> permet de faire des animations plus complexes, en définissant les propriétés CSS à appliquer à différentes étapes.
-Le CSS 3 dispose également de transformations géométriques 2D (rotation, agrandissement, étirement, etc.).
-Il y a également des transformations 3D : <code>translateZ</code>, <code>rotateY</code>, etc.
-A noter qu'il faut définir soi même la perspective via une propriété CSS : <code>-webkit-perspective: 1000px;</code>.
-Par défaut, la valeur par défaut est <code>-webkit-tansform-style: flat</code>. Ce n'est pas ce que l'on souhaite, il faut donc la mettre à <code>preserve-3d</code>. Attention, Internet Explorer 10 ne gère pas cette propriété (mais on peut bidouiller avec du JavaScript pour remplir cette lacune).</p>
-
-<p><img src="/images/devoxxfr-2013-animation-1.jpg" title="Finalement, animer un cube en CSS, ce n'est pas si compliqué" alt="Finalement, animer un cube en CSS, ce n'est pas si compliqué" /></p>
-
-<p>Les bonnes habitudes pour travailler en 3D :</p>
-
-<ul>
-<li>Créer un <code>div</code> qui représente la scène.</li>
-<li>Créer un objet qui supportera l'animation.</li>
-<li>Y affecter des images.</li>
-<li>Définir les propriétés d'animation.</li>
-</ul>
-
-
-<p>Après avoir passé en revue l'utilisation des Canvas 2D, Martin aborde le Canvas 3D, connu aussi sous le nom de <strong>WebGL</strong>. Après quelques explications, Martin propose d'aborder la partie pratique à l'aide de la librairie <a href="https://github.com/mrdoob/three.js/">Three.js</a>, qui permet de coder dans le moteur WebGL en JavaScript : définition de la scène, création d'une "caméra", des "lumières". Ensuite on peut ajouter des objets (des <em>Meshs</em>). Enfin, on définit les actions.
-Voici un exemple de code avec cette librairie :</p>
-
-<p>``` javascript</p>
-
-<p>var camera, scene, renderer;
-var geometry, material, mesh;</p>
-
-<p>init();
-animate();</p>
-
-<p>function init() {</p>
-
-<pre><code>camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 10000 );
-camera.position.z = 1000;
-scene = new THREE.Scene();
-geometry = new THREE.CubeGeometry( 200, 200, 200 );
-material = new THREE.MeshBasicMaterial( { color: 0xff0000, wireframe: true } );
-mesh = new THREE.Mesh( geometry, material );
-scene.add( mesh );
-renderer = new THREE.CanvasRenderer();
-renderer.setSize( window.innerWidth, window.innerHeight );
-document.body.appendChild( renderer.domElement );
-</code></pre>
-
-<p>}</p>
-
-<p>function animate() {</p>
-
-<pre><code>// note: three.js includes requestAnimationFrame shim
-requestAnimationFrame( animate );
-mesh.rotation.x += 0.01;
-mesh.rotation.y += 0.02;
-renderer.render( scene, camera );
-</code></pre>
-
-<p>}
-```</p>
-
-<p>Three.js gère également des modèles d'objets 3D (via la spécification <a href="https://collada.org">Collada</a> par exemple).</p>
-
-<p>Un point sur les préfixes (ici <code>-webkit-*</code>) : il y a une "convention". Tant qu'une spécification n'est pas officielle, les navigateurs utilisent des préfixes. Une fois la spécification entérinée, alors le préfixe peut disparaître. On peut sinon utiliser des outils tels que <a href="http://leaverou.github.com/prefixfree/">prefixfree.js</a> ou <a href="http://sass-lang.com/">SASS</a> qui vont s'occuper d'ajouter les préfixes pour nous.</p>
-
-<p><img src="/images/devoxxfr-2013-animation-2.jpg" title="Les 4 possibilités d'animations en web" alt="Les 4 possibilités d'animations en web" /></p>
-
-<hr/>
-
-
-<h2><a href="http://www.devoxx.com/display/FR13/Peut+on+toujours+etre+developpeur+apres+40+ans">Peut on toujours être développeur après 40 ans ?</a></h2>
-
-<p><a href="http://www.devoxx.com/display/FR13/Benjamin+Marron">Benjamin Marron</a> (<a href="https://twitter.com/bmarron">@bmarron</a>) nous explique s'il est possible</p>
-
-<p>Être boucher à 40 ans ? Artisan à 40 ans ? La question ne se pose pas tant elle est évidente. Pourtant, pour un développeur, la question se pose.
-Y a-t-il une obscolescence des développeur ? Si la personne est concernée, se forme, alors non. Mais sans ces efforts, cela risque d'arriver. Et direction chef de projet :)</p>
-
-<p>Grâce à leur expérience, les développeurs expérimentés savent mieux filtrer les informations, choisir les outils ou les librairies.</p>
-
-<p><img src="/images/devoxxfr-2013-40ans.jpg" title="Développeur à 40 ans, c'est ça ?" alt="Développeur à 40 ans, c'est ça ?" /></p>
-
-<p>Alors la question est peut-être de savoir si nous sommes usés ?
-Il ne faut pas rester dans sa zone de confort.
-Les conférences comme Devoxx permettent de se gonfler à bloc, le leitmotiv c'est "<strong>soyez fiers d'être développeurs</strong>"</p>
-
-<p>Quid du choc générationnel ? Comme travailler avec des "petits jeunes" de 20 ans ? Il faut rester humble, dire que l'on a toujours à apprendre.</p>
-
-<p>Il y a aussi le problème de disponibilité, avec la vie de famille, les enfants, etc. Mais cela reste jouable, et le fait de ne pas être toujours 100% disponible pour son travail n'est pas un frein.</p>
-
-<p>Le message de Benjamin Marron est que la passion doit nous faire continuer dans cette voie, et que nous avons les moyens d'y parvenir. Un sujet n'a pas été vraiment abordé, si ce n'est lors des questions du public : la reconnaissance de l'expérience par l'employeur. Il est vrai qu'en France, niveau salaire, on a tendance à stagner assez vite (disons à partir d'une dizaine d'années d'expérience), et continuer sa progression n'est pas toujours facile. Ca reste compliqué aujourd'hui, mais les choses semblent changer. Doucement en tout cas.</p>
-
-<hr/>
-
-
-<h2><a href="http://www.devoxx.com/display/FR13/Winter+is+coming">Winter is coming</a></h2>
-
-<p><img src="/images/devoxxfr-2013-winter.jpg" title="Winter is coming" alt="Winter is coming" /></p>
-
-<p>Je finis (ou presque) ma journée avec la présentation de <a href="http://www.devoxx.com/display/FR13/Didier+Girard">Didier Girard</a> et <a href="http://www.devoxx.com/display/FR13/Aurelien+Pelletier">Aurélien Pelletier</a> de <a href="http://www.sfeir.com/">SFEIR</a>. J'avoue que j'ai un peu du mal à savoir quoi tirer de cette présentation, tant le message n'était pas très clair. L'idée, du moins une partie de ce qui a été dit, c'est de savoir comment juger de la pertinence d'un framework, d'une librairie, et de savoir estimer son espérance de vie, dans un monde très concurrentiel.</p>
-
-<p>Didier Girard décide donc d'utiliser <a href="http://www.google.com/trends/?hl=en">Google Trends</a> pour juger de la popularité d'un framework. Cet outil de Google permet de mesurer, et comparer, le nombre de fois où tel ou tel mot est <em>recherché</em> sur Google.
-Plutôt que simplement comparer deux noms de technologies via le site de Google, il décide d'y ajouter le terme <em>tutorial</em>, supposant que plus on recherche de tutoriels sur une technologie, plus celle-ci intéresse les gens, et sera facile à maitriser.
-Bien sûr, Didier Girard insiste sur le fait que cela doit aider à se faire une opinion, mais que cela ne saurait suffire. Pourtant, il n'ira guère plus loin dans sa démonstration, ce qui est un peu contradictoire au final. Dommage.</p>
-
-<p>Pour résumer, on va dire que ce n'est pas forcément la présentation que j'ai préféré à Devoxx :)</p>
-
-<hr/>
-
-
-<h2><a href="http://www.devoxx.com/display/FR13/Les+Cast+Codeurs+Podcast...+putain+4+ans+deja%21">Les CastCodeurs, putain 4 ans déjà</a></h2>
-
-<p><img src="/images/devoxxfr-2013-castcodeurs.jpg" title="Merci Atlassian, une fois de plus !" alt="Merci Atlassian, une fois de plus !" /></p>
-
-<p>Ca devient une tradition, finir un Devoxx avec une session live des <a href="http://lescastcodeurs.com/">Cast Codeurs</a>. A vrai dire, je ne vois <strong>aucune</strong> raison de ne pas y assister : récapitulatif de la conférence, bonne ambiance, bonnes blagues (quoique ?) et bières offertes par Atlassian ! Rien de mieux pour terminer en beauté une magnifique conférence. Allez écouter le podcast, bientôt disponible. En attendant, il y a les podcasts de <a href="http://lescastcodeurs.com/2011/11/28/les-cast-codeurs-podcast-episode-49-devoxx-2011-les-dix-ans/">Devoxx 2011</a>, <a href="http://lescastcodeurs.com/2012/04/21/les-cast-codeurs-podcast-episode-57-en-direct-de-devoxx-france-2012/">Devoxx France 2012</a>, et enfin <a href="http://lescastcodeurs.com/2012/11/29/les-cast-codeurs-podcast-episode-68-devoxx-2012-et-les-putchettes/">Devoxx 2012</a>.</p>
-
-<p>A l'année prochaine !</p>
 ]]></content>
   </entry>
   
