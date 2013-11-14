@@ -4,7 +4,7 @@
   <title><![CDATA[Category: conference | fr.romain:blog:3.0]]></title>
   <link href="http://linsolas.github.com/blog/categories/conference/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2013-11-13T17:13:11+01:00</updated>
+  <updated>2013-11-14T18:35:51+01:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -12,6 +12,169 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Devoxx 2013 - deuxième jour]]></title>
+    <link href="http://linsolas.github.com/blog/2013/11/14/devoxx-2013-deuxieme-jour/"/>
+    <updated>2013-11-14T09:50:00+01:00</updated>
+    <id>http://linsolas.github.com/blog/2013/11/14/devoxx-2013-deuxieme-jour</id>
+    <content type="html"><![CDATA[<p><img src="/images/devoxx_logo.gif" title="Devoxx 2013" alt="Devoxx 2013" /></p>
+
+<p>Voici la deuxième journée à Devoxx version 2013.
+Pour commencer la journée, la Keynote de Google annonce la sortie de la version 1.0 du langage <a href="https://www.dartlang.org/">Dart</a>.
+Dart est le langage créé par Google au dessus de JavaScript afin de rendre ce dernier plus utilisable, en offrant pas mal de choses des langages Java ou C# comme les classes, un vrai développement orienté objet, etc.</p>
+
+<p>Il a aussi été question du projet <a href="https://github.com/angular/angular.dart">Angular Dart</a>, une implémentation d'<a href="http://angularjs.org/">Angular</a> sur le language Dart.</p>
+
+<!-- more -->
+
+
+<h2><a href="http://devoxx.be/dv13-francesc-campoy-flores.html?presId=3493">Go see all the ships in the world</a></h2>
+
+<p><img src="/images/note-3.5.png" title="3.5/5" alt="3.5/5" /></p>
+
+<p>On parle beaucoup du Big Data. C'est souvent théorique, ou à des exemples qui ne semblent pas très parlants.
+<a href="https://twitter.com/@francesc">Francesc Campoy Flores</a> nous propose une session où nous devrions avoir au final une visualisation dynamique de la position et trajectoires de tous les bateaux du monde ! Cela s'annonce intéressant d'un point de vue technique, et quelque peu exotique quant au contenu.</p>
+
+<p>Parlons tout d'abord des données. Nous avons 75,000 bateaux (en éliminant les petits bateaux). Il faut donc d'abord récupérer ces données.
+Les bateaux disposent d'un système appelé <a href="http://en.wikipedia.org/wiki/Automatic_Identification_System">AIS</a> (<em>Automatic Identification System</em>), une sorte de GPS avant l'heure pour les navires. Toutefois, ce type de protocole est peu fiable, et difficile à gérer.</p>
+
+<p>Il faut donc stocker toutes ces données. Bien entendu, il fait appel au cloud de Google pour cela.
+Le problème qui se pose aussi est la tête des données AIS, qui ne ressemble à pas grand chose :</p>
+
+<p><img src="/images/devoxx2013-boats1.jpg" title="Les données AIS" alt="Les données AIS" /></p>
+
+<p>Il existe toutefois une librairie en C++ qui permet d'interpréter ces données. Le seul hic, c'est que le cloud de Google ne permet pas d'exécuter du C++. Il faut donc écrire un traducteur vers du CSV pour finalement restocker ces informations dans ce format plus pratique.</p>
+
+<p><a href="https://developers.google.com/bigquery/">BigQuery</a> est ensuite utilisé pour extraire les informations de toutes ces données. Une requête assez basique pour récupérer les positions moyennes des bateaux prend 5.8s sur 14Go de données.</p>
+
+<p>Il faut maintenant servir ces données, de façon rapide et dynamique. Pour cela, Fransesc utilise l'API REST de BigQuery depuis du JavaScript. Toutefois, il inclut une application herbergée sur AppEngine entre le browser et le serveur BigQuery. En effet, on risque sinon de trop faire jouer le cache de ce dernier et du coup ne pas avoir les dernières données disponibles.
+Cette application va matérialiser les requêtes, ainsi qu'une gestion du cache (memcache). Cette application est développée avec le langage Go, pour ses performances.</p>
+
+<p>Voilà l'architecture finale du système. Pas si simple !</p>
+
+<p><img src="/images/devoxx2013-boats2.jpg" title="L'architecture pour voir les bateaux" alt="L'architecture pour voir les bateaux" /></p>
+
+<p>Et le résultat, basée sur Google Maps API, WebGL et CanvasLayer montre tout d'abord une floppée de points sur une carte (75,000 quand même). Puis, en utilisant les données disponibles, ces points sont colorés en fonctin de leur vitesse. Ce calcul est fait par le GPU. On laisse le CPU - peu utilisé autrement - calculer l'histogramme donnant la répartition des vitesses :</p>
+
+<p><img src="/images/devoxx2013-boats3.jpg" title="Coloration en fonction de la vitesse" alt="Coloration en fonction de la vitesse" /></p>
+
+<p>Une coloration en fonction de l'orientation du bateau montre très bien les différents canaux de navigation, comme par exemple autour de l'Espagne.</p>
+
+<p><img src="/images/devoxx2013-boats4.jpg" title="Coloration en fonction de l'orientation" alt="Coloration en fonction de l'orientation" /></p>
+
+<p>Et au final :</p>
+
+<p><img src="/images/devoxx2013-boats5.jpg" title="La représentation des bateaux sur une carte" alt="La représentation des bateaux sur une carte" /></p>
+
+<p>Une présentation tout à fait intéressante pour comprendre la démarche du traitement de ces données. Seul bémol, je m'attendais à un peu de live coding ou tout du moins une démo du résultat (plutôt qu'une vidéo). Mais il est vrai que le nombre de données assez important ainsi qu'un WIFI un peu à la ramasse aurait risqué de casser un peu l'expérience.</p>
+
+<h2><a href="http://devoxx.be/dv13-igor-minar.html?presId=3468">What is in store for the future of Angular</a></h2>
+
+<p><img src="/images/note-4.png" title="4/5" alt="4/5" /></p>
+
+<p>AngularJS avait été <a href="">ma claque et ma découverte</a> de Devoxx 2012. Depuis, le framework est devenu très populaire, et plusieurs sessions ont déjà eu lieu à Devoxx 2013, toutes blindées.
+<a href="https://twitter.com/@IgorMinar">Igor Minar</a> et <a href="https://twitter.com/@mhevery">Misko Hevery</a>, deux des principaux membres du projet, viennent nous parler de ce qui attend Angular pour l'année 2014.</p>
+
+<p>La première chose de prévue pour Angular, c'est de se baser encore plus sur les standards, en particulier les <em>web components</em>, qui inclut :</p>
+
+<ul>
+<li>Shadow DOM</li>
+<li>Custom elements, <code>document.register()</code></li>
+<li>Templates</li>
+<li>Scoped CSS</li>
+</ul>
+
+
+<p>Autre point, c'est l'utilisation du <code>Object.observe</code> qui permettra de meilleures performances que le <em>dirty checking</em> d'Angular. L'autre avantage de cette méthode est qu'elle est asynchrone.</p>
+
+<p>Asynchrone DI (<em>Dependency Injection</em>) vs AMD (<a href="http://en.wikipedia.org/wiki/Asynchronous_module_definition">Asynchronous Module Definition</a>).</p>
+
+<p>L'introduction des <strong>zones</strong> va permettre de supprimer <code>$apply</code> et <code>$digest</code>.</p>
+
+<p><img src="/images/devoxx2013-angularjs-zones.jpg" title="Les zones d'Angular" alt="Les zones d'Angular" /></p>
+
+<ul>
+<li><code>DefaultZone</code> se comporte comme le navigateur.</li>
+<li><code>StackTraceZone</code> permet des stacktraces plus longues.</li>
+<li><code>AngularZone</code> applique le data-binding.</li>
+<li><code>MockZone</code> pour faciliter les tests.</li>
+</ul>
+
+
+<p>Angular va également profiter des nouveautés d'EcmaScript 6, en particulier les classes et les modules.
+Il sera également possible d'utiliser des annotations dans le code Angular.</p>
+
+<p><img src="/images/devoxx2013-angularjs-annotations.jpg" title="Les annotations en Angular" alt="Les annotations en Angular" /></p>
+
+<p>Les <strong>contrats</strong> font également leur apparition dans Angular :</p>
+
+<p><img src="/images/devoxx2013-angularjs-contracts.jpg" title="Les contrats en Angular" alt="Les contrats en Angular" /></p>
+
+<p>Bref, je laisse les présentateurs résumer à ma place :</p>
+
+<p><img src="/images/devoxx2013-angularjs-summary.jpg" title="Résumé des nouveautés d'Angular" alt="Résumé des nouveautés d'Angular" /></p>
+
+<p>La présentation était moins éclatante que l'année passée, mais forcément le sujet s'y prétait moins. Toutefois, cela montre qu'Angular a encore de beaux jours devant lui !</p>
+
+<h2><a href="http://devoxx.be/dv13-romain-linsolas.html?presId=3545">The ingredients for a perfect JavaScript Software Factory</a></h2>
+
+<p><img src="/images/note-5.png" title="5/5" alt="5/5" /></p>
+
+<p>(vous vous doutez bien que la note est ici tout à fait objective)
+Là, c'est mon Quickie !
+J'y parle de JavaScript et d'usine logicielle, en particulier d'outils.
+Ma présentation est essentiellement divisée en trois parties. Compte tenu du temps imparti - à peine 15 minutes - il ne m'est pas possible d'aller pleinement dans les détails, mais l'idée est d'aborder les points principaux du sujet:</p>
+
+<ul>
+<li>Tout d'abord, j'insiste sur le fait qu'il faut réutiliser ce que l'on a déjà sous la main, selon le bon vieux principe du <em>Don't Repeat Yourself</em> (DRY). En effet, nous sommes généralement des développeurs Java, et disposons à ce titre d'une usine logicielle déjà performante. Réutilisons donc Jenkins, SonarQube, et consorts !</li>
+<li>Ensuite, intéressons nous aux outils propres à JavaScript. Là, je m'arrêtre surtout sur <a href="http://yeoman.io/">Yeoman</a>, c'est-à-dire <a href="https://github.com/yeoman/yo">Yo</a> pour créer des squelettes d'applications, <a href="http://bower.io/">Bower</a> pour gérer les dépendances et le packaging et enfin <a href="http://gruntjs.com/">Grunt</a>, un exécuteur de tâches (une sorte de Ant pour JavaScript, pour faire simple).</li>
+<li>La dernière partie insiste sur le fait qu'une bonne usine logicielle n'est pas qu'une questions d'outils, mais aussi de bonnes pratiques. Et en terme de bonnes pratiques, les <em>tests</em> sont en première place. Je montre donc qu'il existe toutes sortes de librairies de tests en JavaScript, pour faire du test unitaire, du test fonctionnel, du BDD ou encore du test <em>front-end</em>.</li>
+</ul>
+
+
+<h2><a href="http://devoxx.be/dv13-dick-wall.html?presId=3713">Enregistrement live de JavaPosse</a></h2>
+
+<p><img src="/images/note-4.png" title="4/5" alt="4/5" /></p>
+
+<p>Le podcast de <a href="http://javaposse.com/">JavaPosse</a> est très connu et réputé. Comme chaque année, ils font un enregistrement live à Devoxx, à la manière des CastCodeurs.</p>
+
+<p>Cette année, seule la moitié de l'équipe était présente, à savoir Chet Haase et Dick Wall. Du coup, la moitié des Cast Codeurs, avec Guillaume Laforge et Emmanuel Bernard est venue en renfort.</p>
+
+<p><img src="/images/devoxx2013-javaposse.jpg" title="JavaPosse et les Cast Codeurs" alt="JavaPosse et les Cast Codeurs" /></p>
+
+<p>Une session agréable, avec une session  avec de la bière offerte par Atlassian. Une fois de plus, merci à eux.</p>
+
+<h2><a href="http://devoxx.be/dv13-andrzej-grzesik.html?presId=3500">Continuous Delivery antipatterns</a></h2>
+
+<p><img src="/images/note-3.5.png" title="3.5/5" alt="3.5/5" /></p>
+
+<p>A la SGCIB, nous sommes en plein dans le <em>Continuous Delivery</em>. Il me paraissait donc important de recueillir quelques nouveaux avis et de bons conseils. C'est dans ce but que j'assiste à la conférence de  <a href="http://devoxx.be/dv13-andrzej-grzesik.html">Andrzej Grzesik</a>.</p>
+
+<p>Le problème est avant tout un problème de personnes, de process.
+Il faut des dashboards, pour savoir qui (a) fait quoi.
+Releases = risques. Il faut donc savoir les éviter (les risques, pas les releases !)</p>
+
+<p>Paralléliser les releases. Mais quoi paralléliser ? A priori, tout est parallélisable. Le mieux est de voir ce qui est le plus pénible, le plus long à s'exécuter dans une release, et voir comment on peut le paralléliser.</p>
+
+<p>Autre problème fréquent : des équipes indépendantes, qui ne se parlent pas (devs contre ops par exemple). Il faut restaurer un canal de discussion, de communication.</p>
+
+<p>L'infrastructure manuelle.
+Il faut tester aussi son infrastructure. Avec <a href="http://www.opscode.com/chef/">Chef</a> par exemple, il est possible de faire une sorte de TDD. <a href="http://acrmp.github.io/foodcritic/">Food critic</a> ou <a href="http://www.vagrantup.com/">Vagrant</a> peuvent également être utiles.</p>
+
+<h2><a href="http://devoxx.be/dv13-shaun-smith.html?presId=3568">Practical RESTful persistence</a></h2>
+
+<p><img src="/images/note-2.5.png" title="2.5/5" alt="2.5/5" /></p>
+
+<p>Finalement, on change de sujet, pour aller voir <a href="https://twitter.com/@shaunmsmith">Shaun Smith</a> parler de la nouvelle fonctionnalité d'<a href="http://www.eclipse.org/eclipselink/">EclipseLink</a> de <a href="http://wiki.eclipse.org/EclipseLink/Development/2.4.0/JPA-RS">JPA-RS</a>, qui intgère JAX-RS, JAXB et JPA.
+L'idée est ici de réaliser un binding entre des entités et du JSON entre autres via des annotations dans les entités.</p>
+
+<p>Bon, j'avoue être passé à côté de cette session, je n'ai pas trop compris le pourquoi de tout ça.</p>
+
+<p>Voilà, la deuxième journée s'achève avec encore de belles expériences (sauf gastronomiques !).
+Demain sera plus calme, avec seulement une demi-journée de travail.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Devoxx 2013 - premier jour]]></title>
@@ -431,299 +594,6 @@ La qualité des présentations et le niveau des speakers sont très bons.</p>
 
 
 <p>Pour résumer, Soft Shake est une très belle conférence, dans l'esprit de Devoxx ou Mix-IT. J'y retournerais avec grand plaisir !</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[SoftShake 2013 - premier jour]]></title>
-    <link href="http://linsolas.github.com/blog/2013/10/24/softshake-2013-premier-jour/"/>
-    <updated>2013-10-24T11:39:00+02:00</updated>
-    <id>http://linsolas.github.com/blog/2013/10/24/softshake-2013-premier-jour</id>
-    <content type="html"><![CDATA[<p><img src="/images/soft-shake-2013.png" title="Soft Shake 2013" alt="Soft Shake 2013" /></p>
-
-<p>Jacques Couvreur nous accueille pour <a href="http://soft-shake.ch/2013/fr/">cette session 2013 de la conférence Soft-Shake</a>. Ce sont 2 jours de conférences, neuf tracks en parallèle, une centaine d'orateurs, et 300 participants. A noter qu'environ un tiers des présentations se fait en anglais.
-Une bonne petite conférence donc !</p>
-
-<!-- more -->
-
-
-<p><img src="/images/softshake-2013-Geneve.jpg" title="Le fameux Jet d'Eau de Genève" alt="Le fameux Jet d'Eau de Genève" /></p>
-
-<p>Je vais <a href="http://www.touilleur-express.fr/2013/10/18/codeurs-en-seine-2013/">faire comme Nicolas Martignole</a> (a.k.a. le touilleur express), à savoir que je vais donner pour chaque session mon ROTI, le Retour sur le Temps Investi, autrement dit une note de 0 à 5 qui dénote l'intérêt que j'ai eu à suivre la présentation.</p>
-
-<h2>Keynote</h2>
-
-<p>Robin Cornelius</p>
-
-<p><img src="/images/note-3.5.png" title="3.5/5" alt="3.5/5" /></p>
-
-<p>Difficile de résumer cette keynote. C'était plus un discours de Robin Cornelius sur sa vie et celle de sa société, <a href="http://www.switcher">Switcher</a>.
-Mais c'était tout de même agréable de l'écouter parler. Robin fait partie des gens passionnés par son travail, sa société, et que l'on pourrait écouter pendant des heures.
-Bon démarrage donc...</p>
-
-<h2><a href="http://soft-shake.ch/2013/program/sessions/13_mobile/2013/10/24/1-votre-premiere-application-ios.html">Votre première application iOS</a></h2>
-
-<p><a href="http://soft-shake.ch/2013/program/authors/2013/10/24/marc-henri-primault.html">Marc-Henri Primault</a></p>
-
-<p><img src="/images/note-2.png" title="2/5" alt="2/5" /></p>
-
-<p>Présenter un langage en l'espace de 45 minutes, c'est compliqué, il y a forcément beaucoup de concepts à montrer.
-Je pense que Marc-Henri a bien montré les bases, mais il est vrai que la lisibilité du code dans les slides n'était pas extraordinaire. La coloration de certains mots clés en violet sur fond noir n'est jamais bien rendue par un vidéoprojecteur.</p>
-
-<p>Personnellement, j'ai eu du mal à accrocher car malheureusement le format de présentation ne se prête pas très bien à un tel apprentissage, en particulier pour des personnes comme moi qui n'y connaissent pas grand chose en développement iOS. Un "<em>Hands On</em>" s'y prêterait tellement mieux !</p>
-
-<h2><a href="http://soft-shake.ch/2013/program/sessions/13_web_dev/2013/10/24/2-Generating_tests_from_code_or_how_to_test_better_and_faster.html">Generating tests from code, or how to test better and faster</a></h2>
-
-<p><a href="http://soft-shake.ch/2013/program/authors/2013/10/24/renault-john-lecoultre.html">Renault John Lecoultre</a> (<a href="https://twitter.com/renajohn">@renajohn</a>)</p>
-
-<p><img src="/images/note-4.png" title="4/5" alt="4/5" /></p>
-
-<p>Tester une application JavaScript, c'est compliqué.
-Il existe deux types d'analyse de code : l'analyse statique et dynamique.</p>
-
-<p>La première se concentre à vérifier syntaxiquement si le code est correct.
-On détectera ici l'utilisation de mauvais patterns, ou du code qui peut présenter un risque fort de bug, comme par exemple l'utilisation du <code>==</code> au lieu du <code>===</code> en JavaScript. Des outils comme <a href="http://www.jslint.com/">JSLint</a>, <a href="http://www.jshint.com/">JSHint</a> ou encore <a href="http://www.sonarqube.org/">SonarQube</a> sont tout à fait adaptés pour ce type d'analyse. Mais cela a quand même des limites.</p>
-
-<p>L'analyse dynamique va exécuter le code pour en vérifier certaines règles, le cas le plus courant étant l'exécution de tests (unitaires, fonctionnels, etc.).</p>
-
-<p>Renault nous parle toutefois d'un troisième type d'analyse, à savoir <strong>l'analyse symbolique</strong>.
-Une rapide recherche sur Google me dit que "<em>L'analyse symbolique de données consiste en un mode d'analyse de tableaux de données statistiques arbitraires par perception cognitive de la surface expressionnelle du médium.</em>"
-Bon, je crois qu'on va laisser tomber la définition et voir directement comment Renault l'illustre dans sa démonstration.</p>
-
-<p>Il nous parle de l'outil <a href="https://unite.bugbuster.com/">Unite</a> de sa société <a href="http://bugbuster.com/">BugBuster</a>.
-L'idée derrière cet outil est de lui fournir une fonction en entrée, et lui va essayer de trouver un jeu d'entrées (<em>inputs</em>) afin de pouvoir tester tous les chemins possibles dans la fonction.
-Prenons l'exemple suivant :</p>
-
-<p>``` javascript
-// params : {x: Number}
-function puzzle(x){
-  if(x)</p>
-
-<pre><code>return true;
-</code></pre>
-
-<p>  else</p>
-
-<pre><code>return false;
-</code></pre>
-
-<p>}
-```</p>
-
-<p>On le voit, pour parcourir les deux branches de cette fonction, nous devons faire en sorte d'évaluer à <code>true</code> la condition <code>if</code>, puis également à <code>false</code>. C'est là qu'intervient Unite. Il va analyser le code de la fonction pour nous trouver les deux valeurs d'entrée, ici <code>x = 0</code> puis <code>x = 1</code>.
-Là où l'outil devient plus intéressant, c'est quand on a du code plus complexe. Prenons un nouvel exemple, avec une fonction de validation d'email (avec une expression régulière simple) :</p>
-
-<p>``` javascript
-// params : {email: String}
-function puzzle(email){
-  if(email.match(/<sup>\w+@[a-zA-Z_]+?.[a-zA-Z]{2,3}$/))</sup></p>
-
-<pre><code>return true;
-</code></pre>
-
-<p>  else</p>
-
-<pre><code>return false;
-</code></pre>
-
-<p>}
-```</p>
-
-<p>Unite va nous trouver deux entrées possibles : <code>`email = "a"</code> pour l'évaluation négative de la condition, et <code>email = "9@B.PH"</code> pour son évaluation positive.</p>
-
-<p>Je dois dire que l'outil s'avère très intéressant, bien qu'encore à l'état de bêta. Reste la question de l'industrialisation d'un tel outil. Pour le moment, je le vois bien comme utilisation <em>one shot</em> pour trouver un bon ensemble de jeux de données pour tester une fonction.
-En tout cas, c'est un outil à suivre de près...</p>
-
-<h2><a href="http://soft-shake.ch/2013/program/sessions/13_web_dev/2013/10/24/3-Backbone_et_marionette_le_dev_js_simplifie.html">Backbone.js et Marionette, le développement JavaScript simplifié</a></h2>
-
-<p><a href="http://soft-shake.ch/2013/program/authors/2013/10/24/xavier-bourguignon.html">Xavier Bourguignon</a> (<a href="https://twitter.com/xbourguignon">@xbourguignon</a>) et <a href="http://soft-shake.ch/2013/program/authors/2013/10/24/philippe-charriere.html">Philippe Charrière</a> (<a href="https://twitter.com/k33g_org">@k33g_org</a>)</p>
-
-<p><img src="/images/note-4.png" title="4/5" alt="4/5" /></p>
-
-<p>Backbone est une librairie légère pour faire du single page application ("MVC" / "MVP" côté client). Il se base sur la librarie <a href="http://underscorejs.org/">underscore</a>, pour le templating par exemple.
-Backbone dispose d'un modèle objet. Son intérêt réside également dans sa facilité d'extension.</p>
-
-<p>Philippe commence à nous montrer des exemples de code avec Backbone. Mais de l'avis de Xavier, "<em>Backbone c'est bien, sauf la partie vue</em>".
-Et c'est vrai que je trouve le code côté vue assez verbeux. C'est pour cela qu'il introduit la librairie <a href="http://marionettejs.com/">Marionette.js</a>, qui joue ainsi le rôle de surcouche à BackBone pour gérer la partie Vue. Ainsi, Marionette permet de faire du vrai <em>Single Page Application</em> avec BackBone.</p>
-
-<p>Xavier et Philippe nous offrent ainsi une vision assez claire de ce framework, en montrant ses atouts mais aussi ses limites. J'avoue que je préfère toujours AngularJS, bien que ce dernier ait un côté un peu plus "magique" que Backbone qui semble plus accessible et plus compréhensible.</p>
-
-<h2><a href="http://soft-shake.ch/2013/program/sessions/13_web_dev/2013/10/24/4-Web_Components_lavenir_des_developpeurs_web.html">Web Components, l'avenir des développeurs web</a></h2>
-
-<p><a href="http://soft-shake.ch/2013/program/authors/2013/10/24/julien-vey.html">Julien Vey</a> (<a href="https://twitter.com/julienvey">@julienvey</a>)</p>
-
-<p><img src="/images/note-4.png" title="4/5" alt="4/5" /></p>
-
-<p>Les applications web sont aujourd'hui de plus en plus riches, et le langage HTML atteint vite ses limites.
-C'est pour cela que le concept de <strong>composants web</strong> est arrivé.
-Il s'agit d'un standard W3C en cours de rédaction, partiellement implémenté par les navigateurs (particulièrement Chrome).</p>
-
-<p>L'idée est de créer des "éléments customs". Imaginons le bouton "Twitter" que l'on peut ajouter sur son site, afin de permettre au visiteur du site de suivre votre compte Twitter.
-Si vous regardez le code de ce bouton, vous verrez un truc illisible fait de HTML et JavaScript. Ne serait-ce pas plus simple d'avoir un tag <code>&lt;twitter user="romaintaz"/&gt;</code> par exemple ? De même, un composant pour noter un article n'aurait-il pas plus de sens sous la forme <code>&lt;ranking note="3"/&gt;</code> ?</p>
-
-<p>Eh bien c'est (à peu près) possible aujourd'hui !</p>
-
-<h3>Les templates</h3>
-
-<p>La première brique à connaître, ce sont les templates. Ils permettent la séparation du fond et de la forme <em>via</em> l'utilisation de <code>&lt;template&gt;</code> :</p>
-
-<p>``` html
-<template id="monTemplate"></p>
-
-<pre><code>// code HTML du template.
-&lt;img src=""&gt;
-&lt;div class="comment"&gt;&lt;/div&gt;
-</code></pre>
-
-<p></template>
-```</p>
-
-<p>Ce template est parsé, mais pas affiché. Les balises <code>&lt;script/&gt;</code> ne sont pas exécutées, et les images ne sont pas chargées. Le code ci-dessus est donc parfaitement valide. Pour l'instancier, il suffit d'un peu de code JavaScript :</p>
-
-<p><code>javascript
-var t = document.querySelector('#monTemplate');
-t.content.querySelector('img').src = "...";
-document.body.appendChild(t.content.cloneNode(true));
-</code></p>
-
-<p>A ce moment-là, les scripts sont exécutés, les images chargées et le DOM affiché.</p>
-
-<h3>Encapsulation</h3>
-
-<p>Passons à la deuxième brique : l'encapsulation.
-Aujourd'hui, on utiliserait des <code>&lt;iframe&gt;</code>. Mais pouah !
-Avec les web components, on utilise le principe du "<strong>shadow DOM</strong>", c'est-à-dire du DOM masqué du reste de l'application. Exemple :</p>
-
-<p><code>html
-&lt;video controls src="http://linsolas.github.com/ma/video"&gt;&lt;/video&gt;
-</code></p>
-
-<p>Avec Chrome Tools, on peut faire afficher le shadow DOM pour cette balise vidéo, sous un "tag" <code>#document-fragment</code> :</p>
-
-<p>``` html</p>
-
-<div id="host">
-</div>
-
-
-<p>```</p>
-
-<p><code>javascript
-var host = document.querySelector('#monTemplate');
-show = host.createShadowRoot();
-shadow.innerHTML = '&lt;h2&gt;Hello&lt;/h2&gt;';
-</code></p>
-
-<p>On peut aussi passer par des templates :</p>
-
-<p><code>
-shadow.webkitCreateShadowRoot();
-</code></p>
-
-<p>Il existe aussi le concept d'<em>Insertion point</em>, avec utilisation de <code>&lt;content&gt;&lt;/content&gt;</code> dans le shadow DOM. Le contenu de la balise du web component est injecté à la place du <code>&lt;content&gt;&lt;/content&gt;</code> défini dans le shadow DOM.</p>
-
-<p>On peut aussi utiliser des sélecteurs pour ne récupérer qu'une partie du code HTML du composant web : <code>&lt;content select="h2"&gt;&lt;/content&gt;</code> qui récupèrera uniquement le code du <code>h2</code>, <code>&lt;content select="h1:first-child"&gt;&lt;/content&gt;</code> pour le premier élément de <code>h1</code> ou <code>&lt;content select="*"&gt;&lt;/content&gt;</code> pour récupérer le reste.</p>
-
-<h3>Externalisation</h3>
-
-<p>Comment peut-on créer des composants web et les utiliser ailleurs ? Cela se fait grâce à la balise <code>&lt;element&gt;</code> qui permet de créer ces nouveaux éléments :</p>
-
-<p>``` html
-<element name="megabutton" extends="button" constructor="MegaButton"></p>
-
-<pre><code>&lt;template&gt;
-    ...
-&lt;/template&gt;
-&lt;script&gt;
-    ...
-&lt;/script&gt;
-</code></pre>
-
-<p></element>
-```</p>
-
-<p>Et pour l'utiliser dans une autre page :</p>
-
-<p><code>html
-&lt;link rek="component" href="megabutton.html"&gt;
-...
-&lt;megabutton&gt;Clique ici&lt;/megabutton&gt;
-</code></p>
-
-<p>Ces éléments ont également un cycle de vie sur lequel il est possible d'intéragir grâce à des fonctions JavaScript : <code>created</code>, <code>attributeChanged</code>, <code>inserted</code> ou <code>removed</code> :</p>
-
-<p>``` javascript
-this.lifecycle({</p>
-
-<pre><code>inserted: function() { ... },
-removed: function() { ... }
-</code></pre>
-
-<p>})
-```</p>
-
-<h3>Mutation Observer</h3>
-
-<p>Ces éléments sont utilisés pour détecter des modifications dans le code JavaScript.</p>
-
-<h3>Object.observe()</h3>
-
-<p>Il s'agit ici du monitoring des modifications des objects JS, bien plus performante que tout autre solution existante aujourd'hui.</p>
-
-<p>``` javascript
-function observeChanges(changes) {</p>
-
-<pre><code>changes.forEach(function(change) {
-    change.name;                // Name
-    change.type;                // Type
-    change.oldValue;            // Ancienne valeur
-    change.object[change.name]; // Nouvelle valeur
-});
-</code></pre>
-
-<p>}
-```</p>
-
-<p>Ainsi, entre le <em>Dirty checking</em> et le <em>Object.observe()</em>, le gain de performances peut être de l'ordre de 20 fois !</p>
-
-<h3>Etat actuel</h3>
-
-<p>AngularJS apporte sa philosophie, déclaratif plutôt qu'impératif.
-Les directives d'Angular sont un peu les customs éléments.</p>
-
-<p>Le projet "<a href="http://www.polymer-project.org/polymer.html">polymer.js</a>" vise à intégrer ces nouveautés dans les navigateurs.</p>
-
-<p>Il existe aussi le projet Polymer.Dart pour le langage Dart.</p>
-
-<p>Le site "<a href="http://jonrimmer.github.io/are-we-componentized-yet/">Are we componentized yet?</a>", montre l'état actuel de l'implémentation dans Chrome.
-Du côté de Firefox, il existe des projets similaires Brick, X-Tag...</p>
-
-<h3>Mon avis</h3>
-
-<p>Une excellente session où j'ai appris pas mal de choses que je ne connaissais pas !</p>
-
-<h2><a href="http://soft-shake.ch/2013/program/sessions/13_web_dev/2013/10/24/5-Du_Javascript_propre_Challenge_Accepted.html">Du JavaScript propre ? Challenge Accepted!</a></h2>
-
-<p><a href="http://soft-shake.ch/2013/program/authors/2013/10/24/romain-linsolas.html">Romain Linsolas</a> (<a href="https://twitter.com/romaintaz">@romaintaz</a>) et <a href="http://soft-shake.ch/2013/program/authors/2013/10/25/julien-jakubowski.html">Julien Jakubowski</a> (<a href="https://twitter.com/jak78">@jak78</a>)</p>
-
-<p><img src="/images/note-5.png" title="5/5" alt="5/5" /></p>
-
-<p>Présentation tout simplement parfaite, sur un sujet somptueux. Du grand art !
-Comment ça, je ne suis pas objectif ?</p>
-
-<p>Bon, si vous voulez en savoir plus, revenez un peu en arrière sur mon blog, j'ai déjà parlé de cette présentation faite avec Julien à Devoxx.
-Elle a encore plu, ça nous a fait très plaisir !</p>
-
-<h2><a href="http://soft-shake.ch/2013/program/sessions/13_bigdata/2013/10/24/07-make-sense-of-your-big-data.html">Make sense of your (Big) Data</a></h2>
-
-<p><a href="http://soft-shake.ch/2013/program/authors/2013/10/24/david-pilato.html">David Pilato</a> (<a href="https://twitter.com/dadoonet">@dadoonet</a>)</p>
-
-<p><img src="/images/note-4.png" title="4/5" alt="4/5" /></p>
-
-<p>David Pilato est "évangeliste" (à ne pas confondre avec Eve Angeli !) pour <a href="http://www.elasticsearch.org/">ElasticSearch</a>, un outil très puissant et très sympathique pour faire de la recherche.
-Associé avec <a href="http://www.elasticsearch.org/overview/kibana/">Kibana</a>, David nous montre comment il est possible pratiquement en temps réel de construire un dashboard très complet sur un grand jeu de données - stockées dans des noeuds ElasticSearch. Autrement dit, <em>comment donner du sens à ses données</em>.</p>
-
-<p>J'essaierais de faire un billet dédié, je trouve que cette session est très intéressante car la solution mise en place est fichtrement simple pour un résultat franchement étonnant !</p>
 ]]></content>
   </entry>
   

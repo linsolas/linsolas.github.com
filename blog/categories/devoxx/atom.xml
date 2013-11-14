@@ -4,7 +4,7 @@
   <title><![CDATA[Category: devoxx | fr.romain:blog:3.0]]></title>
   <link href="http://linsolas.github.com/blog/categories/devoxx/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2013-11-13T17:13:11+01:00</updated>
+  <updated>2013-11-14T18:35:51+01:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -12,6 +12,169 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Devoxx 2013 - deuxième jour]]></title>
+    <link href="http://linsolas.github.com/blog/2013/11/14/devoxx-2013-deuxieme-jour/"/>
+    <updated>2013-11-14T09:50:00+01:00</updated>
+    <id>http://linsolas.github.com/blog/2013/11/14/devoxx-2013-deuxieme-jour</id>
+    <content type="html"><![CDATA[<p><img src="/images/devoxx_logo.gif" title="Devoxx 2013" alt="Devoxx 2013" /></p>
+
+<p>Voici la deuxième journée à Devoxx version 2013.
+Pour commencer la journée, la Keynote de Google annonce la sortie de la version 1.0 du langage <a href="https://www.dartlang.org/">Dart</a>.
+Dart est le langage créé par Google au dessus de JavaScript afin de rendre ce dernier plus utilisable, en offrant pas mal de choses des langages Java ou C# comme les classes, un vrai développement orienté objet, etc.</p>
+
+<p>Il a aussi été question du projet <a href="https://github.com/angular/angular.dart">Angular Dart</a>, une implémentation d'<a href="http://angularjs.org/">Angular</a> sur le language Dart.</p>
+
+<!-- more -->
+
+
+<h2><a href="http://devoxx.be/dv13-francesc-campoy-flores.html?presId=3493">Go see all the ships in the world</a></h2>
+
+<p><img src="/images/note-3.5.png" title="3.5/5" alt="3.5/5" /></p>
+
+<p>On parle beaucoup du Big Data. C'est souvent théorique, ou à des exemples qui ne semblent pas très parlants.
+<a href="https://twitter.com/@francesc">Francesc Campoy Flores</a> nous propose une session où nous devrions avoir au final une visualisation dynamique de la position et trajectoires de tous les bateaux du monde ! Cela s'annonce intéressant d'un point de vue technique, et quelque peu exotique quant au contenu.</p>
+
+<p>Parlons tout d'abord des données. Nous avons 75,000 bateaux (en éliminant les petits bateaux). Il faut donc d'abord récupérer ces données.
+Les bateaux disposent d'un système appelé <a href="http://en.wikipedia.org/wiki/Automatic_Identification_System">AIS</a> (<em>Automatic Identification System</em>), une sorte de GPS avant l'heure pour les navires. Toutefois, ce type de protocole est peu fiable, et difficile à gérer.</p>
+
+<p>Il faut donc stocker toutes ces données. Bien entendu, il fait appel au cloud de Google pour cela.
+Le problème qui se pose aussi est la tête des données AIS, qui ne ressemble à pas grand chose :</p>
+
+<p><img src="/images/devoxx2013-boats1.jpg" title="Les données AIS" alt="Les données AIS" /></p>
+
+<p>Il existe toutefois une librairie en C++ qui permet d'interpréter ces données. Le seul hic, c'est que le cloud de Google ne permet pas d'exécuter du C++. Il faut donc écrire un traducteur vers du CSV pour finalement restocker ces informations dans ce format plus pratique.</p>
+
+<p><a href="https://developers.google.com/bigquery/">BigQuery</a> est ensuite utilisé pour extraire les informations de toutes ces données. Une requête assez basique pour récupérer les positions moyennes des bateaux prend 5.8s sur 14Go de données.</p>
+
+<p>Il faut maintenant servir ces données, de façon rapide et dynamique. Pour cela, Fransesc utilise l'API REST de BigQuery depuis du JavaScript. Toutefois, il inclut une application herbergée sur AppEngine entre le browser et le serveur BigQuery. En effet, on risque sinon de trop faire jouer le cache de ce dernier et du coup ne pas avoir les dernières données disponibles.
+Cette application va matérialiser les requêtes, ainsi qu'une gestion du cache (memcache). Cette application est développée avec le langage Go, pour ses performances.</p>
+
+<p>Voilà l'architecture finale du système. Pas si simple !</p>
+
+<p><img src="/images/devoxx2013-boats2.jpg" title="L'architecture pour voir les bateaux" alt="L'architecture pour voir les bateaux" /></p>
+
+<p>Et le résultat, basée sur Google Maps API, WebGL et CanvasLayer montre tout d'abord une floppée de points sur une carte (75,000 quand même). Puis, en utilisant les données disponibles, ces points sont colorés en fonctin de leur vitesse. Ce calcul est fait par le GPU. On laisse le CPU - peu utilisé autrement - calculer l'histogramme donnant la répartition des vitesses :</p>
+
+<p><img src="/images/devoxx2013-boats3.jpg" title="Coloration en fonction de la vitesse" alt="Coloration en fonction de la vitesse" /></p>
+
+<p>Une coloration en fonction de l'orientation du bateau montre très bien les différents canaux de navigation, comme par exemple autour de l'Espagne.</p>
+
+<p><img src="/images/devoxx2013-boats4.jpg" title="Coloration en fonction de l'orientation" alt="Coloration en fonction de l'orientation" /></p>
+
+<p>Et au final :</p>
+
+<p><img src="/images/devoxx2013-boats5.jpg" title="La représentation des bateaux sur une carte" alt="La représentation des bateaux sur une carte" /></p>
+
+<p>Une présentation tout à fait intéressante pour comprendre la démarche du traitement de ces données. Seul bémol, je m'attendais à un peu de live coding ou tout du moins une démo du résultat (plutôt qu'une vidéo). Mais il est vrai que le nombre de données assez important ainsi qu'un WIFI un peu à la ramasse aurait risqué de casser un peu l'expérience.</p>
+
+<h2><a href="http://devoxx.be/dv13-igor-minar.html?presId=3468">What is in store for the future of Angular</a></h2>
+
+<p><img src="/images/note-4.png" title="4/5" alt="4/5" /></p>
+
+<p>AngularJS avait été <a href="">ma claque et ma découverte</a> de Devoxx 2012. Depuis, le framework est devenu très populaire, et plusieurs sessions ont déjà eu lieu à Devoxx 2013, toutes blindées.
+<a href="https://twitter.com/@IgorMinar">Igor Minar</a> et <a href="https://twitter.com/@mhevery">Misko Hevery</a>, deux des principaux membres du projet, viennent nous parler de ce qui attend Angular pour l'année 2014.</p>
+
+<p>La première chose de prévue pour Angular, c'est de se baser encore plus sur les standards, en particulier les <em>web components</em>, qui inclut :</p>
+
+<ul>
+<li>Shadow DOM</li>
+<li>Custom elements, <code>document.register()</code></li>
+<li>Templates</li>
+<li>Scoped CSS</li>
+</ul>
+
+
+<p>Autre point, c'est l'utilisation du <code>Object.observe</code> qui permettra de meilleures performances que le <em>dirty checking</em> d'Angular. L'autre avantage de cette méthode est qu'elle est asynchrone.</p>
+
+<p>Asynchrone DI (<em>Dependency Injection</em>) vs AMD (<a href="http://en.wikipedia.org/wiki/Asynchronous_module_definition">Asynchronous Module Definition</a>).</p>
+
+<p>L'introduction des <strong>zones</strong> va permettre de supprimer <code>$apply</code> et <code>$digest</code>.</p>
+
+<p><img src="/images/devoxx2013-angularjs-zones.jpg" title="Les zones d'Angular" alt="Les zones d'Angular" /></p>
+
+<ul>
+<li><code>DefaultZone</code> se comporte comme le navigateur.</li>
+<li><code>StackTraceZone</code> permet des stacktraces plus longues.</li>
+<li><code>AngularZone</code> applique le data-binding.</li>
+<li><code>MockZone</code> pour faciliter les tests.</li>
+</ul>
+
+
+<p>Angular va également profiter des nouveautés d'EcmaScript 6, en particulier les classes et les modules.
+Il sera également possible d'utiliser des annotations dans le code Angular.</p>
+
+<p><img src="/images/devoxx2013-angularjs-annotations.jpg" title="Les annotations en Angular" alt="Les annotations en Angular" /></p>
+
+<p>Les <strong>contrats</strong> font également leur apparition dans Angular :</p>
+
+<p><img src="/images/devoxx2013-angularjs-contracts.jpg" title="Les contrats en Angular" alt="Les contrats en Angular" /></p>
+
+<p>Bref, je laisse les présentateurs résumer à ma place :</p>
+
+<p><img src="/images/devoxx2013-angularjs-summary.jpg" title="Résumé des nouveautés d'Angular" alt="Résumé des nouveautés d'Angular" /></p>
+
+<p>La présentation était moins éclatante que l'année passée, mais forcément le sujet s'y prétait moins. Toutefois, cela montre qu'Angular a encore de beaux jours devant lui !</p>
+
+<h2><a href="http://devoxx.be/dv13-romain-linsolas.html?presId=3545">The ingredients for a perfect JavaScript Software Factory</a></h2>
+
+<p><img src="/images/note-5.png" title="5/5" alt="5/5" /></p>
+
+<p>(vous vous doutez bien que la note est ici tout à fait objective)
+Là, c'est mon Quickie !
+J'y parle de JavaScript et d'usine logicielle, en particulier d'outils.
+Ma présentation est essentiellement divisée en trois parties. Compte tenu du temps imparti - à peine 15 minutes - il ne m'est pas possible d'aller pleinement dans les détails, mais l'idée est d'aborder les points principaux du sujet:</p>
+
+<ul>
+<li>Tout d'abord, j'insiste sur le fait qu'il faut réutiliser ce que l'on a déjà sous la main, selon le bon vieux principe du <em>Don't Repeat Yourself</em> (DRY). En effet, nous sommes généralement des développeurs Java, et disposons à ce titre d'une usine logicielle déjà performante. Réutilisons donc Jenkins, SonarQube, et consorts !</li>
+<li>Ensuite, intéressons nous aux outils propres à JavaScript. Là, je m'arrêtre surtout sur <a href="http://yeoman.io/">Yeoman</a>, c'est-à-dire <a href="https://github.com/yeoman/yo">Yo</a> pour créer des squelettes d'applications, <a href="http://bower.io/">Bower</a> pour gérer les dépendances et le packaging et enfin <a href="http://gruntjs.com/">Grunt</a>, un exécuteur de tâches (une sorte de Ant pour JavaScript, pour faire simple).</li>
+<li>La dernière partie insiste sur le fait qu'une bonne usine logicielle n'est pas qu'une questions d'outils, mais aussi de bonnes pratiques. Et en terme de bonnes pratiques, les <em>tests</em> sont en première place. Je montre donc qu'il existe toutes sortes de librairies de tests en JavaScript, pour faire du test unitaire, du test fonctionnel, du BDD ou encore du test <em>front-end</em>.</li>
+</ul>
+
+
+<h2><a href="http://devoxx.be/dv13-dick-wall.html?presId=3713">Enregistrement live de JavaPosse</a></h2>
+
+<p><img src="/images/note-4.png" title="4/5" alt="4/5" /></p>
+
+<p>Le podcast de <a href="http://javaposse.com/">JavaPosse</a> est très connu et réputé. Comme chaque année, ils font un enregistrement live à Devoxx, à la manière des CastCodeurs.</p>
+
+<p>Cette année, seule la moitié de l'équipe était présente, à savoir Chet Haase et Dick Wall. Du coup, la moitié des Cast Codeurs, avec Guillaume Laforge et Emmanuel Bernard est venue en renfort.</p>
+
+<p><img src="/images/devoxx2013-javaposse.jpg" title="JavaPosse et les Cast Codeurs" alt="JavaPosse et les Cast Codeurs" /></p>
+
+<p>Une session agréable, avec une session  avec de la bière offerte par Atlassian. Une fois de plus, merci à eux.</p>
+
+<h2><a href="http://devoxx.be/dv13-andrzej-grzesik.html?presId=3500">Continuous Delivery antipatterns</a></h2>
+
+<p><img src="/images/note-3.5.png" title="3.5/5" alt="3.5/5" /></p>
+
+<p>A la SGCIB, nous sommes en plein dans le <em>Continuous Delivery</em>. Il me paraissait donc important de recueillir quelques nouveaux avis et de bons conseils. C'est dans ce but que j'assiste à la conférence de  <a href="http://devoxx.be/dv13-andrzej-grzesik.html">Andrzej Grzesik</a>.</p>
+
+<p>Le problème est avant tout un problème de personnes, de process.
+Il faut des dashboards, pour savoir qui (a) fait quoi.
+Releases = risques. Il faut donc savoir les éviter (les risques, pas les releases !)</p>
+
+<p>Paralléliser les releases. Mais quoi paralléliser ? A priori, tout est parallélisable. Le mieux est de voir ce qui est le plus pénible, le plus long à s'exécuter dans une release, et voir comment on peut le paralléliser.</p>
+
+<p>Autre problème fréquent : des équipes indépendantes, qui ne se parlent pas (devs contre ops par exemple). Il faut restaurer un canal de discussion, de communication.</p>
+
+<p>L'infrastructure manuelle.
+Il faut tester aussi son infrastructure. Avec <a href="http://www.opscode.com/chef/">Chef</a> par exemple, il est possible de faire une sorte de TDD. <a href="http://acrmp.github.io/foodcritic/">Food critic</a> ou <a href="http://www.vagrantup.com/">Vagrant</a> peuvent également être utiles.</p>
+
+<h2><a href="http://devoxx.be/dv13-shaun-smith.html?presId=3568">Practical RESTful persistence</a></h2>
+
+<p><img src="/images/note-2.5.png" title="2.5/5" alt="2.5/5" /></p>
+
+<p>Finalement, on change de sujet, pour aller voir <a href="https://twitter.com/@shaunmsmith">Shaun Smith</a> parler de la nouvelle fonctionnalité d'<a href="http://www.eclipse.org/eclipselink/">EclipseLink</a> de <a href="http://wiki.eclipse.org/EclipseLink/Development/2.4.0/JPA-RS">JPA-RS</a>, qui intgère JAX-RS, JAXB et JPA.
+L'idée est ici de réaliser un binding entre des entités et du JSON entre autres via des annotations dans les entités.</p>
+
+<p>Bon, j'avoue être passé à côté de cette session, je n'ai pas trop compris le pourquoi de tout ça.</p>
+
+<p>Voilà, la deuxième journée s'achève avec encore de belles expériences (sauf gastronomiques !).
+Demain sera plus calme, avec seulement une demi-journée de travail.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Devoxx 2013 - premier jour]]></title>
@@ -480,50 +643,6 @@ Je ne conseillerais pas AngularJS ou Backbone.js sans connaitre le contexte. Par
 <li>Les slides et bientôt la vidéo sur <a href="http://www.parleys.com/#play/515aac03e4b0c779d7881496">Parleys</a>.</li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Devoxx France 2013 - Bilan]]></title>
-    <link href="http://linsolas.github.com/blog/2013/04/02/devoxx-france-2013-bilan/"/>
-    <updated>2013-04-02T23:23:00+02:00</updated>
-    <id>http://linsolas.github.com/blog/2013/04/02/devoxx-france-2013-bilan</id>
-    <content type="html"><![CDATA[<p><img src="http://www.devoxx.com/download/attachments/6816022/DevoxxFR-2012-web-400-267.png" title="Devoxx France 2013" alt="Devoxx France" /></p>
-
-<p>L'édition française de Devoxx 2013 s'est donc achevée la semaine dernière. A nouveau, un énorme <strong>BRAVO</strong> à toute l'équipe organisatrice, aux sponsors, aux speakers, aux participants. C'était magique. Devoxx, c'est un peu le Disneyland du développeur geek. On y voit des "stars" (pas dans le mauvais sens du terme) et on s'amuse énormément.</p>
-
-<p>Allez, un petit bilan personnel :</p>
-
-<h3>Les plus</h3>
-
-<ul>
-<li>Les gens.</li>
-<li>L'organisation, toujours au poil.</li>
-<li>L'équipe des organisateurs, toujours gentils et disponibles.</li>
-<li>Les rencontres, surtout voir en vrai des personnes que l'on ne connait que <em>via</em> Twitter.</li>
-<li>Les présentations de qualité, plutôt variées et nombreuses.</li>
-<li>Les gens.</li>
-<li>Certains goodies. Personnellement, j'en ai un peu marre des t-shirts (sauf celui d'Atlassian qui est au top, et que je portais durant ma présentation) et des mugs. Certains sponsors innovent plus que d'autres en la matière : boite à Meuh d'OCTO, décapsuleurs, gants, etc.</li>
-<li>Les concours, bien que je n'ai rien gagné !</li>
-<li>Le site de Parleys qui diffuse toutes les sessions que l'on a dû rater parce que parfois c'était dur de choisir, ou que l'on discutait avec des personnes. En plus, le site a été refait en HTML 5 !</li>
-<li>Le diner des speakers.</li>
-<li>La soirée "<em>Meet &amp; greet</em>".</li>
-<li>Les gens.</li>
-</ul>
-
-
-<h3>Les moins</h3>
-
-<ul>
-<li>Pas assez de <em>Hands On</em> le mercredi. Comme je l'ai dit, j'aimerais beaucoup que Devoxx France 2014 se déroule en quatre jours : 2 jours d'universités et Labs avec une attention particulière pour les sessions où l'auditoire code vraiment, et 2 jours de conférences.</li>
-<li>Le Marriott devient trop petit. L'année passée, avec un peu plus de 1200 personnes, on se sentait à l'étroit. Cette année, avec 1400 et quelques participants, c'était encore plus vrai. De nombreuses personnes se sont faites recaler à l'entrée des salles de conférences pleines pour des raisons de sécurité. Cela se comprend, mais c'est rageant. Le problème est de trouver un lieu ayant une capacité d'accueil d'au moins 1500 personnes à Paris pour un budget raisonnable. Difficile à mon avis !</li>
-<li>La nourriture le midi. Sans être mauvaise, ce n'était quand même pas ça, et ça manquait un peu de variété. En plus, sauf erreur de ma part, il n'y avait pas de desserts le midi. A noter que cette année, contrairement à 2012, les boissons étaient toujours à disposition et ça c'est bien (petit bémol : pas de Coca light, que du Coca "normal" :o) ).</li>
-<li>Toujours pas de NAO à gagner :)</li>
-<li>Faute de place, les BOF sont toujours un peu tard le soir (certains finissent à 22h). Guère pratique quand on a déjà 2 jours de Devoxx dans les pates !</li>
-</ul>
-
-
-<p>Voilà, hormis le problème du lieu qui devient trop petit, rien de méchant. Devoxx confirme qu'il s'agit d'une superbe conférence, et encore une fois, j'étais très fier d'y assister, surtout en tant que speaker ! A l'année prochaine (et en fin d'année pour la version World à Anvers) !</p>
 ]]></content>
   </entry>
   
