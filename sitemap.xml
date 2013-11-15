@@ -117,15 +117,21 @@
         <lastmod>2013-11-15T12:40:31+01:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://linsolas.github.com/blog/2013/11/15/mon-interview-sur-developpez-dot-com/
+        </loc>
+        <lastmod>2013-11-15T12:46:15+01:00</lastmod>
+    </url>
+    <url>
         <loc>http://linsolas.github.com/about/</loc>
         <lastmod>2012-11-22T23:40:52+01:00</lastmod>
     </url>
     <url>
         <loc>http://linsolas.github.com/blog/archives/</loc>
-        <lastmod>2013-11-15T12:40:31+01:00</lastmod>
+        <lastmod>2013-11-15T12:46:15+01:00</lastmod>
     </url>
     <url>
         <loc>http://linsolas.github.com/</loc>
-        <lastmod>2013-11-15T12:40:31+01:00</lastmod>
+        <lastmod>2013-11-15T12:46:15+01:00</lastmod>
     </url>
 </urlset>

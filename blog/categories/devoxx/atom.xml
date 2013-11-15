@@ -4,7 +4,7 @@
   <title><![CDATA[Category: devoxx | fr.romain:blog:3.0]]></title>
   <link href="http://linsolas.github.com/blog/categories/devoxx/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2013-11-15T12:40:42+01:00</updated>
+  <updated>2013-11-15T12:46:27+01:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Mon interview sur Developpez.com]]></title>
+    <link href="http://linsolas.github.com/blog/2013/11/15/mon-interview-sur-developpez-dot-com/"/>
+    <updated>2013-11-15T12:41:00+01:00</updated>
+    <id>http://linsolas.github.com/blog/2013/11/15/mon-interview-sur-developpez-dot-com</id>
+    <content type="html"><![CDATA[<p><img src="http://www.developpez.com/template/images/logo.png" title="Developpez.com" alt="Developpez.com" /></p>
+
+<p><a href="https://twitter.com/thierryleriche">Thierry Leriche Dessirier</a> m'a proposé gentillement de m'interviewer pour promouvoir l'édition 2014 de la conférence <a href="http://www.devoxx.fr/">Devoxx</a>. J'y parle de Devoxx, bien sûr, du site <a href="http://www.developpez.com/">Developpez.com</a>, mais aussi de mon expérience en tant que conférencier.</p>
+
+<p>Retrouvez mon interview <a href="http://thierry-leriche-dessirier.developpez.com/articles/interview/romain-linsolas-super-devoxxien/">ici</a>. Et rendez-vous à Devoxx France en 2014.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Devoxx 2013 - dernier jour et bilan]]></title>
@@ -490,25 +503,6 @@ Pour la dernière journée (enfin, demi-journée), mon programme :</p>
 
 
 <p>Voilà, mon programme est établi. Bien entendu, celui-ci va sans aucun doute beaucoup évoluer quand je serais sur place. On verra vendredi après-midi si j'avais bien jugé ou pas...</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Et quatre à la suite]]></title>
-    <link href="http://linsolas.github.com/blog/2013/10/23/et-quatre-a-la-suite/"/>
-    <updated>2013-10-23T19:05:00+02:00</updated>
-    <id>http://linsolas.github.com/blog/2013/10/23/et-quatre-a-la-suite</id>
-    <content type="html"><![CDATA[<p>Quatre à la suite ? Ai-je participé à Questions pour un Champion ? Non !</p>
-
-<p>Bon, je n'ai pas blogué à ce sujet, mais j'aurais la chance dans trois semaines, d'assister à mon quatrième Devoxx. Et pour ne pas changer les bonnes habitudes, je me retrouve une nouvelle fois orateur !</p>
-
-<p>Le sujet, c'est "<em>The perfect ingredients for a JavaScript Software Factory</em>". Oui, encore du JavaScript dans une conférence pourtant orientée Java. Cela prouve bien notre ouverture d'esprit, à nous autres Javaïstes !</p>
-
-<p>Bref, de quoi ça va parler ? En gros, de tout ce qu'il faut pour "industrialiser" son développement JavaScript. Un développeur Java dispose déjà de toute une panoplie d'outils et de pratiques pour développer correctement ses applications. Mais qu'en est-il pour un développeur JavaScript ? L'écosystème est-il désert ou au contraire fourmille-t-il de petites perles ?</p>
-
-<p>Hélas, il s'agit d'un <strong>Quickie</strong>, ce qui veut dire que je n'aurais que 15 minutes pour aborder ce sujet tellement vaste. Je serais donc amené à surtout éfleurer ce sujet, mais cela me semble une bonne approche pour un développeur qui souhaite s'intéresser vraiment à faire du JavaScript propre !</p>
-
-<p>Bref, si vous êtes à Anvers la semaine du 11 novembre, n'hésitez pas à venir jeter un oeil à ma présentation...</p>
 ]]></content>
   </entry>
   
