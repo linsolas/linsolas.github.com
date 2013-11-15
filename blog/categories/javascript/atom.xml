@@ -4,7 +4,7 @@
   <title><![CDATA[Category: javascript | fr.romain:blog:3.0]]></title>
   <link href="http://linsolas.github.com/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2013-11-14T18:35:51+01:00</updated>
+  <updated>2013-11-15T12:40:42+01:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -12,6 +12,433 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Devoxx 2013 - dernier jour et bilan]]></title>
+    <link href="http://linsolas.github.com/blog/2013/11/15/devoxx-2013-dernier-jour-et-bilan/"/>
+    <updated>2013-11-15T00:27:00+01:00</updated>
+    <id>http://linsolas.github.com/blog/2013/11/15/devoxx-2013-dernier-jour-et-bilan</id>
+    <content type="html"><![CDATA[<p><img src="/images/devoxx_logo.gif" title="Devoxx 2013" alt="Devoxx 2013" /></p>
+
+<p>La dernière journée à Devoxx est toujours un peu spéciale. Beaucoup moins de monde, moins de sessions aussi, on sent que la fin est là !
+Pour cette dernière journée, comme habituellement pour chaque Devoxx (France ou Belgique), je termine par l'enregistrement du podcast des CastCodeurs.</p>
+
+<!-- more -->
+
+
+<p>J'ai commencé la journée avec <a href="http://devoxx.be/dv13-scott-kurz.html?presId=3728">Batch applications for the Java platform (JSR 352)</a>, mais entre la fatigue des deux derniers jours et les slides bien trop chargés, j'ai eu du mal à suivre. Donc si vous voulez en savoir plus, je vous invite à regarder la <a href="http://jcp.org/en/jsr/detail?id=352">JSR 352</a> :)</p>
+
+<h2><a href="http://devoxx.be/dv13-vincent-massol.html?presId=3430">Enregistrement live des CastCodeurs</a></h2>
+
+<p><img src="/images/note-4.png" title="4/5" alt="4/5" /></p>
+
+<p>Ma seule et unique session en français (la seule de la conférence d'ailleurs) : l'enregistrement live du <a href="http://lescastcodeurs.com/">Podcast des CastCodeurs</a>. Une analyse toujours fine et délicate de la conférence qui est en train de s'achever.
+Je vous laisserais écouter cet épisode qui sera bientôt disponible sur le site. D'ailleurs, bientôt la 100e. Ce sera d'ailleurs peut-être pour Devoxx Anvers 2014, qui sait.</p>
+
+<p><img src="/images/devoxx2013-castcodeurs.jpg" title="Les CastCodeurs sur scène" alt="Les CastCodeurs sur scène" /></p>
+
+<h2><a href="http://devoxx.be/dv13-jean-franois-denise.html?presId=3759">Avatar.js, Server-Side JavaScript on the Java Platform</a></h2>
+
+<p><img src="/images/note-2.png" title="2/5" alt="2/5" /></p>
+
+<p>Finissons ce Devoxx par la présentation de <a href="http://devoxx.be/dv13-jean-franois-denise.html">Jean-François Denise</a> sur <a href="https://avatar-js.java.net/">Avatar.js</a>.</p>
+
+<p>Il s'agit d'un framework JavaScript côté serveur qui tourne sur la JVM et est une combinaison de :</p>
+
+<ul>
+<li>d'une inspiration de Node pour son modèle orienté événement, son système de modules et de son API.</li>
+<li>utilisation du moteur JavaScript de Nashorn.</li>
+<li>l'API de de la plateforme Java.</li>
+</ul>
+
+
+<p>Le but n'est pas de copier Node, mais plutôt d'en créer une compatible avec lui. Prendre le meilleure des deux mondes en quelque sorte.
+La syntaxe s'approche de celle de Node, comme par exemple :</p>
+
+<p>``` javascript
+var fs = require('fs')
+fs.readdir('/Documents/images', function(err, files) {</p>
+
+<pre><code>files.map(function(imgFile) {
+    var file = new java.util.File(imgFile);
+    var img = javax.imageio.ImageIO.read(file);
+    ...
+})
+</code></pre>
+
+<p>})
+```</p>
+
+<p>Démarrer un serveur peut se faire directement en ligne de commandes, ou encore via quelques lignes de code :</p>
+
+<p><code>java
+String[] args = { "./myscript.js" };
+Server server = new Server(args);
+server.run(args);
+</code></p>
+
+<p>Avatar.js vient aussi avec Avatar EE. Et là, je commence à me poser des questions.
+Il faut noter qu'Avatar.js n'est pas encore finalisé, et son API peut également être amenée à changer...</p>
+
+<p>Jean-Baptiste passe ensuite à une démo d'application d'upload de photos en Avatar.js, avec l'aide d'Express, des WebSocket, de java.sql et de javax.imageio. Ah non, en fait de démo, il s'agit de slides qui montrent du code. Argh</p>
+
+<p>J'avoue ne pas être vraiment emballé par ce projet, bien qu'avoir une passerelle entre Node.js et Java peut être intéressant. De plus ne pas voir une <em>vraie</em> démo m'a quand même déçu !</p>
+
+<h2>Bilan</h2>
+
+<p>Pour ma deuxième année à Anvers, la magie est toujours là. Cela reste l'une des meilleures conférences du monde sur le domaine du Java, avec des stars et des présentations de qualité.
+Je dirais quand même que j'ai préféré Devoxx 2012 à la version 2013, mais cela est peut-être aussi lié au fait que l'année dernière, il y avait en plus l'excitation de découvrir cette conférence pour de vrai.</p>
+
+<p>Bref, je reviendrais à Anvers en 2014 si j'en ai la possibilité, et ce sera peut-être pour faire une conférence, qui sait.</p>
+
+<p>Donc les aspects positifs :</p>
+
+<ul>
+<li>La qualité des présentations et des orateurs.</li>
+<li>Une organisation au poil, et c'est du sacré boulot !</li>
+<li>Les gens, les amis que l'on revoit ou que l'on se fait. Les rencontres donc.</li>
+<li>Les stands, il y en a pas mal, ils sont plutôt bien achalandés, et certains offrent des goodies sympas.</li>
+<li>A boire. On peut toujours boire, c'est toujours bien fourni, et parfois de la bière est offerte par un stand ou Atlassian.</li>
+<li>Le bracelet, toujours aussi pratique.</li>
+<li>Le système de vote à la sortie des salles (comme en 2012).</li>
+<li>Le film du jeudi soir (avec les popcorns), même si je ne l'ai pas tellement apprécié ("<em>Le Cartel</em>" ou "<em>The Counselor</em>" en VO), je trouve que c'est quand même top comme idée.</li>
+<li>Le site <a href="http://www.parleys.com">Parleys</a> qui héberge(ra) les sessions, toutes filmées (sauf, hélas, les Quickies et donc le mien)</li>
+</ul>
+
+
+<p>Les moins, ou les points d'amélioration :</p>
+
+<ul>
+<li>La nourriture. Je ne me souviens pas d'avoir super bien mangé à Devoxx 2012, mais j'ai vraiment l'impression que cette année c'était pire. Le mercredi midi c'était juste un sandwich, rien de folichon. Le lendemain, c'était une salade assez étrange (en gros, un sacré mélange), ce qui m'a fait finir au Quick. En dehors de ça, point de salut. Quelques gâteaux ont été jetés en pature à la foule affamée vers 16h, mais franchement, il y a un très gros axe d'amélioration sur ce point-là !</li>
+<li>Le système de vote qui mériterait d'être mieux utilisé. En gros, il ne sert qu'à faire un "Top 3" des meilleures sessions du jour ou de la conférence entière. Il serait bien de fournir le score au speaker à la fin de la conférence, pour avoir une évaluation directe du ressenti des spectateurs.</li>
+<li>Contrairement à l'année passée où j'avais eu la "révélation Angular", cette année pas de "<em>Kick-ass</em>" présentations. Mais le niveau reste élevé, ne me faites pas dire ce que je ne dis pas :)</li>
+</ul>
+
+
+<p>Vivement 2014 :)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Devoxx 2013 - deuxième jour]]></title>
+    <link href="http://linsolas.github.com/blog/2013/11/14/devoxx-2013-deuxieme-jour/"/>
+    <updated>2013-11-14T09:50:00+01:00</updated>
+    <id>http://linsolas.github.com/blog/2013/11/14/devoxx-2013-deuxieme-jour</id>
+    <content type="html"><![CDATA[<p><img src="/images/devoxx_logo.gif" title="Devoxx 2013" alt="Devoxx 2013" /></p>
+
+<p>Voici la deuxième journée à Devoxx version 2013.
+Pour commencer la journée, la Keynote de Google annonce la sortie de la version 1.0 du langage <a href="https://www.dartlang.org/">Dart</a>.
+Dart est le langage créé par Google au dessus de JavaScript afin de rendre ce dernier plus utilisable, en offrant pas mal de choses des langages Java ou C# comme les classes, un vrai développement orienté objet, etc.</p>
+
+<p>Il a aussi été question du projet <a href="https://github.com/angular/angular.dart">Angular Dart</a>, une implémentation d'<a href="http://angularjs.org/">Angular</a> sur le language Dart.</p>
+
+<!-- more -->
+
+
+<h2><a href="http://devoxx.be/dv13-francesc-campoy-flores.html?presId=3493">Go see all the ships in the world</a></h2>
+
+<p><img src="/images/note-3.5.png" title="3.5/5" alt="3.5/5" /></p>
+
+<p>On parle beaucoup du Big Data. C'est souvent théorique, ou à des exemples qui ne semblent pas très parlants.
+<a href="https://twitter.com/@francesc">Francesc Campoy Flores</a> nous propose une session où nous devrions avoir au final une visualisation dynamique de la position et trajectoires de tous les bateaux du monde ! Cela s'annonce intéressant d'un point de vue technique, et quelque peu exotique quant au contenu.</p>
+
+<p>Parlons tout d'abord des données. Nous avons 75,000 bateaux (en éliminant les petits bateaux). Il faut donc d'abord récupérer ces données.
+Les bateaux disposent d'un système appelé <a href="http://en.wikipedia.org/wiki/Automatic_Identification_System">AIS</a> (<em>Automatic Identification System</em>), une sorte de GPS avant l'heure pour les navires. Toutefois, ce type de protocole est peu fiable, et difficile à gérer.</p>
+
+<p>Il faut donc stocker toutes ces données. Bien entendu, il fait appel au cloud de Google pour cela.
+Le problème qui se pose aussi est la tête des données AIS, qui ne ressemble à pas grand chose :</p>
+
+<p><img src="/images/devoxx2013-boats1.jpg" title="Les données AIS" alt="Les données AIS" /></p>
+
+<p>Il existe toutefois une librairie en C++ qui permet d'interpréter ces données. Le seul hic, c'est que le cloud de Google ne permet pas d'exécuter du C++. Il faut donc écrire un traducteur vers du CSV pour finalement restocker ces informations dans ce format plus pratique.</p>
+
+<p><a href="https://developers.google.com/bigquery/">BigQuery</a> est ensuite utilisé pour extraire les informations de toutes ces données. Une requête assez basique pour récupérer les positions moyennes des bateaux prend 5.8s sur 14Go de données.</p>
+
+<p>Il faut maintenant servir ces données, de façon rapide et dynamique. Pour cela, Fransesc utilise l'API REST de BigQuery depuis du JavaScript. Toutefois, il inclut une application herbergée sur AppEngine entre le browser et le serveur BigQuery. En effet, on risque sinon de trop faire jouer le cache de ce dernier et du coup ne pas avoir les dernières données disponibles.
+Cette application va matérialiser les requêtes, ainsi qu'une gestion du cache (memcache). Cette application est développée avec le langage Go, pour ses performances.</p>
+
+<p>Voilà l'architecture finale du système. Pas si simple !</p>
+
+<p><img src="/images/devoxx2013-boats2.jpg" title="L'architecture pour voir les bateaux" alt="L'architecture pour voir les bateaux" /></p>
+
+<p>Et le résultat, basée sur Google Maps API, WebGL et CanvasLayer montre tout d'abord une floppée de points sur une carte (75,000 quand même). Puis, en utilisant les données disponibles, ces points sont colorés en fonctin de leur vitesse. Ce calcul est fait par le GPU. On laisse le CPU - peu utilisé autrement - calculer l'histogramme donnant la répartition des vitesses :</p>
+
+<p><img src="/images/devoxx2013-boats3.jpg" title="Coloration en fonction de la vitesse" alt="Coloration en fonction de la vitesse" /></p>
+
+<p>Une coloration en fonction de l'orientation du bateau montre très bien les différents canaux de navigation, comme par exemple autour de l'Espagne.</p>
+
+<p><img src="/images/devoxx2013-boats4.jpg" title="Coloration en fonction de l'orientation" alt="Coloration en fonction de l'orientation" /></p>
+
+<p>Et au final :</p>
+
+<p><img src="/images/devoxx2013-boats5.jpg" title="La représentation des bateaux sur une carte" alt="La représentation des bateaux sur une carte" /></p>
+
+<p>Une présentation tout à fait intéressante pour comprendre la démarche du traitement de ces données. Seul bémol, je m'attendais à un peu de live coding ou tout du moins une démo du résultat (plutôt qu'une vidéo). Mais il est vrai que le nombre de données assez important ainsi qu'un WIFI un peu à la ramasse aurait risqué de casser un peu l'expérience.</p>
+
+<h2><a href="http://devoxx.be/dv13-igor-minar.html?presId=3468">What is in store for the future of Angular</a></h2>
+
+<p><img src="/images/note-4.png" title="4/5" alt="4/5" /></p>
+
+<p>AngularJS avait été <a href="">ma claque et ma découverte</a> de Devoxx 2012. Depuis, le framework est devenu très populaire, et plusieurs sessions ont déjà eu lieu à Devoxx 2013, toutes blindées.
+<a href="https://twitter.com/@IgorMinar">Igor Minar</a> et <a href="https://twitter.com/@mhevery">Misko Hevery</a>, deux des principaux membres du projet, viennent nous parler de ce qui attend Angular pour l'année 2014.</p>
+
+<p>La première chose de prévue pour Angular, c'est de se baser encore plus sur les standards, en particulier les <em>web components</em>, qui inclut :</p>
+
+<ul>
+<li>Shadow DOM</li>
+<li>Custom elements, <code>document.register()</code></li>
+<li>Templates</li>
+<li>Scoped CSS</li>
+</ul>
+
+
+<p>Autre point, c'est l'utilisation du <code>Object.observe</code> qui permettra de meilleures performances que le <em>dirty checking</em> d'Angular. L'autre avantage de cette méthode est qu'elle est asynchrone.</p>
+
+<p>Asynchrone DI (<em>Dependency Injection</em>) vs AMD (<a href="http://en.wikipedia.org/wiki/Asynchronous_module_definition">Asynchronous Module Definition</a>).</p>
+
+<p>L'introduction des <strong>zones</strong> va permettre de supprimer <code>$apply</code> et <code>$digest</code>.</p>
+
+<p><img src="/images/devoxx2013-angularjs-zones.jpg" title="Les zones d'Angular" alt="Les zones d'Angular" /></p>
+
+<ul>
+<li><code>DefaultZone</code> se comporte comme le navigateur.</li>
+<li><code>StackTraceZone</code> permet des stacktraces plus longues.</li>
+<li><code>AngularZone</code> applique le data-binding.</li>
+<li><code>MockZone</code> pour faciliter les tests.</li>
+</ul>
+
+
+<p>Angular va également profiter des nouveautés d'EcmaScript 6, en particulier les classes et les modules.
+Il sera également possible d'utiliser des annotations dans le code Angular.</p>
+
+<p><img src="/images/devoxx2013-angularjs-annotations.jpg" title="Les annotations en Angular" alt="Les annotations en Angular" /></p>
+
+<p>Les <strong>contrats</strong> font également leur apparition dans Angular :</p>
+
+<p><img src="/images/devoxx2013-angularjs-contracts.jpg" title="Les contrats en Angular" alt="Les contrats en Angular" /></p>
+
+<p>Bref, je laisse les présentateurs résumer à ma place :</p>
+
+<p><img src="/images/devoxx2013-angularjs-summary.jpg" title="Résumé des nouveautés d'Angular" alt="Résumé des nouveautés d'Angular" /></p>
+
+<p>La présentation était moins éclatante que l'année passée, mais forcément le sujet s'y prétait moins. Toutefois, cela montre qu'Angular a encore de beaux jours devant lui !</p>
+
+<h2><a href="http://devoxx.be/dv13-romain-linsolas.html?presId=3545">The ingredients for a perfect JavaScript Software Factory</a></h2>
+
+<p><img src="/images/note-5.png" title="5/5" alt="5/5" /></p>
+
+<p>(vous vous doutez bien que la note est ici tout à fait objective)
+Là, c'est mon Quickie !
+J'y parle de JavaScript et d'usine logicielle, en particulier d'outils.
+Ma présentation est essentiellement divisée en trois parties. Compte tenu du temps imparti - à peine 15 minutes - il ne m'est pas possible d'aller pleinement dans les détails, mais l'idée est d'aborder les points principaux du sujet:</p>
+
+<ul>
+<li>Tout d'abord, j'insiste sur le fait qu'il faut réutiliser ce que l'on a déjà sous la main, selon le bon vieux principe du <em>Don't Repeat Yourself</em> (DRY). En effet, nous sommes généralement des développeurs Java, et disposons à ce titre d'une usine logicielle déjà performante. Réutilisons donc Jenkins, SonarQube, et consorts !</li>
+<li>Ensuite, intéressons nous aux outils propres à JavaScript. Là, je m'arrêtre surtout sur <a href="http://yeoman.io/">Yeoman</a>, c'est-à-dire <a href="https://github.com/yeoman/yo">Yo</a> pour créer des squelettes d'applications, <a href="http://bower.io/">Bower</a> pour gérer les dépendances et le packaging et enfin <a href="http://gruntjs.com/">Grunt</a>, un exécuteur de tâches (une sorte de Ant pour JavaScript, pour faire simple).</li>
+<li>La dernière partie insiste sur le fait qu'une bonne usine logicielle n'est pas qu'une questions d'outils, mais aussi de bonnes pratiques. Et en terme de bonnes pratiques, les <em>tests</em> sont en première place. Je montre donc qu'il existe toutes sortes de librairies de tests en JavaScript, pour faire du test unitaire, du test fonctionnel, du BDD ou encore du test <em>front-end</em>.</li>
+</ul>
+
+
+<h2><a href="http://devoxx.be/dv13-dick-wall.html?presId=3713">Enregistrement live de JavaPosse</a></h2>
+
+<p><img src="/images/note-4.png" title="4/5" alt="4/5" /></p>
+
+<p>Le podcast de <a href="http://javaposse.com/">JavaPosse</a> est très connu et réputé. Comme chaque année, ils font un enregistrement live à Devoxx, à la manière des CastCodeurs.</p>
+
+<p>Cette année, seule la moitié de l'équipe était présente, à savoir Chet Haase et Dick Wall. Du coup, la moitié des Cast Codeurs, avec Guillaume Laforge et Emmanuel Bernard est venue en renfort.</p>
+
+<p><img src="/images/devoxx2013-javaposse.jpg" title="JavaPosse et les Cast Codeurs" alt="JavaPosse et les Cast Codeurs" /></p>
+
+<p>Une session agréable, avec une session  avec de la bière offerte par Atlassian. Une fois de plus, merci à eux.</p>
+
+<h2><a href="http://devoxx.be/dv13-andrzej-grzesik.html?presId=3500">Continuous Delivery antipatterns</a></h2>
+
+<p><img src="/images/note-3.5.png" title="3.5/5" alt="3.5/5" /></p>
+
+<p>A la SGCIB, nous sommes en plein dans le <em>Continuous Delivery</em>. Il me paraissait donc important de recueillir quelques nouveaux avis et de bons conseils. C'est dans ce but que j'assiste à la conférence de  <a href="http://devoxx.be/dv13-andrzej-grzesik.html">Andrzej Grzesik</a>.</p>
+
+<p>Le problème est avant tout un problème de personnes, de process.
+Il faut des dashboards, pour savoir qui (a) fait quoi.
+Releases = risques. Il faut donc savoir les éviter (les risques, pas les releases !)</p>
+
+<p>Paralléliser les releases. Mais quoi paralléliser ? A priori, tout est parallélisable. Le mieux est de voir ce qui est le plus pénible, le plus long à s'exécuter dans une release, et voir comment on peut le paralléliser.</p>
+
+<p>Autre problème fréquent : des équipes indépendantes, qui ne se parlent pas (devs contre ops par exemple). Il faut restaurer un canal de discussion, de communication.</p>
+
+<p>L'infrastructure manuelle.
+Il faut tester aussi son infrastructure. Avec <a href="http://www.opscode.com/chef/">Chef</a> par exemple, il est possible de faire une sorte de TDD. <a href="http://acrmp.github.io/foodcritic/">Food critic</a> ou <a href="http://www.vagrantup.com/">Vagrant</a> peuvent également être utiles.</p>
+
+<h2><a href="http://devoxx.be/dv13-shaun-smith.html?presId=3568">Practical RESTful persistence</a></h2>
+
+<p><img src="/images/note-2.5.png" title="2.5/5" alt="2.5/5" /></p>
+
+<p>Finalement, on change de sujet, pour aller voir <a href="https://twitter.com/@shaunmsmith">Shaun Smith</a> parler de la nouvelle fonctionnalité d'<a href="http://www.eclipse.org/eclipselink/">EclipseLink</a> de <a href="http://wiki.eclipse.org/EclipseLink/Development/2.4.0/JPA-RS">JPA-RS</a>, qui intgère JAX-RS, JAXB et JPA.
+L'idée est ici de réaliser un binding entre des entités et du JSON entre autres via des annotations dans les entités.</p>
+
+<p>Bon, j'avoue être passé à côté de cette session, je n'ai pas trop compris le pourquoi de tout ça.</p>
+
+<p>Voilà, la deuxième journée s'achève avec encore de belles expériences (sauf gastronomiques !).
+Demain sera plus calme, avec seulement une demi-journée de travail.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Devoxx 2013 - premier jour]]></title>
+    <link href="http://linsolas.github.com/blog/2013/11/13/devoxx-2013-premier-jour/"/>
+    <updated>2013-11-13T08:56:00+01:00</updated>
+    <id>http://linsolas.github.com/blog/2013/11/13/devoxx-2013-premier-jour</id>
+    <content type="html"><![CDATA[<p><img src="/images/devoxx_logo.gif" title="Devoxx 2013" alt="Devoxx 2013" /></p>
+
+<p>Et voilà, ma deuxième expérience belge de Devoxx est entamée.</p>
+
+<!-- more -->
+
+
+<h2><a href="http://devoxx.be/dv13-sven-peters.html?presId=3143">How To Do Kick-Ass Software Development</a></h2>
+
+<p><img src="/images/note-4.png" title="4/5" alt="4/5" /></p>
+
+<p><img src="/images/devoxx-2013-kickass.jpg" title="Kick-ass development" alt="Kick-ass Development" /></p>
+
+<p>J'ai choisi cette présentation de <a href="https://twitter.com/@svenpet">Sven Peters</a> d'Atlassian, car j'avais beaucoup apprécié sa présentation l'année passée sur <a href="http://linsolas.github.io/blog/2012/11/18/devoxx-2012-jour-1/">7 things to make a good team great</a>. Il y présentait 7 trucs pour rendre une bonne équipe encore meilleure. C'est d'ailleurs lors de cette présentation qu'il m'est venue l'idée de mettre les <a href="http://www.brownbaglunch.fr">Brown Bag Lunch</a> à la SGCIB (via l'idée "<em>Feed you brain</em>"), peu de temps avant que ce mouvement ne prenne de l'ampleur en France.</p>
+
+<p>Sven s'est intéressé au film <a href="http://www.imdb.com/title/tt1250777/">Kick-Ass</a>, où une personne quelconque souhaite devenir un super-héros, juste en portant un costume. Forcément, au début il se fait dérouiller, mais persiste. Et c'est le message de Sven : se prendre des gamèles, mais toujours se relever.</p>
+
+<p>Mais que souhaite t-on atteindre avec son équipe ?</p>
+
+<ul>
+<li>un meilleur software ;</li>
+<li>moins d'<em>overhead</em> ;</li>
+<li>un développement plus rapide ;</li>
+<li>des clients heureux ;</li>
+<li>des développeurs heureux.</li>
+</ul>
+
+
+<p>Il y a quelques temps, la solution à tous les problèmes était l'agilité. Mais qu'en est-il en 2013 ?
+Le problème de toute méthodologie ou technologie c'est qu'au début c'est super, mais très vite les soucis commencent à surgir, jusqu'à s'apercevoir que cette solution ne résoud pas tous les problèmes (voir la <a href="http://en.wikipedia.org/wiki/Hype_cycle">Gartner Hype Curve</a>).</p>
+
+<p>Il faut toujours garder à l'esprit de construire la bonne chose ("<em>Building the right thing</em>").
+Une idée est le "<em>Fake it til you make it</em>".
+Sven nous montre l'exemple à ne pas suivre avec le <a href="http://en.wikipedia.org/wiki/Microsoft_Kin">téléphone Kin</a> de Microsoft. Censé être très adapté à la nouvelle génération, il fut un échec très retentissant, sorti de la vente à peine au bout de deux semaines, et aura fait perder plus d'un milliard de dollars à la firme !</p>
+
+<p><img src="http://www.digitaltrends.com/wp-content/uploads/2010/06/043775-microsoft-kin.jpg" title="Microsoft Kin" alt="Image Microsoft Kin" /></p>
+
+<p>A l'opposé, IBM a voulu tester une application de reconnaissance vocale.
+Plutôt que de développer un système complexe, ils ont triché en mettant une personne réelle dont le rôle était d'exécuter les tâches dictées par un cobaye. L'expérimentation n'ayant pas convaincue, il fut décidé que l'application réelle ne serait pas développée.</p>
+
+<p>Passons à l'importance du feedback. Celui-ci doit répondre à trois critères :</p>
+
+<ul>
+<li>facile à trouver ;</li>
+<li>simple ;</li>
+<li>rapide à soumettre.</li>
+</ul>
+
+
+<p>Il ne faut pas embêter directement les développeurs avec les feedbacks. Par exemple, pour l'équipe GMail, il y a 100 développeurs pour 425M utilisateurs. Imaginer que ce soit les développeurs qui traitent directement les feedbacks des utilisateurs. Le développement de l'application n'avancerait jamais.
+Cependant, tous doivent être conscients de ce qui ne va pas.</p>
+
+<p>Chaque jour, l'équipe d'Atlassian se réunit 45 minutes pour revoir ces feedbacks et en faire quelque chose de personnel.
+De plus, chaque développeur passe une semaine par an au support de premier niveau, pour être en contact directement avec les problèmes des utilisateurs.</p>
+
+<p>Autre point, ce qu'ils appellent le <em>Developer on Test</em>. Il s'agit de faire remplir le rôle de testeur aux développeurs.
+Pour cela, six astuces :</p>
+
+<ul>
+<li>Le training. Comment penser comme un testeur ?</li>
+<li>Faire du <em>pairing</em> entre un testeur et un développeur.</li>
+<li><em>Blitz Test</em> : durant une journée, toute la compagnie - et pas seulement les développeurs et les testeurs - teste une nouvelle vesion.</li>
+<li>Définir des recettes de tests.</li>
+<li>Instaurere des sessions séparées : pendant une heure, deux équipes testent les mêmes choses, puis comparent leurs résultats.</li>
+<li>La chasse aux bugs : pendant une semaine, un développeur est dédié à la chasse aux bugs sur tous les éléments marqués comme Terminés.</li>
+</ul>
+
+
+<p>Sven nous rappelle alors que "La qualité est la responsabilité de chacun".</p>
+
+<p>Sven passe ensuite sur le design. A Atlassian, les développeurs font aussi du design.
+Ils n'étaient pas forcément mauvais, mais cela avait tendance à partir dans tous les sens.
+Ce dont ils ont besoin, c'est de lignes directrices, de <em>design guidances</em> (<a href="https://developer.atlassian.com/design">les guidlines de design d'Atlassian</a>).</p>
+
+<p>Ils organisent également des workshops pour les développeurs.</p>
+
+<p>Comme un développement complet requiert la collaboration de plusieurs départements, il est important de supprimer les frictions qui peuvent apparaitre entre eux.</p>
+
+<p>Atlassian définit également des <em>guidelines</em> pour le développement. Ainsi, pour chaque tâche une branche est créée sur Git.
+Leur durée de vie est ainsi très courte (environ 2 jours).
+Puis, pour merger le code, ils passent par des <em>push requests</em>, ce qui fait que le nouveau code est revu et validé par ses pairs. Ce nouveau code n'est donc plus de la responsabilité d'un seul développeur.</p>
+
+<p>Dernier point : l'automatisation. Le principe est d'échouer rapidement (<em>Fail fast</em>). 4 choses à retenir :</p>
+
+<ul>
+<li>Mettre à disposition les artifacts générés.</li>
+<li>Paralleliser les tests pour les accélérer.</li>
+<li>Avoir une stratégie de builds. Créer des couches de tests selon leur catégorie, leur intérêt.</li>
+<li>Toujours avoir un oeil sur les statistiques. Savoir par exemple ce qui prend du temps sur un build, pour être en mesure de l'accélérer.</li>
+</ul>
+
+
+<p>Encore une belle présentation de Sven Peters.</p>
+
+<h2><a href="http://devoxx.be/dv13-chet-haase.html?presId=3193">Patterns, Shmatterns</a></h2>
+
+<p><img src="/images/note-4.png" title="4/5" alt="4/5" /></p>
+
+<p>Pourquoi cette présentation ? Tout simplement pour son orateur, <a href="https://twitter.com/@chethaase">Chet Haase</a>. L'année passée, il avait aussi présenté un Quickie (<a href="">The Future of Software Development Process Methodology Effectiveness</a>) qui avait été un beau succès.</p>
+
+<p>Encore une fois, la salle était comble. Chet Haase a cette fois-ci passé en revue un certain nombre de patterns et les a comparé avec ses propres patterns, ce qui en faisait quelque chose d'assez drôle.</p>
+
+<p><img src="/images/devoxx-2013-chethaase.jpg" title="Le design pattern Refactory" alt="Le design pattern Refactory" /></p>
+
+<h2><a href="http://devoxx.be/dv13-sven-peters.html?presId=3144">Don't use Git</a></h2>
+
+<p><img src="/images/note-4.png" title="4/5" alt="4/5" /></p>
+
+<p>A nouveau, <a href="https://twitter.com/@svenpet">Sven Peters</a> sur la scène. Le titre de la conférence peut paraître provocateur, tant Git est utilisé partout (Atlassian a même Stash dans son catalogue, un gestionnaire de repositories Git).
+Mais cela est en fait une façon de promouvoir ce système de gestion de sources.</p>
+
+<p>Sous le ton de l'ironie, Sven essaie de démonter les arguments qui font de Git un vrai succès. Git permet de travailler en mode déconnecté ? Mais c'est la fin du travail collaboratif ! Git rend les merges faciles et presque automatiques ? Mais le travail de merge sur SVN est une ôde à la cohésion d'équipe...</p>
+
+<p>Bien entendu, tout cela n'est que prétexte pour montrer en quoi Git est supérieur aux anciens gestionnaires de sources comme SVN.</p>
+
+<h2><a href="http://devoxx.be/dv13-nikolay-chashnikov.html?presId=3772">Efficient coding in IntelliJ IDEA</a></h2>
+
+<p><img src="/images/note-2.png" title="2/5" alt="2/5" /></p>
+
+<p><a href="http://devoxx.be/dv13-nikolay-chashnikov.html?presId=3772">Nikolay Chashnikov</a> est aux commandes pour nous montrer comment bien maitriser son IDE IntelliJ IDEA de JetBrains.
+Après pas mal d'essais ratés, je suis finalement passé définitivement sur cet IDE depuis un an, et clairement, je ne reviendrais pas en arrière. Mais je suis conscient de n'utiliser qu'une toute petite partie des capacités de l'outil. J'attends donc de cette session qu'elle me donne plein de bons conseils.</p>
+
+<p>Hélas, je resterais sur ma faim. Une bonne première partie de la session montre surtout les capacités d'autocomplétion proposées par IntelliJ. Le reste est avant tout la découverte (ou non) d'un certain nombre de raccourcis claviers. Bref, pas grand chose à se mettre sous la dent, si ce n'est 2 ou 3 nouveaux raccourcis. C'est chez payé pour une conférence d'une heure !</p>
+
+<p>Je pense que cette session peut être intéressante pour une personne utilisant Eclipse et souhaitant comprendre pourquoi IntelliJ est si puissant. Mais pour un utilisateur d'IntelliJ, même un non expert comme moi, peu d'informations à en tirer. Dommage.</p>
+
+<h2><a href="http://devoxx.be/dv13-tugdual-grall.html?presId=3281">Elastify your app: from SQL to NoSQL in less than one hour!</a></h2>
+
+<p><img src="/images/note-4.png" title="4/5" alt="4/5" /></p>
+
+<p>J'avais déjà assisté à cette présentation <a href="">lors de Devoxx France 2013</a>, toujours faite par <a href="https://twitter.com/@tgrall">Tugdual Grall</a> et <a href="https://twitter.com/@dadoonet">David Pilato</a>.
+Je me suis dit que j'allais quand même y jeter un oeil pour mieux l'apprécier.</p>
+
+<p><img src="/images/devoxx-2013-elastify.jpg" title="Elastify your application" alt="Elastify your application" /></p>
+
+<p>N'hésitez pas à relire <a href="http://linsolas.github.io/blog/2013/03/28/devoxx-france-2013-jour-2/">mon résumé lors de Devoxx France 2013</a>.</p>
+
+<h2><a href="http://devoxx.be/dv13-attila-szegedi.html?presId=3732">The Curious Case of JavaScript on the JVM</a></h2>
+
+<p><img src="/images/note-3.png" title="3/5" alt="3/5" /></p>
+
+<p>J'aime Java, j'aime le JavaScript. Je me dis qu'une session mélangeant les deux pourrait être intéressante.
+Je me décide donc d'aller voir ce qu'en dit <a href="https://twitter.com/@szegedi">Attila Szegedi</a>.
+Il y était question de <a href="http://openjdk.java.net/projects/nashorn/">Nashorn</a>, qui est l'implémentation d'un <em>runtime</em> JavaScript hautes performances sur la JVM.</p>
+
+<p>En gros, on écrit du JavaScript mélangé à du Java - à moins que ce ne soit l'inverse ? A noter que Nashorn devrait être <em>normalement</em> inclus dans le JDK 1.8.</p>
+
+<p>J'ai un peu de mal à voir l'intérêt de ce mélange, mais pourquoi pas. C'est aussi ce genre de chose qui fait la richesse de la plateforme de la JVM :)</p>
+
+<p>Voilà une première journée déjà bien intéressante, j'attends avec impatience la deuxième fournée de conférences, qui s'annonce de belle qualité.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Et quatre à la suite]]></title>
@@ -43,671 +470,6 @@
 La présentation sera sensiblement la même que celle faite à Devoxx avec <a href="http://soft-shake.ch/2013/program/authors/2013/10/25/julien-jakubowski.html">Julien Jakubowski</a>, mais on essaiera de mettre à jour certaines parties.</p>
 
 <p>Si vous venez à la conférence, venez nous voir !</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Faire du CasperJS en CoffeeScript sur Windows]]></title>
-    <link href="http://linsolas.github.com/blog/2013/04/09/faire-du-casperjs-en-coffeescript-sur-windows/"/>
-    <updated>2013-04-09T21:07:00+02:00</updated>
-    <id>http://linsolas.github.com/blog/2013/04/09/faire-du-casperjs-en-coffeescript-sur-windows</id>
-    <content type="html"><![CDATA[<h1><img src="/images/logo_windows.png" title="Windows" alt="Windows" /> + <img src="/images/casperjs_mini.jpg" title="CasperJS" alt="CasperJS" /> = <img src="/images/icon_love.png" title="Loooove" alt="Loooove" /></h1>
-
-<p>Je suis revenu de Devoxx France avec quelques idées en tête, dont celle de mettre du <a href="http://casperjs.org/">CasperJS</a> dans des applications (merci <a href="http://linsolas.github.io/blog/2013/03/27/devoxx-france-2013-jour-1/">Jean-Laurent et Pierre</a>). Pour faciliter les choses, ma machine tourne sur du Windows (version 7 en l'occurrence), ce qui n'est pas forcément le meilleur environnement pour ce type de chose. Mais on ne va pas se décourager si vite, hein ?</p>
-
-<!-- more -->
-
-
-<p>Commençons petit, et essayons de faire marcher un test simple en JavaScript sur CasperJS.</p>
-
-<h2>Installation des outils</h2>
-
-<p>La première chose à faire, c'est d'installer CasperJS sur la machine Windows. Mais avant cela, il est nécessaire de disposer d'une version assez récente de <a href="http://phantomjs.org">PhantomJS</a> (CasperJS utilise PhantomJS pour s'exécuter). Donc on <a href="http://phantomjs.org/download.html">télécharge PhantomJS</a> et on l'installe (enfin on décompresse le ZIP). Dans mon cas, il s'agit de la version <strong>1.9</strong>. Même chose ensuite, je dézippe le ZIP de CasperJS (v<strong>1.0.2</strong>), et je finis par ajouter dans mon <code>PATH</code> les chemins vers les exécutables. Voyons si ça marche bien :</p>
-
-<p><code>
-D:\dev&gt;phantomjs -v
-1.9.0
-D:\dev&gt;casperjs --version
-1.0.2
-</code></p>
-
-<p>Les choses s'annoncent bien ! Exécutons un test maintenant. Prennons celui-ci, assez simple :</p>
-
-<p>``` javascript Le code en version JavaScript
-var casper = require('casper').create({</p>
-
-<pre><code>verbose: true,
-logLevel: 'debug'
-</code></pre>
-
-<p>});</p>
-
-<p>casper.start('https://mon-application:8080/login/', function() {</p>
-
-<pre><code>this.echo('Log in');
-this.test.assertTitle('Sign in');
-this.test.assertNotVisible('label#error');
-this.fill('form#loginForm', {
-    'j_username': 'romain.linsolas',
-    'j_password': ''
-}, false);
-this.click("form#loginForm input.button");
-this.test.assertVisible('label.error'); // Une boite d'erreur doit apparaitre
-this.fill('form#loginForm', {
-    'j_username': 'romain.linsolas',
-    'j_password': 'abc123'
-}, false);
-this.click("form#loginForm input.button");
-</code></pre>
-
-<p>});</p>
-
-<p>casper.then(function() {</p>
-
-<pre><code>this.capture('test-screen.png');
-this.test.assertTitle('Hello World'); // Nous sommes loggués
-// Suite du test
-</code></pre>
-
-<p>});</p>
-
-<p>casper.run(function() {</p>
-
-<pre><code>this.test.renderResults(true);
-</code></pre>
-
-<p>});
-```</p>
-
-<p>En gros, il se divise ainsi :</p>
-
-<ul>
-<li>J'initialise un contexte <code>casper</code> (dans mon cas, je lui demande d'être un peu pipelette, ça facilitera les choses en cas de problème).</li>
-<li>Ensuite, je démarre un test où il va exécuter certaines tâches :
-
-<ul>
-<li>se connecter à une application ;</li>
-<li>vérifier le titre de la page ;</li>
-<li>remplir un formulaire de login sans le mot de passe ;</li>
-<li>cliquer sur un lien, et vérifier qu'un message d'erreur apparait ;</li>
-<li>retester en saisissant un mot de passe.</li>
-</ul>
-</li>
-<li>Enfin, je vérifie que je suis bien connecté (le titre de la page a changé) et pour le fun, je fais une capture d'écran de la page telle qu'elle est à ce moment-là.</li>
-</ul>
-
-
-<p>Allez zou, il est temps de tester. Le verdict va tomber très vite, il suffit d'écrire <code>casperjs [mon fichier].js</code> :</p>
-
-<p><code>text
-D:\dev&gt;casperjs test-casper.js
-[info] [phantom] Starting...
-[info] [phantom] Running suite: 3 steps
-[debug] [phantom] opening url: https://mon-application:8080/login/, HTTP GET
-[debug] [phantom] Navigation requested: url=https://mon-application:8080/login/, type=Other, lock=true, isMainFrame=true
-[debug] [phantom] url changed to "https://mon-application:8080/login/"
-[debug] [phantom] Successfully injected Casper client-side utilities
-[info] [phantom] Step 2/3 https://mon-application:8080/login/ (HTTP 200)
-Log in
-PASS Page title is: "Sign in"
-PASS Selector is not visible
-[info] [remote] attempting to fetch form element from selector: 'form#loginForm'
-[debug] [remote] Set "j_username" field value to romain.linsolas
-[debug] [remote] Set "j_password" field value to
-[debug] [phantom] Mouse event 'click' on selector: form#loginForm input.button
-PASS Selector is visible
-[info] [remote] attempting to fetch form element from selector: 'form#loginForm'
-[debug] [remote] Set "j_username" field value to romain.linsolas
-[debug] [remote] Set "j_password" field value to ******
-[debug] [phantom] Mouse event 'click' on selector: form#loginForm input.button
-[info] [phantom] Step 2/3: done in 718ms.
-[debug] [phantom] Navigation requested: url=https://mon-application:8080/logincheck;jsessionid=808FD9D0EDD9D9C5CCAE7F11F4AE05DE, type=FormSubmitted, lock=true, isMainFrame=true
-[debug] [phantom] Navigation requested: url=https://mon-application:8080/, type=FormSubmitted, lock=true, isMainFrame=true
-[debug] [phantom] url changed to "https://mon-application:8080/"
-[debug] [phantom] Successfully injected Casper client-side utilities
-[info] [phantom] Step 3/3 https://mon-application:8080/ (HTTP 200)
-[debug] [phantom] Capturing page to D:/dev/test-screen.png
-[info] [phantom] Capture saved to D:/dev/.png
-PASS Page title is: "Hello World"
-[info] [phantom] Step 3/3: done in 1224ms.
-[info] [phantom] Done 3 steps in 1226ms
-</code></p>
-
-<p>Cool, ça marche !</p>
-
-<h2>Passons au CoffeeScript</h2>
-
-<p><img src="/images/CoffeeScript.png" title="CoffeeScript" alt="CoffeeScript" /></p>
-
-<p>Le JavaScript c'est bien, mais c'est un peu verbeux, surtout quand le code des tests va grandissant. Tentons maintenant de passer à <a href="http://coffeescript.org/">CoffeeScript</a>. CasperJS est l'ami de CoffeeScript et accepte très bien que les scripts à exécuter soient écrits avec. D'après la documentation, il est écrit qu'il suffit de lancer simplement la commande <code>casperjs [mon fichier].coffee</code>. Ca a l'air pas mal. Ecrivons tout d'abord le même code de test, mais cette fois-ci en CoffeeScript. Cela nous donne quelque chose comme ça :</p>
-
-<p>``` coffeescript Le code en version CoffeeScript
-casper = require('casper').create(</p>
-
-<pre><code>verbose: true
-logLevel: 'debug'
-</code></pre>
-
-<p>)</p>
-
-<p>casper.start 'https://mon-application:8080/login/', -></p>
-
-<pre><code>@echo 'Log in'
-@test.assertTitle 'Sign in'
-@test.assertNotVisible 'label#error'
-@fill 'form#loginForm', {
-    j_username: 'romain.linsolas'
-    j_password: ''
-}, false
-@click "form#loginForm input.button"
-@test.assertVisible('label.error') ## Error box is displayed
-@fill 'form#loginForm', {
-    j_username: 'romain.linsolas'
-    j_password: 'abc123'
-}, false
-@click "form#loginForm input.button"
-</code></pre>
-
-<p>casper.then -></p>
-
-<pre><code>@capture 'test-screen.png'
-@test.assertTitle 'Hello World' ## Now we are logged
-## Suite du test
-</code></pre>
-
-<p>casper.run -></p>
-
-<pre><code>@test.renderResults true
-</code></pre>
-
-<p>```</p>
-
-<p>Allez, maintenant on exécute tout ça :</p>
-
-<p><code>text
-D:\dev\&gt;casperjs test-casper.coffee
-[info] [phantom] Starting...
-[info] [phantom] Running suite: 3 steps
-[debug] [phantom] opening url: https://mon-application:8080/login/, HTTP GET
-[debug] [phantom] Navigation requested: url=https://mon-application:8080/login/, type=Other, lock=true, isMainFrame=true
-[debug] [phantom] url changed to "https://mon-application:8080/login/"
-[debug] [phantom] Successfully injected Casper client-side utilities
-[info] [phantom] Step 2/3 https://mon-application:8080/login/ (HTTP 200)
-Log in
-PASS Page title is: "Sign in"
-PASS Selector is not visible
-[info] [remote] attempting to fetch form element from selector: 'form#loginForm'
-[debug] [remote] Set "j_username" field value to romain.linsolas
-[debug] [remote] Set "j_password" field value to
-[debug] [phantom] Mouse event 'click' on selector: form#loginForm input.button
-PASS Selector is visible
-[info] [remote] attempting to fetch form element from selector: 'form#loginForm'
-[debug] [remote] Set "j_username" field value to romain.linsolas
-[debug] [remote] Set "j_password" field value to ******
-[debug] [phantom] Mouse event 'click' on selector: form#loginForm input.button
-[info] [phantom] Step 2/3: done in 1099ms.
-[debug] [phantom] Navigation requested: url=https://mon-application:8080/logincheck;jsessionid=0A26317CDA05D97D63D6538EE4212B07, type=FormSubmitted, lock=true, isMainFrame=true
-[debug] [phantom] Navigation requested: url=https://mon-application:8080/, type=FormSubmitted, lock=true, isMainFrame=true
-[debug] [phantom] url changed to "https://mon-application:8080/"
-[debug] [phantom] Successfully injected Casper client-side utilities
-[info] [phantom] Step 3/3 https://mon-application:8080/ (HTTP 200)
-PASS Page title is: "Hello World"
-[debug] [phantom] Mouse event 'click' on selector: xpath selector: //*[text()="Administration"]
-[debug] [phantom] Navigation requested: url=https://mon-application:8080/domain/account/index, type=LinkClicked, lock=true, isMainFrame=true
-[info] [phantom] Step 3/3: done in 1389ms.
-[debug] [phantom] url changed to "https://mon-application:8080/domain/account/index"
-[debug] [phantom] Successfully injected Casper client-side utilities
-[info] [phantom] Done 3 steps in 1749ms
-</code></p>
-
-<p>Voilà qui est génial, CasperJS gère nativement le CoffeeScript sans avoir besoin de l'installer séparément. Mais on va quand même procéder à son installation, comme ça on disposera d'un compilateur CoffeeScript.</p>
-
-<p>La première étape, c'est l'installation de <a href="http://nodejs.org/">NodeJS</a>. Les choses se font assez simplement, il y a un <code>.msi</code> <a href="http://nodejs.org/download/">à télécharger</a>. Il me faudra juste ajouter le chemin d'installation de NodeJS dans mon <code>PATH</code> :</p>
-
-<p><code>text
-D:\dev&gt;node -v
-v0.10.3
-D:\dev&gt;npm -v
-1.2.17
-</code></p>
-
-<p>Maintenant, installons CoffeeScript grâce à la commande <code>npm install -g coffee-script</code>.</p>
-
-<p><code>
-D:\dev\nodejs&gt;npm install -g coffee-script
-npm http GET https://registry.npmjs.org/coffee-script
-npm http GET https://registry.npmjs.org/coffee-script
-npm http GET https://registry.npmjs.org/coffee-script
-npm ERR! Error: getaddrinfo ENOTFOUND
-npm ERR!     at errnoException (dns.js:37:11)
-npm ERR!     at Object.onanswer [as oncomplete] (dns.js:124:16)
-npm ERR! If you need help, you may report this log at:
-npm ERR!     &lt;http://github.com/isaacs/npm/issues&gt;
-npm ERR! or email it to:
-npm ERR!     &lt;npm-@googlegroups.com&gt;
-npm ERR! System Windows_NT 6.1.7601
-npm ERR! command "D:\\dev\\nodejs\\\\node.exe" "D:\\dev\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "-g" "coffee-script"
-npm ERR! cwd D:\dev\nodejs
-npm ERR! node -v v0.10.3
-npm ERR! npm -v 1.2.17
-npm ERR! syscall getaddrinfo
-npm ERR! code ENOTFOUND
-npm ERR! errno ENOTFOUND
-npm ERR!
-npm ERR! Additional logging details can be found in:
-npm ERR!     D:\dev\nodejs\npm-debug.log
-npm ERR! not ok code 0
-</code></p>
-
-<p>Comme les choses ne sont pas simples chez moi, je suis derrière un proxy :) Il faut donc donner les informations de connexion à npm pour se connecter à Internet. Cela se fait dans le fichier <code>&lt;répertoire home&gt;\.npmrc</code> (par exemple <code>C:\Users\chuck.norris\.npmrc</code>). Dans ce fichier, on définit l'adresse des proxies ainsi que le registre npm :</p>
-
-<p><code>
-proxy = http://[user]:[mot de passe]@[url proxy]:[port]/
-https-proxy = http://[user]:[mot de passe]@[url proxy]:[port]/
-registry = http://registry.npmjs.org
-</code></p>
-
-<p>On relance la même commande, et cette fois-ci ça marche mieux :</p>
-
-<p><code>
-D:\dev\nodejs&gt;npm install -g coffee-script
-npm http GET http://registry.npmjs.org/coffee-script
-npm http 200 http://registry.npmjs.org/coffee-script
-npm http GET http://registry.npmjs.org/coffee-script/-/coffee-script-1.6.2.tgz
-npm http 200 http://registry.npmjs.org/coffee-script/-/coffee-script-1.6.2.tgz
-C:\Users\chuck.norris\AppData\Roaming\npm\cake -&gt; C:\Users\chuck.norris\AppData\Roaming\npm\node_modules\coffee-script\bin\cake
-C:\Users\chuck.norris\AppData\Roaming\npm\coffee -&gt; C:\Users\chuck.norris\AppData\Roaming\npm\node_modules\coffee-script\bin\coffee
-coffee-script@1.6.2 C:\Users\chuck.norris\AppData\Roaming\npm\node_modules\coffee-script
-</code></p>
-
-<p>Cool ! Voyons maintenant s'il est possible de lancer la commande <code>coffee</code> :</p>
-
-<p><code>
-D:\dev&gt;coffee -v
-CoffeeScript version 1.6.2
-</code></p>
-
-<p>Houra !</p>
-
-<h2>Intégration au build</h2>
-
-<p>Dernière étape de ce petit tutoriel : comment allons-nous faire pour exécuter automatiquement les tests CoffeeScript, pour les intégrer par exemple dans notre <em>build</em> continu sur Jenkins ? On pourrait effectivement ajouter une étape dans la configuration Jenkins qui irait lancer un script, mais ce n'est pas très propre.</p>
-
-<p>J'ai trouvé quelques plugins Maven, mais rien de folichon. J'ai donc décidé <a href="https://github.com/linsolas/casperjs-runner-maven-plugin">d'en créer un moi-même</a>, mais il n'est pas encore stabilisé.</p>
-
-<p>En attendant, je vais passer par un test <strong>JUnit</strong>, qui aura pour tâche de lister les <code>*.js</code> et <code>*.coffee</code> d'un répertoire donné. C'est une version très simple, elle ne gère que les cas standards (j'essaierais de faire les choses plus proprement dans mon plugin Maven). Elle ne supporte pas non plus les options de la commande <code>casperjs</code> (comme par exemple les <code>--pre</code> ou <code>--post</code>), mais c'est un premier pas et surtout, ça marche :)</p>
-
-<p>``` java Classe JUnit d'exécution des fichiers JavaScript et CoffeeScript
-package fr.linsolas.javascript.casperjs;</p>
-
-<p>import org.apache.commons.exec.CommandLine;
-import org.apache.commons.exec.DefaultExecutor;
-import org.apache.commons.lang.StringUtils;
-import org.junit.BeforeClass;
-import org.junit.Test;</p>
-
-<p>import java.io.File;
-import java.io.FilenameFilter;
-import java.io.IOException;</p>
-
-<p>import static org.fest.assertions.Assertions.assertThat;</p>
-
-<p>/<em><em>
- * Run CasperJS on any </em>.js or </em>.coffee files found in a specific folder.
- * @author Romain Linsolas
- */
-public class RunCasperJSTest {</p>
-
-<pre><code>private static boolean casperFound = false;
-private static final String CASPER_JS = "casperjs.bat %s";
-private static final String TESTS_DIR = "D:\\dev\\mon-application\\src\\test\\javascript\\casperjs";
-
-@BeforeClass
-public static void checkEnvironment() {
-    // Vérification que l'on a bien CasperJS installé.
-    int res = execute(CASPER_JS, "--version");
-    assertThat(res).isNotEqualTo(-1);
-    casperFound = true;
-}
-
-@Test
-public void runJavaScriptTests() {
-    File[] files = new File(TESTS_DIR).listFiles(new FilenameFilter() {
-        @Override
-        public boolean accept(File dir, String name) {
-            return StringUtils.endsWithIgnoreCase(name, ".js");
-        }
-    });
-    runTests(files);
-}
-
-@Test
-public void runCoffeeScriptTests() {
-    File[] files = new File(TESTS_DIR).listFiles(new FilenameFilter() {
-        @Override
-        public boolean accept(File dir, String name) {
-            return StringUtils.endsWithIgnoreCase(name, ".coffee");
-        }
-    });
-    runTests(files);
-}
-
-private void runTests(File[] files) {
-    assertThat(casperFound).isTrue();
-    int ok = 0;
-    int ko = 0;
-    for (File f : files) {
-        int res = execute(CASPER_JS, f.getAbsolutePath());
-        if (res == 0) { ok++; } else { ko++; }
-    }
-    System.out.println("Results: " + ok + " test(s) successful, " + ko + " test(s) failed. Total of " + (ok + ko) + " test(s).");
-    assertThat(ko).isEqualTo(0);
-}
-
-
-private static int execute(String command, Object... arguments) {
-    DefaultExecutor exec = new DefaultExecutor();
-    CommandLine line = CommandLine.parse(String.format(command, arguments));
-    try {
-        return exec.execute(line);
-    } catch (IOException e) {
-        return -1;
-    }
-}
-</code></pre>
-
-<p>}</p>
-
-<p>```</p>
-
-<hr>
-
-
-<p><small>Logo Windows<sup>>TM</sup> par <a href="http://www.yootheme.com/">YOOTheme</a>, image de coeur par <a href="http://www.icon-king.com">David Vignoni</a></small></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Devoxx France 2013 - Du JavaScript propre ? Challenge Accepted]]></title>
-    <link href="http://linsolas.github.com/blog/2013/04/03/devoxx-france-2013-du-javascript-propre-challenge-accepted/"/>
-    <updated>2013-04-03T08:59:00+02:00</updated>
-    <id>http://linsolas.github.com/blog/2013/04/03/devoxx-france-2013-du-javascript-propre-challenge-accepted</id>
-    <content type="html"><![CDATA[<p><img src="/images/affiche-conference.jpg" title="Du JavaScript propre ? Challenge Accepted!" alt="Du JavaScript propre ? Challenge Accepted!" /></p>
-
-<p>Dernier billet sur la conférence Devoxx France 2013 (ouf !). Je vais parler de notre session, <a href="http://www.devoxx.com/display/FR13/Du+Javascript+propre+++Challenge+Accepted">Du JavaScript propre ? Challenge Accepted!</a>, présentée avec <a href="http://www.devoxx.com/display/FR13/Julien+Jakubowski">Julien Jakubowski</a> d'<a href="http://www.octo.com">OCTO</a>.</p>
-
-<!-- more -->
-
-
-<p>Alors pour la petite histoire, il faut savoir que Julien et moi ne nous connaissions pas personnellement un mois et demi avant Devoxx ! Nous avions tous les deux proposé une conférence durant le CFP (<em>Call For Paper</em>) très similaire.
-De son côté, Julien avait proposé une version améliorée de sa présentation <a href="http://fr.slideshare.net/jak78/javascript-ce-nest-pas-si-sale">Le JavaScript ce n'est pas si sale</a> qu'il avait faite au <a href="http://chtijug.org/">Ch'ti JUG</a> dont il est le fondateur.
-De mon côté, j'avais proposé à peu près la même chose, mais dont le but était plutôt de faire un état des lieux de l'écosystème autour de JavaScript en 2013, et montrer que celui-ci est extrêmement riche, presque à l'image de celui du monde Java.
-Le comité de direction, ne sachant qui choisir, nous a demandé s'il était possible de mixer nos présentations. Ce qui fut fait. On est donc parti de la présentation de Julien, puis on l'a améliorée, suite à nos nombreuses discussions. Je pense également que le fait de la présenter à deux la rend plus vivante, plus intéressante.</p>
-
-<p><img src="/images/devoxxfr-2013-salle-vide.jpg" title="Le calme avant la tempête" alt="Le calme avant la tempête" /></p>
-
-<h2>Le contenu</h2>
-
-<p>La session se divise en deux parties :</p>
-
-<ul>
-<li>Les problèmes courants en JavaScript.</li>
-<li>Les solutions que l'on propose pour coder proprement en JavaScript.</li>
-</ul>
-
-
-<h3>Les problèmes</h3>
-
-<p>Tout d'abord, nous expliquons pourquoi nous faisons cette présentation. Le constat est double :</p>
-
-<ul>
-<li>JavaScript est partout, et les sites sont de plus en plus riches en partie grâce à lui. On ne peut donc pas l'ignorer, surtout avec l'avénement du HTML5.</li>
-<li>JavaScript a une mauvaise réputation. Le langage est sale, plus adapté à la bidouille sur sa page HTML que pour faire de <em>vraies</em> applications, difficulté de trouver un bon environnement de travail.</li>
-</ul>
-
-
-<p>Bref, il y a du boulot pour redorer le blason de JavaScript. Après une petite partie ludique, où l'on montre quelques résultats <em>étonnants</em> de JavaScript (je vous conseille fortement de regarder <a href="https://www.destroyallsoftware.com/talks/wat">cette vidéo</a>), on passe aux vrais problèmes que l'on est susceptible de rencontrer dans ses projets :</p>
-
-<ul>
-<li><strong>Pollution de l'espace de nommage</strong>. Quand on définit des fonctions dans les fichiers JavaScript sans prendre garde, il se peut qu'il y ait des collisions entre plusieurs fonctions ayant le même nom. Par exemple, si l'on définit une méthode <code>checkForm()</code> dans un fichier JS, rien ne dit que nous n'aurons pas une méthode au même nom dans un autre fichier. Dans pareille situation, JS ne considère que la dernière méthode définie, et cela peut poser des problèmes.</li>
-<li><strong>Le scope global par défaut</strong>. Par défaut, les variables ont un scope global, et cela peut aussi entrainer des problèmes. Dans le code suivant, la variable <code>i</code> sera la même dans les 2 boucles, ce qui fait que nous n'applerons le <em>logger</em> que 10 fois et non 100 fois comme attendu :</li>
-</ul>
-
-
-<p>``` javascript
-function subLoop() {</p>
-
-<pre><code>for (i = 0; i &lt; 10; i++) {
-    console.log(i);
-}
-</code></pre>
-
-<p>}</p>
-
-<p>for (var i = 0; i &lt; 10; i++) {</p>
-
-<pre><code>subLoop();
-</code></pre>
-
-<p>}
-<code>
-* **Tout est public par défaut**. Difficile de cacher certains détails de son implémentation, le mot clé</code>private``` n'existant pas en JS. Dans le code suivant, la variable censée être privée ne l'est pas du tout :</p>
-
-<p>``` javascript
-var counter = {</p>
-
-<pre><code>privateValue: 0,
-increment: function() {
-    counter.privateValue++;
-    return counter.privateValue;
-}
-</code></pre>
-
-<p>}</p>
-
-<p>counter.increment(); // 1
-counter.privateValue = 0; // Aie
-counter.increment(); // 1</p>
-
-<p>```
-* <strong>Code non testé</strong>. Tout est dit :)</p>
-
-<p>Assez parlé des problèmes, voyons les solutions !</p>
-
-<h3>Les solutions</h3>
-
-<p>Première idée : on pourrait simplement déléguer le code JavaScript à son framework préféré (GWT, JSF, etc.) Nous ne souhaitons pas aller dans cette direction. Faisons du JavaScript ! Autre idée, pour au moins limiter les dégâts : utiliser <a href="https://code.google.com/p/dart/">Google Dart</a> ou <a href="http://coffeescript.org/">CoffeeScript</a> qui permettent une écriture plus fluide, plus sécurisée du code JavaScript.</p>
-
-<p>D'un point de vue architectural, donc assez haut niveau, il existe aujourd'hui une tendance à ne pas négliger : les architectures MVC/MVW/MV* <strong>côté client</strong>. Autrement dit, plutôt que d'avoir un serveur qui va s'occuper de toute la partie fonctionnelle (couches modèle, contrôleur et vue), on va déporter tout ou partie de ceci côté client. Pour se faire, on se fera aider de solutions telles que <a href="http://backbonejs.org/">Backbone.js</a>, <a href="http://emberjs.com/">Ember</a> ou le très à la mode <a href="http://angularjs.org/">AngularJS</a>. Ce type d'architecture offre d'autres avantages : comme le code est exécuté côté client, le temps de réponse est instantané, on transfère beaucoup moins d'informations entre le client et le serveur (ce qui privilégie les réseaux mobiles), et offre plus facilement un mode déconnecté à son application. Mais ce n'est pas magique, il faudra faire attention à d'autres points, en particulier l'aspect sécurité (bah oui, tout le code est sur le client, donc il lui est plus facile de le comprendre et de le contourner).</p>
-
-<p><img src="/images/devoxxfr-2013-architecture-mvc.png" title="Et si on déplaçait le code métier du côté client ?" alt="Et si on déplaçait le code métier du côté client ?" /></p>
-
-<p>On a cité, parmi les problèmes, le fait que tout est public par défaut. Pour le résoudre, on propose d'opter pour la modularité. Cela revient un peu à simuler une classe en Java (attention, ce n'est pas exactement ça, c'est juste pour faire comprendre l'idée), en n'exposant à l'extérieur que ce que l'on souhaite (une sorte d'interface). Le code de notre compteur devient au final quelque chose comme ça :</p>
-
-<p>``` javascript
-// Notre counter sera notre objet utilisé par la suite.
-var counter = (function() {</p>
-
-<pre><code>var privateValue = 0;
-var publicMethod = function() {
-    privateValue++;
-    return privateValue;
-};
-// On retourne un objet qui contient une méthode "increment", seul élément qui sera visible de l'extérieur.
-return {
-    increment: publicMethod
-};
-</code></pre>
-
-<p>})();</p>
-
-<p>// On passe à l'utilisation du compteur :
-counter.increment();  // 1
-counter.privateValue; // undefined
-counter.privateValue = 0; // Cela ne pose pas de problème. JS va ajouter une propriété "privateValue" à l'objet "counter", mais elle sera différente du "privateValue" que nous utilisons dans notre implémentation. Pas de conflit du coup !
-counter.increment();  // 2
-```</p>
-
-<p>Pour accroitre encore la lisibilité et la propreté de son code, on pourra créer des sortes de packages pour nos modules :</p>
-
-<p>``` javascript
-var myapp = {</p>
-
-<pre><code>subpackage: {
-
-    counter: (function() {
-        // ...
-    })()
-
-}
-</code></pre>
-
-<p>}</p>
-
-<p>// Et son utilisation :
-myapp.subpackage.counter.increment(); // 1
-```</p>
-
-<p>On aborde ensuite la question du chargement des librairies JS. Plutôt que d'avoir 15 fichiers JS chargés au chargement de la page (chargement séquentiel, qui plus est, ce qui ralentit d'autant le chargement), on va utiliser les principes de l'AMD (<em>Asynchronous Modules Definition</em>), par exemple grâce à la librairie <a href="http://requirejs.org/">require.js</a>. Cela apporte en particulier deux avantages :</p>
-
-<ul>
-<li>Chargement <strong>asynchrone</strong> et/ou en <strong>parallèle</strong>, et donc cela ne bloque pas le chargement des pages, qui se fait normalement de façon séquentielle.</li>
-<li>Chargement à la <strong>demande</strong>. Certaines fonctionnalités de la page peuvent ne pas être utilisées. Alors autant ne pas charger les ressources liées. On pourra ainsi dire "quand l'utilisateur souhaite faire ceci, alors on chargera <em>à ce moment-là</em> les librairies X et Y".</li>
-<li>Définition des <strong>dépendances</strong>. Un peu comme dans le point précédent, on pourra indiquer que la librairie X dépend de Y, et donc on chargera Y avant X.</li>
-</ul>
-
-
-<p>Intéressons-nous au code en lui-même maintenant. Il existe des outils pour s'assurer que nous n'écrivons pas (trop) de bêtises dans notre code JavaScript, un peu comme le fait Checkstyle ou PMD en Java. Nous avons ainsi <a href="http://www.jslint.com/">JsLint</a> ou <a href="http://www.jshint.com/">JsHint</a> pour remplir cette tâche. On tâchera aussi d'écrire un code plus expressif, c'est-à-dire plus simple, plus lisible, plus concis. J'aime l'expression qui dit <em>qu'il faut écrire le code comme si la personne qui va le maintenir est un psychopathe qui connait mon adresse</em>, ça traduit bien l'intérêt d'écrire correctement son code.</p>
-
-<p>Un vieux code tel que celui-ci :</p>
-
-<p>``` javascript
-function checkForm() {</p>
-
-<pre><code>var beerName = document.getElementById("beer_name").value;
-if (beerName === '') {
-    document.getElementById("beer_name").className += "invalid";
-    document.getElementById("error_box").style.display = "block";
-    return false;
-}
-return true;
-</code></pre>
-
-<p>}
-```</p>
-
-<p>pourra être <em>refactoré</em> avec <a href="http://jquery.com/">jQuery</a> de cette façon, rendant le code plus lisible, plus facile à maintenir :</p>
-
-<p>``` javascript
-$('#beerForm').submit(function() {</p>
-
-<pre><code>if ($('#beer_name').val() === "") {
-    $('#beer_name').addClass('invalid');
-    $('#error_box').show();
-    return false;
-}
-return true;
-</code></pre>
-
-<p>});
-```</p>
-
-<p>Autre chose pour simplifier l'écriture : utiliser des moteurs de <em>templating</em>, tels que <a href="http://mustache.github.com/">Mustache.js</a> ou <a href="http://handlebarsjs.com/">Handlebars.js</a>, qui permettent d'insérer des données dans du HTML de façon fluide. Ainsi, si <code>beers</code> est un tableau de bières (au format JSON), on pourra écrire ceci :</p>
-
-<p>
-```</p>
-
-<ul id="beers-list">
-    {{#beers}}
-        <li>{{name}} - {{color}} - {{alcohol}}%</li>
-    {{/beers}}
-</ul>
-
-
-<script type="text/javascript">
-    var template = $('#beers-list');
-    // Appel du moteur de rendu de Mustache
-    template.html( Mustache.render(template.html(), data) );
-</script>
-
-
-<p>```
-</p>
-
-<p>Autre sujet important, les tests. Nous n'allons pas dans le détail, mais nous expliquons qu'il existe de nombreux outils pour cela : Jasmine, QUnit, Mocha, CapserJS, PhantomJS, Karma, etc. Je vous renvoie à l'<a href="http://linsolas.github.com/blog/2013/03/27/devoxx-france-2013-jour-1/">université de Jean-Laurent de Morlhon et Pierre Gayvallet à ce sujet</a>.</p>
-
-<p>Le message est clair : tous les outils sont là pour faire des tests, du TDD, du BDD, des tests d'intégration, etc. Bref, on n'a plus d'excuses !</p>
-
-<p><img src="/images/devoxxfr-2013-batmanrobin.png" title="Faites des tests en JavaScript" alt="Faites des tests en JavaScript" /></p>
-
-<p>Dernier point abordé : l'automatisation. On peut facilement intégrer son application JavaScript dans un serveur d'intégration continue comme Jenkins ou un outil d'analyse qualité tel que Sonar. Je vous renvoie <a href="http://www.parleys.com/#play/5148922a0364bc17fc56c7cf">à mon Tools In Action de l'année dernière pour voir tout ça en pratique</a>.
-Niveau IDE, nous recommandons <a href="http://www.jetbrains.com/idea/">IntelliJ IDEA de JetBrains</a> (ou <a href="http://www.jetbrains.com/webstorm/">WebStorm</a>) qui offre un <em>vrai</em> support des langages web comme le JavaScript, le HTML ou le CSS.</p>
-
-<h3>La présentation à Devoxx France</h3>
-
-<p>Voilà un retour personnel sur la présentation elle-même. Déjà, on était très content avec Julien, car la salle était pleine, ce qui fait 300 personnes à nous écouter (sans compter les millions qui nous verront sur Parleys). Si si, j'avais compté les chaises pendant que la salle était vide ! :o)</p>
-
-<p><img src="/images/devoxxfr-2013-salle-1.jpg" title="Y a du monde à gauche..." alt="Y a du monde à gauche" />
-<img src="/images/devoxxfr-2013-salle-2.jpg" title="... et aussi à droite !" alt="... et aussi à droite !" /></p>
-
-<p>On a plutôt bien géré notre temps, on a fini un peu en avance même - environ 8 minutes avant - ce qui nous a permis de prendre près d'une dizaine de questions. Les retours que j'ai eu en direct ou sur le Net semblent montrer que la présentation a été appréciée, et c'est ce qui nous rend encore plus heureux (<a href="http://blog.soat.fr/2013/04/devoxx-fr-2013-du-javascript-propre-challenge-accepted/">un exemple ici</a>).</p>
-
-<p>Une chose toutefois, que l'on fera peut-être si notre présentation est prise sur une autre conférence. Il semblerait, d'après les questions, que certaines personnes s'attendaient à avoir un peu la <em>stack</em> idéale pour développer en JavaScript. Tout d'abord, elle n'existe pas. Choisir un framework JavaScript va dépendre de vos besoins, mais aussi de votre maitrise du langage, et du risque que vous acceptez de courrir par rapport à la pérénnité de tel ou tel outil.
-Je ne conseillerais pas AngularJS ou Backbone.js sans connaitre le contexte. Partir sur une application exécutée côté clent, cela a un impact à plus ou moins long terme, et faire ce choix n'est pas anodin.</p>
-
-<p>L'un des points sur lequel il faut faire attention, c'est l'intégration des outils entre eux. Il n'est pas toujours évident de faire fonctionner X avec Y. Aussi, peut-être proposerons-nous dans une version améliorée de la présentation deux ou trois <em>stacks</em> qui fonctionnent bien ensemble.</p>
-
-<h3>Références</h3>
-
-<ul>
-<li>Les slides sur Slideshare <a href="http://fr.slideshare.net/linsolas/java-script-devoxxfrance2013">ici</a> ou <a href="http://fr.slideshare.net/jak78/java-script-devoxxfrance2013ppt">là</a>.</li>
-<li>Les slides et bientôt la vidéo sur <a href="http://www.parleys.com/#play/515aac03e4b0c779d7881496">Parleys</a>.</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Devoxx France 2013 - Bilan]]></title>
-    <link href="http://linsolas.github.com/blog/2013/04/02/devoxx-france-2013-bilan/"/>
-    <updated>2013-04-02T23:23:00+02:00</updated>
-    <id>http://linsolas.github.com/blog/2013/04/02/devoxx-france-2013-bilan</id>
-    <content type="html"><![CDATA[<p><img src="http://www.devoxx.com/download/attachments/6816022/DevoxxFR-2012-web-400-267.png" title="Devoxx France 2013" alt="Devoxx France" /></p>
-
-<p>L'édition française de Devoxx 2013 s'est donc achevée la semaine dernière. A nouveau, un énorme <strong>BRAVO</strong> à toute l'équipe organisatrice, aux sponsors, aux speakers, aux participants. C'était magique. Devoxx, c'est un peu le Disneyland du développeur geek. On y voit des "stars" (pas dans le mauvais sens du terme) et on s'amuse énormément.</p>
-
-<p>Allez, un petit bilan personnel :</p>
-
-<h3>Les plus</h3>
-
-<ul>
-<li>Les gens.</li>
-<li>L'organisation, toujours au poil.</li>
-<li>L'équipe des organisateurs, toujours gentils et disponibles.</li>
-<li>Les rencontres, surtout voir en vrai des personnes que l'on ne connait que <em>via</em> Twitter.</li>
-<li>Les présentations de qualité, plutôt variées et nombreuses.</li>
-<li>Les gens.</li>
-<li>Certains goodies. Personnellement, j'en ai un peu marre des t-shirts (sauf celui d'Atlassian qui est au top, et que je portais durant ma présentation) et des mugs. Certains sponsors innovent plus que d'autres en la matière : boite à Meuh d'OCTO, décapsuleurs, gants, etc.</li>
-<li>Les concours, bien que je n'ai rien gagné !</li>
-<li>Le site de Parleys qui diffuse toutes les sessions que l'on a dû rater parce que parfois c'était dur de choisir, ou que l'on discutait avec des personnes. En plus, le site a été refait en HTML 5 !</li>
-<li>Le diner des speakers.</li>
-<li>La soirée "<em>Meet &amp; greet</em>".</li>
-<li>Les gens.</li>
-</ul>
-
-
-<h3>Les moins</h3>
-
-<ul>
-<li>Pas assez de <em>Hands On</em> le mercredi. Comme je l'ai dit, j'aimerais beaucoup que Devoxx France 2014 se déroule en quatre jours : 2 jours d'universités et Labs avec une attention particulière pour les sessions où l'auditoire code vraiment, et 2 jours de conférences.</li>
-<li>Le Marriott devient trop petit. L'année passée, avec un peu plus de 1200 personnes, on se sentait à l'étroit. Cette année, avec 1400 et quelques participants, c'était encore plus vrai. De nombreuses personnes se sont faites recaler à l'entrée des salles de conférences pleines pour des raisons de sécurité. Cela se comprend, mais c'est rageant. Le problème est de trouver un lieu ayant une capacité d'accueil d'au moins 1500 personnes à Paris pour un budget raisonnable. Difficile à mon avis !</li>
-<li>La nourriture le midi. Sans être mauvaise, ce n'était quand même pas ça, et ça manquait un peu de variété. En plus, sauf erreur de ma part, il n'y avait pas de desserts le midi. A noter que cette année, contrairement à 2012, les boissons étaient toujours à disposition et ça c'est bien (petit bémol : pas de Coca light, que du Coca "normal" :o) ).</li>
-<li>Toujours pas de NAO à gagner :)</li>
-<li>Faute de place, les BOF sont toujours un peu tard le soir (certains finissent à 22h). Guère pratique quand on a déjà 2 jours de Devoxx dans les pates !</li>
-</ul>
-
-
-<p>Voilà, hormis le problème du lieu qui devient trop petit, rien de méchant. Devoxx confirme qu'il s'agit d'une superbe conférence, et encore une fois, j'étais très fier d'y assister, surtout en tant que speaker ! A l'année prochaine (et en fin d'année pour la version World à Anvers) !</p>
 ]]></content>
   </entry>
   

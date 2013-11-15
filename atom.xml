@@ -4,7 +4,7 @@
   <title><![CDATA[fr.romain:blog:3.0]]></title>
   <link href="http://linsolas.github.com/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2013-11-14T18:35:51+01:00</updated>
+  <updated>2013-11-15T12:40:42+01:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -12,6 +12,120 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Devoxx 2013 - dernier jour et bilan]]></title>
+    <link href="http://linsolas.github.com/blog/2013/11/15/devoxx-2013-dernier-jour-et-bilan/"/>
+    <updated>2013-11-15T00:27:00+01:00</updated>
+    <id>http://linsolas.github.com/blog/2013/11/15/devoxx-2013-dernier-jour-et-bilan</id>
+    <content type="html"><![CDATA[<p><img src="http://linsolas.github.com/images/devoxx_logo.gif" title="Devoxx 2013" alt="Devoxx 2013" /></p>
+
+<p>La dernière journée à Devoxx est toujours un peu spéciale. Beaucoup moins de monde, moins de sessions aussi, on sent que la fin est là !
+Pour cette dernière journée, comme habituellement pour chaque Devoxx (France ou Belgique), je termine par l&#8217;enregistrement du podcast des CastCodeurs.</p>
+
+<!-- more -->
+
+
+<p>J&#8217;ai commencé la journée avec <a href="http://devoxx.be/dv13-scott-kurz.html?presId=3728">Batch applications for the Java platform (JSR 352)</a>, mais entre la fatigue des deux derniers jours et les slides bien trop chargés, j&#8217;ai eu du mal à suivre. Donc si vous voulez en savoir plus, je vous invite à regarder la <a href="http://jcp.org/en/jsr/detail?id=352">JSR 352</a> :)</p>
+
+<h2><a href="http://devoxx.be/dv13-vincent-massol.html?presId=3430">Enregistrement live des CastCodeurs</a></h2>
+
+<p><img src="http://linsolas.github.com/images/note-4.png" title="4/5" alt="4/5" /></p>
+
+<p>Ma seule et unique session en français (la seule de la conférence d&#8217;ailleurs) : l&#8217;enregistrement live du <a href="http://lescastcodeurs.com/">Podcast des CastCodeurs</a>. Une analyse toujours fine et délicate de la conférence qui est en train de s&#8217;achever.
+Je vous laisserais écouter cet épisode qui sera bientôt disponible sur le site. D&#8217;ailleurs, bientôt la 100e. Ce sera d&#8217;ailleurs peut-être pour Devoxx Anvers 2014, qui sait.</p>
+
+<p><img src="http://linsolas.github.com/images/devoxx2013-castcodeurs.jpg" title="Les CastCodeurs sur scène" alt="Les CastCodeurs sur scène" /></p>
+
+<h2><a href="http://devoxx.be/dv13-jean-franois-denise.html?presId=3759">Avatar.js, Server-Side JavaScript on the Java Platform</a></h2>
+
+<p><img src="http://linsolas.github.com/images/note-2.png" title="2/5" alt="2/5" /></p>
+
+<p>Finissons ce Devoxx par la présentation de <a href="http://devoxx.be/dv13-jean-franois-denise.html">Jean-François Denise</a> sur <a href="https://avatar-js.java.net/">Avatar.js</a>.</p>
+
+<p>Il s&#8217;agit d&#8217;un framework JavaScript côté serveur qui tourne sur la JVM et est une combinaison de :</p>
+
+<ul>
+<li>d&#8217;une inspiration de Node pour son modèle orienté événement, son système de modules et de son API.</li>
+<li>utilisation du moteur JavaScript de Nashorn.</li>
+<li>l&#8217;API de de la plateforme Java.</li>
+</ul>
+
+
+<p>Le but n&#8217;est pas de copier Node, mais plutôt d&#8217;en créer une compatible avec lui. Prendre le meilleure des deux mondes en quelque sorte.
+La syntaxe s&#8217;approche de celle de Node, comme par exemple :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="nx">fs</span><span class="p">.</span><span class="nx">readdir</span><span class="p">(</span><span class="s1">&#39;/Documents/images&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">files</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">files</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">imgFile</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="kd">var</span> <span class="nx">file</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">java</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nx">File</span><span class="p">(</span><span class="nx">imgFile</span><span class="p">);</span>
+</span><span class='line'>      <span class="kd">var</span> <span class="nx">img</span> <span class="o">=</span> <span class="nx">javax</span><span class="p">.</span><span class="nx">imageio</span><span class="p">.</span><span class="nx">ImageIO</span><span class="p">.</span><span class="nx">read</span><span class="p">(</span><span class="nx">file</span><span class="p">);</span>
+</span><span class='line'>      <span class="p">...</span>
+</span><span class='line'>  <span class="p">})</span>
+</span><span class='line'><span class="p">})</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Démarrer un serveur peut se faire directement en ligne de commandes, ou encore via quelques lignes de code :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">String</span><span class="o">[]</span> <span class="n">args</span> <span class="o">=</span> <span class="o">{</span> <span class="s">&quot;./myscript.js&quot;</span> <span class="o">};</span>
+</span><span class='line'><span class="n">Server</span> <span class="n">server</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Server</span><span class="o">(</span><span class="n">args</span><span class="o">);</span>
+</span><span class='line'><span class="n">server</span><span class="o">.</span><span class="na">run</span><span class="o">(</span><span class="n">args</span><span class="o">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Avatar.js vient aussi avec Avatar EE. Et là, je commence à me poser des questions.
+Il faut noter qu&#8217;Avatar.js n&#8217;est pas encore finalisé, et son API peut également être amenée à changer&#8230;</p>
+
+<p>Jean-Baptiste passe ensuite à une démo d&#8217;application d&#8217;upload de photos en Avatar.js, avec l&#8217;aide d&#8217;Express, des WebSocket, de java.sql et de javax.imageio. Ah non, en fait de démo, il s&#8217;agit de slides qui montrent du code. Argh</p>
+
+<p>J&#8217;avoue ne pas être vraiment emballé par ce projet, bien qu&#8217;avoir une passerelle entre Node.js et Java peut être intéressant. De plus ne pas voir une <em>vraie</em> démo m&#8217;a quand même déçu !</p>
+
+<h2>Bilan</h2>
+
+<p>Pour ma deuxième année à Anvers, la magie est toujours là. Cela reste l&#8217;une des meilleures conférences du monde sur le domaine du Java, avec des stars et des présentations de qualité.
+Je dirais quand même que j&#8217;ai préféré Devoxx 2012 à la version 2013, mais cela est peut-être aussi lié au fait que l&#8217;année dernière, il y avait en plus l&#8217;excitation de découvrir cette conférence pour de vrai.</p>
+
+<p>Bref, je reviendrais à Anvers en 2014 si j&#8217;en ai la possibilité, et ce sera peut-être pour faire une conférence, qui sait.</p>
+
+<p>Donc les aspects positifs :</p>
+
+<ul>
+<li>La qualité des présentations et des orateurs.</li>
+<li>Une organisation au poil, et c&#8217;est du sacré boulot !</li>
+<li>Les gens, les amis que l&#8217;on revoit ou que l&#8217;on se fait. Les rencontres donc.</li>
+<li>Les stands, il y en a pas mal, ils sont plutôt bien achalandés, et certains offrent des goodies sympas.</li>
+<li>A boire. On peut toujours boire, c&#8217;est toujours bien fourni, et parfois de la bière est offerte par un stand ou Atlassian.</li>
+<li>Le bracelet, toujours aussi pratique.</li>
+<li>Le système de vote à la sortie des salles (comme en 2012).</li>
+<li>Le film du jeudi soir (avec les popcorns), même si je ne l&#8217;ai pas tellement apprécié (&#8221;<em>Le Cartel</em>&#8221; ou &#8221;<em>The Counselor</em>&#8221; en VO), je trouve que c&#8217;est quand même top comme idée.</li>
+<li>Le site <a href="http://www.parleys.com">Parleys</a> qui héberge(ra) les sessions, toutes filmées (sauf, hélas, les Quickies et donc le mien)</li>
+</ul>
+
+
+<p>Les moins, ou les points d&#8217;amélioration :</p>
+
+<ul>
+<li>La nourriture. Je ne me souviens pas d&#8217;avoir super bien mangé à Devoxx 2012, mais j&#8217;ai vraiment l&#8217;impression que cette année c&#8217;était pire. Le mercredi midi c&#8217;était juste un sandwich, rien de folichon. Le lendemain, c&#8217;était une salade assez étrange (en gros, un sacré mélange), ce qui m&#8217;a fait finir au Quick. En dehors de ça, point de salut. Quelques gâteaux ont été jetés en pature à la foule affamée vers 16h, mais franchement, il y a un très gros axe d&#8217;amélioration sur ce point-là !</li>
+<li>Le système de vote qui mériterait d&#8217;être mieux utilisé. En gros, il ne sert qu&#8217;à faire un &#8220;Top 3&#8221; des meilleures sessions du jour ou de la conférence entière. Il serait bien de fournir le score au speaker à la fin de la conférence, pour avoir une évaluation directe du ressenti des spectateurs.</li>
+<li>Contrairement à l&#8217;année passée où j&#8217;avais eu la &#8220;révélation Angular&#8221;, cette année pas de &#8221;<em>Kick-ass</em>&#8221; présentations. Mais le niveau reste élevé, ne me faites pas dire ce que je ne dis pas :)</li>
+</ul>
+
+
+<p>Vivement 2014 :)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Devoxx 2013 - deuxième jour]]></title>
@@ -3225,57 +3339,6 @@ Pourquoi faire proposer un BBL ? En tant qu&#8217;orateur, cela a plusieurs avan
 <p>Et à défaut de sujet à proposer, pourquoi ne pas héberger vous-même un BBL ? Pour cela, il suffit d&#8217;avoir des locaux (si possible faciles d&#8217;accès, pour faciliter la venue des intervenants), d&#8217;avoir un public - il n&#8217;est pas nécessaire de faire des BBL avec 30 personnes, une demi douzaine peut déjà suffire - et de contacter les bonnes personnes. Twitter est sans doute une excellente porte d&#8217;entrée pour ça.</p>
 
 <p>Icone par <a href="http://pica-ae.deviantart.com/">pica-ae</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Devoxx 2012]]></title>
-    <link href="http://linsolas.github.com/blog/2012/11/20/devoxx-2012/"/>
-    <updated>2012-11-20T15:56:00+01:00</updated>
-    <id>http://linsolas.github.com/blog/2012/11/20/devoxx-2012</id>
-    <content type="html"><![CDATA[<p>J&#8217;ai déjà parlé des présentations auxquelles j&#8217;ai assisté lors de la conférence Devoxx dans des précédents billets (<a href="http://linsolas.github.com/blog/2012/11/18/devoxx-2012-jour-1/">premier jour</a>, <a href="http://linsolas.github.com/blog/2012/11/20/devoxx-2012-jour-2/">le deuxième jour</a>, <a href="http://linsolas.github.com/blog/2012/11/20/devoxx-2012-jour-3/">le troisième jour</a> et <a href="http://linsolas.github.com/blog/2012/11/17/devoxx-2012-presentation-dhibernate-envers/">mon Quickie</a>). Cette fois-ci, j&#8217;aborderais les à-côtés.</p>
-
-<!-- more -->
-
-
-<h2>Pourquoi Devoxx ?</h2>
-
-<p>J&#8217;ai dû entendre parler de la conférence Devoxx autour de 2009, et mon envie d&#8217;y participer n&#8217;est allée qu&#8217;en grandissant. Ce sera finalement l&#8217;édition française de Devoxx, en avril 2012, qui sera ma première participation. Mais l&#8217;édition française ne m&#8217;a pas rassasié, et je voulais absolument assister à l&#8217;édition originale. Deux sujets soumis, dont un retenu (&#8221;<a href="http://www.devoxx.com/display/DV12/Easy+Entity+Auditing+with+Hibernate+Envers"><em>Easy Entity Auditing with Hibernate Envers</em></a>&#8221;) plus tard, et zou, me voilà en Belgique !</p>
-
-<p><img src="http://linsolas.github.com/images/Devoxx2012-Anvers.jpg" alt="La gare d'Anvers" title="La gare d'Anvers"/></p>
-
-<p>Alors qu&#8217;est-ce que Devoxx ? Il s&#8217;agit de la deuxième conférence Java au monde, la première étant la Grand Messe d&#8217;Oracle, le <em>Java One</em> qui se tient à San Fransisco. Voyez ces chiffres : 5 jours de conférence, environ 3500 participants - tous les billets étaient vendus 1 mois avant, presque aussi bien que pour Lady Gaga :) - presque 200 conférenciers, des hectolitres de bière&#8230;</p>
-
-<p>Niveau organisation, on voit qu&#8217;il s&#8217;agit de la 11e édition. Tout est bien rodé, il n&#8217;y a quasiment aucun accroc, les conférences s&#8217;enchainent avec une fluidité remarquable. Devoxx prennant place dans un complexe cinématographique, les salles sont plutôt grandes, de 200 à 900 places environ et les sièges sont vraiment confortables (peut-être même un peu trop, quand on a très peu dormi la veille :) ). Devoxx étant une conférence de geeks, il fallait bien des gadgets de geeks. Le premier, c&#8217;est le bracelet incorporant une puce NFC, permettant de s&#8217;authentifier, mais aussi de voter à la fin d&#8217;une session. D&#8217;ailleurs ce point m&#8217;a vraiment plu, je trouve cette idée géniale. Seul bémol, il aurait été appréciable pour le conférencier d&#8217;avoir sa note finale, histoire de savoir si son discours a convaincu ou non.</p>
-
-<p><img src="http://linsolas.github.com/images/Devoxx2012-Badge.jpg" alt="Le badge Devoxx" title="Le badge Devoxx"/></p>
-
-<p><img src="http://linsolas.github.com/images/Devoxx2012-Votes.jpg" alt="Les bornes de votes" title="Les bornes de votes"/></p>
-
-<p>Ces bornes de votes sont gérées par des <a href="http://www.raspberrypi.org/">Raspberry Pi</a>, l&#8217;une des stars de Devoxx. Plusieurs sessions étaient consacrées à cette petite machine très accessible (autour de $25) et visiblement assez puissante. D&#8217;ailleurs, il y en avait aussi pour gérer les écrans affichant le descriptif de la conférence devant chacune des salles. Il y a eu aussi <a href="http://www.aldebaran-robotics.com/en/">le NAO</a>, un magnifique petit robot.</p>
-
-<p><img src="http://linsolas.github.com/images/Devoxx2012-NAO.jpg" alt="NAO, le petit robot" title="NAO, le petit robot"/></p>
-
-<p>Là, contrairement au Raspberry Pi, le joujou est <em>très</em> cher. En gros, si vous passez un test d&#8217;aptitude auprès d&#8217;Aldebaran Robotics (la concepteur français du robot), et que vous vous engagez à produire 2 applications par an, alors il ne vous en coûtera <em>que</em> 3000€ (H.T. bien entendu). Si vous voulez juste vous l&#8217;offrir pour Noël, comptez 4 fois plus :) Mais cela reste un bien joli jouet, et l&#8217;ouverture de la conférence (que j&#8217;ai ratée pour cause de grèves) a été faite par 5 NAOs qui ont dansé une petite chorégraphie. Stephan Janssen, le fondateur de Devoxx, a dit que s&#8217;ils étaient les Commodore 64 de la robotique, il fallait imaginer ce que nous aurons dans 5 ans ! Je suis assez d&#8217;accord sur ce point, il suffit de voir l&#8217;évolution de nos téléphones en 5 ou 10 ans (comparez le Nokia 3310 à un iPhone 5, Samsung Galaxy S3 ou un Nexus 4 :) ).</p>
-
-<p>Allez, je finirais juste par une critique : les repas. Franchement, ils ne sont pas au niveau de l&#8217;organisation de la conférence. Le mercredi, un simple sandwich et un yaourt, le lendemain une petite salade (assez bonne cela dit), ça fait un peu <em>cheap</em> (et pour éviter que les affamés se jettent dessus, il faut badger avant de se servir). De même, lors de la pause de 4 heures, pas grand chose à se mettre sous la dent.</p>
-
-<h2>Les thèmes</h2>
-
-<p>En 2011, le <strong>Cloud</strong> et le <strong>HTML 5</strong> étaient des sujets très souvent abordés par les conférenciers. Désormais, ce sont des thèmes qui ne sont plus abordés directement, tant ils sont acceptés, intégrés. On ne conçoit plus de développer un site sans passer par du HTML 5, ni même de le déployer sans considérer la case du &#8220;Cloud&#8221;.
-C&#8217;est un peu la même chose pour ce qui est des méthodologies et en particulier de l&#8217;<strong>agilité</strong>. Peu de sessions spécifiquement dédiées à ces sujets, mais ces thèmes sont régulièrement abordés par les conférenciers. Le métier de développeur, ainsi que la façon dont on l&#8217;exécute a aussi été abordé dans plusieurs speakers.</p>
-
-<p>La <strong>sécurité</strong> a aussi beaucoup fait parlé d&#8217;elle, étant également l&#8217;un des sujets abordé par Tim Bray lors de la keynote de Google du jeudi.</p>
-
-<p>Devoxx 2012 a parfaitement monté que Java n&#8217;est plus simplement focalisé sur le langage lui-même, mais dispose de tout un écosystème. Certes on a parlé du <strong>JDK8</strong>, avec les expressions lambdas, les closures. On a aussi abordé le <strong>JavaEE</strong> 7 et différentes JSR. Mais les langages gravitant autour de la JVM ont eu la part belle dans cette session du Devoxx, avec Scala, Groovy, Android, Ceylon&#8230;
-Notons aussi une bonne présence de <strong>JavaFX</strong> dans les sessions, bien que ces dernières n&#8217;aient jamais fait salle comble d&#8217;après ce que j&#8217;ai entendu dire. Cette forte présence est sans doute à mettre en parallèle avec le fait qu&#8217;Oracle est l&#8217;un des deux sponsors platinium - avec Google. Visiblement, la nouvelle version de JavaFX semble apporter des choses intéressantes, mais à mon goût, elle arrive sans doute trop tard pour vraiment captiver les foules.
-Peu présente l&#8217;année dernière, Adobe n&#8217;était même plus à Devoxx cette année, preuve s&#8217;il en est que la technologie Flash s&#8217;essoufle grandement&#8230;</p>
-
-<p>Le web a eu aussi une part très importante dans le planning, en particulier de tout ce qui tourne autour de <strong>JavaScript</strong>. La démonstration d&#8217;AngularJS par les développeurs de Google a été l&#8217;un des gros succès cette année. On a eu également droit à une session parlant des tests du JavaScript, sur vert.x également. Je note d&#8217;ailleurs que le monde de Java et celui du JavaScript sont de plus en plus proches, avec toujours plus de frameworks ou librairies permettant de faire intéragir l&#8217;un avec l&#8217;autre (on peut ainsi exécuter des tests JavaScript écrits en Jasmine sur une JVM avec Maven). L&#8217;outillage autour de JavaScript s&#8217;améliore encore plus, permettant d&#8217;y mettre en oeuvre des pratiques courantes en Java comme le TDD, l&#8217;intégration continue, etc.</p>
-
-<p>Autre thématique à ce Devoxx, qui disposait de son propre canal appelé le <em>Future<Devoxx></em>, était la <strong>robotique</strong>, avec les interactions avec le NAO ou les Raspberry Pi.</p>
-
-<p>Au final, des sujets d&#8217;actualité, et assez variés. Je me demande ce que nous réserve les trois Devoxx de 2013 !</p>
 ]]></content>
   </entry>
   

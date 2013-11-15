@@ -4,7 +4,7 @@
   <title><![CDATA[Category: conference | fr.romain:blog:3.0]]></title>
   <link href="http://linsolas.github.com/blog/categories/conference/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2013-11-14T18:35:51+01:00</updated>
+  <updated>2013-11-15T12:40:42+01:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -12,6 +12,112 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Devoxx 2013 - dernier jour et bilan]]></title>
+    <link href="http://linsolas.github.com/blog/2013/11/15/devoxx-2013-dernier-jour-et-bilan/"/>
+    <updated>2013-11-15T00:27:00+01:00</updated>
+    <id>http://linsolas.github.com/blog/2013/11/15/devoxx-2013-dernier-jour-et-bilan</id>
+    <content type="html"><![CDATA[<p><img src="/images/devoxx_logo.gif" title="Devoxx 2013" alt="Devoxx 2013" /></p>
+
+<p>La dernière journée à Devoxx est toujours un peu spéciale. Beaucoup moins de monde, moins de sessions aussi, on sent que la fin est là !
+Pour cette dernière journée, comme habituellement pour chaque Devoxx (France ou Belgique), je termine par l'enregistrement du podcast des CastCodeurs.</p>
+
+<!-- more -->
+
+
+<p>J'ai commencé la journée avec <a href="http://devoxx.be/dv13-scott-kurz.html?presId=3728">Batch applications for the Java platform (JSR 352)</a>, mais entre la fatigue des deux derniers jours et les slides bien trop chargés, j'ai eu du mal à suivre. Donc si vous voulez en savoir plus, je vous invite à regarder la <a href="http://jcp.org/en/jsr/detail?id=352">JSR 352</a> :)</p>
+
+<h2><a href="http://devoxx.be/dv13-vincent-massol.html?presId=3430">Enregistrement live des CastCodeurs</a></h2>
+
+<p><img src="/images/note-4.png" title="4/5" alt="4/5" /></p>
+
+<p>Ma seule et unique session en français (la seule de la conférence d'ailleurs) : l'enregistrement live du <a href="http://lescastcodeurs.com/">Podcast des CastCodeurs</a>. Une analyse toujours fine et délicate de la conférence qui est en train de s'achever.
+Je vous laisserais écouter cet épisode qui sera bientôt disponible sur le site. D'ailleurs, bientôt la 100e. Ce sera d'ailleurs peut-être pour Devoxx Anvers 2014, qui sait.</p>
+
+<p><img src="/images/devoxx2013-castcodeurs.jpg" title="Les CastCodeurs sur scène" alt="Les CastCodeurs sur scène" /></p>
+
+<h2><a href="http://devoxx.be/dv13-jean-franois-denise.html?presId=3759">Avatar.js, Server-Side JavaScript on the Java Platform</a></h2>
+
+<p><img src="/images/note-2.png" title="2/5" alt="2/5" /></p>
+
+<p>Finissons ce Devoxx par la présentation de <a href="http://devoxx.be/dv13-jean-franois-denise.html">Jean-François Denise</a> sur <a href="https://avatar-js.java.net/">Avatar.js</a>.</p>
+
+<p>Il s'agit d'un framework JavaScript côté serveur qui tourne sur la JVM et est une combinaison de :</p>
+
+<ul>
+<li>d'une inspiration de Node pour son modèle orienté événement, son système de modules et de son API.</li>
+<li>utilisation du moteur JavaScript de Nashorn.</li>
+<li>l'API de de la plateforme Java.</li>
+</ul>
+
+
+<p>Le but n'est pas de copier Node, mais plutôt d'en créer une compatible avec lui. Prendre le meilleure des deux mondes en quelque sorte.
+La syntaxe s'approche de celle de Node, comme par exemple :</p>
+
+<p>``` javascript
+var fs = require('fs')
+fs.readdir('/Documents/images', function(err, files) {</p>
+
+<pre><code>files.map(function(imgFile) {
+    var file = new java.util.File(imgFile);
+    var img = javax.imageio.ImageIO.read(file);
+    ...
+})
+</code></pre>
+
+<p>})
+```</p>
+
+<p>Démarrer un serveur peut se faire directement en ligne de commandes, ou encore via quelques lignes de code :</p>
+
+<p><code>java
+String[] args = { "./myscript.js" };
+Server server = new Server(args);
+server.run(args);
+</code></p>
+
+<p>Avatar.js vient aussi avec Avatar EE. Et là, je commence à me poser des questions.
+Il faut noter qu'Avatar.js n'est pas encore finalisé, et son API peut également être amenée à changer...</p>
+
+<p>Jean-Baptiste passe ensuite à une démo d'application d'upload de photos en Avatar.js, avec l'aide d'Express, des WebSocket, de java.sql et de javax.imageio. Ah non, en fait de démo, il s'agit de slides qui montrent du code. Argh</p>
+
+<p>J'avoue ne pas être vraiment emballé par ce projet, bien qu'avoir une passerelle entre Node.js et Java peut être intéressant. De plus ne pas voir une <em>vraie</em> démo m'a quand même déçu !</p>
+
+<h2>Bilan</h2>
+
+<p>Pour ma deuxième année à Anvers, la magie est toujours là. Cela reste l'une des meilleures conférences du monde sur le domaine du Java, avec des stars et des présentations de qualité.
+Je dirais quand même que j'ai préféré Devoxx 2012 à la version 2013, mais cela est peut-être aussi lié au fait que l'année dernière, il y avait en plus l'excitation de découvrir cette conférence pour de vrai.</p>
+
+<p>Bref, je reviendrais à Anvers en 2014 si j'en ai la possibilité, et ce sera peut-être pour faire une conférence, qui sait.</p>
+
+<p>Donc les aspects positifs :</p>
+
+<ul>
+<li>La qualité des présentations et des orateurs.</li>
+<li>Une organisation au poil, et c'est du sacré boulot !</li>
+<li>Les gens, les amis que l'on revoit ou que l'on se fait. Les rencontres donc.</li>
+<li>Les stands, il y en a pas mal, ils sont plutôt bien achalandés, et certains offrent des goodies sympas.</li>
+<li>A boire. On peut toujours boire, c'est toujours bien fourni, et parfois de la bière est offerte par un stand ou Atlassian.</li>
+<li>Le bracelet, toujours aussi pratique.</li>
+<li>Le système de vote à la sortie des salles (comme en 2012).</li>
+<li>Le film du jeudi soir (avec les popcorns), même si je ne l'ai pas tellement apprécié ("<em>Le Cartel</em>" ou "<em>The Counselor</em>" en VO), je trouve que c'est quand même top comme idée.</li>
+<li>Le site <a href="http://www.parleys.com">Parleys</a> qui héberge(ra) les sessions, toutes filmées (sauf, hélas, les Quickies et donc le mien)</li>
+</ul>
+
+
+<p>Les moins, ou les points d'amélioration :</p>
+
+<ul>
+<li>La nourriture. Je ne me souviens pas d'avoir super bien mangé à Devoxx 2012, mais j'ai vraiment l'impression que cette année c'était pire. Le mercredi midi c'était juste un sandwich, rien de folichon. Le lendemain, c'était une salade assez étrange (en gros, un sacré mélange), ce qui m'a fait finir au Quick. En dehors de ça, point de salut. Quelques gâteaux ont été jetés en pature à la foule affamée vers 16h, mais franchement, il y a un très gros axe d'amélioration sur ce point-là !</li>
+<li>Le système de vote qui mériterait d'être mieux utilisé. En gros, il ne sert qu'à faire un "Top 3" des meilleures sessions du jour ou de la conférence entière. Il serait bien de fournir le score au speaker à la fin de la conférence, pour avoir une évaluation directe du ressenti des spectateurs.</li>
+<li>Contrairement à l'année passée où j'avais eu la "révélation Angular", cette année pas de "<em>Kick-ass</em>" présentations. Mais le niveau reste élevé, ne me faites pas dire ce que je ne dis pas :)</li>
+</ul>
+
+
+<p>Vivement 2014 :)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Devoxx 2013 - deuxième jour]]></title>
@@ -406,194 +512,6 @@ Je n'ai pas eu la chance qu'ils viennent à ma session, mais je partage quand m�
 <img src="/images/softshake-2013-dessin3.jpg" title="Troisième image" alt="Troisième image" />
 <img src="/images/softshake-2013-dessin4.jpg" title="Quatrième image" alt="Quatrième image" />
 <img src="/images/softshake-2013-dessin5.jpg" title="Cinquième image" alt="Cinquième image" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[SoftShake 2013 - deuxième jour]]></title>
-    <link href="http://linsolas.github.com/blog/2013/10/25/softshake-2013-deuxieme-jour/"/>
-    <updated>2013-10-25T16:19:00+02:00</updated>
-    <id>http://linsolas.github.com/blog/2013/10/25/softshake-2013-deuxieme-jour</id>
-    <content type="html"><![CDATA[<p><img src="/images/soft-shake-2013.png" title="Soft Shake 2013" alt="Soft Shake 2013" /></p>
-
-<p>Et c'est parti pour le second jour de la conférence <strong>Soft-Shake</strong>.</p>
-
-<!-- more -->
-
-
-<h2>Keynote collaborative</h2>
-
-<p>La première keynote de la journée était une keynote "collaborative".
-Chaque responsable d'un track de sessions avait la parole pendant 4 minutes pour nous exposer sa vision à moyen terme (entre 2 et 5 ans) concernant sa technologie. Par exemple, le responsable de la partie "web" nous a dit que le JavaScript sera encore plus présent qu'aujourd'hui, en particulier du côté serveur.</p>
-
-<h2>Keynote Programatoo</h2>
-
-<p><img src="/images/note-4.5.png" title="4.5/5" alt="4.5/5" /></p>
-
-<p>La seconde keynote parlait de "<strong>Programatoo</strong>", un projet lancé par Audrey Neveu (<a href="https://twitter.com/Audrey_Neveu">@Audrey_Neveu</a>) et Aline Paponaud (<a href="https://twitter.com/bootis">@bootis</a>) de <a href="http://www.sfeir.fr">SFEIR</a>.
-Qu'est-ce que Programatoo ?
-Il s'agit d'apprendre à coder à nos enfants, n'y plus n'y moins.</p>
-
-<p><img src="/images/programatoo.jpg" title="Programatoo" alt="Programatoo" /></p>
-
-<p>Revenons 20 ans en arrière pour comprendre la génèse de cette idée.
-Au milieu des années 80, Aline et Audrey sont des petites filles (très sages, forcément) déjà attirées par les mystères de l'informatique et des ordinateurs. Elles veulent comprendre comment ça marche. 10 ans plus tard, leur intérêt est toujours intact, mais hélas elles se heurtent souvent à des stéréotypes ("<em>ce n'est pas pour les filles !</em>") ou l'incompréhension du milieu scolaire pour ce domaine.
-Audrey apprend avec joie qu'il y a des cours d'informatique dans son lycée. Elle s'y inscrit, mais cela se résumera à apprendre à utiliser Word ou Excel. C'est la déception.
-De son côté, Aline n'a guère plus de succès.
-Fort heureusement, elles ne baissent pas les bras, et embrassent le métier de programmeuse.</p>
-
-<p>En 2012, Aline va trouver Audrey pour proposer une idée géniale : et si on apprenait à coder à nos enfants ! C'est ainsi qu'en mars 2012 nait la première session "Programatoo", avec les enfants des employés de SFEIR. Et c'est un succès.</p>
-
-<p>Les choses ne sont pas pour autant parfaites.
-Elles font un constat navrant. Parmi les participants, il y avait deux adolescentes. Celles-ci sont parfaitement à l'aise avec les ordinateurs, du moins quand il s'agit d'utiliser Facebook, YouTube et autres services du genre. Mais elles sont incapables de vraiment utiliser un ordinateur, de comprendre comment cela fonctionne, ni même voir en cette machine un merveilleux outil de créativité !</p>
-
-<p>On dit que la jeune génération est une génération "digitale", qu'elle est née avec un smartphone dans les mains. Je le constate aussi, mon fils de 6 ans maitrise depuis un moment l'iPad, qui n'a plus de secret pour lui.
-Mais en réalité, nos enfants sont conditionnés pour "<strong>consommer</strong>" de l'informatique. Il faut les aider à en devenir des acteurs, des vrais utilisateurs.
-Finalement, c'est un peu comme une carte et un GPS : aujourd'hui, l'utilisation d'un GPS est plutôt intuitive et il nous mâche tout le travail, on n'a plus qu'à suivre bêtement ses instructions. Du coup, il devient obsolète de savoir lire une carte papier classique, et pourtant cela reste la base pour savoir se positionner quelque part...</p>
-
-<p>En tant qu'informaticien, il ne tient qu'à nous de changer la donne. Nous avons beaucoup d'outils, de langages destinés à l'aprentissage de la programmation, y compris destinés à de jeunes enfants.
-Ayant discuté ensuite avec Audrey, je vais sans doute essayer de mettre mon fils à la programmation.
-Bien entendu, point de Scala :) mais plutôt du <a href="http://scratch.mit.edu">Scratch</a> qui a l'avantage d'être très visuel et ludique.</p>
-
-<p>Il faut noter que le projet Programatoo n'est pas unique en son genre. Les conférences "Devoxx 4 Kids" s'organisent par-ci, par-là. Il y en avait justement une à Genève le samedi qui a suivi la conférence Soft-Shake.</p>
-
-<p>Programatoo a également gagné le "Duke Choice Awards 2013" à la conférence Java One. Une très belle consécration amplement méritée.
-Bravo Audrey et Aline !</p>
-
-<h2><a href="http://soft-shake.ch/2013/program/sessions/13_ruby/2013/10/25/01-speedup-your-web-app.html">Speed-up your webapp</a></h2>
-
-<p><a href="http://soft-shake.ch/2013/program/authors/2013/10/24/alexis-bernard.html">Alexis Bernard</a> (<a href="https://twitter.com/alexis_bernard">@alexis_bernard</a>)</p>
-
-<p><img src="/images/note-2.png" title="2/5" alt="2/5" /></p>
-
-<p>Je suis ouvert d'esprit, je vais donc dans le track "Ruby" pour la première session de la journée.
-Alexis nous parle d'optimisation quand on veut accélérer son site web.</p>
-
-<p>Première question : pourquoi le faire ?
-A cela, Alexis nous donne les exemples de Amazon et Yahoo! : pour le premier, diminuer le temps de réponse de 100ms, c'est un gain de revenu de l'ordre d'1%, ce qui n'est pas négligeable quand on voit leurs revenus...
-Pour le second, une diminution de 400ms de ce temps de réponse, et c'est 9% de traffic gagnés !
-Tout le monde n'est pas Amazon ou Yahoo! mais cela reste intéressant.</p>
-
-<p>La technique d'Alexis est simple : mesurer, optimiser et mesurer encore.</p>
-
-<p>Donc il faut mesurer. Pour cela, Alexis nous parle de quelques outils :</p>
-
-<ul>
-<li><a href="http://www.newrelic.com/">New Relic</a>, une solution SAAS visiblement assez poussée, qui historise en plus les mesures. Pratique pour comparer dans le temps. Mais c'est une solution assez chère visiblement (de l'ordre de 150€ par mois et par serveur).</li>
-<li><a href="https://github.com/MiniProfiler/rack-mini-profiler">Rack Mini Profiler</a>, un outil Ruby, un peu dans la même idée que New Relic, mais avec moins de fonctionnalités, et pas d'historisation.</li>
-<li><a href="https://www.pingdom.com/">Pingdom</a> dont l'une des fonctionnalités est de vérifier que les recommandations standard d'optimisations des sites-web sont bien respectées.</li>
-<li><a href="http://www.webpagetest.org/">WebPageTest</a>, qui a l'astuce de tester chaque requête 2 fois de suite. Cela permet ainsi de vérifier l'efficacité du système de cache des ressources.</li>
-<li>Chrome Dev Tools peut aussi être mis à profit pour mesurer les performances de l'application.</li>
-</ul>
-
-
-<p>Une fois les mesures faites, il faut corriger les problèmes. Alexis nous dit qu'il faut toujours optimser le <em>back-end</em> dans un premier temps. La plupart du temps cela va se résumer à optimiser la base de données, les requêtes, les indexes, etc.
-Une fois ceci fait, on peut s'intéresser à l'optimisation <em>front-end</em>. Là aussi des outils peuvent nous aider, Chrome Dev Tools par exemple, ou imageoptim.com, pour améliorer la compression des images.</p>
-
-<p>Une session intéressante, mais qui ne va pas à mon goût assez loin dans les détails. Les solutions proposées restent assez basiques au final.</p>
-
-<h2><a href="http://soft-shake.ch/2013/program/sessions/13_java/2013/10/25/02-Golo.html">Golo, le langage qui donne des super-pouvoirs</a></h2>
-
-<p><a href="http://soft-shake.ch/2013/program/authors/2013/10/24/philippe-charriere.html">Philippe Charrière</a> (<a href="https://twitter.com/k33g_org">@k33g_org</a>)</p>
-
-<p><img src="/images/note-3.5.png" title="3.5/5" alt="3.5/5" /></p>
-
-<p>Mais qu'est-ce que <strong>Golo</strong>, ce langage au nom rigolo ?
-C'est un langage créé par Julien Ponge (@jponge) qui tourne sur la JVM, avec Java 7 ou 8 (pas avant, car Golo nécessite <code>invokedynamic</code> pour tourner, introduit en Java 7).
-Ses principales forces sont sa simplicité, sa légèreté ainsi que la facilité d'étendre le langage.</p>
-
-<p>Philippe nous montre quelques exemples de code, la syntaxe reste assez compréhensible pour un développeur Java.
-Les lambdas, qui se font toujours attendre dans Java, sont là, tout comme les structures, des objets créés dynamiquement (<code>ObjectDynamic</code>) ou encore la possibilité d'étendre (<code>augment</code>) des classes existantes pour leur ajouter des fonctionnalités.</p>
-
-<p>Je vous invite à aller jeter un oeil sur le site du langage - <a href="http://golo-lang.org">http://golo-lang.org</a> - pour vous rendre compte de ce qu'offre ce langage, et voir quelques exemples concrets de code. Voilà un basique <em>Hello World</em> :</p>
-
-<p>```
-module EchoArgs</p>
-
-<p>function main = |args| {</p>
-
-<pre><code>println("Hello World...")
-foreach arg in args {
-  println("-&gt;  " + arg)
-}
-</code></pre>
-
-<p>}
-```</p>
-
-<p>J'ai aimé cette présentation, qui nous a donné un bon aperçu de ce qu'est Golo.
-Toutefois, cela reste un langage dont le but m'échappe un peu - hormis le côté "fun" d'avoir créer son propre langage !</p>
-
-<h2><a href="http://soft-shake.ch/2013/program/sessions/13_mobile/2013/10/25/3-Mobile-troll-party.html">Mobile Troll Party</a></h2>
-
-<p><a href="http://soft-shake.ch/2013/program/authors/2013/10/24/xavier-bourguignon.html">Xavier Bourguignon</a> (<a href="https://twitter.com/xbourguignon">@xbourguignon</a>)</p>
-
-<p><img src="/images/note-3.png" title="3/5" alt="3/5" /></p>
-
-<p><img src="/images/softshake-2013-mobile-troll-party.jpg" title="Une session pleine de violences" alt="Une session pleine de violences" /></p>
-
-<p>Une session pour le fun. Le but ici est de troller sévèrement sur iOS et Android.
-Je m'attendait à un peu plus de trash, un peu plus de sujets polémiques. Le jeu des deux présentateurs n'était peut-être pas assez rodé je pense, mais d'après ce que j'ai compris, Xavier devait la faire seul jusqu'à la veille au soir où il a réussi à convaincre son partenaire de venir aussi.
-Malgré tout, c'était une bonne ambiance, et les trolls étaient effectivement nombreux !</p>
-
-<h2><a href="http://soft-shake.ch/2013/program/sessions/13_agile/2013/10/25/4-5-ans-et-500-releases-en-50-minutes.html">5 ans, 500 releases en 50 minutes</a></h2>
-
-<p><a href="http://soft-shake.ch/2013/program/authors/2013/10/25/freddy-mallet.html">Freddy Mallet</a> (<a href="https://twitter.com/FreddyMallet">@FreddyMallet</a>) et <a href="http://soft-shake.ch/2013/program/authors/2013/10/24/olivier-gaudin.html">Olivier Gaudin</a> (<a href="https://twitter.com/gaudol">@gaudol</a>)</p>
-
-<p><img src="/images/note-4.png" title="4/5" alt="4/5" /></p>
-
-<p>Compte tenu du temps imparti (45 minutes), cette session a été renommée "<em>4 ans, 400 releases en 40 minutes</em>" :)
-Cette session raconte la vie de la société SonarSource, éditeur de l'outil d'analyse de code SonarQube (connu anciennement simplement sous le nom Sonar).</p>
-
-<p>Lorsque SonarSource a été créée, il y a 5 ans, c'était une petite startup lancée par trois personnes (en particulier Olivier et Freddy), sur leurs fonds propres. La société marche bien aujourd'hui, et a bien grossi (une 20aine de personnes d'ici la fin de l'anée), mais il y a eu beaucoup de problèmes, de "douleurs". En particulier 5 :</p>
-
-<ul>
-<li>Les tests.</li>
-<li>L'architecture.</li>
-<li>L'infrastructure.</li>
-<li>L'organisation.</li>
-<li>Sonar on Sonar.</li>
-</ul>
-
-
-<p>Un gros travail a été fait sur les tests. Les tests unitaires d'abord, mais aussi les tests d'intégration. Le fait que Sonar supporte 5 bases de données différentes, qu'il existe une soixante de plugins ne rend pas les choses simples. Toutefois, ils arrivent à tout tester de façon assez efficace.</p>
-
-<p>Initialement, HibernateORM et GWT avaient été choisis. Le premier car gérer 5 bases de données et autant de spécificités n'est jamais aisé. Le second, car à l'époque cela répondait bien aux besoins de l'équipe. Mais ces choix se sont finalement avérés être des maillons faibles, et progressivement ont été remplacés.</p>
-
-<p>Les développeurs ne font pas que des développements, il a fallu embaucher une personne dédiée à part entière pour gérer l'infrastructure et les releases. Mais un tel cloisonnement n'est jamais très efficace, et SonarSource a ainsi créer une équipe de "DevOps".</p>
-
-<p>Afin de ne pas être désynchroniser avec les utilisateurs de l'outil, l'équipe de SonarSource utilise SonarQube directement. Le fameux principe du "<em>Eat your own dog food</em>" en somme. Ils ont ainsi une instance de "production" interne pour laquelle ils font des releases toutes les semaines. Cela implique donc d'être capable de faire des releases presque tous les jours, les développements de type "big bang" sont donc exclus.</p>
-
-<p>Un dernier point abordé par Freddy et Olivier concerne le <em>Quality Gate</em> (un sujet qui mériterait sans doute une session à part entière). Il s'agit d'une sorte de contrat de qualité pour pouvoir faire une release. En gros, il faut respecter certaines règles, atteindre certains objectifs pour engager la release : par exemple, avoir clos tous les tickets JIRA, avoir une note SQALE de A (la meilleure), ne pas avoir de violations bloquantes ou critiques, ou même de violations non revues par l'équipe.</p>
-
-<h2>Bilan</h2>
-
-<p>Au final, ce sont deux très belles journées qui viennent de s'écouler.
-La qualité des présentations et le niveau des speakers sont très bons.</p>
-
-<p>Les plus :</p>
-
-<ul>
-<li>Du beau monde. C'est toujours un plaisir de revoir des gens qu'on apprécie, et de rencontrer physiquement des personnes que l'on ne connait que par Twitter.</li>
-<li>De bons sujets.</li>
-<li>Des tracks très variés : Java, agilité, web, mobile, IA/Robotique, BigData et NoSQL, Microsoft, Ruby on Rails.</li>
-<li>Le repas des speakers (miam miam la fondue !)</li>
-<li>Genève, très jolie ville.</li>
-<li>Les organisateurs, très accueillants et toujours disponibles.</li>
-<li>Les dessins en live des sessions (voir prochain billet).</li>
-</ul>
-
-
-<p>Les moins :</p>
-
-<ul>
-<li>La séparation des salles. Elles se trouvaient soit au 1e étage, soit au 5e. Changer de salle pouvait ainsi demander un peu de gymnastique !</li>
-<li>A peu de choses près, les mêmes repas le midi sur les deux jours. Un peu plus de variété aurait été appréciable. Pas de problème au niveau de la quantité toutefois.</li>
-<li>J'aurais bien aimé que SoftShake se tienne en hiver, Genève sous la neige doit être très agréable.</li>
-</ul>
-
-
-<p>Pour résumer, Soft Shake est une très belle conférence, dans l'esprit de Devoxx ou Mix-IT. J'y retournerais avec grand plaisir !</p>
 ]]></content>
   </entry>
   
