@@ -4,7 +4,7 @@
   <title><![CDATA[fr.romain:blog:3.0]]></title>
   <link href="http://linsolas.github.com/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2014-01-26T21:49:03+01:00</updated>
+  <updated>2014-05-05T22:05:04+02:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -12,6 +12,420 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Introduction aux web-components avec Google Polymer]]></title>
+    <link href="http://linsolas.github.com/blog/2014/05/05/introduction-aux-web-components-avec-google-polymer/"/>
+    <updated>2014-05-05T22:00:00+02:00</updated>
+    <id>http://linsolas.github.com/blog/2014/05/05/introduction-aux-web-components-avec-google-polymer</id>
+    <content type="html"><![CDATA[<p>Lors de <a href="http://www.devoxx.fr">Devoxx France 2014</a>, j&#8217;ai présenté avec mon ami <a href="https://twitter.com/jak78">Julien Jakubowski</a> un &#8220;Tools In Action&#8221; sur la <a href="http://cfp.devoxx.fr/devoxxfr2014/talk/HXP-745/Cr%C3%A9ons%20un%20web%20component%20avec%20Polymer">création de web component avec Google Polymer</a>.</p>
+
+<p>Peut-être que vous n&#8217;avez pas eu la chance de venir y assister. Je vous propose donc une initiation à Google Polymer et aux web components.</p>
+
+<h1>Les web components, qu&#8217;est-ce que c&#8217;est ?</h1>
+
+<p>Un site internet, c&#8217;est un ensemble de pages écrites en HTML (dans la plupart des cas du moins). Aujourd&#8217;hui, ces sites sont de plus en plus riches, de plus en plus dynamiques. Les composants qui structurent une page web sont de fait plus complexes.
+Paradoxalement, le langage HTML est un langage assez pauvre, puisqu&#8217;il ne dispose que d&#8217;un peu plus d&#8217;une centaine de &#8220;mots&#8221;, les balises.
+Résultat, il faut généralement bidouiller pour créer un vrai composant. Ainsi, avec Twitter Bootstrap, la création d&#8217;un panneau d&#8217;onglets va nécessiter d&#8217;utiliser les balises de liste (<code>&lt;ul&gt;</code> et <code>&lt;li&gt;</code>) comme cela :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;nav nav-tabs&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#home&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#profile&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#messages&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>Messages<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#settings&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>Settings<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'><span class="nt">&lt;/ul&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ce n&#8217;est pas trop moche, mais cela reste moins lisible que quelque chose de ce genre :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;tabs-pane&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;tab</span> <span class="na">title=</span><span class="s">&quot;Home&quot;</span> <span class="na">active=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tab&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;tab</span> <span class="na">title=</span><span class="s">&quot;Profile&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tab&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;tab</span> <span class="na">title=</span><span class="s">&quot;Messages&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tab&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;tab</span> <span class="na">title=</span><span class="s">&quot;Settings&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tab&gt;</span>
+</span><span class='line'><span class="nt">&lt;/tabs-pane&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Or la lisibilité est un critère très important quand on sait que l&#8217;on doit passer 80% du temps à lire du code et 20% à en écrire.</p>
+
+<p>Dans le même genre, est-ce qu&#8217;il ne serait pas plus pratique d&#8217;écrire ceci pour embarquer un tweet dans une page :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;tweet</span> <span class="na">tweetId=</span><span class="s">&quot;123456789&quot;</span><span class="nt">&gt;&lt;/tweet&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Hé bien c&#8217;est le but des web components que de proposer de créer ses propres balises HTML et de pouvoir les exporter facilement.</p>
+
+<h1>Le standard web Component</h1>
+
+<p>Finalement, créer ses propres tags HTML n&#8217;est pas quelque chose de nouveau, on peut le faire grâce à différents frameworks - comme par exemple avec une directive AngularJS - voire même en pur JavaScript.
+Mais les web components sont en réalité <a href="http://www.w3.org/TR/components-intro/">un standard en cours d&#8217;élaboration par le W3C</a>, et c&#8217;est là sa force première. Pour être plus précis, il s&#8217;agit d&#8217;un ensemble de standards, comprennant les briques nécessaires à l&#8217;élaboration d&#8217;un composant web. Je pense par exemple au <a href="http://w3c.github.io/webcomponents/spec/shadow/">shadow DOM</a> ou encore au <a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/templates/index.html#template-element">HTML template</a>.</p>
+
+<p>Ces standards sont toujours à l&#8217;étude, mais il existe quelques implémentations pour pouvoir jouer dès à présent avec les web components. Celui qui va nous intéresser plus particulièrement c&#8217;est celle de Google, à savoir <a href="http://www.polymer-project.org/">Polymer</a>.</p>
+
+<p><img src="http://www.polymer-project.org/images/logos/p-logo.svg" title="Google Polymer" alt="Google Polymer" /></p>
+
+<h1>Let&#8217;s start!</h1>
+
+<p>Assez parlé, codons ! Je vous propose de coder une balise <code>progress-bar</code>, basée sur <a href="http://getbootstrap.com/components/#progress">celle proposée par Twitter Bootstrap</a>. Le code HTML est le suivant :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress progress-striped&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-info&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;20&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 20%&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>20% Complete<span class="nt">&lt;/span&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/div&gt;</span>
+</span><span class='line'><span class="nt">&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Commençons par créer une application web toute simple. On va donc s&#8217;appuyer sur <a href="https://github.com/yeoman/yo">yo</a>, qui permet grâce à un générateur spécifique de nous créer une application blanche, préconfigurée pour un contexte particulier. On exécute ainsi la commande <code>yo webapp</code>. Une fois la structure générée, un petit <code>npm install</code> puis <code>bower install</code> nous permettent d&#8217;être prêt à coder. Pour nos besoins, j&#8217;ai un peu épuré le projet, en supprimant quelques éléments inutiles et en enlevant jQuery, qui n&#8217;est pas toujours utile.</p>
+
+<p>Grâce à sa pré-configuration grâce à <code>yo</code>, nous disposons d&#8217;une tâche <a href="http://gruntjs.com/">Grunt</a> (une sorte de <code>Apache Ant</code>, mais pour JavaScript) <code>serve</code>, qui va nous permettre de modifier notre code et de voir automatiquement le navigateur se recharger pour prendre ces modifications en compte. Il nous suffit donc d&#8217;exécuter <code>grunt serve</code>, et c&#8217;est tout ! Notre page sera dès lors visible à l&#8217;adresse http://localhost:9000.</p>
+
+<p>Première étape, il nous faut ajouter la librairie Polymer à notre projet. On va donc utiliser <a href="http://bower.io/">bower</a> pour gérer notre dépendance, on exécute donc la commande <code>bower install polymer --save</code> (l&#8217;option <code>--save</code> permet d&#8217;ajouter la dépendance dans le fichier <code>bower.json</code>). Nous disposons maintenant de <code>Polymer</code> dans le répertoire <code>bower_components</code>, mais aussi de <code>platform</code>. Comme je l&#8217;ai expliqué, les web components se basent sur un ensemble de briques qui ne sont aujourd&#8217;hui pas toutes supportées nativement par les navigateurs. Il faut donc les émuler, via des &#8220;polyfills&#8221;. Et c&#8217;est précisément le rôle de <code>platform</code>.</p>
+
+<p>Voilà notre HTML de base pour bien démarrer :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="cp">&lt;!doctype html&gt;</span>
+</span><span class='line'><span class="nt">&lt;html&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;head&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;utf-8&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;title&gt;</span>Polymer<span class="nt">&lt;/title&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;../bower_components/bootstrap/dist/css/bootstrap.css&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>        <span class="c">&lt;!-- Nos dépendances pour utiliser Polymer --&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;../bower_components/platform/platform.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;../bower_components/polymer/polymer.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/head&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;body&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;header&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>                <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">&quot;text-muted&quot;</span><span class="nt">&gt;</span>Google Polymer<span class="nt">&lt;/h3&gt;</span>
+</span><span class='line'>            <span class="nt">&lt;/div&gt;</span>
+</span><span class='line'>            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;footer&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>                <span class="nt">&lt;p&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;glyphicon glyphicon-heart&quot;</span><span class="nt">&gt;&lt;/span&gt;</span> Polymer<span class="nt">&lt;/p&gt;</span>
+</span><span class='line'>            <span class="nt">&lt;/div&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;/div&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/body&gt;</span>
+</span><span class='line'><span class="nt">&lt;/html&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Commençons par créer un élément Polymer pour le composant <code>progress-bar</code>. A noter qu&#8217;un composant Polymer doit être composé de deux mots séparés par un <code>-</code> (sans doute pour éviter la confusion avec les &#8220;vrais&#8221; tags HTML) :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;polymer</span><span class="na">-element</span> <span class="na">name=</span><span class="s">&quot;progress-bar&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;template&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/template&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;script&gt;</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">module</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>        <span class="p">})();</span>
+</span><span class='line'>        <span class="nx">Polymer</span><span class="p">(</span><span class="s1">&#39;progress-bar&#39;</span><span class="p">,</span> <span class="nx">module</span><span class="p">);</span>
+</span><span class='line'>    <span class="nt">&lt;/script&gt;</span>
+</span><span class='line'><span class="err">&lt;</span>/polymer-element&gt;
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>On voit trois choses intéressantes :</p>
+
+<ul>
+<li>le tag <code>polymer-element</code> qui prend le nom du composant (<code>progress-bar</code>) ;</li>
+<li>le tag <code>&lt;template&gt;</code> qui va nous permettre d&#8217;ajouter le code HTML ;</li>
+<li>la partie script qui nous permet d&#8217;initialiser un objet <code>module</code> qui correspond à notre composant Polymer, ainsi que la ligne <code>Polymer('progress-bar', module);</code> qui permet de l&#8217;enregistrer pour l&#8217;utiliser par la suite.</li>
+</ul>
+
+
+<p>On injecte alors le code HTML de la barre de progression dans le <code>&lt;template&gt;</code>, comme suit:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;polymer</span><span class="na">-element</span> <span class="na">name=</span><span class="s">&quot;progress-bar&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;template&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress progress-striped&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-info&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;20&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 20%&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>20% Complete<span class="nt">&lt;/span&gt;</span>
+</span><span class='line'>            <span class="nt">&lt;/div&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;/div&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/template&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;script&gt;</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">module</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>        <span class="p">})();</span>
+</span><span class='line'>        <span class="nx">Polymer</span><span class="p">(</span><span class="s1">&#39;progress-bar&#39;</span><span class="p">,</span> <span class="nx">module</span><span class="p">);</span>
+</span><span class='line'>    <span class="nt">&lt;/script&gt;</span>
+</span><span class='line'><span class="err">&lt;</span>/polymer-element&gt;
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>C&#8217;est bien, mais il faudrait pouvoir définir le pourcentage de progression dynamiquement, dont acte :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;polymer</span><span class="na">-element</span> <span class="na">name=</span><span class="s">&quot;progress-bar&quot;</span> <span class="na">attributes=</span><span class="s">&quot;percentage&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;template&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress progress-striped&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-info&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: %&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>% Complete<span class="nt">&lt;/span&gt;</span>
+</span><span class='line'>            <span class="nt">&lt;/div&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;/div&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/template&gt;</span>
+</span><span class='line'><span class="err">&lt;</span>/polymer-element&gt;
+</span><span class='line'><span class="nt">&lt;progress</span><span class="na">-bar</span> <span class="na">percentage=</span><span class="s">&quot;42&quot;</span><span class="nt">&gt;</span><span class="err">&lt;</span>/progress-bar&gt;
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>On voit plusieurs choses :</p>
+
+<ul>
+<li>il faut définir les attributs passés au composant via l&#8217;attribut <code>attributes="percentage"</code> ;</li>
+<li>dans le code HTML, on peut accéder à cette information via la syntaxe &#8220;double moustaches&#8221;, &#8220;. Les habitués d&#8217;Angular ne seront pas perdus !</li>
+</ul>
+
+
+<p>Changeons un peu notre composant pour donner un <code>min</code>, un <code>max</code> et une <code>value</code>, en laissant à la charge du composant de calculer lui-même le pourcentage:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;polymer</span><span class="na">-element</span> <span class="na">name=</span><span class="s">&quot;progress-bar&quot;</span> <span class="na">attributes=</span><span class="s">&quot;min,max,value&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;template&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress progress-striped&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar progress-bar-info&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;&quot;</span> <span class="na">style=</span><span class="s">&quot;width: %&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>% Complete<span class="nt">&lt;/span&gt;</span>
+</span><span class='line'>            <span class="nt">&lt;/div&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;/div&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/template&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;script&gt;</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">module</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>            <span class="k">return</span> <span class="p">{</span>
+</span><span class='line'>                <span class="nx">get</span> <span class="nx">percentage</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>                    <span class="k">return</span> <span class="p">((</span><span class="k">this</span><span class="p">.</span><span class="nx">value</span> <span class="o">-</span> <span class="k">this</span><span class="p">.</span><span class="nx">min</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">max</span> <span class="o">-</span> <span class="k">this</span><span class="p">.</span><span class="nx">min</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span><span class="p">;</span>
+</span><span class='line'>                <span class="p">}</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>        <span class="p">})();</span>
+</span><span class='line'>        <span class="nx">Polymer</span><span class="p">(</span><span class="s1">&#39;progress-bar&#39;</span><span class="p">,</span> <span class="nx">module</span><span class="p">);</span>
+</span><span class='line'>    <span class="nt">&lt;/script&gt;</span>
+</span><span class='line'><span class="err">&lt;</span>/polymer-element&gt;
+</span><span class='line'><span class="c">&lt;!-- Utilisation dans ma page du web component &quot;progress-bar&quot; --&gt;</span>
+</span><span class='line'><span class="nt">&lt;progress</span><span class="na">-bar</span> <span class="na">min=</span><span class="s">&quot;0&quot;</span> <span class="na">max=</span><span class="s">&quot;20&quot;</span> <span class="na">value=</span><span class="s">&quot;12&quot;</span><span class="nt">&gt;</span><span class="err">&lt;</span>/progress-bar&gt;
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>On voit ici aussi que les paramètres, <code>min</code>, <code>max</code> ou <code>value</code> sont disponibles également dans la partie <code>&lt;script&gt;</code>.</p>
+
+<p>Et si on souhaite change la valeur courante ? Un web component peut être accédé de la même façon que n&#8217;importe quel autre élément du DOM, donc un simple bout de JavaScript suffit :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary&quot;</span> <span class="na">onclick=</span><span class="s">&quot;changeValue()&quot;</span><span class="nt">&gt;</span>Change value<span class="nt">&lt;/button&gt;</span>
+</span><span class='line'><span class="nt">&lt;script&gt;</span>
+</span><span class='line'>    <span class="kd">function</span> <span class="nx">changeValue</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">bar</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#progression&#39;</span><span class="p">);</span> <span class="c1">// On récupère l&#39;objet</span>
+</span><span class='line'>        <span class="nx">bar</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="o">+</span><span class="nx">bar</span><span class="p">.</span><span class="nx">min</span> <span class="o">+</span> <span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="nx">bar</span><span class="p">.</span><span class="nx">max</span> <span class="o">-</span> <span class="nx">bar</span><span class="p">.</span><span class="nx">min</span><span class="p">));</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="nt">&lt;/script&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Il serait sans doute plus propre de proposer des fonctions, comme par exemple <code>updateValue</code>:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;polymer</span><span class="na">-element</span> <span class="na">name=</span><span class="s">&quot;progress-bar&quot;</span> <span class="na">attributes=</span><span class="s">&quot;min,max,value&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    ...
+</span><span class='line'>    <span class="nt">&lt;script&gt;</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">module</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>            <span class="k">return</span> <span class="p">{</span>
+</span><span class='line'>                <span class="nx">get</span> <span class="nx">percentage</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>                    <span class="k">return</span> <span class="p">((</span><span class="k">this</span><span class="p">.</span><span class="nx">value</span> <span class="o">-</span> <span class="k">this</span><span class="p">.</span><span class="nx">min</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">max</span> <span class="o">-</span> <span class="k">this</span><span class="p">.</span><span class="nx">min</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span><span class="p">;</span>
+</span><span class='line'>                <span class="p">},</span>
+</span><span class='line'>                <span class="nx">updateValue</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">val</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                    <span class="k">this</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">val</span><span class="p">;</span>
+</span><span class='line'>                <span class="p">}</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>        <span class="p">})();</span>
+</span><span class='line'>        <span class="nx">Polymer</span><span class="p">(</span><span class="s1">&#39;progress-bar&#39;</span><span class="p">,</span> <span class="nx">module</span><span class="p">);</span>
+</span><span class='line'>    <span class="nt">&lt;/script&gt;</span>
+</span><span class='line'><span class="err">&lt;</span>/polymer-element&gt;
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>pour pouvoir l&#8217;appeler ensuite :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">changeValue</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">bar</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#progression&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">bar</span><span class="p">.</span><span class="nx">updateValue</span><span class="p">(</span><span class="o">+</span><span class="nx">bar</span><span class="p">.</span><span class="nx">min</span> <span class="o">+</span> <span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="nx">bar</span><span class="p">.</span><span class="nx">max</span> <span class="o">-</span> <span class="nx">bar</span><span class="p">.</span><span class="nx">min</span><span class="p">)));</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>Externalisation</h1>
+
+<p>C&#8217;est bien beau tout ça, mais comment je fournis ce web component tout beau à une autre équipe ?
+C&#8217;est simple. Je déplace tout le code du <code>&lt;polymer-element&gt;</code> dans un fichier séparé, par exemple <code>progress-bar.html</code>, puis je l&#8217;importe grâce à cette petite ligne dans mon entête de page :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">&lt;</span><span class="nx">link</span> <span class="nx">rel</span><span class="o">=</span><span class="s2">&quot;import&quot;</span> <span class="nx">href</span><span class="o">=</span><span class="s2">&quot;progress-bar.html&quot;</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Le reste de ma page initiale ne change pas, je peux du coup utiliser mon <code>&lt;progress-bar id="progression" min="0" max="20" value="12"&gt;&lt;/progress-bar&gt;</code> sans problème.
+A la limite, je pourrais même sortir le lien vers la librairie <code>polymer</code> et le mettre directement dans mon fichier HTML :</p>
+
+<p><code>progress-bar.html</code> :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;../bower_components/polymer/polymer.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'><span class="nt">&lt;polymer</span><span class="na">-element</span> <span class="na">name=</span><span class="s">&quot;progress-bar&quot;</span> <span class="na">attributes=</span><span class="s">&quot;min,max,value&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    ...
+</span><span class='line'><span class="err">&lt;</span>/polymer-element&gt;
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>et dans ma page <code>index.html</code> :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;html&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;head&gt;</span>
+</span><span class='line'>        ...
+</span><span class='line'>        <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;../bower_components/platform/platform.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;import&quot;</span> <span class="na">href=</span><span class="s">&quot;progress-bar.html&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/head&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;body&gt;</span>
+</span><span class='line'>      ...
+</span><span class='line'>        <span class="nt">&lt;progress</span><span class="na">-bar</span> <span class="na">id=</span><span class="s">&quot;progression&quot;</span> <span class="na">min=</span><span class="s">&quot;10&quot;</span> <span class="na">max=</span><span class="s">&quot;20&quot;</span> <span class="na">value=</span><span class="s">&quot;12&quot;</span><span class="nt">&gt;</span><span class="err">&lt;</span>/progress-bar&gt;
+</span><span class='line'>    <span class="nt">&lt;/body&gt;</span>
+</span><span class='line'><span class="nt">&lt;/html&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Il est (pour l&#8217;instant) encore nécessaire d&#8217;avoir un lien vers la librairie <code>platform</code> dans la page principale car le <code>import</code> est lui-même <a href="http://www.w3.org/TR/2014/WD-html-imports-20140311/">un standard</a> en cours de travail du W3C et n&#8217;est donc pas supporté nativement par les navigateurs. Il faut donc avoir recours au polyfill de <code>platform</code> pour l&#8217;instant.</p>
+
+<p>Voilà un premier voyage dans le monde des web components avec Polymer. D&#8217;autres billets viendront peut-être le compléter&#8230;</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Une année de BBL à la SGCIB]]></title>
@@ -3300,39 +3714,6 @@ A nouveau, j&#8217;aurais la chance d&#8217;être speaker, cette fois-ci pour pr
 <p>Rendez-vous à Devoxx !</p>
 
 <p><strong>EDIT</strong> En attendant la vidéo sur le site de <a href="http://www.parleys.com">Parleys</a>, voici <a href="http://fr.slideshare.net/linsolas/java-script-devoxxfrance2013">les slides sur SlideShare</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Conférencier à Devoxx France 2013]]></title>
-    <link href="http://linsolas.github.com/blog/2013/02/21/conferencier-a-devoxx-france-2013/"/>
-    <updated>2013-02-21T00:08:00+01:00</updated>
-    <id>http://linsolas.github.com/blog/2013/02/21/conferencier-a-devoxx-france-2013</id>
-    <content type="html"><![CDATA[<p><img src="http://www.devoxx.com/download/attachments/6816022/DevoxxFR-2012-web-400-267.png"/></p>
-
-<p><em>tl;dr</em> Je serais à nouveau présentateur pour la conférence Devoxx France 2013, et ça fait mon bonheur, surtout qu&#8217;il s&#8217;agit d&#8217;une conférence (oui, je fais une conférence dans une conférence, normal quoi) !</p>
-
-<!-- more -->
-
-
-<p>La conférence <a href="http://www.devoxx.com">Devoxx</a> est arrivée assez tard dans ma vie professionnelle. J&#8217;en avais entendu parler il y a environ 4 ou 5 ans, et j&#8217;avais eu envie d&#8217;y assister à plusieurs reprises, en vain.
-Quand fin 2011 le comité Devoxx annonça qu&#8217;à partir de 2012 la conférence aurait sa <em>petite</em> soeur <strong>Devoxx France</strong>, il devenait hors de question pour moi de ne pas y assister. Et pour n&#8217;avoir aucun regrêt, j&#8217;avais même proposé deux sujets (un <em>Tools In Action</em> ainsi qu&#8217;un <em>Quickie</em>) au <em>CFP</em> (<em>Call for Papers</em>, ou en français <em>Appel à Orateur</em> ?). A ma grande surprise, les deux sujets ont été acceptés, et je me suis ainsi retrouvé à présenter ceci :</p>
-
-<ul>
-<li><a href="http://www.devoxx.com/display/FR12/Chouchoutez+votre+code+JavaScript">Chouchoutez votre code JavaScript</a>, où je montrais qu&#8217;industrialiser son développement JavaScript est aussi facile qu&#8217;en Java, et pour ne rien gâcher, avec les mêmes outils : Maven, Jenkins, Sonar.</li>
-<li><a href="http://www.devoxx.com/display/FR12/TestNG%2C+parce+que+vos+tests+le+valent+bien">TestNG, parce que vos tests le valent bien</a>, un petit <em>Quickie</em> pour montrer les atouts de TestNG par rapport à JUnit.</li>
-</ul>
-
-
-<p>Ca a été un grand moment, et quand est venu le <em>CFP</em> pour Devoxx World (la conférence originelle, tenue à Anvers), je me suis dit que j&#8217;allais également y proposer des sujets. Au final, mon <em>Quickie</em> <a href="http://www.devoxx.com/display/DV12/Easy+Entity+Auditing+with+Hibernate+Envers">Easy Entity Auditing With Hibernate Envers</a> a été retenu. Parler en anglais n&#8217;est pas forcément chose aisée, et le format <em>Quickie</em> - 15 minutes - s&#8217;adaptait à merveille !</p>
-
-<p>Et voilà que vient l&#8217;année 2013. Et donc les Devoxx. Cette année, en plus de Paris et Anvers, Londres s&#8217;est jointe à la fête. Mais pas question pour moi d&#8217;assister à DevoxxUK, Devoxx France restant la priorité (surtout que les deux conférences se chevauchent dans le calendrier).
-Vu l&#8217;excitation que m&#8217;avait procuré mes présentations lors des Devoxx 2012, je voulais absolument y retourner comme orateur. Par manque de temps et d&#8217;inspiration, je n&#8217;ai finalement proposé qu&#8217;un seul sujet, une conférence (format de 50 minutes). Pari risqué, car c&#8217;est le <em>slot</em> le plus demandé. Il me semble qu&#8217;il y a eu environ 310 propositions pour une trentaine de places. Près de 90% seront donc refusées. Par chance, la mienne fut retenue, tout comme celle de <a href="http://julien.jakubowski.fr/">Julien Jakubowski</a> (architecte <a href="http://www.octo.com">OCTO</a> et fondateur du <a href="http://chtijug.org/">Chti&#8217;JUG</a>), <a href="http://www.devoxx.com/display/FR13/Du+Javascript+propre+++Challenge+Accepted+%21"><em>Du JavaScript propre ? Challenge Accepted</em></a>.
-Etant donné la ressemblance de nos deux présentations, il a été décidé que nous présenterions tous les deux une conférence commune. C&#8217;est donc chose faite (enfin, on y travaille quoi).</p>
-
-<p>Je ne vais pas dévoiler le contenu de la présentation, mais il s&#8217;agira de lister les principaux travers lorsque l&#8217;on développe en JavaScript, et surtout de montrer les moyens de code proprement.</p>
-
-<p><em>Stay tuned</em>, et je l&#8217;espère que l&#8217;on se verra à la conférence Devoxx !</p>
 ]]></content>
   </entry>
   
