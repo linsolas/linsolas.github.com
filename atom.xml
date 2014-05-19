@@ -4,7 +4,7 @@
   <title><![CDATA[fr.romain:blog:3.0]]></title>
   <link href="http://linsolas.github.com/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2014-05-05T22:05:04+02:00</updated>
+  <updated>2014-05-19T20:15:40+02:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -12,6 +12,99 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Retour sur Devoxx France 2014]]></title>
+    <link href="http://linsolas.github.com/blog/2014/05/19/retour-sur-devoxx-france-2014/"/>
+    <updated>2014-05-19T20:10:00+02:00</updated>
+    <id>http://linsolas.github.com/blog/2014/05/19/retour-sur-devoxx-france-2014</id>
+    <content type="html"><![CDATA[<p><img src="http://linsolas.github.com/images/devoxx_logo.gif" title="Devoxx France 2014" alt="Devoxx France 2014" /></p>
+
+<h1>Devoxx France 2014</h1>
+
+<p>Habituellement, pendant et juste après un Devoxx, je pourri gentillement mon blog avec des billets expliquant en détail les sessions que j&#8217;ai suivi, ainsi qu&#8217;un billet récapitulatif.
+Cette année, je vais me contenter du billet récapitulatif, et avec un mois de retard en plus ! Tout se perd&#8230;</p>
+
+<p>A vrai dire, tout cela a une raison bien précise : je n&#8217;ai vu presque aucune session, car la Société Générale était sponsor cette année, et ça m&#8217;a pris un temps fou !
+Commençons tout d&#8217;abord justement par ces quelques sessions.</p>
+
+<h1>Conférences</h1>
+
+<h2><a href="http://cfp.devoxx.fr/devoxxfr2014/talk/HXP-745/Cr%C3%A9ons%20un%20web%20component%20avec%20Polymer">Créons un web component avec Polymer</a></h2>
+
+<p>Forcément, en tant que co-présentateur (avec une fois de plus Julien Jakubowski), j&#8217;étais obligé d&#8217;y assister.
+Le titre n&#8217;était pas très vendeur, surtout que Julien a eu l&#8217;idée géniale d&#8217;utiliser l&#8217;<a href="http://developer.marvel.com/">API Marvel</a>, mais seulement <em>après</em> le CFP. On aurait ainsi pu proposer le titre <code>Créons un &lt;super-héro&gt; avec Google Polymer</code>. Ca aurait été plus vendeur, mais d&#8217;un autre côté, notre salle était pleine ! Petit bémol, la salle était plutôt petite et notre session - pourtant un Tools In Action - n&#8217;a pas été filmé. J&#8217;ai l&#8217;impression que l&#8217;équipe des organisateurs a voulu optimiser les salles du sous-sol du Marriott pour avoir plus de TiA et ainsi contenter plus de monde, mais faisant l&#8217;impasse sur la vidéo pour certaines. Pas très grave, si vous l&#8217;avez manqué, je proposerais bientôt ce sujet sous forme d&#8217;un <a href="http://www.brownbaglunch.fr">brown bag lunch</a>&#8230;</p>
+
+<h2><a href="http://cfp.devoxx.fr/devoxxfr2014/talk/EHJ-890/Des%20SSII%20aux%20SS3I%20%3F%20Soci%C3%A9t%C3%A9s%20au%20service%20des%20individus%20de%20l%E2%80%99ing%C3%A9nierie%20informatique">Des SSII aux SS3I : Sociétés au service des individus de l’ingénierie informatique</a></h2>
+
+<p><img src="http://linsolas.github.com/images/note-3.png" title="3/5" alt="3/5" /></p>
+
+<p>Ma première vraie conférence est une conférence donnée par deux femmes, <a href="http://cfp.devoxx.fr/devoxxfr2014/speaker/07af1df53d450d56d48fdddd319d85554a1fe21d/Aude%20Amarrurtu">Aude Amarrurtu</a> et <a href="http://cfp.devoxx.fr/devoxxfr2014/speaker/d41b8a6c22ac52c0c3588468d3f5a34a762f9ccd/Betty%20MOREAU">Betty Moreau</a>, qui sont RH de surcroit !
+Le message qu&#8217;elles ont voulu faire passer, c&#8217;est qu&#8217;en France, une très grosse part du développement informatique est gérée par des SSII (enfin, ESN pour &#8221;<em>Entreprise de Service du Numérique</em>&#8221;). Je n&#8217;ai plus les chiffres en tête, mais le nombre de SSII en France est très important (plus de 10000, allant de 1 employés à plusieurs dizaines de milliers) et leur part de marché tournait autour de 80%.
+Le tableau des SSII était assez noir, mais comme toujours, il y en a toujours quelques unes qui se démarquent du lot.
+Une session intéressante, mais qui, j&#8217;ai l&#8217;impression, donnait plutôt envie de devenir freelance au final&#8230;</p>
+
+<h2><a href="http://cfp.devoxx.fr/devoxxfr2014/talk/VAR-813/Au%20secours,%20mon%20code%20AngularJS%20est%20pourri%20!">Au secours, mon code AngularJS est pourri !</a></h2>
+
+<p><img src="http://linsolas.github.com/images/note-2.5.png" title="2.5/5" alt="2.5/5" /></p>
+
+<p><a href="http://cfp.devoxx.fr/devoxxfr2014/speaker/7c0e3659c3e1946a39a7b45f633a3a6f52cab4c6/Thierry%20Chatel">Thierry Chatel</a>, formateur sur AngularJS, nous propose une session dédiée aux bonnes pratiques lorsque l&#8217;on développe une application avec AngularJS, ainsi que les différentes choses à éviter.
+J&#8217;ai été déçu pour deux raisons. Déjà, Thierry manquait un peu d&#8217;énergie comme présentateur, mais surtout cela s&#8217;est borné à une énumération de bonnes ou mauvaises pratiques. C&#8217;est bien, mais il manquait vraiment du concret, des exemples de code. Je crois avoir attendu 15 minutes avant de voir la première ligne de code Angular ! C&#8217;est dommage, le sujet était forcément très intéressant et aurait mérité mieux. En tout cas, ça m&#8217;a rassuré sur ma pratique d&#8217;Angular, qui n&#8217;est pas si pourri que ça :o)</p>
+
+<h2><a href="http://cfp.devoxx.fr/devoxxfr2014/talk/URP-539/Etendre%20le%20Web%20avec%20les%20Web%20Components">Etendre le Web avec les Web Components</a></h2>
+
+<p><img src="http://linsolas.github.com/images/note-2.5.png" title="2.5/5" alt="2.5/5" /></p>
+
+<p>Sur le CFP, j&#8217;avais fait deux propositions concernant les web components. Un Tools In Action (retenu) et une conférence. Cette dernière n&#8217;a été retenue, sans doute parce que ce sujet a été proposé aussi par <a href="http://cfp.devoxx.fr/devoxxfr2014/speaker/e30ce1e52e2a508470ac5be4eb6a1062463bf62d/Christophe%20Jolif">Christophe Jolif</a> d&#8217;IBM.
+Il nous a donc expliqué le principe des web components, ce qui était intéressant.
+J&#8217;ai cependant trouvé que la présentation a beaucoup (trop ?) tourné autour de l&#8217;implémentation d&#8217;IBM des web components, <a href="https://github.com/ibm-js/delite">Delite</a>.</p>
+
+<h2><a href="http://cfp.devoxx.fr/devoxxfr2014/talk/XEA-025/Extremist%20Programming%20:%20l%27art%20de%20s%27amuser%20avec%20du%20code">Extremist Programming : l&#8217;art de s&#8217;amuser avec du code</a></h2>
+
+<p><img src="http://linsolas.github.com/images/note-5.png" title="5/5" alt="5/5" /></p>
+
+<p>Une présentation décaléee faite par <a href="http://cfp.devoxx.fr/devoxxfr2014/speaker/fe056ad4746a010de60b106afd60c075031d8cd3/Eric%20Lefevre-Ardant">Eric Lefevre-Ardant</a> et <a href="http://cfp.devoxx.fr/devoxxfr2014/speaker/0499a99ad2f1d4c024bc3c433d9c05f0dbc55ea4/Cyrille%20Martraire">Cyrille Martraire</a>, cela ne peut pas se manquer. Et clairement, ça a été mon <strong>gros coup de coeur</strong> sur cette édition 2014 de Devoxx France.
+Tout comme la conférence <a href="http://www.devoxx.com/display/FR13/Boucles+etranges+++etranges+boucles+%28puzzlers+et+curiosites%29">Boucles étranges : étranges boucles (puzzlers et curiosités)</a> d&#8217;Eric lors de Devoxx France 2013, difficile de retranscrire ici le contenu de cette session, qui essayait de nous montrer comment l&#8217;art et le développement peuvent cohabiter.
+Tous les ingrédients d&#8217;une excellente présentation étaient présent : présentateurs plein d&#8217;énergie et parfaitement complémentaires, des informations intéressantes, de l&#8217;humour et des cookies (très bons d&#8217;ailleurs). Je recommande sur Parleys, même si la vidéo sera sans doute un peu moins bonne que le live&#8230;</p>
+
+<h2><a href="http://cfp.devoxx.fr/devoxxfr2014/talk/JSH-188/Pourquoi%20vous%20devriez%20essayer%20s%C3%A9rieusement%20les%20Object%20Calisthenics">Pourquoi vous devriez essayer sérieusement les Object Calisthenics</a></h2>
+
+<p>Un Quickie très intéressant par <a href="http://cfp.devoxx.fr/devoxxfr2014/speaker/9b4fefab030e99d7c2ac41ea9f5416bb7f4ff7a0/Guillaume%20Duquesnay">Guillaume Duquesnay</a> qui nous parle de la programmation avec des objects calisthéniques. Mais qu&#8217;est-ce que c&#8217;est ? Hé bien ce n&#8217;est rien de plus que de la programmation en s&#8217;infligeant des contraintes fortes qui sont les suivantes :</p>
+
+<ul>
+<li>un seul niveau d’indentation par méthode (pour éviter les <code>if</code> imbriqués par exemple) ;</li>
+<li>pas de <code>else</code> ;</li>
+<li>encapsuler tous les types primitifs et <code>String</code> ;</li>
+<li>un seul point par ligne ;</li>
+<li>pas d’abréviation (pour les noms des variables) ;</li>
+<li>limiter la taille des entités (petites classes par ex.) ;</li>
+<li>pas plus de deux variables d’instance par classe ;</li>
+<li>utiliser des collections &#8220;first class&#8221; (pas sûr de trouver une bonne traduction pour ça), c&#8217;est-à-dire de ne pas utiliser par exemple des <code>List&lt;String&gt; usernames</code> mais plutôt une classe plus explicite, comme par exemple <code>Usernames</code>.</li>
+<li>pas de getter / setter / properties</li>
+</ul>
+
+
+<p>Bon, malheureusement j&#8217;ai dû m&#8217;eclipser avant la fin de la session, je n&#8217;ai donc pas pu entendre ce que ce type de programmation a pu apporter à l&#8217;orateur dans sa façon de développer. Mais en tout cas, j&#8217;aimerais bien m&#8217;y frotter, plus par défi intellictuel qu&#8217;autre chose. Peut-être lors d&#8217;un coding dojo ?</p>
+
+<h1>Sponsoring SG</h1>
+
+<p>Grosse nouvelle, la Société Générale (plus exactement le département ITEC de la banque d&#8217;investissement) est devenue <a href="http://www.devoxx.fr/partenaires/">sponsor de la conférence</a>. Une première, puisqu&#8217;habituellement ce sont plutôt des éditeurs ou des SSII qui sont présentes sur ce genre d&#8217;événements.
+Si je n&#8217;ai pas initié ce sponsoring (merci aux Alexandres, ils se reconnaitront), j&#8217;ai du gérer près de 80% de la préparation de notre sponsoring. Ceci explique aussi que je suis resté les 3/4 de mon temps à proximité du stand SG.</p>
+
+<p>Notre présence dans ce milieu très geek a été plutôt bien vue, même si beaucoup en était étonné. Nous avons pu montrer que nous avons effectivement un esprit geek, et que la banque - du moins la notre ;o) - sait proposer des challenges intéressants et actuels : Big Data, Continuous Delivery, développement web et mobile, Software Craftsmanship, ainsi que d&#8217;activités attrayantes comme des Coding Dojo, des <a href="http://www.brownbaglunch.fr/">Brown Bag Lunches</a>, etc.</p>
+
+<p>Nous avions également un jeu très sympathique, le <a href="https://devoxx.societegenerale.com">Trading Challenge</a> (le site ne sera pas forcément disponible encore très longtemps). Le principe est de jouer en bourse (avec des données réelles, bien que légèrement décalées) avec un portefeuille virtuel. A la fin de la journée, quand la bourse ferme, les comptes sont calculés, et les trois meilleurs boursicoteurs repartaient avec de jolis cadeaux : Raspberry Pi, Amazon Kindle et caméra GoPro ! Seul bémol : le dernier jour de Devoxx était le vendredi saint, et donc les marchés étaient fermés. Donc pas de jeu. Dommage !
+Autre intérêt non négligeable du jeu : c&#8217;est un développement interne, une application web responsive développée avec de l&#8217;AngularJS et proposant des dashboards Kibana. Bref, une belle vitrine technologique pour la SG ! Comme quoi on ne fait plus du Cobol :o)</p>
+
+<h1>Bilan général</h1>
+
+<p>Bien que je n&#8217;ai vu que très peu de conférences - j&#8217;ai même raté l&#8217;enregistrement des Cast Codeurs pour démonter note stand - j&#8217;ai encore apprécié cette édition de Devoxx France. L&#8217;ambiance, les rencontres, le partage est toujours le point fort de cette conférence,</p>
+
+<p>Le rendez-vous est donc pris pour l&#8217;année prochaine, mais cette fois-ci au <strong>Palais des Congrès</strong> ! Le Marriott - et sa magnifique moquette - va sans doute nous manquer, mais la taille critique de 1500 développeurs était atteinte et il devenait urgent de viser plus haut. C&#8217;est donc chose faite !</p>
+
+<p>Si vous souhaitez un compte-rendu bien plus complet, je vous invite à lire celui réalisé par l&#8217;équipe de Developpez.com, qui est l&#8217;oeuvre de Thierry Leriche-Dessirier et auquel j&#8217;ai participé, visible <a href="http://thierry-leriche-dessirier.developpez.com/articles/interview/devoxx-france-2014/">ici</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Introduction aux web-components avec Google Polymer]]></title>
@@ -22,7 +115,7 @@
 
 <p>Peut-être que vous n&#8217;avez pas eu la chance de venir y assister. Je vous propose donc une initiation à Google Polymer et aux web components.</p>
 
-<h1>Les web components, qu&#8217;est-ce que c&#8217;est ?</h1>
+<h1>Les web components, qu&#8217;est-ce ?</h1>
 
 <p>Un site internet, c&#8217;est un ensemble de pages écrites en HTML (dans la plupart des cas du moins). Aujourd&#8217;hui, ces sites sont de plus en plus riches, de plus en plus dynamiques. Les composants qui structurent une page web sont de fait plus complexes.
 Paradoxalement, le langage HTML est un langage assez pauvre, puisqu&#8217;il ne dispose que d&#8217;un peu plus d&#8217;une centaine de &#8220;mots&#8221;, les balises.
@@ -71,7 +164,7 @@ Résultat, il faut généralement bidouiller pour créer un vrai composant. Ains
 
 <p>Hé bien c&#8217;est le but des web components que de proposer de créer ses propres balises HTML et de pouvoir les exporter facilement.</p>
 
-<h1>Le standard web Component</h1>
+<h1>Le standard web component</h1>
 
 <p>Finalement, créer ses propres tags HTML n&#8217;est pas quelque chose de nouveau, on peut le faire grâce à différents frameworks - comme par exemple avec une directive AngularJS - voire même en pur JavaScript.
 Mais les web components sont en réalité <a href="http://www.w3.org/TR/components-intro/">un standard en cours d&#8217;élaboration par le W3C</a>, et c&#8217;est là sa force première. Pour être plus précis, il s&#8217;agit d&#8217;un ensemble de standards, comprennant les briques nécessaires à l&#8217;élaboration d&#8217;un composant web. Je pense par exemple au <a href="http://w3c.github.io/webcomponents/spec/shadow/">shadow DOM</a> ou encore au <a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/templates/index.html#template-element">HTML template</a>.</p>
@@ -3692,28 +3785,6 @@ Le montage est le suivant :</p>
 
 
 <p>Sait-on jamais :)</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Du JavaScript propre ? Challenge Accepted]]></title>
-    <link href="http://linsolas.github.com/blog/2013/03/21/du-javascript-propre-challenge-accepted/"/>
-    <updated>2013-03-21T23:17:00+01:00</updated>
-    <id>http://linsolas.github.com/blog/2013/03/21/du-javascript-propre-challenge-accepted</id>
-    <content type="html"><![CDATA[<p><img src="http://linsolas.github.com/images/affiche-conference.jpg" alt="Du JavaScript propre ? Challenge Accepted!"/></p>
-
-<p>L&#8217;édition 2013 de <a href="http://www.devoxx.com/display/FR13/Accueil">Devoxx France</a> arrive à grands pas, le 27 mars c&#8217;est presque demain !
-A nouveau, j&#8217;aurais la chance d&#8217;être speaker, cette fois-ci pour présenter, conjointement avec <a href="http://www.devoxx.com/display/FR13/Julien+Jakubowski">Julien Jakubowski</a>, <a href="http://www.devoxx.com/display/FR13/Du+Javascript+propre+++Challenge+Accepted"><em>Du JavaScript propre ? Challenge Accepted!</em></a></p>
-
-<p>Le JavaScript est partout, et pour peu que vous souhaitiez faire un peu de web, il est incontournable. Mais fini le JavaScript de papy, celui que vous écriviez en 2003 pour bidouiller votre page web. On est aujourd&#8217;hui sur quelque chose de sérieux. Il est donc hors de question de continuer à bidouiller, et il faut savoir chouchouter son code JavaScript.</p>
-
-<p>Nous aborderons dans un premier temps les principaux travers du développement en JavaScript, avec quelques petites surprises, puis nous rentrerons dans le vif du sujet : les astuces, les bonnes pratiques et les bons outils pour écrire du code JavaScript <strong>proprement</strong>. Au bout d&#8217;une heure, vous ne devriez plus avoir peur de vous lancer dans l&#8217;écriture de 100,000 lignes de code JavaScript !</p>
-
-<p>Si vous êtes curieux des solutions que l&#8217;on va vous proposer, venez à la Seine B, vendredi matin à 10h40.</p>
-
-<p>Rendez-vous à Devoxx !</p>
-
-<p><strong>EDIT</strong> En attendant la vidéo sur le site de <a href="http://www.parleys.com">Parleys</a>, voici <a href="http://fr.slideshare.net/linsolas/java-script-devoxxfrance2013">les slides sur SlideShare</a>.</p>
 ]]></content>
   </entry>
   

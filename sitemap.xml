@@ -130,7 +130,11 @@
         <loc>
             http://linsolas.github.com/blog/2014/05/05/introduction-aux-web-components-avec-google-polymer/
         </loc>
-        <lastmod>2014-05-05T22:01:09+02:00</lastmod>
+        <lastmod>2014-05-05T22:10:26+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://linsolas.github.com/blog/2014/05/19/retour-sur-devoxx-france-2014/</loc>
+        <lastmod>2014-05-19T20:14:01+02:00</lastmod>
     </url>
     <url>
         <loc>http://linsolas.github.com/about/</loc>
@@ -138,10 +142,10 @@
     </url>
     <url>
         <loc>http://linsolas.github.com/blog/archives/</loc>
-        <lastmod>2014-05-05T22:01:09+02:00</lastmod>
+        <lastmod>2014-05-19T20:14:01+02:00</lastmod>
     </url>
     <url>
         <loc>http://linsolas.github.com/</loc>
-        <lastmod>2014-05-05T22:01:09+02:00</lastmod>
+        <lastmod>2014-05-19T20:14:01+02:00</lastmod>
     </url>
 </urlset>

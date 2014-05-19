@@ -4,7 +4,7 @@
   <title><![CDATA[Category: conference | fr.romain:blog:3.0]]></title>
   <link href="http://linsolas.github.com/blog/categories/conference/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2014-05-05T22:05:04+02:00</updated>
+  <updated>2014-05-19T20:15:40+02:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -12,6 +12,99 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Retour sur Devoxx France 2014]]></title>
+    <link href="http://linsolas.github.com/blog/2014/05/19/retour-sur-devoxx-france-2014/"/>
+    <updated>2014-05-19T20:10:00+02:00</updated>
+    <id>http://linsolas.github.com/blog/2014/05/19/retour-sur-devoxx-france-2014</id>
+    <content type="html"><![CDATA[<p><img src="/images/devoxx_logo.gif" title="Devoxx France 2014" alt="Devoxx France 2014" /></p>
+
+<h1>Devoxx France 2014</h1>
+
+<p>Habituellement, pendant et juste après un Devoxx, je pourri gentillement mon blog avec des billets expliquant en détail les sessions que j'ai suivi, ainsi qu'un billet récapitulatif.
+Cette année, je vais me contenter du billet récapitulatif, et avec un mois de retard en plus ! Tout se perd...</p>
+
+<p>A vrai dire, tout cela a une raison bien précise : je n'ai vu presque aucune session, car la Société Générale était sponsor cette année, et ça m'a pris un temps fou !
+Commençons tout d'abord justement par ces quelques sessions.</p>
+
+<h1>Conférences</h1>
+
+<h2><a href="http://cfp.devoxx.fr/devoxxfr2014/talk/HXP-745/Cr%C3%A9ons%20un%20web%20component%20avec%20Polymer">Créons un web component avec Polymer</a></h2>
+
+<p>Forcément, en tant que co-présentateur (avec une fois de plus Julien Jakubowski), j'étais obligé d'y assister.
+Le titre n'était pas très vendeur, surtout que Julien a eu l'idée géniale d'utiliser l'<a href="http://developer.marvel.com/">API Marvel</a>, mais seulement <em>après</em> le CFP. On aurait ainsi pu proposer le titre <code>Créons un &lt;super-héro&gt; avec Google Polymer</code>. Ca aurait été plus vendeur, mais d'un autre côté, notre salle était pleine ! Petit bémol, la salle était plutôt petite et notre session - pourtant un Tools In Action - n'a pas été filmé. J'ai l'impression que l'équipe des organisateurs a voulu optimiser les salles du sous-sol du Marriott pour avoir plus de TiA et ainsi contenter plus de monde, mais faisant l'impasse sur la vidéo pour certaines. Pas très grave, si vous l'avez manqué, je proposerais bientôt ce sujet sous forme d'un <a href="http://www.brownbaglunch.fr">brown bag lunch</a>...</p>
+
+<h2><a href="http://cfp.devoxx.fr/devoxxfr2014/talk/EHJ-890/Des%20SSII%20aux%20SS3I%20%3F%20Soci%C3%A9t%C3%A9s%20au%20service%20des%20individus%20de%20l%E2%80%99ing%C3%A9nierie%20informatique">Des SSII aux SS3I : Sociétés au service des individus de l’ingénierie informatique</a></h2>
+
+<p><img src="/images/note-3.png" title="3/5" alt="3/5" /></p>
+
+<p>Ma première vraie conférence est une conférence donnée par deux femmes, <a href="http://cfp.devoxx.fr/devoxxfr2014/speaker/07af1df53d450d56d48fdddd319d85554a1fe21d/Aude%20Amarrurtu">Aude Amarrurtu</a> et <a href="http://cfp.devoxx.fr/devoxxfr2014/speaker/d41b8a6c22ac52c0c3588468d3f5a34a762f9ccd/Betty%20MOREAU">Betty Moreau</a>, qui sont RH de surcroit !
+Le message qu'elles ont voulu faire passer, c'est qu'en France, une très grosse part du développement informatique est gérée par des SSII (enfin, ESN pour "<em>Entreprise de Service du Numérique</em>"). Je n'ai plus les chiffres en tête, mais le nombre de SSII en France est très important (plus de 10000, allant de 1 employés à plusieurs dizaines de milliers) et leur part de marché tournait autour de 80%.
+Le tableau des SSII était assez noir, mais comme toujours, il y en a toujours quelques unes qui se démarquent du lot.
+Une session intéressante, mais qui, j'ai l'impression, donnait plutôt envie de devenir freelance au final...</p>
+
+<h2><a href="http://cfp.devoxx.fr/devoxxfr2014/talk/VAR-813/Au%20secours,%20mon%20code%20AngularJS%20est%20pourri%20!">Au secours, mon code AngularJS est pourri !</a></h2>
+
+<p><img src="/images/note-2.5.png" title="2.5/5" alt="2.5/5" /></p>
+
+<p><a href="http://cfp.devoxx.fr/devoxxfr2014/speaker/7c0e3659c3e1946a39a7b45f633a3a6f52cab4c6/Thierry%20Chatel">Thierry Chatel</a>, formateur sur AngularJS, nous propose une session dédiée aux bonnes pratiques lorsque l'on développe une application avec AngularJS, ainsi que les différentes choses à éviter.
+J'ai été déçu pour deux raisons. Déjà, Thierry manquait un peu d'énergie comme présentateur, mais surtout cela s'est borné à une énumération de bonnes ou mauvaises pratiques. C'est bien, mais il manquait vraiment du concret, des exemples de code. Je crois avoir attendu 15 minutes avant de voir la première ligne de code Angular ! C'est dommage, le sujet était forcément très intéressant et aurait mérité mieux. En tout cas, ça m'a rassuré sur ma pratique d'Angular, qui n'est pas si pourri que ça :o)</p>
+
+<h2><a href="http://cfp.devoxx.fr/devoxxfr2014/talk/URP-539/Etendre%20le%20Web%20avec%20les%20Web%20Components">Etendre le Web avec les Web Components</a></h2>
+
+<p><img src="/images/note-2.5.png" title="2.5/5" alt="2.5/5" /></p>
+
+<p>Sur le CFP, j'avais fait deux propositions concernant les web components. Un Tools In Action (retenu) et une conférence. Cette dernière n'a été retenue, sans doute parce que ce sujet a été proposé aussi par <a href="http://cfp.devoxx.fr/devoxxfr2014/speaker/e30ce1e52e2a508470ac5be4eb6a1062463bf62d/Christophe%20Jolif">Christophe Jolif</a> d'IBM.
+Il nous a donc expliqué le principe des web components, ce qui était intéressant.
+J'ai cependant trouvé que la présentation a beaucoup (trop ?) tourné autour de l'implémentation d'IBM des web components, <a href="https://github.com/ibm-js/delite">Delite</a>.</p>
+
+<h2><a href="http://cfp.devoxx.fr/devoxxfr2014/talk/XEA-025/Extremist%20Programming%20:%20l%27art%20de%20s%27amuser%20avec%20du%20code">Extremist Programming : l'art de s'amuser avec du code</a></h2>
+
+<p><img src="/images/note-5.png" title="5/5" alt="5/5" /></p>
+
+<p>Une présentation décaléee faite par <a href="http://cfp.devoxx.fr/devoxxfr2014/speaker/fe056ad4746a010de60b106afd60c075031d8cd3/Eric%20Lefevre-Ardant">Eric Lefevre-Ardant</a> et <a href="http://cfp.devoxx.fr/devoxxfr2014/speaker/0499a99ad2f1d4c024bc3c433d9c05f0dbc55ea4/Cyrille%20Martraire">Cyrille Martraire</a>, cela ne peut pas se manquer. Et clairement, ça a été mon <strong>gros coup de coeur</strong> sur cette édition 2014 de Devoxx France.
+Tout comme la conférence <a href="http://www.devoxx.com/display/FR13/Boucles+etranges+++etranges+boucles+%28puzzlers+et+curiosites%29">Boucles étranges : étranges boucles (puzzlers et curiosités)</a> d'Eric lors de Devoxx France 2013, difficile de retranscrire ici le contenu de cette session, qui essayait de nous montrer comment l'art et le développement peuvent cohabiter.
+Tous les ingrédients d'une excellente présentation étaient présent : présentateurs plein d'énergie et parfaitement complémentaires, des informations intéressantes, de l'humour et des cookies (très bons d'ailleurs). Je recommande sur Parleys, même si la vidéo sera sans doute un peu moins bonne que le live...</p>
+
+<h2><a href="http://cfp.devoxx.fr/devoxxfr2014/talk/JSH-188/Pourquoi%20vous%20devriez%20essayer%20s%C3%A9rieusement%20les%20Object%20Calisthenics">Pourquoi vous devriez essayer sérieusement les Object Calisthenics</a></h2>
+
+<p>Un Quickie très intéressant par <a href="http://cfp.devoxx.fr/devoxxfr2014/speaker/9b4fefab030e99d7c2ac41ea9f5416bb7f4ff7a0/Guillaume%20Duquesnay">Guillaume Duquesnay</a> qui nous parle de la programmation avec des objects calisthéniques. Mais qu'est-ce que c'est ? Hé bien ce n'est rien de plus que de la programmation en s'infligeant des contraintes fortes qui sont les suivantes :</p>
+
+<ul>
+<li>un seul niveau d’indentation par méthode (pour éviter les <code>if</code> imbriqués par exemple) ;</li>
+<li>pas de <code>else</code> ;</li>
+<li>encapsuler tous les types primitifs et <code>String</code> ;</li>
+<li>un seul point par ligne ;</li>
+<li>pas d’abréviation (pour les noms des variables) ;</li>
+<li>limiter la taille des entités (petites classes par ex.) ;</li>
+<li>pas plus de deux variables d’instance par classe ;</li>
+<li>utiliser des collections "first class" (pas sûr de trouver une bonne traduction pour ça), c'est-à-dire de ne pas utiliser par exemple des <code>List&lt;String&gt; usernames</code> mais plutôt une classe plus explicite, comme par exemple <code>Usernames</code>.</li>
+<li>pas de getter / setter / properties</li>
+</ul>
+
+
+<p>Bon, malheureusement j'ai dû m'eclipser avant la fin de la session, je n'ai donc pas pu entendre ce que ce type de programmation a pu apporter à l'orateur dans sa façon de développer. Mais en tout cas, j'aimerais bien m'y frotter, plus par défi intellictuel qu'autre chose. Peut-être lors d'un coding dojo ?</p>
+
+<h1>Sponsoring SG</h1>
+
+<p>Grosse nouvelle, la Société Générale (plus exactement le département ITEC de la banque d'investissement) est devenue <a href="http://www.devoxx.fr/partenaires/">sponsor de la conférence</a>. Une première, puisqu'habituellement ce sont plutôt des éditeurs ou des SSII qui sont présentes sur ce genre d'événements.
+Si je n'ai pas initié ce sponsoring (merci aux Alexandres, ils se reconnaitront), j'ai du gérer près de 80% de la préparation de notre sponsoring. Ceci explique aussi que je suis resté les 3/4 de mon temps à proximité du stand SG.</p>
+
+<p>Notre présence dans ce milieu très geek a été plutôt bien vue, même si beaucoup en était étonné. Nous avons pu montrer que nous avons effectivement un esprit geek, et que la banque - du moins la notre ;o) - sait proposer des challenges intéressants et actuels : Big Data, Continuous Delivery, développement web et mobile, Software Craftsmanship, ainsi que d'activités attrayantes comme des Coding Dojo, des <a href="http://www.brownbaglunch.fr/">Brown Bag Lunches</a>, etc.</p>
+
+<p>Nous avions également un jeu très sympathique, le <a href="https://devoxx.societegenerale.com">Trading Challenge</a> (le site ne sera pas forcément disponible encore très longtemps). Le principe est de jouer en bourse (avec des données réelles, bien que légèrement décalées) avec un portefeuille virtuel. A la fin de la journée, quand la bourse ferme, les comptes sont calculés, et les trois meilleurs boursicoteurs repartaient avec de jolis cadeaux : Raspberry Pi, Amazon Kindle et caméra GoPro ! Seul bémol : le dernier jour de Devoxx était le vendredi saint, et donc les marchés étaient fermés. Donc pas de jeu. Dommage !
+Autre intérêt non négligeable du jeu : c'est un développement interne, une application web responsive développée avec de l'AngularJS et proposant des dashboards Kibana. Bref, une belle vitrine technologique pour la SG ! Comme quoi on ne fait plus du Cobol :o)</p>
+
+<h1>Bilan général</h1>
+
+<p>Bien que je n'ai vu que très peu de conférences - j'ai même raté l'enregistrement des Cast Codeurs pour démonter note stand - j'ai encore apprécié cette édition de Devoxx France. L'ambiance, les rencontres, le partage est toujours le point fort de cette conférence,</p>
+
+<p>Le rendez-vous est donc pris pour l'année prochaine, mais cette fois-ci au <strong>Palais des Congrès</strong> ! Le Marriott - et sa magnifique moquette - va sans doute nous manquer, mais la taille critique de 1500 développeurs était atteinte et il devenait urgent de viser plus haut. C'est donc chose faite !</p>
+
+<p>Si vous souhaitez un compte-rendu bien plus complet, je vous invite à lire celui réalisé par l'équipe de Developpez.com, qui est l'oeuvre de Thierry Leriche-Dessirier et auquel j'ai participé, visible <a href="http://thierry-leriche-dessirier.developpez.com/articles/interview/devoxx-france-2014/">ici</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Une année de BBL à la SGCIB]]></title>
@@ -342,164 +435,6 @@ L'idée est ici de réaliser un binding entre des entités et du JSON entre autr
 
 <p>Voilà, la deuxième journée s'achève avec encore de belles expériences (sauf gastronomiques !).
 Demain sera plus calme, avec seulement une demi-journée de travail.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Devoxx 2013 - premier jour]]></title>
-    <link href="http://linsolas.github.com/blog/2013/11/13/devoxx-2013-premier-jour/"/>
-    <updated>2013-11-13T08:56:00+01:00</updated>
-    <id>http://linsolas.github.com/blog/2013/11/13/devoxx-2013-premier-jour</id>
-    <content type="html"><![CDATA[<p><img src="/images/devoxx_logo.gif" title="Devoxx 2013" alt="Devoxx 2013" /></p>
-
-<p>Et voilà, ma deuxième expérience belge de Devoxx est entamée.</p>
-
-<!-- more -->
-
-
-<h2><a href="http://devoxx.be/dv13-sven-peters.html?presId=3143">How To Do Kick-Ass Software Development</a></h2>
-
-<p><img src="/images/note-4.png" title="4/5" alt="4/5" /></p>
-
-<p><img src="/images/devoxx-2013-kickass.jpg" title="Kick-ass development" alt="Kick-ass Development" /></p>
-
-<p>J'ai choisi cette présentation de <a href="https://twitter.com/@svenpet">Sven Peters</a> d'Atlassian, car j'avais beaucoup apprécié sa présentation l'année passée sur <a href="http://linsolas.github.io/blog/2012/11/18/devoxx-2012-jour-1/">7 things to make a good team great</a>. Il y présentait 7 trucs pour rendre une bonne équipe encore meilleure. C'est d'ailleurs lors de cette présentation qu'il m'est venue l'idée de mettre les <a href="http://www.brownbaglunch.fr">Brown Bag Lunch</a> à la SGCIB (via l'idée "<em>Feed you brain</em>"), peu de temps avant que ce mouvement ne prenne de l'ampleur en France.</p>
-
-<p>Sven s'est intéressé au film <a href="http://www.imdb.com/title/tt1250777/">Kick-Ass</a>, où une personne quelconque souhaite devenir un super-héros, juste en portant un costume. Forcément, au début il se fait dérouiller, mais persiste. Et c'est le message de Sven : se prendre des gamèles, mais toujours se relever.</p>
-
-<p>Mais que souhaite t-on atteindre avec son équipe ?</p>
-
-<ul>
-<li>un meilleur software ;</li>
-<li>moins d'<em>overhead</em> ;</li>
-<li>un développement plus rapide ;</li>
-<li>des clients heureux ;</li>
-<li>des développeurs heureux.</li>
-</ul>
-
-
-<p>Il y a quelques temps, la solution à tous les problèmes était l'agilité. Mais qu'en est-il en 2013 ?
-Le problème de toute méthodologie ou technologie c'est qu'au début c'est super, mais très vite les soucis commencent à surgir, jusqu'à s'apercevoir que cette solution ne résoud pas tous les problèmes (voir la <a href="http://en.wikipedia.org/wiki/Hype_cycle">Gartner Hype Curve</a>).</p>
-
-<p>Il faut toujours garder à l'esprit de construire la bonne chose ("<em>Building the right thing</em>").
-Une idée est le "<em>Fake it til you make it</em>".
-Sven nous montre l'exemple à ne pas suivre avec le <a href="http://en.wikipedia.org/wiki/Microsoft_Kin">téléphone Kin</a> de Microsoft. Censé être très adapté à la nouvelle génération, il fut un échec très retentissant, sorti de la vente à peine au bout de deux semaines, et aura fait perder plus d'un milliard de dollars à la firme !</p>
-
-<p><img src="http://www.digitaltrends.com/wp-content/uploads/2010/06/043775-microsoft-kin.jpg" title="Microsoft Kin" alt="Image Microsoft Kin" /></p>
-
-<p>A l'opposé, IBM a voulu tester une application de reconnaissance vocale.
-Plutôt que de développer un système complexe, ils ont triché en mettant une personne réelle dont le rôle était d'exécuter les tâches dictées par un cobaye. L'expérimentation n'ayant pas convaincue, il fut décidé que l'application réelle ne serait pas développée.</p>
-
-<p>Passons à l'importance du feedback. Celui-ci doit répondre à trois critères :</p>
-
-<ul>
-<li>facile à trouver ;</li>
-<li>simple ;</li>
-<li>rapide à soumettre.</li>
-</ul>
-
-
-<p>Il ne faut pas embêter directement les développeurs avec les feedbacks. Par exemple, pour l'équipe GMail, il y a 100 développeurs pour 425M utilisateurs. Imaginer que ce soit les développeurs qui traitent directement les feedbacks des utilisateurs. Le développement de l'application n'avancerait jamais.
-Cependant, tous doivent être conscients de ce qui ne va pas.</p>
-
-<p>Chaque jour, l'équipe d'Atlassian se réunit 45 minutes pour revoir ces feedbacks et en faire quelque chose de personnel.
-De plus, chaque développeur passe une semaine par an au support de premier niveau, pour être en contact directement avec les problèmes des utilisateurs.</p>
-
-<p>Autre point, ce qu'ils appellent le <em>Developer on Test</em>. Il s'agit de faire remplir le rôle de testeur aux développeurs.
-Pour cela, six astuces :</p>
-
-<ul>
-<li>Le training. Comment penser comme un testeur ?</li>
-<li>Faire du <em>pairing</em> entre un testeur et un développeur.</li>
-<li><em>Blitz Test</em> : durant une journée, toute la compagnie - et pas seulement les développeurs et les testeurs - teste une nouvelle vesion.</li>
-<li>Définir des recettes de tests.</li>
-<li>Instaurere des sessions séparées : pendant une heure, deux équipes testent les mêmes choses, puis comparent leurs résultats.</li>
-<li>La chasse aux bugs : pendant une semaine, un développeur est dédié à la chasse aux bugs sur tous les éléments marqués comme Terminés.</li>
-</ul>
-
-
-<p>Sven nous rappelle alors que "La qualité est la responsabilité de chacun".</p>
-
-<p>Sven passe ensuite sur le design. A Atlassian, les développeurs font aussi du design.
-Ils n'étaient pas forcément mauvais, mais cela avait tendance à partir dans tous les sens.
-Ce dont ils ont besoin, c'est de lignes directrices, de <em>design guidances</em> (<a href="https://developer.atlassian.com/design">les guidlines de design d'Atlassian</a>).</p>
-
-<p>Ils organisent également des workshops pour les développeurs.</p>
-
-<p>Comme un développement complet requiert la collaboration de plusieurs départements, il est important de supprimer les frictions qui peuvent apparaitre entre eux.</p>
-
-<p>Atlassian définit également des <em>guidelines</em> pour le développement. Ainsi, pour chaque tâche une branche est créée sur Git.
-Leur durée de vie est ainsi très courte (environ 2 jours).
-Puis, pour merger le code, ils passent par des <em>push requests</em>, ce qui fait que le nouveau code est revu et validé par ses pairs. Ce nouveau code n'est donc plus de la responsabilité d'un seul développeur.</p>
-
-<p>Dernier point : l'automatisation. Le principe est d'échouer rapidement (<em>Fail fast</em>). 4 choses à retenir :</p>
-
-<ul>
-<li>Mettre à disposition les artifacts générés.</li>
-<li>Paralleliser les tests pour les accélérer.</li>
-<li>Avoir une stratégie de builds. Créer des couches de tests selon leur catégorie, leur intérêt.</li>
-<li>Toujours avoir un oeil sur les statistiques. Savoir par exemple ce qui prend du temps sur un build, pour être en mesure de l'accélérer.</li>
-</ul>
-
-
-<p>Encore une belle présentation de Sven Peters.</p>
-
-<h2><a href="http://devoxx.be/dv13-chet-haase.html?presId=3193">Patterns, Shmatterns</a></h2>
-
-<p><img src="/images/note-4.png" title="4/5" alt="4/5" /></p>
-
-<p>Pourquoi cette présentation ? Tout simplement pour son orateur, <a href="https://twitter.com/@chethaase">Chet Haase</a>. L'année passée, il avait aussi présenté un Quickie (<a href="">The Future of Software Development Process Methodology Effectiveness</a>) qui avait été un beau succès.</p>
-
-<p>Encore une fois, la salle était comble. Chet Haase a cette fois-ci passé en revue un certain nombre de patterns et les a comparé avec ses propres patterns, ce qui en faisait quelque chose d'assez drôle.</p>
-
-<p><img src="/images/devoxx-2013-chethaase.jpg" title="Le design pattern Refactory" alt="Le design pattern Refactory" /></p>
-
-<h2><a href="http://devoxx.be/dv13-sven-peters.html?presId=3144">Don't use Git</a></h2>
-
-<p><img src="/images/note-4.png" title="4/5" alt="4/5" /></p>
-
-<p>A nouveau, <a href="https://twitter.com/@svenpet">Sven Peters</a> sur la scène. Le titre de la conférence peut paraître provocateur, tant Git est utilisé partout (Atlassian a même Stash dans son catalogue, un gestionnaire de repositories Git).
-Mais cela est en fait une façon de promouvoir ce système de gestion de sources.</p>
-
-<p>Sous le ton de l'ironie, Sven essaie de démonter les arguments qui font de Git un vrai succès. Git permet de travailler en mode déconnecté ? Mais c'est la fin du travail collaboratif ! Git rend les merges faciles et presque automatiques ? Mais le travail de merge sur SVN est une ôde à la cohésion d'équipe...</p>
-
-<p>Bien entendu, tout cela n'est que prétexte pour montrer en quoi Git est supérieur aux anciens gestionnaires de sources comme SVN.</p>
-
-<h2><a href="http://devoxx.be/dv13-nikolay-chashnikov.html?presId=3772">Efficient coding in IntelliJ IDEA</a></h2>
-
-<p><img src="/images/note-2.png" title="2/5" alt="2/5" /></p>
-
-<p><a href="http://devoxx.be/dv13-nikolay-chashnikov.html?presId=3772">Nikolay Chashnikov</a> est aux commandes pour nous montrer comment bien maitriser son IDE IntelliJ IDEA de JetBrains.
-Après pas mal d'essais ratés, je suis finalement passé définitivement sur cet IDE depuis un an, et clairement, je ne reviendrais pas en arrière. Mais je suis conscient de n'utiliser qu'une toute petite partie des capacités de l'outil. J'attends donc de cette session qu'elle me donne plein de bons conseils.</p>
-
-<p>Hélas, je resterais sur ma faim. Une bonne première partie de la session montre surtout les capacités d'autocomplétion proposées par IntelliJ. Le reste est avant tout la découverte (ou non) d'un certain nombre de raccourcis claviers. Bref, pas grand chose à se mettre sous la dent, si ce n'est 2 ou 3 nouveaux raccourcis. C'est chez payé pour une conférence d'une heure !</p>
-
-<p>Je pense que cette session peut être intéressante pour une personne utilisant Eclipse et souhaitant comprendre pourquoi IntelliJ est si puissant. Mais pour un utilisateur d'IntelliJ, même un non expert comme moi, peu d'informations à en tirer. Dommage.</p>
-
-<h2><a href="http://devoxx.be/dv13-tugdual-grall.html?presId=3281">Elastify your app: from SQL to NoSQL in less than one hour!</a></h2>
-
-<p><img src="/images/note-4.png" title="4/5" alt="4/5" /></p>
-
-<p>J'avais déjà assisté à cette présentation <a href="">lors de Devoxx France 2013</a>, toujours faite par <a href="https://twitter.com/@tgrall">Tugdual Grall</a> et <a href="https://twitter.com/@dadoonet">David Pilato</a>.
-Je me suis dit que j'allais quand même y jeter un oeil pour mieux l'apprécier.</p>
-
-<p><img src="/images/devoxx-2013-elastify.jpg" title="Elastify your application" alt="Elastify your application" /></p>
-
-<p>N'hésitez pas à relire <a href="http://linsolas.github.io/blog/2013/03/28/devoxx-france-2013-jour-2/">mon résumé lors de Devoxx France 2013</a>.</p>
-
-<h2><a href="http://devoxx.be/dv13-attila-szegedi.html?presId=3732">The Curious Case of JavaScript on the JVM</a></h2>
-
-<p><img src="/images/note-3.png" title="3/5" alt="3/5" /></p>
-
-<p>J'aime Java, j'aime le JavaScript. Je me dis qu'une session mélangeant les deux pourrait être intéressante.
-Je me décide donc d'aller voir ce qu'en dit <a href="https://twitter.com/@szegedi">Attila Szegedi</a>.
-Il y était question de <a href="http://openjdk.java.net/projects/nashorn/">Nashorn</a>, qui est l'implémentation d'un <em>runtime</em> JavaScript hautes performances sur la JVM.</p>
-
-<p>En gros, on écrit du JavaScript mélangé à du Java - à moins que ce ne soit l'inverse ? A noter que Nashorn devrait être <em>normalement</em> inclus dans le JDK 1.8.</p>
-
-<p>J'ai un peu de mal à voir l'intérêt de ce mélange, mais pourquoi pas. C'est aussi ce genre de chose qui fait la richesse de la plateforme de la JVM :)</p>
-
-<p>Voilà une première journée déjà bien intéressante, j'attends avec impatience la deuxième fournée de conférences, qui s'annonce de belle qualité.</p>
 ]]></content>
   </entry>
   
