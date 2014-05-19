@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: code | fr.romain:blog:3.0]]></title>
+  <link href="http://linsolas.github.com/blog/categories/code/atom.xml" rel="self"/>
+  <link href="http://linsolas.github.com/"/>
+  <updated>2014-05-19T21:05:47+02:00</updated>
+  <id>http://linsolas.github.com/</id>
+  <author>
+    <name><![CDATA[Romain Linsolas]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Hackathon Société Générale]]></title>
+    <link href="http://linsolas.github.com/blog/2014/05/19/hackathon-societe-generale/"/>
+    <updated>2014-05-19T20:25:00+02:00</updated>
+    <id>http://linsolas.github.com/blog/2014/05/19/hackathon-societe-generale</id>
+    <content type="html"><![CDATA[<p>Le mois dernier, la Société Générale <a href="http://linsolas.github.io/blog/2014/05/19/retour-sur-devoxx-france-2014/">était sponsor</a> de la conférence <a href="http://www.devoxx.fr">Devoxx France</a>. Une chose assez inhabituelle pour le signaler ! Hé bien ce n'est pas fini, car la Société Générale, avec l'aide de <a href="http://events.bemyapp.com/events/index/france">BeMyApp</a> organise ce week-end un Hackathon.</p>
+
+<p><img src="/images/hackathon-sg.jpg" title="Hackathon SG" alt="Hackathon SG" /></p>
+
+<h2>C'est quoi donc ?</h2>
+
+<p>Le hackathon, à ne pas confondre avec le hackchaton (qui doit sans doute consister à coder avec des petits chatons) est un événement destiné à créer des applications sur un laps de temps assez court, généralement un week-end.
+Ainsi, pendant près de 48 heures, plusieurs dizaines d'équipes vont concourir pour créer la plus belle application. Le thème est d'"<em>inventer la DSI de demain</em>". Quoi ce n'est pas clair ? Ok, pour être plus précis, il s'agit de créer des applications ou des services pour aider les développeurs de la SG.
+Bon, je vous rassure tout de suite, le code est et restera la propriété de leurs auteurs. L'idée n'est certainement pas de faire travailler des gens à l'oeil, mais plutôt de montrer que nous sommes des développeurs sympa et modernes à la SG !</p>
+
+<p>Toutes les informations sur l'événement sont ici : <a href="http://hackathonsg.bemyapp.com/">http://hackathonsg.bemyapp.com/</a></p>
+
+<p>Si vous venez à ce Hackathon, n'hésitez pas à me faire un petit coucou, j'y serais le vendredi soir, où je donnerais d'ailleurs une présentation sur les web components (il s'agit de celle de Devoxx France 2014, mais améliorée).</p>
+]]></content>
+  </entry>
+  
+</feed>
