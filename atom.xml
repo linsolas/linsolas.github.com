@@ -4,7 +4,7 @@
   <title><![CDATA[fr.romain:blog:3.0]]></title>
   <link href="http://linsolas.github.com/atom.xml" rel="self"/>
   <link href="http://linsolas.github.com/"/>
-  <updated>2014-05-19T21:05:47+02:00</updated>
+  <updated>2014-07-04T20:37:54+02:00</updated>
   <id>http://linsolas.github.com/</id>
   <author>
     <name><![CDATA[Romain Linsolas]]></name>
@@ -12,6 +12,267 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[yo, man]]></title>
+    <link href="http://linsolas.github.com/blog/2014/07/04/yo/"/>
+    <updated>2014-07-04T20:24:00+02:00</updated>
+    <id>http://linsolas.github.com/blog/2014/07/04/yo</id>
+    <content type="html"><![CDATA[<p><img src="http://linsolas.github.com/images/yeoman-fusee.png" title="yeoman" alt="yeoman" /></p>
+
+<h1>yo, qu&#8217;est-ce que c&#8217;est ?</h1>
+
+<p>Aujourd&#8217;hui, quand on fait du développement web, et donc en particulier du JavaScript, il n&#8217;est plus possible de se passer de bons outils pour développer correctement. <a href="http://yeoman.io/">Yeoman</a> est l&#8217;un d&#8217;entre eux. Cet outil est en fait une composition de trois outils :</p>
+
+<ul>
+<li><a href="http://gruntjs.com/">grunt</a>, le &#8221;<a href="http://ant.apache.org/">Ant</a>&#8221; du JavaScript, c&#8217;est-à-dire un exécuteur de tâches ;</li>
+<li><a href="http://bower.io/">bower</a> le gestionnaire de dépendances ;</li>
+<li><a href="https://github.com/yeoman/yo">yo</a> dont on va parler ici.</li>
+</ul>
+
+
+<p>Yo est ce que l&#8217;on appelle un <em>project scaffolder</em>, que l&#8217;on pourrait traduire en français par &#8220;échaffaudeur de projet&#8221;. Ok, on n&#8217;est pas trop aidé. L&#8217;idée derrière ce genre d&#8217;outils est de générer le squelette d&#8217;une application en fonction d&#8217;un contexte donné. Un exemple tout bête : je souhaite démarrer une application avec AngularJS. Plutôt que de passer quelques minutes / heures à configurer les bases de mon projet, je vais utiliser un générateur <code>yo</code> pour me faire ce travail. Une fois exécuté, je n&#8217;aurais alors plus qu&#8217;à développer mon projet, toutes les bases étant mises en place.</p>
+
+<h2>Installation de yo</h2>
+
+<p>L&#8217;utilitaire <code>yo</code> s&#8217;installe via <code>npm</code>, ce qui signifie qu&#8217;il vous faudra installer <a href="http://nodejs.org/">NodeJS</a> si ce n&#8217;est déjà fait. Une fois installé, il suffit de lancer la commande <code>npm install -g yo</code> (l&#8217;option <code>-g</code> assure une installation globale au système) pour que <code>yo</code> soit installé. Un petit <code>yo -v</code> nous assurera de sa bonne installation.</p>
+
+<h2>Utiliser un générateur yo</h2>
+
+<p>Concrètement, <code>yo</code> va faire appel à un générateur spécifique pour générer le squelette de notre application. Si je tape simplement <code>yo</code> dans ma console, celui-ci va me propose quelques options (le nombre d&#8217;options va dépendre de ce qui est installé sur ma machine) :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$&gt; yo
+</span><span class='line'>[?] What would you like to do? (Use arrow keys)
+</span><span class='line'>&gt; Run the Generator generator (0.4.4)
+</span><span class='line'>  Run the Webapp generator (0.4.9)
+</span><span class='line'>  Run the Karma generator (0.8.1)
+</span><span class='line'>  Run the Mocha generator (0.1.3)
+</span><span class='line'>  Update your generators
+</span><span class='line'>  Install a generator
+</span><span class='line'>  Find some help
+</span><span class='line'>  Get me out of here!</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Comme vous le voyez, les choix qui s&#8217;offrent à moi sont soit l&#8217;exécution d&#8217;un générateur, soit la mise à jour ou l&#8217;installation de nouveaux générateurs.
+Normalement, seuls les deux premiers générateurs (générateur de générateur <code>yo</code> et générateur d&#8217;applications web) sont disponibles initialement.</p>
+
+<p>Admettons que nous voulons créer une application AngularJS. Nous allons donc faire appel au <a href="https://github.com/yeoman/generator-angular">générateur Angular</a>. Deux options s&#8217;offrent à nous :</p>
+
+<ol>
+<li>Passer par la commande <code>npm install -g generator-angular</code>, qui installera le générateur ;</li>
+<li>Passer par la ligne de commande de <code>yo</code> :</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$&gt; yo
+</span><span class='line'>[?] What would you like to do?
+</span><span class='line'>  Run the Generator generator (0.4.4)
+</span><span class='line'>  Run the Karma generator (0.8.1)
+</span><span class='line'>  Run the Webapp generator (0.4.9)
+</span><span class='line'>  Run the Mocha generator (0.1.3)
+</span><span class='line'>  Update your generators
+</span><span class='line'>&gt; Install a generator
+</span><span class='line'>  Find some help
+</span><span class='line'>  Get me out of here!
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>$&gt; yo
+</span><span class='line'>[?] What would you like to do? Install a generator
+</span><span class='line'>[?] Search NPM for generators: angular
+</span><span class='line'>[?] Here's what I found. Install one? (Use arrow keys)
+</span><span class='line'>&gt; generator-angular
+</span><span class='line'>  generator-angular-axiom
+</span><span class='line'>  generator-angular-beego
+</span><span class='line'>  generator-angular-bootstrap
+</span><span class='line'>  generator-angular-bootstrap-less
+</span><span class='line'>  generator-angular-browserify-express
+</span><span class='line'>  generator-angular-caveman2
+</span><span class='line'>  generator-angular-cmelion
+</span><span class='line'>(Move up and down to reveal more choices)</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Dans les deux cas, c&#8217;est bien <code>npm</code> qui va s&#8217;exécuter pour installer le générateur.
+Pour lancer la génération, c&#8217;est la même chose : soit nous exécutons la commande <code>yo angular</code> (le nom du générateur, sans le <code>generator-</code> devant), soit nous passons par la commande <code>yo</code> et on se laisse guider par l&#8217;outil. Attention, <code>yo</code> génère les sources de l&#8217;application dans le répertoire courant, pensez donc à créer un sous-répertoire avant.</p>
+
+<p>Là, en fonction du générateur, un certain nombre de questions vont nous être posées, par exemple pour savoir si nous voulons utiliser <a href="http://sass-lang.com/">SASS</a> ou <a href="http://getbootstrap.com/">Bootstrap</a> :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$&gt; yo angular
+</span><span class='line'>
+</span><span class='line'>     _-----_
+</span><span class='line'>    |       |
+</span><span class='line'>    |--(o)--|   .--------------------------.
+</span><span class='line'>   `---------´  |    Welcome to Yeoman,    |
+</span><span class='line'>    ( _´U`_ )   |   ladies and gentlemen!  |
+</span><span class='line'>    /___A___\   '__________________________'
+</span><span class='line'>     |  ~  |
+</span><span class='line'>   __'.___.'__
+</span><span class='line'> ´   `  |° ´ Y `
+</span><span class='line'>
+</span><span class='line'>Out of the box I include Bootstrap and some AngularJS recommended modules.
+</span><span class='line'>
+</span><span class='line'>[?] Would you like to use Sass (with Compass)? No
+</span><span class='line'>[?] Would you like to include Bootstrap? Yes
+</span><span class='line'>[?] Which modules would you like to include? (Press &lt;space&gt; to select)
+</span><span class='line'>&gt;[X] angular-resource.js
+</span><span class='line'> [X] angular-cookies.js
+</span><span class='line'> [X] angular-sanitize.js
+</span><span class='line'> [X] angular-route.js</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Une fois la commande terminée, nous diposons d&#8217;un répertoire bien configuré. Il est parfois requis d&#8217;exécuter les commandes <code>npm install</code> (pour installer les contributions Grunt) et <code>bower update</code> (pour télécharger les dépendances de l&#8217;application) afin d&#8217;être tout à fait prêt, mais normalement le générateur va se charger de cette opération.
+Voici les principaux éléments de structure de l&#8217;application générée :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>bower.json                     -&gt; Déclaration des dépendences pour Bower
+</span><span class='line'>Gruntfile.js                   -&gt; Définition des tâches pour Grunt
+</span><span class='line'>package.json                   -&gt; Description de l'application
+</span><span class='line'>  +- app                       -&gt; Répertoire des sources
+</span><span class='line'>  |    +- bower_components     -&gt; Dépendences téléchargées par Bower
+</span><span class='line'>  |    + *                     -&gt; Sources de l'application
+</span><span class='line'>  +- node_modules              -&gt; Modules NodeJS nécessaires à l'application (essentiellement pour Grunt)
+</span><span class='line'>  +- test                      -&gt; Répertoire des tests (Karma et Jasmine)
+</span><span class='line'>       +- *                    -&gt; Sources des tests
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Comme on peut le voir, <code>yo</code> fait appel à ses deux copains de <code>yeoman</code> pour travailler : <code>Bower</code> et <code>Grunt</code>.
+En tapant par exemple <code>grunt serve</code>, <code>Grunt</code> va exécuter quelques tâches et démarrer un serveur :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$&gt; grunt serve
+</span><span class='line'>Running "serve" task
+</span><span class='line'>
+</span><span class='line'>Running "clean:server" (clean) task
+</span><span class='line'>
+</span><span class='line'>Running "bowerInstall:app" (bowerInstall) task
+</span><span class='line'>
+</span><span class='line'>Running "concurrent:server" (concurrent) task
+</span><span class='line'>
+</span><span class='line'>Running "copy:styles" (copy) task
+</span><span class='line'>Copied 1 files
+</span><span class='line'>
+</span><span class='line'>Done, without errors.
+</span><span class='line'>
+</span><span class='line'>Running "autoprefixer:dist" (autoprefixer) task
+</span><span class='line'>Prefixed file ".tmp/styles/main.css" created.
+</span><span class='line'>
+</span><span class='line'>Running "connect:livereload" (connect) task
+</span><span class='line'>Started connect web server on 127.0.0.1:9000.
+</span><span class='line'>
+</span><span class='line'>Running "watch" task
+</span><span class='line'>Waiting...</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Grâce à la tâche <a href="https://github.com/gruntjs/grunt-contrib-livereload">livereload</a> de <code>Grunt</code>, chaque modification du code va entraîner le rechargement automatique de la page :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Waiting...OK
+</span><span class='line'>&gt;&gt; File "app\views\main.html" changed.
+</span><span class='line'>
+</span><span class='line'>... Reload app\views\main.html ...
+</span><span class='line'>Completed in 0.001s at Sun Jun 01 2014 11:02:17 GMT+0200 (Romance Daylight Time) - Waiting...</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Comme je le disais plus haut, cela prend à peine une minute, et au final, nous disposons d&#8217;une application prête pour le développement.</p>
+
+<h2>Créer son propre générateur</h2>
+
+<p>Bien qu&#8217;il existe tout un tas de générateur, il peut arriver le besoin d&#8217;en créer un soi-même. C&#8217;est le rôle du <code>generator-generator</code>, qui comme son nom l&#8217;indique, génère le squelette d&#8217;un générateur. Je vais faire un peu ma faignasse, mais je vais profiter de l&#8217;excellente présentation réalisée par <a href="https://twitter.com/laut3rry">Thierry Lau</a> sur ce sujet :</p>
+
+<p><a href="http://lauterry.github.io/prez-yeoman-generator/">http://lauterry.github.io/prez-yeoman-generator/</a></p>
+
+<p>Pour résumer, si vous devez vous lancer dans un projet, plutôt que de perdre du temps, passez vite à <strong>yo</strong> !</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Hackathon Société Générale]]></title>
@@ -3054,186 +3315,6 @@ Bien sûr, Didier Girard insiste sur le fait que cela doit aider à se faire une
 <p>Ca devient une tradition, finir un Devoxx avec une session live des <a href="http://lescastcodeurs.com/">Cast Codeurs</a>. A vrai dire, je ne vois <strong>aucune</strong> raison de ne pas y assister : récapitulatif de la conférence, bonne ambiance, bonnes blagues (quoique ?) et bières offertes par Atlassian ! Rien de mieux pour terminer en beauté une magnifique conférence. Allez écouter le podcast, bientôt disponible. En attendant, il y a les podcasts de <a href="http://lescastcodeurs.com/2011/11/28/les-cast-codeurs-podcast-episode-49-devoxx-2011-les-dix-ans/">Devoxx 2011</a>, <a href="http://lescastcodeurs.com/2012/04/21/les-cast-codeurs-podcast-episode-57-en-direct-de-devoxx-france-2012/">Devoxx France 2012</a>, et enfin <a href="http://lescastcodeurs.com/2012/11/29/les-cast-codeurs-podcast-episode-68-devoxx-2012-et-les-putchettes/">Devoxx 2012</a>.</p>
 
 <p>A l&#8217;année prochaine !</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Devoxx France 2013 - Jour 2]]></title>
-    <link href="http://linsolas.github.com/blog/2013/03/28/devoxx-france-2013-jour-2/"/>
-    <updated>2013-03-28T11:31:00+01:00</updated>
-    <id>http://linsolas.github.com/blog/2013/03/28/devoxx-france-2013-jour-2</id>
-    <content type="html"><![CDATA[<p><img src="http://www.devoxx.com/download/attachments/6816022/DevoxxFR-2012-web-400-267.png" title="Devoxx France 2013" alt="Devoxx France" /></p>
-
-<p>Et c&#8217;est parti pour la seconde journée de Devoxx France 2013. Le jeudi est la première journée des conférences et quickies. Moins de code, mais toujours autant de fun.</p>
-
-<p>Pour cause de timing, j&#8217;ai hélas raté les keynotes du matin. <a href="http://www.devoxx.com/display/FR13/Bonjour+et+bienvenue">La première</a>, présentée par une partie de l&#8217;équipe organisatrice de l&#8217;événement, était essentiellement destinée à accueillir les personnes et donner un certain nombre de chiffres. Une annonce toutefois : la nouvelle version du site <a href="http://www.parleys.com">Parleys</a>, refait complètement en HTML 5. Exit le Flash, et c&#8217;est tant mieux !</p>
-
-<p><a href="http://www.devoxx.com/pages/viewpage.action?pageId=6818412">La seconde, L&#8217;Histoire des Ecritures</a>, présentée par <a href="http://www.devoxx.com/display/FR13/Clarisse+Herrenschmidt">Clarisse Herrenschmidt</a> retraçait l&#8217;histoire de l&#8217;écriture, au terme de nombreux siècles d&#8217;évolution. Une keynote visiblement passionnante, qui change un peu des thèmes très informatiques dont on a l&#8217;habitude. Certains l&#8217;ont comparée à la keynote de Michel Serres à l&#8217;USI, donc forcément un compliment ! L&#8217;ayant ratée, je pense qu&#8217;il s&#8217;agira de la première que je regarderais sur le site de Parleys.</p>
-
-<p><a href="http://www.devoxx.com/display/FR13/Objects+and+functions%2C+conflict+without+a+cause">Dernière keynote</a> fut celle de <a href="http://www.devoxx.com/display/FR13/Martin+Odersky">Martin Odersky</a>, le créateur de Scala. Il semble que les retours indiquent que la keynote n&#8217;a pas été dans la direction d&#8217;un apaisement entre les <em>Javaïstes</em> et les <em>Scalafistes</em>. Dommage.</p>
-
-<!-- more -->
-
-
-<h2><a href="http://www.devoxx.com/display/FR13/Elastifiez+votre+application+++du+SQL+au+NoSQL+en+moins+d%27une+heure">Elastifiez votre application : du SQL au NoSQL en moins d&#8217;une heure</a></h2>
-
-<p><img src="http://linsolas.github.com/images/devoxxfr-2013-nosql-1.jpg" title="David et Tug sur scène" alt="David et Tug sur scène" /></p>
-
-<p><a href="http://www.devoxx.com/display/FR13/David+Pilato">David Pilato</a> et <a href="http://www.devoxx.com/display/FR13/Tugdual%20Grall">Tugdual Grall</a> nous propose un guide pour migrer une application utilisant une base de données relationnelle vers une base de données NoSQL.</p>
-
-<p>Tout d&#8217;abord, une question : pourquoi migrer ?</p>
-
-<ul>
-<li>Il est aisé de faire de la scalabilité verticale : augmentation des serveurs, de la mémoire, etc. Mais cela ne suffit plus, on voudrait de la scalabilité horizontale.</li>
-<li>La recherche doit être structurée. On souhaiterait de la recherche full-text.</li>
-</ul>
-
-
-<p>Ils vont nous montrer le développement d&#8217;une application basée sur <a href="http://www.couchbase.com/">CouchBase</a> pour la base de données NoSQL et <a href="http://www.elasticsearch.org/">ElasticSearch</a> pour la partie recherche.</p>
-
-<p><img src="http://linsolas.github.com/images/devoxxfr-2013-nosql-2.jpg" title="Un petit problème, David ?" alt="Un petit problème, David ?" /></p>
-
-<p>On commence par une visite de l&#8217;application telle qu&#8217;elle est, dans sa version relationelle. Il s&#8217;agit d&#8217;une base assez simple, avec des fonctionnalités de CRUD, et une recherche assez limitée (la recherche n&#8217;est pas multi-champs, très stricte, etc.).</p>
-
-<p>Première étape du refactoring de l&#8217;application : mettre en place une API REST dans le serveur (utilisation de Spring MVC + <a href="http://jackson.codehaus.org/">Jackson</a>). Par exemple, on propose une méthode de récupération d&#8217;une personne par son ID (ou éventuellement par son nom).</p>
-
-<p>Deuxième étape, mise en place de <strong>CouchBase</strong>. Côté code, on ajoute la dépendance vers le client CouchBase dans le <code>pom.xml</code>. L&#8217;API utilisée ici est très claire et concise. Pour montrer que ça fonctionne, Tugdual montre des appels REST via la commande <code>curl</code>. Ce n&#8217;est pas sexy, mais ça marche effectivement.</p>
-
-<p>L&#8217;interface graphique de l&#8217;application se fait en Angular, mais ça n&#8217;a guère d&#8217;importance ici.</p>
-
-<p>Tout fonctionne bien, mais ce n&#8217;est pas encore ça. Par exemple, si on cherche <em>Joe Smith</em>, on trouvera des résultats, mais pas si l&#8217;on cherche <em>Smith Joe</em>. C&#8217;est là qu&#8217;intervient <strong>ElasticSearch</strong>. Une fois l&#8217;index dans ElasticSearch créé, on duplique les données de CouchBase vers ElasticSearch, tout ceci se faisant très simplement via l&#8217;interface web de CouchBase (la base de données est prévue pour fonctionner avec ElasticSearch).</p>
-
-<p>Maintenant, on modifie la partie de recherche - gérée par AngularJS - afin de taper directement sur ElasticSearch, sans passer par le serveur. Avec pratiquement aucune modification, la recherche bénéficie désormais de la puissance d&#8217;ElasticSearch : recherche multi-champs, recherche plus générique (désormais la recherche <em>Smith Joe</em> trouve effectivement <em>Joe Smith</em>), etc.</p>
-
-<p>Passons maintenant à l&#8217;analyse de données. David présente <a href="http://kibana.org/">Kibana</a>, un plugin d&#8217;Elastic Search qui permet de créer des dashboards dynamiques. En quelques clics, David arrive à créer un histogramme montrant la distribution des dates de naissance parmi la base de données contenant déjà plus d&#8217;un million d&#8217;entrées. Même chose pour créer un camembert pour la répartition par pays. Ce dashboard est dynamique. On peut ainsi naviguer dans nos données.</p>
-
-<p><img src="http://linsolas.github.com/images/devoxxfr-2013-nosql-3.jpg" title="Kibana, pour faire des dashboards rapides et efficaces" alt="Kibana, pour faire des dashboards rapides et efficaces" /></p>
-
-<p>Un autre point positif des bases NoSQL : les données sont sans schéma (<em>schema less</em>), c&#8217;est-à-dire qu&#8217;il est possible d&#8217;ajouter, modifier ou supprimer des champs sans aucun problème. Aucun <code>ALTER TABLE</code> à faire, pas de freeze de la base de données, pas d&#8217;update des données existantes.</p>
-
-<p>En moins d&#8217;une heure, David et Tug ont réussi leur pari de faire migrer leur application pour la rendre plus scalable, plus élastique. En prime, et ce n&#8217;est pas négligeable, ils ont ajouté de vraies fonctionnalités de recherche et de création de dashboards dynamiques, à moindre frais. Une telle migration n&#8217;est toutefois pas si aisée dans le monde réél, et se passer d&#8217;une base relationnelle n&#8217;est pas toujours simple, en particulier car il faut changer aussi sa façon de penser son modèle de données.</p>
-
-<hr/>
-
-
-<h2><a href="http://www.devoxx.com/display/FR13/Les+bronzes+font+du+dev">Les bronzés font du dév</a></h2>
-
-<p><img src="http://linsolas.github.com/images/devoxxfr-2013-ellene.jpg" title="Pas de machine ? Lis la doc en attendant !" alt="Pas de machine ? Lis la doc en attendant" /></p>
-
-<p><a href="http://www.devoxx.com/display/FR13/Ellene+Dijoux">Ellène Siber Dijoux</a> (<a href="https://twitter.com/ElleneSiber">@ElleneSiber</a>), durant un Quickie humoristique, nous montre la vie professionnelle de Martin Dutruc, jeune développeur fraichement débarqué de son école. La déconvenue va être totale, et nous voyons à travers cette petite histoire pas mal de travers de notre métier (quand il n&#8217;est pas exécuté par les bonnes personnes) ainsi qu&#8217;un certain nombre de clichés dans notre environnement :</p>
-
-<ul>
-<li>La société à &#8220;taille humaine&#8221; de 1200 personnes ;</li>
-<li>Le commercial qui était un ancien développeur et qui connait bien le monde du &#8221;<em>Java - J deux ZE</em>&#8221; ;</li>
-<li>Pas de machine lors de l&#8217;arrivée d&#8217;un nouveau dans l&#8217;équipe. Du coup on lui donne 1000 pages de documentation, fonctionnelle ou technique ;</li>
-<li>Le problème du build qui ne passe pas, alors il faut ignorer les tests ;</li>
-<li>La mauvaise gestion du temps, de la pseudo-agilité (vive les itérations de 2 mois !).</li>
-</ul>
-
-
-<p>Ellène s&#8217;en est bien sortie, le format de sa présentation n&#8217;était pas forcément facile. Hélas, ces travers sentaient beaucoup le vécu, y compris pour moi. En tout cas, bien vu Ellène :)</p>
-
-<hr/>
-
-
-<h2><a href="http://www.devoxx.com/display/FR13/Comparing+JVM+Web+Frameworks">Comparing JVM Web Frameworks</a></h2>
-
-<p><a href="http://www.devoxx.com/display/FR13/Matt+Raible">Matt Raible</a> (<a href="https://twitter.com/mraible">@mraible</a>) nous propose une comparaison de différents frameworks Web tournant sur la JVM. Tout d&#8217;abord une petite histoire sur le web et les frameworks web pour la JVM.</p>
-
-<p><img src="https://farm9.staticflickr.com/8529/8588701778_91aeb65377_o.png" title="L'historique des frameworks web de la JVM" alt="L'historique des frameworks web de la JVM" />
-<em>Image de <a href="http://raibledesigns.com/">Matt Raible</a> (Copyright Raible Designs)</em></p>
-
-<p>Y a t&#8217;il trop de frameworks web pour la JVM ? La salle pense en majorité que oui. L&#8217;arrivée des frameworks JavaScript ne change pas la donne, et posent d&#8217;autres problèmes : peu de scalabilité, problème de sécurité, code potentiellement critique côté client, etc.</p>
-
-<p>Passons au comparatif des frameworks. Tout d&#8217;abord, quels critères pour choisir les candidats ?</p>
-
-<ul>
-<li>Communauté / Support</li>
-<li>HTML 5</li>
-<li>REST</li>
-<li>Mobile</li>
-<li>Performances</li>
-<li>Rapidité des pages</li>
-</ul>
-
-
-<p>Matt décide de se &#8220;borner&#8221; à la plateforme JVM pour restreindre son choix. Cela laisse tout de même un large choix de langage : Java, Scala, Groovy, etc.</p>
-
-<p>Faire des comparatifs n&#8217;est pas simple. Il faut affronter communautés passionnées (surtout celles ayant une mauvaise note), critiques sur la façon de noter ou sur les notes. Il y aussi la possibilité de &#8220;tricher&#8221; avec les résultats.</p>
-
-<p>Pour Matt, l&#8217;une des très bonne comparaison de frameworks était la présentation <a href="http://www.parleys.com/#play/514892290364bc17fc56c52e/chapter0/about">World Wide Wait</a> lors du Devoxx 2011.
-Autre comparatif intéressant est le site <a href="http://devrates.com/stats/index">devrates.com</a> qui permet avant tout de connaitre la popularité d&#8217;un framework.</p>
-
-<p>S&#8217;il s&#8217;agit d&#8217;un framework <em>full stack</em>, Matt recommande avant tout de choisir en fonction du langage que l&#8217;on souhaite utiliser : JRuby, Groovy, Scala ou Java.</p>
-
-<p>Cette présentation n&#8217;était pas une comparaison en soi, mais plutôt les bonnes méthodes à suivre quand on veut faire soi même une comparaison de frameworks, afin de choisir ce qui permettra de mieux répondre à nos besoins. Une présentation intéressante, mais peut-être un peu en deça de ce que nous avait habitué Matt Raible par le passé.</p>
-
-<hr/>
-
-
-<h2><a href="http://www.devoxx.com/display/FR13/Structures+de+donnees+exotiques%2C+au+dela+de+ArrayList%2C+HashMap+et+autres+HashSet.">Structures de données exotiques, au delà de ArrayList, HashMap et autres HashSet</a></h2>
-
-<p><a href="http://www.devoxx.com/display/FR13/Sam+Bessalah">Sam Bessalah</a> (<a href="https://twitter.com/samklr">@samklr</a>)</p>
-
-<p>On a tendance à toujours sortir l&#8217;artillerie lourde, et pas de considérer vraiment le problème que l&#8217;on a. Comme il le dit, <em>quand on a un marteau, tout ressemble à un clou</em> ! Durant cette présentation, Sam nous présente 4 structures de données, un poil exotique.</p>
-
-<h3>Skiplist</h3>
-
-<ul>
-<li>Stockage de données ordonnées</li>
-<li>Insertion / suppression en <code>O(log N)</code></li>
-<li>Recherche en <code>O(log N)</code></li>
-</ul>
-
-
-<p>Plutôt que de parcourir toute la liste pour chercher un élément, on prend des &#8220;voies express&#8221;, c&#8217;est-à-dire qu&#8217;on va sauter des éléments. Pour vulgariser un peu, Sam compare ça aux Métro 1 et au RER A. Par exemple, si l&#8217;on veut se rendre de La Défense à Châtelet, on peut prendre l&#8217;une ou l&#8217;autre des lignes. Le Métro 1 va mettre plus de temps, car il s&#8217;arrête à chaque station, alors que le RER prend une voie &#8220;express&#8221; (du moins en temps normal, quand il n&#8217;y a pas d&#8217;incident :) ). On arrive ainsi plus vite à destination. C&#8217;est le même principe pour les <code>SkipList</code> lorsqu&#8217;on la parcourt à la recherche d&#8217;un élément : on ne va pas aller d&#8217;élément en élément, mais on va plutôt prendre des &#8220;raccourcis&#8221;.</p>
-
-<p>Depuis le JDK 1.6, il existe des implémentations de ce type de structure :</p>
-
-<ul>
-<li><a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/ConcurrentSkipListMap.html">java.util.concurrent.ConcurrentSkipListMap</a></li>
-<li><a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/ConcurrentSkipListSet.html">java.util.concurrent.ConcurrentSkipListSet</a></li>
-</ul>
-
-
-<h3>Tries</h3>
-
-<p>Cette structure est une sorte d&#8217;arbre ternaire. Pour une recherche de texte, la complexité va dépendre non de la taille de l&#8217;arbre, mais de la longueur de la chaine de recherche.
-Toutefois, cette structure reste assez gourmande en mémoire. Sam fait un focus sur la structure <code>Hash Array Mapped Trie</code> (<a href="http://en.wikipedia.org/wiki/Hash_array_mapped_trie">HAMT</a>). Dans ce type de structure, on code les clés sur 32 bits, du coup la profondeur de l&#8217;arbre ne dépassera jamais 7 niveaux.</p>
-
-<p>Pour la complexité nous avons d&#8217;excellents résultats :</p>
-
-<ul>
-<li>ajouter, premier, dernier, n-ième élément, mise à jour -> <code>O(1)</code>.</li>
-<li>concat, insert, preprend -> <code>O(N)</code> (N étant au maximum 7).</li>
-</ul>
-
-
-<p>A noter qu&#8217;il existe une <code>Concurrent Trie</code> (<a href="http://en.wikipedia.org/wiki/Ctrie">CTrie</a>) qui n&#8217;est pas bloquante.</p>
-
-<h3>Sketches</h3>
-
-<p>Prendre un ensemble de données, en extraire des informations, puis travailler sur ces informations et non sur les données elles-mêmes.</p>
-
-<h4>Bloom Filters</h4>
-
-<p>Structure de données probabiliste. Par exemple, est-ce qu&#8217;un élément appartient à un ensemble de données ?
-On ne pas être sûr à 100% que la donnée soit présente, mais on est absolument certain qu&#8217;elle n&#8217;y ait pas. Il ne peut donc pas y avoir de faux-négatif.</p>
-
-<p>Attention toutefois, si un <em>Bloom Filter</em> accepte les insertions, il ne peut pas y ajouter de suppression de données. Afin de supporter la suppression, il faudra utiliser un <em>Counting Bloom Filter</em>.</p>
-
-<p>On peut trouver une implémentation dans Guava, <a href="http://docs.guava-libraries.googlecode.com/git-history/v11.0/javadoc/com/google/common/hash/BloomFilter.html">BloomFilter</a></p>
-
-<h3>Count Min Sketches</h3>
-
-<p>Le <a href="http://en.wikipedia.org/wiki/Count-Min_sketch">Count Min Sketch</a> est une évolution du Bloom Filter. Cette structure garde l&#8217;information du nombre d&#8217;occurences de chaque élément. Une utilisation de ce genre de structure est de détecter quelle source change le plus souvent ses données, les IP qui consomment le plus de bande passante, etc.</p>
-
-<p>A voir sur GitHub, une <a href="https://github.com/clearspring/stream-lib">librairie de structure de données par flux</a>.</p>
-
-<hr/>
-
-
-<p>Une seconde journée moins chargée en terme de conférence en ce qui me concerne, car il me fallait encore préparer mon passage du lendemain avec Julien Jakubowski. J&#8217;ai également beaucoup discuté avec d&#8217;autres personnes, visiter un peu les stands, etc.</p>
 ]]></content>
   </entry>
   

@@ -9,7 +9,7 @@
   <meta name="author" content="Romain Linsolas">
 
   
-  <meta name="description" content="Le mois dernier, la Société Générale était sponsor de la conférence Devoxx France. Une chose assez inhabituelle pour le signaler ! Hé bien ce n&#8217 &hellip;">
+  <meta name="description" content="yo, qu&#8217;est-ce que c&#8217;est ? Aujourd&#8217;hui, quand on fait du développement web, et donc en particulier du JavaScript, il n&#8217;est &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -77,6 +77,296 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/07/04/yo/">Yo, Man</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-04T20:24:00+02:00" pubdate data-updated="true">Jul 4<span>th</span>, 2014</time>
+        
+         | <a href="/blog/2014/07/04/yo/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><img src="/images/yeoman-fusee.png" title="yeoman" alt="yeoman" /></p>
+
+<h1>yo, qu&#8217;est-ce que c&#8217;est ?</h1>
+
+<p>Aujourd&#8217;hui, quand on fait du développement web, et donc en particulier du JavaScript, il n&#8217;est plus possible de se passer de bons outils pour développer correctement. <a href="http://yeoman.io/">Yeoman</a> est l&#8217;un d&#8217;entre eux. Cet outil est en fait une composition de trois outils :</p>
+
+<ul>
+<li><a href="http://gruntjs.com/">grunt</a>, le &#8221;<a href="http://ant.apache.org/">Ant</a>&#8221; du JavaScript, c&#8217;est-à-dire un exécuteur de tâches ;</li>
+<li><a href="http://bower.io/">bower</a> le gestionnaire de dépendances ;</li>
+<li><a href="https://github.com/yeoman/yo">yo</a> dont on va parler ici.</li>
+</ul>
+
+
+<p>Yo est ce que l&#8217;on appelle un <em>project scaffolder</em>, que l&#8217;on pourrait traduire en français par &#8220;échaffaudeur de projet&#8221;. Ok, on n&#8217;est pas trop aidé. L&#8217;idée derrière ce genre d&#8217;outils est de générer le squelette d&#8217;une application en fonction d&#8217;un contexte donné. Un exemple tout bête : je souhaite démarrer une application avec AngularJS. Plutôt que de passer quelques minutes / heures à configurer les bases de mon projet, je vais utiliser un générateur <code>yo</code> pour me faire ce travail. Une fois exécuté, je n&#8217;aurais alors plus qu&#8217;à développer mon projet, toutes les bases étant mises en place.</p>
+
+<h2>Installation de yo</h2>
+
+<p>L&#8217;utilitaire <code>yo</code> s&#8217;installe via <code>npm</code>, ce qui signifie qu&#8217;il vous faudra installer <a href="http://nodejs.org/">NodeJS</a> si ce n&#8217;est déjà fait. Une fois installé, il suffit de lancer la commande <code>npm install -g yo</code> (l&#8217;option <code>-g</code> assure une installation globale au système) pour que <code>yo</code> soit installé. Un petit <code>yo -v</code> nous assurera de sa bonne installation.</p>
+
+<h2>Utiliser un générateur yo</h2>
+
+<p>Concrètement, <code>yo</code> va faire appel à un générateur spécifique pour générer le squelette de notre application. Si je tape simplement <code>yo</code> dans ma console, celui-ci va me propose quelques options (le nombre d&#8217;options va dépendre de ce qui est installé sur ma machine) :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$&gt; yo
+</span><span class='line'>[?] What would you like to do? (Use arrow keys)
+</span><span class='line'>&gt; Run the Generator generator (0.4.4)
+</span><span class='line'>  Run the Webapp generator (0.4.9)
+</span><span class='line'>  Run the Karma generator (0.8.1)
+</span><span class='line'>  Run the Mocha generator (0.1.3)
+</span><span class='line'>  Update your generators
+</span><span class='line'>  Install a generator
+</span><span class='line'>  Find some help
+</span><span class='line'>  Get me out of here!</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Comme vous le voyez, les choix qui s&#8217;offrent à moi sont soit l&#8217;exécution d&#8217;un générateur, soit la mise à jour ou l&#8217;installation de nouveaux générateurs.
+Normalement, seuls les deux premiers générateurs (générateur de générateur <code>yo</code> et générateur d&#8217;applications web) sont disponibles initialement.</p>
+
+<p>Admettons que nous voulons créer une application AngularJS. Nous allons donc faire appel au <a href="https://github.com/yeoman/generator-angular">générateur Angular</a>. Deux options s&#8217;offrent à nous :</p>
+
+<ol>
+<li>Passer par la commande <code>npm install -g generator-angular</code>, qui installera le générateur ;</li>
+<li>Passer par la ligne de commande de <code>yo</code> :</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$&gt; yo
+</span><span class='line'>[?] What would you like to do?
+</span><span class='line'>  Run the Generator generator (0.4.4)
+</span><span class='line'>  Run the Karma generator (0.8.1)
+</span><span class='line'>  Run the Webapp generator (0.4.9)
+</span><span class='line'>  Run the Mocha generator (0.1.3)
+</span><span class='line'>  Update your generators
+</span><span class='line'>&gt; Install a generator
+</span><span class='line'>  Find some help
+</span><span class='line'>  Get me out of here!
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>$&gt; yo
+</span><span class='line'>[?] What would you like to do? Install a generator
+</span><span class='line'>[?] Search NPM for generators: angular
+</span><span class='line'>[?] Here's what I found. Install one? (Use arrow keys)
+</span><span class='line'>&gt; generator-angular
+</span><span class='line'>  generator-angular-axiom
+</span><span class='line'>  generator-angular-beego
+</span><span class='line'>  generator-angular-bootstrap
+</span><span class='line'>  generator-angular-bootstrap-less
+</span><span class='line'>  generator-angular-browserify-express
+</span><span class='line'>  generator-angular-caveman2
+</span><span class='line'>  generator-angular-cmelion
+</span><span class='line'>(Move up and down to reveal more choices)</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Dans les deux cas, c&#8217;est bien <code>npm</code> qui va s&#8217;exécuter pour installer le générateur.
+Pour lancer la génération, c&#8217;est la même chose : soit nous exécutons la commande <code>yo angular</code> (le nom du générateur, sans le <code>generator-</code> devant), soit nous passons par la commande <code>yo</code> et on se laisse guider par l&#8217;outil. Attention, <code>yo</code> génère les sources de l&#8217;application dans le répertoire courant, pensez donc à créer un sous-répertoire avant.</p>
+
+<p>Là, en fonction du générateur, un certain nombre de questions vont nous être posées, par exemple pour savoir si nous voulons utiliser <a href="http://sass-lang.com/">SASS</a> ou <a href="http://getbootstrap.com/">Bootstrap</a> :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$&gt; yo angular
+</span><span class='line'>
+</span><span class='line'>     _-----_
+</span><span class='line'>    |       |
+</span><span class='line'>    |--(o)--|   .--------------------------.
+</span><span class='line'>   `---------´  |    Welcome to Yeoman,    |
+</span><span class='line'>    ( _´U`_ )   |   ladies and gentlemen!  |
+</span><span class='line'>    /___A___\   '__________________________'
+</span><span class='line'>     |  ~  |
+</span><span class='line'>   __'.___.'__
+</span><span class='line'> ´   `  |° ´ Y `
+</span><span class='line'>
+</span><span class='line'>Out of the box I include Bootstrap and some AngularJS recommended modules.
+</span><span class='line'>
+</span><span class='line'>[?] Would you like to use Sass (with Compass)? No
+</span><span class='line'>[?] Would you like to include Bootstrap? Yes
+</span><span class='line'>[?] Which modules would you like to include? (Press &lt;space&gt; to select)
+</span><span class='line'>&gt;[X] angular-resource.js
+</span><span class='line'> [X] angular-cookies.js
+</span><span class='line'> [X] angular-sanitize.js
+</span><span class='line'> [X] angular-route.js</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Une fois la commande terminée, nous diposons d&#8217;un répertoire bien configuré. Il est parfois requis d&#8217;exécuter les commandes <code>npm install</code> (pour installer les contributions Grunt) et <code>bower update</code> (pour télécharger les dépendances de l&#8217;application) afin d&#8217;être tout à fait prêt, mais normalement le générateur va se charger de cette opération.
+Voici les principaux éléments de structure de l&#8217;application générée :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>bower.json                     -&gt; Déclaration des dépendences pour Bower
+</span><span class='line'>Gruntfile.js                   -&gt; Définition des tâches pour Grunt
+</span><span class='line'>package.json                   -&gt; Description de l'application
+</span><span class='line'>  +- app                       -&gt; Répertoire des sources
+</span><span class='line'>  |    +- bower_components     -&gt; Dépendences téléchargées par Bower
+</span><span class='line'>  |    + *                     -&gt; Sources de l'application
+</span><span class='line'>  +- node_modules              -&gt; Modules NodeJS nécessaires à l'application (essentiellement pour Grunt)
+</span><span class='line'>  +- test                      -&gt; Répertoire des tests (Karma et Jasmine)
+</span><span class='line'>       +- *                    -&gt; Sources des tests
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Comme on peut le voir, <code>yo</code> fait appel à ses deux copains de <code>yeoman</code> pour travailler : <code>Bower</code> et <code>Grunt</code>.
+En tapant par exemple <code>grunt serve</code>, <code>Grunt</code> va exécuter quelques tâches et démarrer un serveur :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$&gt; grunt serve
+</span><span class='line'>Running "serve" task
+</span><span class='line'>
+</span><span class='line'>Running "clean:server" (clean) task
+</span><span class='line'>
+</span><span class='line'>Running "bowerInstall:app" (bowerInstall) task
+</span><span class='line'>
+</span><span class='line'>Running "concurrent:server" (concurrent) task
+</span><span class='line'>
+</span><span class='line'>Running "copy:styles" (copy) task
+</span><span class='line'>Copied 1 files
+</span><span class='line'>
+</span><span class='line'>Done, without errors.
+</span><span class='line'>
+</span><span class='line'>Running "autoprefixer:dist" (autoprefixer) task
+</span><span class='line'>Prefixed file ".tmp/styles/main.css" created.
+</span><span class='line'>
+</span><span class='line'>Running "connect:livereload" (connect) task
+</span><span class='line'>Started connect web server on 127.0.0.1:9000.
+</span><span class='line'>
+</span><span class='line'>Running "watch" task
+</span><span class='line'>Waiting...</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Grâce à la tâche <a href="https://github.com/gruntjs/grunt-contrib-livereload">livereload</a> de <code>Grunt</code>, chaque modification du code va entraîner le rechargement automatique de la page :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Waiting...OK
+</span><span class='line'>&gt;&gt; File "app\views\main.html" changed.
+</span><span class='line'>
+</span><span class='line'>... Reload app\views\main.html ...
+</span><span class='line'>Completed in 0.001s at Sun Jun 01 2014 11:02:17 GMT+0200 (Romance Daylight Time) - Waiting...</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Comme je le disais plus haut, cela prend à peine une minute, et au final, nous disposons d&#8217;une application prête pour le développement.</p>
+
+<h2>Créer son propre générateur</h2>
+
+<p>Bien qu&#8217;il existe tout un tas de générateur, il peut arriver le besoin d&#8217;en créer un soi-même. C&#8217;est le rôle du <code>generator-generator</code>, qui comme son nom l&#8217;indique, génère le squelette d&#8217;un générateur. Je vais faire un peu ma faignasse, mais je vais profiter de l&#8217;excellente présentation réalisée par <a href="https://twitter.com/laut3rry">Thierry Lau</a> sur ce sujet :</p>
+
+<p><a href="http://lauterry.github.io/prez-yeoman-generator/">http://lauterry.github.io/prez-yeoman-generator/</a></p>
+
+<p>Pour résumer, si vous devez vous lancer dans un projet, plutôt que de perdre du temps, passez vite à <strong>yo</strong> !</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -1004,54 +1294,6 @@ Pour la 4e fois d&#8217;affilée, et la 2e en ce qui concerne la version &#8220;
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/10/29/softshake-2013-facilitation-graphique/">SoftShake 2013 - Facilitation Graphique</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-10-29T18:31:00+01:00" pubdate data-updated="true">Oct 29<span>th</span>, 2013</time>
-        
-         | <a href="/blog/2013/10/29/softshake-2013-facilitation-graphique/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Les organisateurs de la conférence SoftShake ont eu la très bonne idée d&#8217;inviter Elizabeth Auzan et Sébastien Gerbier des &#8221;<em>Visual Thinkers</em>&#8221;, ou <em>Facilitateus Visuels</em>, de la société <a href="http://www.lowtech-hitouch.com/">Lowtech Hitouch</a>.</p>
-
-<p>L&#8217;idée est simple : ils se présentent à différentes sessions et illustrent graphiquement ce qu&#8217;ils entendent, ce qu&#8217;ils comprennent.
-Je n&#8217;ai pas eu la chance qu&#8217;ils viennent à ma session, mais je partage quand même les très jolies planches que voici (désolé pour la 4e qui est un peu floue) :</p>
-
-<p><img src="/images/softshake-2013-dessin1.jpg" title="Première image" alt="Priemère image" /></p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/10/29/softshake-2013-facilitation-graphique/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -1067,6 +1309,10 @@ Je n&#8217;ai pas eu la chance qu&#8217;ils viennent à ma session, mais je part
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/07/04/yo/">yo, man</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/05/19/hackathon-societe-generale/">Hackathon Société Générale</a>
       </li>
     
@@ -1080,10 +1326,6 @@ Je n&#8217;ai pas eu la chance qu&#8217;ils viennent à ma session, mais je part
     
       <li class="post">
         <a href="/blog/2014/01/20/une-annee-de-bbl-a-la-sgcib/">Une année de BBL à la SGCIB</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/11/15/mon-interview-sur-developpez-dot-com/">Mon interview sur Developpez.com</a>
       </li>
     
   </ul>
